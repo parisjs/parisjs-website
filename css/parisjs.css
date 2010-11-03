@@ -1,0 +1,9 @@
+body {
+	-webkit-perspective: 600;
+	-webkit-transform-style: preserves-3d;
+}
+
+ul {
+	-webkit-transition: -webkit-transform 1s ease-in;
+	width: 300px;
+}
