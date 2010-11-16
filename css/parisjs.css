@@ -50,3 +50,7 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+.no-csstransforms3d .csstransforms3d {
+    display: none;
+}
