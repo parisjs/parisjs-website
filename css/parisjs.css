@@ -1,9 +1,43 @@
 body {
-	-webkit-perspective: 600;
-	-webkit-transform-style: preserves-3d;
+    -webkit-perspective: 600;
+    -webkit-transform-style: preserves-3d;
+    background:  #CF9B00;
+    margin: 0 3em;
+    background: #FFCC00;
+    font-family: 'serif';
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', arial, serif;
+}
+
+h1 {
+    margin: 0.5em 1em;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+h2, h3 {
+    color: #4F4005;
+    margin-top: 0.2em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+.content {
+    padding: 1em;
+    border: solid 20px white;
+    border-radius: 2em;
+    -moz-border-radius: 2em;
+    background-color: #FFF1BA;
 }
 
 ul {
-	-webkit-transition: -webkit-transform 1s ease-in;
-	width: 300px;
+    -webkit-transition: -webkit-transform 1s ease-in;
+}
+
+p {
+    margin-left: 1em;
 }
