@@ -42,3 +42,11 @@ ul {
 p {
     margin-left: 1em;
 }
+
+a {
+    color: #4F4005;
+    text-decoration:underline;
+}
+a:hover {
+    text-decoration: none;
+}
