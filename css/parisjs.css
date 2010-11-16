@@ -31,6 +31,7 @@ h2 {
     border: solid 20px white;
     border-radius: 2em;
     -moz-border-radius: 2em;
+    -webkit-border-radius: 2em;
     background-color: #FFF1BA;
 }
 
