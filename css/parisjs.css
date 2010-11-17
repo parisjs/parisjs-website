@@ -2,7 +2,7 @@ body {
     -webkit-perspective: 600;
     -webkit-transform-style: preserves-3d;
     background:  #CF9B00;
-    margin: 0 3em;
+    margin: 0 3em 3em;
     background: #FFCC00;
     font-family: 'serif';
 }
