@@ -17,6 +17,28 @@ h1 {
     font-weight: normal;
 }
 
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: -3px -3px 60px #ffffff;
+    }
+    to {
+        text-shadow: 3px 3px 20px #dcb000;
+    }
+}
+
+.textshadow.cssanimations h1 {
+    -webkit-animation-name: glow;
+    -webkit-animation-duration: 15s;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.textshadow.no-cssanimations h1 {
+    text-shadow: -3px -3px 60px #fff1ba;
+}
+
+
 h2, h3 {
     color: #4F4005;
     margin-top: 0.2em;
