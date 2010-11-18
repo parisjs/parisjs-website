@@ -28,19 +28,20 @@
         <h2>{{#l}}Events{{/l}}</h2>
 
         <h3>{{#l}}Next one{{/l}}</h3>
+        {{#next}}
         <p>
-            <strong>24 November 2010</strong>, hosted by ISART Digital.<br />
-            Register and let us know what you want to talk about <a href="http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100"> here.</a>
+            <strong>{{dateday}} {{datemonth}} {{dateyear}}</strong>, hosted by {{where}}.<br />
+            Register and let us know what you want to talk about <a href="{{link}}"> here.</a>
         </p>
+        {{/next}}
 
         <h3>{{#l}}Older ones{{/l}}</h3>
         <ul>
+            {{#previous}}
             <li>
-                <a href="http://lanyrd.com/2010/first-js-meetup-paris/">lanyrd.com/2010/first-js-meetup-paris/</a>
+                <a href="{{link}}">{{dateday}} {{datemonth}} {{dateyear}} - {{where}}</a>
             </li>
-            <li>
-                <a href="http://barcamp.org/jscamp0">barcamp.org/jscamp0</a>
-            </li>
+            {{/previous}}
         </ul>
 
         <h2>{{#l}}Community{{/l}}</h2>

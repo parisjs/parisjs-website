@@ -4,6 +4,36 @@
  * Released under GPL 3
  */
 $(function() {
+    var Meetup = Backbone.Model.extend({
+        initialize : function(attr) {
+            var date = new Date(Date.parse(attr.date));
+            var month = "month-"+ (date.getMonth() + 1);
+            this.set({"dateday"  : date.getDate(),
+                      "datemonth": month.toLocaleString(),
+                      "dateyear" : date.getFullYear()});
+        }
+    });
+
+    var Meetups = Backbone.Collection.extend({
+        model : Meetup,
+
+        comparator: function(meetup) {
+            return Date.parse(meetup.get("date"));
+        },
+
+        getNextOnes : function() {
+            return new Meetups(this.filter(function(meetup) {
+                return Date.parse(meetup.get("date")) > Date.now();
+            }));
+        },
+
+        getPreviousOnes: function() {
+            return new Meetups(this.filter(function(meetup) {
+                return Date.parse(meetup.get("date")) < Date.now();
+            }));
+        }
+    });
+
     var IndexView = Backbone.View.extend({
         template: function(context) {
             return Mustache.to_html($('#template-index').html(), context);
@@ -19,11 +49,16 @@ $(function() {
 
         render: function() {
             $(this.el).html(this.template({
-                "l": function(s) {
+                l: function(s) {
                     return function(text, render) {
                         return render(text.toLocaleString());
                     }
-                }
+                },
+                formatdate : function(text, render) {
+                    return text;
+                },
+                next: this.collection.getNextOnes().first().toJSON(),
+                previous: this.collection.getPreviousOnes().toJSON()
             }));
         }
 
@@ -52,8 +87,14 @@ $(function() {
         },
 
         index: function() {
-            var view = new IndexView({el: $(".content")});
-            view.render();
+            var meetups  = new Meetups();
+            $.getJSON('/meetups.json', function(result) {
+                _.each(result, function(r) {
+                    meetups.add(new Meetup(r));
+                });
+                new IndexView({el         : $(".content"),
+                               collection : meetups}).render();
+            });
         }
     });
 
