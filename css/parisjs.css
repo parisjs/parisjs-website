@@ -76,3 +76,22 @@ a:hover {
 .no-csstransforms3d .csstransforms3d {
     display: none;
 }
+
+.switch_languages {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    padding: 1em;
+    margin: 0;
+    list-style-type: none;
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    background-color: white;
+}
+.switch_languages li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}

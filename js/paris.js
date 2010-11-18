@@ -10,7 +10,7 @@ $(function() {
         },
 
         events: {
-            "click .csstransforms3d a" : "transform",
+            "click .csstransforms3d a" : "transform"
         },
 
         transform: function() {
@@ -31,6 +31,24 @@ $(function() {
     var ParisJS = Backbone.Controller.extend({
         routes: {
             "":                 "index", // #/
+        },
+
+        initialize: function() {
+            if (Modernizr.localstorage && window.localStorage.lang) {
+                String.locale = window.localStorage.lang;
+            }
+            var that = this;
+            $(".switch_languages li").click(function(e) {
+                // save current selection
+                String.locale = $(this).data("lang");
+                // save for future visits
+                if (Modernizr.localstorage) {
+                    window.localStorage.lang = String.locale;
+                }
+                // redraw current page
+                // FIXME: it works currently because we have only one route ...
+                that[that.routes[""]]();
+            });
         },
 
         index: function() {
