@@ -1,0 +1,12 @@
+{
+  "fr": {
+      "Events"    : "Evénements",
+      "Next one"  : "Prochain",
+      "Older ones": "Précédents",
+      "Community" : "Communauté",
+      "Follow <a href='http://twitter.com/parisjs'>@parisjs</a> on twitter" : "Suivez <a href='http://twitter.com/parisjs'>@parisjs</a> sur twitter",
+      "Join <a href='http://groups.google.com/group/parisjs'>mailing list</a>": "Rejoignez la <a href='http://groups.google.com/group/parisjs'>liste de diffusion</a>",
+      "Join <a href='irc:parisjs@freenode.net'>#parisjs</a> on Freenode": "Rejoignez <a href='irc:parisjs@freenode.net'>#parisjs</a> sur Freenode",
+      "<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github" : "<a href='https://github.com/parisjs/parisjs-website'>Forkez nous</a> sur github"
+  }
+}

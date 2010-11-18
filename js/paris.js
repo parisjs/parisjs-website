@@ -5,11 +5,26 @@
  */
 $(function() {
     var IndexView = Backbone.View.extend({
-        template: _.template($('#template-index').html()),
+        template: function(context) {
+            return Mustache.to_html($('#template-index').html(), context);
+        },
+
+        events: {
+            "click .csstransforms3d a" : "transform",
+        },
+
+        transform: function() {
+            $("#list").get(0).style.webkitTransform = 'rotateX(180deg) rotateY(180deg) rotateZ(180deg)';
+        },
 
         render: function() {
-            console.log(this.template({}));
-            $(this.el).html(this.template({}));
+            $(this.el).html(this.template({
+                "l": function(s) {
+                    return function(text, render) {
+                        return render(text.toLocaleString());
+                    }
+                }
+            }));
         }
 
     });
