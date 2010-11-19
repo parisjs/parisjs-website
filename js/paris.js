@@ -23,13 +23,13 @@ $(function() {
 
         getNextOnes : function() {
             return new Meetups(this.filter(function(meetup) {
-                return Date.parse(meetup.get("date")) > Date.now();
+                return Date.parse(meetup.get("date")) > new Date().getTime();
             }));
         },
 
         getPreviousOnes: function() {
             return new Meetups(this.filter(function(meetup) {
-                return Date.parse(meetup.get("date")) < Date.now();
+                return Date.parse(meetup.get("date")) < new Date().getTime();
             }));
         }
     });
