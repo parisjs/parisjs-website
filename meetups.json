@@ -1,18 +1,18 @@
 [
         {
-            "date": "2010-11-24",
+            "date": "2010/11/24",
             "where" : "ISART Digital",
             "link" : "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100"
         },
 
         {
-            "date" : "2010-10-20",
+            "date" : "2010/10/20",
             "where" : "Starbucks Coffee Capucines",
             "link" : "http://barcamp.org/w/page/30731863/jscamp0"
         },
 
         {
-            "date" : "2010-10-12",
+            "date" : "2010/10/12",
             "where" : "af83",
             "link" : "http://lanyrd.com/2010/first-js-meetup-paris/"
         }
