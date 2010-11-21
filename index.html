@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Paris JS</title>
+    <link rel="profile" href="http://microformats.org/profile/hcalendar">
     <link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
     <link rel="localizations" href="l10n/locales.json" type="application/x-l10n+json"/>
@@ -29,9 +30,9 @@
 
         <h3>{{#l}}Next one{{/l}}</h3>
         {{#next}}
-        <p>
-            <strong>{{dateday}} {{datemonth}} {{dateyear}}</strong>, {{#l}}hosted by {{/l}} {{where}}.<br />
-            {{#l}}Register and let us know what you want to talk about <a href='{{link}}'> here</a>.{{/l}}
+        <p class="vevent">
+            <strong class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</strong> : <span class="summary">{{summary}}</span> {{#l}}hosted by {{/l}} <span class="location">{{location}}</span>.<br />
+            {{#l}}Register and let us know what you want to talk about <a class='url' href='{{url}}'> here</a>.{{/l}}
         </p>
         {{/next}}
         {{^next}}
@@ -41,8 +42,8 @@
         <h3>{{#l}}Older ones{{/l}}</h3>
         <ul>
             {{#previous}}
-            <li>
-                <a href="{{link}}">{{dateday}} {{datemonth}} {{dateyear}} - {{where}}</a>
+            <li class="vevent">
+                <a class="url" href="{{url}}"><span class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</spam> - <span class="summary">{{summary}}</span></a>
             </li>
             {{/previous}}
         </ul>

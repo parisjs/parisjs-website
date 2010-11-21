@@ -6,17 +6,19 @@
 $(function() {
     var Meetup = Backbone.Model.extend({
         initialize : function(attr) {
-            var date = new Date(Date.parse(attr.date));
+            var date = this.getDate(attr.dtstart);
             var month = "month-"+ (date.getMonth() + 1);
             this.set({"dateday"  : date.getDate(),
                       "datemonth": month.toLocaleString(),
                       "dateyear" : date.getFullYear()});
         },
 
-        getDate : function() {
-            var d = new Date(Date.parse(this.get("date")));
+        getDate : function(date) {
+            var date = date || this.get("dtstart");
+            var dtstart = date.split('-');
+            var d = new Date(dtstart[0], dtstart[1], dtstart[2]);
             d.setHours(23);
-            return d.getTime();
+            return d;
         }
     });
 
@@ -24,18 +26,18 @@ $(function() {
         model : Meetup,
 
         comparator: function(meetup) {
-            return Date.parse(meetup.get("date"));
+            return meetup.getDate().getTime();
         },
 
         getNextOnes : function() {
             return new Meetups(this.filter(_.bind(function(meetup) {
-                return meetup.getDate() > new Date().getTime();
+                return meetup.getDate().getTime() > new Date().getTime();
             }, this)));
         },
 
         getPreviousOnes: function() {
             return new Meetups(this.filter(function(meetup) {
-                return meetup.getDate() < new Date().getTime();
+                return meetup.getDate().getTime() < new Date().getTime();
             }));
         }
     });

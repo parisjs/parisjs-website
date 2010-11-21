@@ -7,7 +7,8 @@ This is the source of the parisjs.org website.
 Edit meetups.json and add the event.
 
         {
-            "date": "YYYY/MM/DD",
-            "where" : "The place",
-            "link" : "http://link for registration/"
+            "summary" : "your summary",
+            "dtstart": "YYYY-MM-DD",
+            "location" : "The place",
+            "url" : "http://link for registration/"
         }

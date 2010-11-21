@@ -1,19 +1,22 @@
 [
         {
-            "date": "2010/11/24",
-            "where" : "ISART Digital",
-            "link" : "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100"
+            "summary"  : "ParisJS Meetup 2",
+            "dtstart"  : "2010-11-24",
+            "location" : "ISART Digital",
+            "url"      : "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100"
         },
 
         {
-            "date" : "2010/10/20",
-            "where" : "Starbucks Coffee Capucines",
-            "link" : "http://barcamp.org/w/page/30731863/jscamp0"
+            "summary"  : "jscamp0",
+            "dtstart"  : "2010-10-20",
+            "location" : "Starbucks Coffee Capucines",
+            "url"      : "http://barcamp.org/w/page/30731863/jscamp0"
         },
 
         {
-            "date" : "2010/10/12",
-            "where" : "af83",
-            "link" : "http://lanyrd.com/2010/first-js-meetup-paris/"
+            "summary"  : "First JS Meetup",
+            "dtstart"  : "2010-10-12",
+            "location" : "af83",
+            "url"      : "http://lanyrd.com/2010/first-js-meetup-paris/"
         }
 ]
