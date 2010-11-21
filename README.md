@@ -4,11 +4,13 @@ This is the source of the parisjs.org website.
 
 ## Add events
 
-Edit meetups.json and add the event.
+Edit index.html and add the event in [hCalendar format](http://microformats.org/wiki/hcalendar).
 
-        {
-            "summary" : "your summary",
-            "dtstart": "YYYY-MM-DD",
-            "location" : "The place",
-            "url" : "http://link for registration/"
-        }
+        <div class="vevent">
+            <h2 class="summary">you title</h2>
+            <p>
+                <span class="dtstart">YYYY-MM-DD</span> at
+                <span class="location">location</span>
+                <a class="url" href="http://example.com/"></a>
+            </p>
+        </div>

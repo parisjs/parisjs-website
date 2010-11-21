@@ -97,10 +97,13 @@ $(function() {
 
         index: function() {
             var meetups  = new Meetups();
-            $.getJSON('/meetups.json', function(result) {
-                _.each(result, function(r) {
-                    meetups.add(new Meetup(r));
-                });
+            $('.content .vevent').each(function(i, el) {
+                meetups.add(new Meetup({
+                    "summary"  : $(this).find('.summary').text(),
+                    "dtstart"  : $(this).find('.dtstart').text(),
+                    "location" : $(this).find('.location').text(),
+                    "url"      : $(this).find('.url').attr('href')
+                }));
                 new IndexView({el         : $(".content"),
                                collection : meetups}).render();
             });
