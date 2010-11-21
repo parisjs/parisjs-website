@@ -11,6 +11,12 @@ $(function() {
             this.set({"dateday"  : date.getDate(),
                       "datemonth": month.toLocaleString(),
                       "dateyear" : date.getFullYear()});
+        },
+
+        getDate : function() {
+            var d = new Date(Date.parse(this.get("date")));
+            d.setHours(23);
+            return d.getTime();
         }
     });
 
@@ -22,14 +28,14 @@ $(function() {
         },
 
         getNextOnes : function() {
-            return new Meetups(this.filter(function(meetup) {
-                return Date.parse(meetup.get("date")) > new Date().getTime();
-            }));
+            return new Meetups(this.filter(_.bind(function(meetup) {
+                return meetup.getDate() > new Date().getTime();
+            }, this)));
         },
 
         getPreviousOnes: function() {
             return new Meetups(this.filter(function(meetup) {
-                return Date.parse(meetup.get("date")) < new Date().getTime();
+                return meetup.getDate() < new Date().getTime();
             }));
         }
     });
