@@ -48,6 +48,7 @@ $(function() {
         },
 
         render: function() {
+            var next = this.collection.getNextOnes();
             $(this.el).html(this.template({
                 l: function(s) {
                     return function(text, render) {
@@ -57,7 +58,7 @@ $(function() {
                 formatdate : function(text, render) {
                     return text;
                 },
-                next: this.collection.getNextOnes().first().toJSON(),
+                next: next.length != 0 ? next.first().toJSON() : null,
                 previous: this.collection.getPreviousOnes().toJSON()
             }));
         }

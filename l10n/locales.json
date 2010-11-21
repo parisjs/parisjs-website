@@ -10,6 +10,7 @@
       "<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github" : "<a href='https://github.com/parisjs/parisjs-website'>Forkez nous</a> sur github",
       "Register and let us know what you want to talk about <a href='{{link}}'> here</a>." : "Enregistrez vous et indiquez les sujets sur lesquels vous voulez parler <a href='{{link}}'> ici</a>.",
       "hosted by " : "hébergé par ",
+      "No event planed, yet." : "Aucun événement prévus, pour l'instant.",
       "month-1" : "janvier",
       "month-2" : "février",
       "month-3" : "mars",
