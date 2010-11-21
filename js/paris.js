@@ -16,7 +16,7 @@ $(function() {
         getDate : function(date) {
             var date = date || this.get("dtstart");
             var dtstart = date.split('-');
-            var d = new Date(dtstart[0], dtstart[1], dtstart[2]);
+            var d = new Date(dtstart[0], dtstart[1] - 1, dtstart[2]);
             d.setHours(23);
             return d;
         }
