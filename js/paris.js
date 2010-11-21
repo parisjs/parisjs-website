@@ -93,9 +93,6 @@ $(function() {
                 // FIXME: it works currently because we have only one route ...
                 that[that.routes[""]]();
             });
-        },
-
-        index: function() {
             var meetups  = new Meetups();
             $('.content .vevent').each(function(i, el) {
                 meetups.add(new Meetup({
@@ -104,9 +101,13 @@ $(function() {
                     "location" : $(this).find('.location').text(),
                     "url"      : $(this).find('.url').attr('href')
                 }));
-                new IndexView({el         : $(".content"),
-                               collection : meetups}).render();
             });
+            this.meetups = meetups;
+        },
+
+        index: function() {
+            new IndexView({el         : $(".content"),
+                           collection : this.meetups}).render();
         }
     });
 
