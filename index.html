@@ -1,42 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Paris JS</title>
-	<link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
-        <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Paris.js - Javascript user group in Paris</title>
+    <link rel="profile" href="http://microformats.org/profile/hcalendar">
+    <link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
+    <link rel="localizations" href="l10n/locales.json" type="application/x-l10n+json"/>
+    <script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/backbone-min.js"></script>
+    <script type="text/javascript" src="js/l10n.min.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/paris.js"></script>
 </head>
 <body>
-    <h1>Paris JS</h1>
+    <h1>Paris.js</h1>
 
     <div class="content">
-        <h2>Events</h2>
-
-        <h3>Next one</h3>
-        <p>
-            <strong>24 November 2010</strong>, hosted by ISART Digital.<br />
-            Register and let us know what you want to talk about <a href="http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100"> here.</a>
-        </p>
-
-        <h3>Older ones</h3>
-        <ul>
-            <li>
-                <a href="http://lanyrd.com/2010/first-js-meetup-paris/">lanyrd.com/2010/first-js-meetup-paris/</a>
-            </li>
-            <li>
-                <a href="http://barcamp.org/jscamp0">barcamp.org/jscamp0</a>
-            </li>
-        </ul>
-
-        <h2>Community</h2>
-        <ul id="list">
-            <li>Follow <a href="http://twitter.com/parisjs">@parisjs</a> on twitter</li>
-            <li>Join <a href="http://groups.google.com/group/parisjs">mailing list</a></li>
-            <li>Join <a href="irc:parisjs@freenode.net">#parisjs</a> on Freenode</li>
-            <li><a href="https://github.com/parisjs/parisjs-website">Fork us</a> on github</li>
-            <li class="csstransforms3d">Do <a href="#" onclick="document.getElementById('list').style.webkitTransform='rotateX(180deg) rotateY(180deg) rotateZ(180deg)';return false;">javascript stuff</a></li>
-        </ul>
+        <!-- vevent database -->
+        <div class="vevent">
+            <h2 class="summary">ParisJS Meetup 3</h2>
+            <p>
+                <span class="dtstart">2011-01-26</span> at
+                <span class="location">Zenexity - Paris 9e</span>
+                <a class="url" href="http://parisjs.eventbrite.com/">parisjs.eventbrite.com</a>
+            </p>
+        </div>
+        <div class="vevent">
+            <h2 class="summary">ParisJS Meetup 2</h2>
+            <p>
+                <span class="dtstart">2010-11-24</span> at
+                <span class="location">ISART Digital</span>
+                <a class="url" href="http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100">http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100</a>
+            </p>
+        </div>
+        <div class="vevent">
+            <h2 class="summary">jscamp0</h2>
+            <p>
+                <span class="dtstart">2010-10-20</span> at
+                <span class="location">Starbucks Coffee Capucines</span>
+                <a class="url" href="http://barcamp.org/w/page/30731863/jscamp0">http://barcamp.org/w/page/30731863/jscamp0</a>
+            </p>
+        </div>
+        <div class="vevent">
+            <h2 class="summary">First JS Meetup</h2>
+            <p>
+                <span class="dtstart">2010-10-12</span> at
+                <span class="location">af83</span>
+                <a class="url" href="http://lanyrd.com/2010/first-js-meetup-paris/">http://lanyrd.com/2010/first-js-meetup-paris/</a>
+            </p>
+        </div>
     </div>
+
+    <ul class="switch_languages">
+        <li data-lang="fr"><img src="img/fr.png" alt="fr" /></li>
+        <li data-lang="en"><img src="img/us.png" alt="en" /></li>
+    </ul>
+
+    <script type="text/template" id="template-index">
+        <h2>{{#l}}Events{{/l}}</h2>
+
+        <h3>{{#l}}Next one{{/l}}</h3>
+        {{#next}}
+        <p class="vevent">
+            <strong class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</strong> : <span class="summary">{{summary}}</span> {{#l}}hosted by {{/l}} <span class="location">{{location}}</span>.<br />
+            {{#l}}<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about.{{/l}}
+        </p>
+        {{/next}}
+        {{^next}}
+        <p>{{#l}}No event planed, yet.{{/l}}</p>
+        {{/next}}
+
+        <h3>{{#l}}Older ones{{/l}}</h3>
+        <ul>
+            {{#previous}}
+            <li class="vevent">
+                <a class="url" href="{{url}}"><span class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</spam> - <span class="summary">{{summary}}</span></a>
+            </li>
+            {{/previous}}
+        </ul>
+
+        <h2>{{#l}}Community{{/l}}</h2>
+        <ul id="list">
+            <li>{{#l}}Follow <a href='http://twitter.com/parisjs'>@parisjs</a> on twitter{{/l}}</li>
+            <li>{{#l}}Join <a href='http://groups.google.com/group/parisjs'>mailing list</a>{{/l}}</li>
+            <li>{{#l}}Join <a href='irc:parisjs@freenode.net'>#parisjs</a> on Freenode{{/l}}</li>
+            <li>{{#l}}<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github{{/l}}</li>
+            <li class="csstransforms3d">{{#l}}Do <a href="#">javascript stuff</a>{{/l}}</li>
+        </ul>
+
+        <a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function' title='JS Function arguments' class="floatright"><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JS Function arguments'/></a>
+
+    </script>
+    <script type="text/javascript" src="js/vapor.min.js"></script>
 </body>
 </html>

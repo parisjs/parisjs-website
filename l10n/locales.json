@@ -1,0 +1,41 @@
+{
+  "fr": {
+      "Events"    : "Evénements",
+      "Next one"  : "Prochain",
+      "Older ones": "Précédents",
+      "Community" : "Communauté",
+      "Follow <a href='http://twitter.com/parisjs'>@parisjs</a> on twitter" : "Suivez <a href='http://twitter.com/parisjs'>@parisjs</a> sur twitter",
+      "Join <a href='http://groups.google.com/group/parisjs'>mailing list</a>": "Rejoignez la <a href='http://groups.google.com/group/parisjs'>liste de diffusion</a>",
+      "Join <a href='irc:parisjs@freenode.net'>#parisjs</a> on Freenode": "Rejoignez <a href='irc:parisjs@freenode.net'>#parisjs</a> sur Freenode",
+      "<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github" : "<a href='https://github.com/parisjs/parisjs-website'>Forkez nous</a> sur github",
+      "<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about." : "<a class='url' href='{{url}}'>Enregistrez vous</a> et indiquez les sujets sur lesquels vous voulez parler.",
+      "hosted by " : "hébergé par ",
+      "No event planed, yet." : "Aucun événement prévus, pour l'instant.",
+      "month-1" : "janvier",
+      "month-2" : "février",
+      "month-3" : "mars",
+      "month-4" : "avril",
+      "month-5" : "mai",
+      "month-6" : "juin",
+      "month-7" : "juillet",
+      "month-9" : "aout",
+      "month-9" : "septembre",
+      "month-10" : "octobre",
+      "month-11" : "novembre",
+      "month-12" : "décembre"
+  },
+  "en" : {
+      "month-1" : "January",
+      "month-2" : "February",
+      "month-3" : "March",
+      "month-4" : "April",
+      "month-5" : "May",
+      "month-6" : "June",
+      "month-7" : "July",
+      "month-9" : "August",
+      "month-9" : "September",
+      "month-10" : "October",
+      "month-11" : "November",
+      "month-12" : "December"
+  }
+}
