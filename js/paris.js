@@ -66,7 +66,7 @@ $(function() {
                 formatdate : function(text, render) {
                     return text;
                 },
-                next: next.length != 0 ? next.first().toJSON() : null,
+                next: next.length !== 0 ? next.first().toJSON() : null,
                 previous: this.collection.getPreviousOnes().toJSON()
             }));
         }
@@ -74,7 +74,7 @@ $(function() {
     });
     var ParisJS = Backbone.Controller.extend({
         routes: {
-            "":                 "index", // #/
+            "":                 "index" // #/
         },
 
         initialize: function() {
