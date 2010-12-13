@@ -52,7 +52,15 @@ $(function() {
         },
 
         transform: function() {
-            $("#list").get(0).style.webkitTransform = 'rotateX(180deg) rotateY(180deg) rotateZ(180deg)';
+            var elt = $("#list").get(0);
+
+            var onTransitionEnd = function (evt) {
+                evt.stopPropagation();
+                elt.style.webkitTransform = 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
+                elt.removeEventListener('webkitTransitionEnd', onTransitionEnd, false);
+            }
+            elt.addEventListener('webkitTransitionEnd', onTransitionEnd, false);
+            elt.style.webkitTransform = 'rotateX(180deg) rotateY(360deg) rotateZ(180deg) ';
         },
 
         render: function() {
