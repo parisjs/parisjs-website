@@ -11,6 +11,11 @@ h1, h2, h3 {
     font-family: 'Lobster', arial, serif;
 }
 
+p, li {
+    font-family: 'Molengo', arial, serif;
+    font-size:13pt;
+}
+
 h1 {
     margin: 0.3em 1em;
     font-size: 4em;
@@ -89,6 +94,7 @@ a:hover {
     -webkit-border-radius: 1em;
     background-color: white;
 }
+
 .switch_languages li {
     display: inline;
     padding: 0;
