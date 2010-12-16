@@ -1,10 +1,13 @@
 body {
-    -webkit-perspective: 600;
-    -webkit-transform-style: preserves-3d;
-    background:  #CF9B00;
-    margin: 0 3em 3em;
+    margin:0;
     background: #FFCC00;
     font-family: 'serif';
+}
+
+.main {
+    margin: 0 3em 3em;
+    -webkit-perspective: 600;
+    -webkit-transform-style: preserves-3d;
 }
 
 h1, h2, h3 {
@@ -100,4 +103,22 @@ a:hover {
     padding: 0;
     margin: 0;
     cursor: pointer;
+}
+
+.promotejs img {
+    border:none;
+}
+
+.forkme {
+    position:absolute;
+    margin:0;
+    padding:0;
+    width:149px;
+    height:149px;
+    top:0;
+    left:0;
+}
+
+.forkme img {
+    border:none;
 }
