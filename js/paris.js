@@ -75,7 +75,8 @@ $(function() {
                     return text;
                 },
                 next: next.length !== 0 ? next.first().toJSON() : null,
-                previous: this.collection.getPreviousOnes().toJSON()
+                // FIXME Stupid fix: au moins on peut voire le prochain event sur IE...
+                previous: $.browser.msie ? null : this.collection.getPreviousOnes().toJSON()
             }));
         }
 
