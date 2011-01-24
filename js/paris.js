@@ -26,7 +26,7 @@ $(function() {
         model : Meetup,
 
         comparator: function(meetup) {
-            return meetup.getDate().getTime();
+            return -meetup.getDate().getTime();
         },
 
         getNextOnes : function() {
