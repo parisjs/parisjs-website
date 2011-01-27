@@ -27,6 +27,13 @@
         <div class="content">
             <!-- vevent database -->
             <div class="vevent">
+                <h2 class="summary">ParisJS Meetup 4</h2>
+                <p>
+                    <span class="dtstart">2011-02-23</span> at
+                    <span class="location">La Cantine - Paris 2e</span>
+                </p>
+            </div>
+            <div class="vevent">
                 <h2 class="summary">ParisJS Meetup 3</h2>
                 <p>
                     <span class="dtstart">2011-01-26</span> at
@@ -73,7 +80,7 @@
         <p class="vevent">
             <a type="text/calendar" title="Download iCal" href="http://h2vx.com/ics/parisjs.org"><img src="img/calendar_add.gif"></a>
             <strong class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</strong> : <span class="summary">{{summary}}</span> {{#l}}hosted by {{/l}} <span class="location">{{location}}</span>.<br />
-            {{#l}}<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about.{{/l}}
+            {{#l}}{{#url}}<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about.{{/url}}{{/l}}
         </p>
         {{/next}}
         {{^next}}
