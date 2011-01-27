@@ -6,65 +6,72 @@
     <link rel="profile" href="http://microformats.org/profile/hcalendar">
     <link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
     <link rel="localizations" href="l10n/locales.json" type="application/x-l10n+json"/>
     <script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
     <script type="text/javascript" src="js/underscore-min.js"></script>
+    <!--[if IE]> <script type="text/javascript" src="js/json2.js"></script> <![endif]-->
     <script type="text/javascript" src="js/backbone-min.js"></script>
     <script type="text/javascript" src="js/l10n.min.js"></script>
     <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/paris.js"></script>
 </head>
 <body>
-    <h1>Paris.js</h1>
+    <a href="https://github.com/parisjs/parisjs-website" class="forkme">
+        <img  src="img/fork-us.png" alt="Fork us on GitHub">
+    </a>
 
-    <div class="content">
-        <!-- vevent database -->
-        <div class="vevent">
-            <h2 class="summary">ParisJS Meetup 3</h2>
-            <p>
-                <span class="dtstart">2011-01-26</span> at
-                <span class="location">Zenexity - Paris 9e</span>
-                <a class="url" href="http://parisjs.eventbrite.com/">parisjs.eventbrite.com</a>
-            </p>
+    <div class="main">
+        <h1>Paris.js</h1>
+        <div class="content">
+            <!-- vevent database -->
+            <div class="vevent">
+                <h2 class="summary">ParisJS Meetup 3</h2>
+                <p>
+                    <span class="dtstart">2011-01-26</span> at
+                    <span class="location">Zenexity - Paris 9e</span>
+                    <a class="url" href="http://parisjs.eventbrite.com/">parisjs.eventbrite.com</a>
+                </p>
+            </div>
+            <div class="vevent">
+                <h2 class="summary">ParisJS Meetup 2</h2>
+                <p>
+                    <span class="dtstart">2010-11-24</span> at
+                    <span class="location">ISART Digital</span>
+                    <a class="url" href="http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100">http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100</a>
+                </p>
+            </div>
+            <div class="vevent">
+                <h2 class="summary">jscamp0</h2>
+                <p>
+                    <span class="dtstart">2010-10-20</span> at
+                    <span class="location">Starbucks Coffee Capucines</span>
+                    <a class="url" href="http://barcamp.org/w/page/30731863/jscamp0">http://barcamp.org/w/page/30731863/jscamp0</a>
+                </p>
+            </div>
+            <div class="vevent">
+                <h2 class="summary">First JS Meetup</h2>
+                <p>
+                    <span class="dtstart">2010-10-12</span> at
+                    <span class="location">af83</span>
+                    <a class="url" href="http://lanyrd.com/2010/first-js-meetup-paris/">http://lanyrd.com/2010/first-js-meetup-paris/</a>
+                </p>
+            </div>
         </div>
-        <div class="vevent">
-            <h2 class="summary">ParisJS Meetup 2</h2>
-            <p>
-                <span class="dtstart">2010-11-24</span> at
-                <span class="location">ISART Digital</span>
-                <a class="url" href="http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100">http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100</a>
-            </p>
-        </div>
-        <div class="vevent">
-            <h2 class="summary">jscamp0</h2>
-            <p>
-                <span class="dtstart">2010-10-20</span> at
-                <span class="location">Starbucks Coffee Capucines</span>
-                <a class="url" href="http://barcamp.org/w/page/30731863/jscamp0">http://barcamp.org/w/page/30731863/jscamp0</a>
-            </p>
-        </div>
-        <div class="vevent">
-            <h2 class="summary">First JS Meetup</h2>
-            <p>
-                <span class="dtstart">2010-10-12</span> at
-                <span class="location">af83</span>
-                <a class="url" href="http://lanyrd.com/2010/first-js-meetup-paris/">http://lanyrd.com/2010/first-js-meetup-paris/</a>
-            </p>
-        </div>
+
+        <ul class="switch_languages">
+            <li data-lang="fr"><img src="img/fr.png" alt="fr" /></li>
+            <li data-lang="en"><img src="img/us.png" alt="en" /></li>
+        </ul>
     </div>
-
-    <ul class="switch_languages">
-        <li data-lang="fr"><img src="img/fr.png" alt="fr" /></li>
-        <li data-lang="en"><img src="img/us.png" alt="en" /></li>
-    </ul>
-
     <script type="text/template" id="template-index">
         <h2>{{#l}}Events{{/l}}</h2>
 
         <h3>{{#l}}Next one{{/l}}</h3>
         {{#next}}
         <p class="vevent">
+            <a type="text/calendar" title="Download iCal" href="http://h2vx.com/ics/parisjs.org"><img src="img/calendar_add.gif"></a>
             <strong class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</strong> : <span class="summary">{{summary}}</span> {{#l}}hosted by {{/l}} <span class="location">{{location}}</span>.<br />
             {{#l}}<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about.{{/l}}
         </p>
@@ -88,10 +95,11 @@
             <li>{{#l}}Join <a href='http://groups.google.com/group/parisjs'>mailing list</a>{{/l}}</li>
             <li>{{#l}}Join <a href='irc:parisjs@freenode.net'>#parisjs</a> on Freenode{{/l}}</li>
             <li>{{#l}}<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github{{/l}}</li>
+            <li>{{#l}}<a type='text/calendar' href='webcal://h2vx.com/ics/parisjs.org'>Subscribe</a> to iCal{{/l}}</li>
             <li class="csstransforms3d">{{#l}}Do <a href="#">javascript stuff</a>{{/l}}</li>
         </ul>
 
-        <a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function' title='JS Function arguments' class="floatright"><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JS Function arguments'/></a>
+        <a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function' title='JS Function arguments' class="promotejs"><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JS Function arguments'/></a>
 
     </script>
     <script type="text/javascript" src="js/vapor.min.js"></script>

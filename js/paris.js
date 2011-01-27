@@ -26,7 +26,7 @@ $(function() {
         model : Meetup,
 
         comparator: function(meetup) {
-            return meetup.getDate().getTime();
+            return -meetup.getDate().getTime();
         },
 
         getNextOnes : function() {
@@ -52,7 +52,15 @@ $(function() {
         },
 
         transform: function() {
-            $("#list").get(0).style.webkitTransform = 'rotateX(180deg) rotateY(180deg) rotateZ(180deg)';
+            var elt = $("#list").get(0);
+
+            var onTransitionEnd = function (evt) {
+                evt.stopPropagation();
+                elt.style.webkitTransform = 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
+                elt.removeEventListener('webkitTransitionEnd', onTransitionEnd, false);
+            }
+            elt.addEventListener('webkitTransitionEnd', onTransitionEnd, false);
+            elt.style.webkitTransform = 'rotateX(180deg) rotateY(360deg) rotateZ(180deg) ';
         },
 
         render: function() {
@@ -66,15 +74,16 @@ $(function() {
                 formatdate : function(text, render) {
                     return text;
                 },
-                next: next.length != 0 ? next.first().toJSON() : null,
-                previous: this.collection.getPreviousOnes().toJSON()
+                next: next.length !== 0 ? next.first().toJSON() : null,
+                // FIXME Stupid fix: au moins on peut voire le prochain event sur IE...
+                previous: $.browser.msie ? null : this.collection.getPreviousOnes().toJSON()
             }));
         }
 
     });
     var ParisJS = Backbone.Controller.extend({
         routes: {
-            "":                 "index", // #/
+            "":                 "index" // #/
         },
 
         initialize: function() {
@@ -93,17 +102,21 @@ $(function() {
                 // FIXME: it works currently because we have only one route ...
                 that[that.routes[""]]();
             });
-            var meetups  = new Meetups();
-            $('.content .vevent').each(function(i, el) {
-                meetups.add(new Meetup({
+            this.meetups = new Meetups().refresh(this._loadInitialData());
+        },
+
+	_loadInitialData: function() {
+	    var data = [];
+	    $('.content .vevent').each(function(i, el) {
+                data.push({
                     "summary"  : $(this).find('.summary').text(),
                     "dtstart"  : $(this).find('.dtstart').text(),
                     "location" : $(this).find('.location').text(),
                     "url"      : $(this).find('.url').attr('href')
-                }));
+                });
             });
-            this.meetups = meetups;
-        },
+	    return data;
+	},
 
         index: function() {
             new IndexView({el         : $(".content"),
