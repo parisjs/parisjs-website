@@ -36,13 +36,15 @@ $(function() {
     loadTwitter();
 });
 
+Function.prototype.delay = function(s){ setTimeout(this, s*1000); };
+
 function loadEvents(tries) {
     $.ajax({
         url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true",
         jsonp: "callback",
         success: function(result) {
             var events = [];
-            if (result.query.count == 0 && tries < 2) {
+            if (result.query.count === 0 && tries < 2) {
                 // Once in a while YQL sends an empty result: try again!
                 loadEvents(tries + 1);
                 return;
@@ -72,13 +74,16 @@ function loadTwitter() {
         success: function(result) {
             console.log(result);
             var $twitter = $("#twitts");
+            $(".twittbox").remove();
             $(result.results).each(function(){
                 $twitter.append(makeTwitt(this));
             });
+            loadTwitter.delay(30);
         },
         error: function(XHR, textStatus, errorThrown) {
             console.log(textStatus);
             console.log(errorThrown);
+            loadTwitter.delay(30);
         }
     })
 }
