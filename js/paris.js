@@ -1,5 +1,8 @@
 (function(){
 
+if (typeof console == "undefined" || typeof console.log == "undefined")
+    var console = { log: function() {} };
+
 var MONTH = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -62,15 +65,20 @@ function loadEvents(tries) {
 }
 
 function loadTwitter() {
-    $.ajax({
+    $.jsonp({
         url: "http://search.twitter.com/search.json?q=parisjs&rpp=10",
         dataType: "jsonp",
+        callbackParameter: "callback",
         success: function(result) {
             console.log(result);
             var $twitter = $("#twitts");
             $(result.results).each(function(){
                 $twitter.append(makeTwitt(this));
             });
+        },
+        error: function(XHR, textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
         }
     })
 }
