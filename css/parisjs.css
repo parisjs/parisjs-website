@@ -25,6 +25,20 @@ h1 {
     font-weight: normal;
 }
 
+#twitter {
+    float: right;
+    width: 300px;
+}
+
+.twittbox {
+    background-color: #FFE587;
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    margin-bottom: 20px;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.8em;
+}
 
 @-webkit-keyframes glow {
     from {

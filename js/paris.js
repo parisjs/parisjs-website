@@ -29,19 +29,27 @@ var OLDEVENTS = [
 ];
 
 $(function() {
+    loadEvents(0);
+    loadTwitter();
+});
 
+function loadEvents(tries) {
     $.ajax({
         url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true",
         jsonp: "callback",
         success: function(result) {
-            console.log(result);
             var events = [];
-            if (result.query.count > 0)
+            if (result.query.count == 0 && tries < 2) {
+                // Once in a while YQL sends an empty result: try again!
+                loadEvents(tries + 1);
+                return;
+            }
+            if (result.query.count > 0) {
                 events = events.concat(result.query.results.events.event);
+            }
             events = events.concat(OLDEVENTS);
             var $meetups = $("#meetups");
             var $old = $("#oldmeetups");
-            console.log(events);
             $(events).each(function(){
                 if (this.status == "Completed") {
                     $old.append(oldEvent(this));
@@ -51,8 +59,21 @@ $(function() {
             });
         }
     });
+}
 
-});
+function loadTwitter() {
+    $.ajax({
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=10",
+        dataType: "jsonp",
+        success: function(result) {
+            console.log(result);
+            var $twitter = $("#twitts");
+            $(result.results).each(function(){
+                $twitter.append(makeTwitt(this));
+            });
+        }
+    })
+}
 
 function makeEvent(event) {
     return "<div class='vevent'><p>"
@@ -60,8 +81,15 @@ function makeEvent(event) {
         + "<strong class='dtstart'>" + formatDate(event.start_date.split(" ")[0]) + "</strong>: "
         +  event.title + " at "
         + "<span class='location'>" + event.venue.name + "</span>"
-        + " - <a href='" + event.url + "'>inscription</a></p>"
+        + " - <a href='" + event.url + "'>inscription</a> "
+        + "(" + event.num_attendee_rows + " participants)"
+        + "</p>"
     + "</div>";
+}
+
+function makeTwitt(twitt) {
+    var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + linkify(twitt.text);
+    return $("<div></div>").addClass("twittbox").html(body);
 }
 
 function oldEvent(event) {
@@ -71,6 +99,13 @@ function oldEvent(event) {
             .html('<span class="dtstart" title="'+date+'">'+formatDate(date)+'</span> - '
                   + '<span class="summary">' + event.title + '</span>')
         );
+}
+
+function linkify(text) {
+  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  return text.replace(exp,"<a href='$1'>$1</a>")
+             .replace(/@(\w+)/ig, "<a href='http://twitter.com/$1'>@$1</a>")
+             .replace(/(#[^\s]+)/ig, "<a href='http://twitter.com/search?q=$1'>$1</a>");
 }
 
 function formatDate(date) {
