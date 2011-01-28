@@ -7,14 +7,7 @@
     <link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-    <link rel="localizations" href="l10n/locales.json" type="application/x-l10n+json"/>
-    <script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
     <script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
-    <script type="text/javascript" src="js/underscore-min.js"></script>
-    <!--[if IE]> <script type="text/javascript" src="js/json2.js"></script> <![endif]-->
-    <script type="text/javascript" src="js/backbone-min.js"></script>
-    <script type="text/javascript" src="js/l10n.min.js"></script>
-    <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/paris.js"></script>
 </head>
 <body>
@@ -25,24 +18,14 @@
     <div class="main">
         <h1>Paris.js</h1>
         <div class="content">
-            <!-- vevent database -->
+            <h2>Meetups à venir</h2>
+            <div id="meetups"></div>
+
+            <h2>Meetups passés</h2>
+            <div id="oldmeetups"></div>
+
             <div class="vevent">
-                <h2 class="summary">ParisJS Meetup 4</h2>
-                <p>
-                    <span class="dtstart">2011-02-23</span> at
-                    <span class="location">La Cantine - Paris 2e</span>
-                </p>
-            </div>
-            <div class="vevent">
-                <h2 class="summary">ParisJS Meetup 3</h2>
-                <p>
-                    <span class="dtstart">2011-01-26</span> at
-                    <span class="location">Zenexity - Paris 9e</span>
-                    <a class="url" href="http://parisjs.eventbrite.com/">parisjs.eventbrite.com</a>
-                </p>
-            </div>
-            <div class="vevent">
-                <h2 class="summary">ParisJS Meetup 2</h2>
+                <h3 class="summary">ParisJS Meetup 2</h3>
                 <p>
                     <span class="dtstart">2010-11-24</span> at
                     <span class="location">ISART Digital</span>
@@ -50,7 +33,7 @@
                 </p>
             </div>
             <div class="vevent">
-                <h2 class="summary">jscamp0</h2>
+                <h3 class="summary">jscamp0</h3>
                 <p>
                     <span class="dtstart">2010-10-20</span> at
                     <span class="location">Starbucks Coffee Capucines</span>
@@ -58,7 +41,7 @@
                 </p>
             </div>
             <div class="vevent">
-                <h2 class="summary">First JS Meetup</h2>
+                <h3 class="summary">First JS Meetup</h3>
                 <p>
                     <span class="dtstart">2010-10-12</span> at
                     <span class="location">af83</span>
@@ -67,48 +50,7 @@
             </div>
         </div>
 
-        <ul class="switch_languages">
-            <li data-lang="fr"><img src="img/fr.png" alt="fr" /></li>
-            <li data-lang="en"><img src="img/us.png" alt="en" /></li>
-        </ul>
     </div>
-    <script type="text/template" id="template-index">
-        <h2>{{#l}}Events{{/l}}</h2>
-
-        <h3>{{#l}}Next one{{/l}}</h3>
-        {{#next}}
-        <p class="vevent">
-            <a type="text/calendar" title="Download iCal" href="http://h2vx.com/ics/parisjs.org"><img src="img/calendar_add.gif"></a>
-            <strong class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</strong> : <span class="summary">{{summary}}</span> {{#l}}hosted by {{/l}} <span class="location">{{location}}</span>.<br />
-            {{#l}}{{#url}}<a class='url' href='{{url}}'>Register</a> and let us know what you want to talk about.{{/url}}{{/l}}
-        </p>
-        {{/next}}
-        {{^next}}
-        <p>{{#l}}No event planed, yet.{{/l}}</p>
-        {{/next}}
-
-        <h3>{{#l}}Older ones{{/l}}</h3>
-        <ul>
-            {{#previous}}
-            <li class="vevent">
-                <a class="url" href="{{url}}"><span class="dtstart" title="{{dtstart}}">{{dateday}} {{datemonth}} {{dateyear}}</spam> - <span class="summary">{{summary}}</span></a>
-            </li>
-            {{/previous}}
-        </ul>
-
-        <h2>{{#l}}Community{{/l}}</h2>
-        <ul id="list">
-            <li>{{#l}}Follow <a href='http://twitter.com/parisjs'>@parisjs</a> on twitter{{/l}}</li>
-            <li>{{#l}}Join <a href='http://groups.google.com/group/parisjs'>mailing list</a>{{/l}}</li>
-            <li>{{#l}}Join <a href='irc:parisjs@freenode.net'>#parisjs</a> on Freenode{{/l}}</li>
-            <li>{{#l}}<a href='https://github.com/parisjs/parisjs-website'>Fork us</a> on github{{/l}}</li>
-            <li>{{#l}}<a type='text/calendar' href='webcal://h2vx.com/ics/parisjs.org'>Subscribe</a> to iCal{{/l}}</li>
-            <li class="csstransforms3d">{{#l}}Do <a href="#">javascript stuff</a>{{/l}}</li>
-        </ul>
-
-        <a href='https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function' title='JS Function arguments' class="promotejs"><img src='http://static.jsconf.us/promotejsh.gif' height='150' width='180' alt='JS Function arguments'/></a>
-
-    </script>
     <script type="text/javascript" src="js/vapor.min.js"></script>
 </body>
 </html>
