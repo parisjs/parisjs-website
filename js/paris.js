@@ -68,7 +68,7 @@ function loadEvents(tries) {
 
 function loadTwitter() {
     $.jsonp({
-        url: "http://search.twitter.com/search.json?q=parisjs&rpp=6",
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8",
         dataType: "jsonp",
         callbackParameter: "callback",
         success: function(result) {
