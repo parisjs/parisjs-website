@@ -1,129 +1,131 @@
-/**
- * ParisJS Website
- * (c) 2010 François de Metz
- * Released under GPL 3
- */
+(function(){
+
+if (typeof console == "undefined" || typeof console.log == "undefined")
+    var console = { log: function() {} };
+
+var MONTH = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+var ICAL = "http://h2vx.com/ics/www.eventbrite.com/org/862067525";
+
+var OLDEVENTS = [
+    {
+        title: "ParisJS Meetup 2",
+        start_date: "2010-11-24",
+        url: "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100",
+        status: "Completed"
+    },
+    {
+        title: "jscamp0",
+        start_date: "2010-10-20",
+        url: "http://barcamp.org/w/page/30731863/jscamp0",
+        status: "Completed"
+    },
+    {
+        title: "First ParisJS Meetup",
+        start_date: "2010-10-12",
+        url: "http://lanyrd.com/2010/first-js-meetup-paris/",
+        status: "Completed"
+    }
+];
+
 $(function() {
-    var Meetup = Backbone.Model.extend({
-        initialize : function(attr) {
-            var date = this.getDate(attr.dtstart);
-            var month = "month-"+ (date.getMonth() + 1);
-            this.set({"dateday"  : date.getDate(),
-                      "datemonth": month.toLocaleString(),
-                      "dateyear" : date.getFullYear()});
-        },
-
-        getDate : function(date) {
-            var date = date || this.get("dtstart");
-            var dtstart = date.split('-');
-            var d = new Date(dtstart[0], dtstart[1] - 1, dtstart[2]);
-            d.setHours(23);
-            return d;
-        }
-    });
-
-    var Meetups = Backbone.Collection.extend({
-        model : Meetup,
-
-        comparator: function(meetup) {
-            return -meetup.getDate().getTime();
-        },
-
-        getNextOnes : function() {
-            return new Meetups(this.filter(_.bind(function(meetup) {
-                return meetup.getDate().getTime() > new Date().getTime();
-            }, this)));
-        },
-
-        getPreviousOnes: function() {
-            return new Meetups(this.filter(function(meetup) {
-                return meetup.getDate().getTime() < new Date().getTime();
-            }));
-        }
-    });
-
-    var IndexView = Backbone.View.extend({
-        template: function(context) {
-            return Mustache.to_html($('#template-index').html(), context);
-        },
-
-        events: {
-            "click .csstransforms3d a" : "transform"
-        },
-
-        transform: function() {
-            var elt = $("#list").get(0);
-
-            var onTransitionEnd = function (evt) {
-                evt.stopPropagation();
-                elt.style.webkitTransform = 'rotateX(0deg) rotateY(0deg) rotateZ(0deg)';
-                elt.removeEventListener('webkitTransitionEnd', onTransitionEnd, false);
-            }
-            elt.addEventListener('webkitTransitionEnd', onTransitionEnd, false);
-            elt.style.webkitTransform = 'rotateX(180deg) rotateY(360deg) rotateZ(180deg) ';
-        },
-
-        render: function() {
-            var next = this.collection.getNextOnes();
-            $(this.el).html(this.template({
-                l: function(s) {
-                    return function(text, render) {
-                        return render(text.toLocaleString());
-                    }
-                },
-                formatdate : function(text, render) {
-                    return text;
-                },
-                next: next.length !== 0 ? next.first().toJSON() : null,
-                // FIXME Stupid fix: au moins on peut voire le prochain event sur IE...
-                previous: $.browser.msie ? null : this.collection.getPreviousOnes().toJSON()
-            }));
-        }
-
-    });
-    var ParisJS = Backbone.Controller.extend({
-        routes: {
-            "":                 "index" // #/
-        },
-
-        initialize: function() {
-            if (Modernizr.localstorage && window.localStorage.lang) {
-                String.locale = window.localStorage.lang;
-            }
-            var that = this;
-            $(".switch_languages li").click(function(e) {
-                // save current selection
-                String.locale = $(this).data("lang");
-                // save for future visits
-                if (Modernizr.localstorage) {
-                    window.localStorage.lang = String.locale;
-                }
-                // redraw current page
-                // FIXME: it works currently because we have only one route ...
-                that[that.routes[""]]();
-            });
-            this.meetups = new Meetups().refresh(this._loadInitialData());
-        },
-
-	_loadInitialData: function() {
-	    var data = [];
-	    $('.content .vevent').each(function(i, el) {
-                data.push({
-                    "summary"  : $(this).find('.summary').text(),
-                    "dtstart"  : $(this).find('.dtstart').text(),
-                    "location" : $(this).find('.location').text(),
-                    "url"      : $(this).find('.url').attr('href')
-                });
-            });
-	    return data;
-	},
-
-        index: function() {
-            new IndexView({el         : $(".content"),
-                           collection : this.meetups}).render();
-        }
-    });
-
-    new ParisJS();
-    Backbone.history.start();
+    loadEvents(0);
+    loadTwitter();
 });
+
+Function.prototype.delay = function(s){ setTimeout(this, s*1000); };
+
+function loadEvents(tries) {
+    $.ajax({
+        url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true",
+        jsonp: "callback",
+        success: function(result) {
+            var events = [];
+            if (result.query.count === 0 && tries < 2) {
+                // Once in a while YQL sends an empty result: try again!
+                loadEvents(tries + 1);
+                return;
+            }
+            if (result.query.count > 0) {
+                events = events.concat(result.query.results.events.event);
+            }
+            events = events.concat(OLDEVENTS);
+            var $meetups = $("#meetups");
+            var $old = $("#oldmeetups");
+            $(events).each(function(){
+                if (this.status == "Completed") {
+                    $old.append(oldEvent(this));
+                } else {
+                    $meetups.append(makeEvent(this));
+                }
+            });
+        }
+    });
+}
+
+function loadTwitter() {
+    $.jsonp({
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=10",
+        dataType: "jsonp",
+        callbackParameter: "callback",
+        success: function(result) {
+            console.log(result);
+            var $twitter = $("#twitts");
+            $(".twittbox").remove();
+            $(result.results).each(function(){
+                $twitter.append(makeTwitt(this));
+            });
+            loadTwitter.delay(30);
+        },
+        error: function(XHR, textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
+            loadTwitter.delay(30);
+        }
+    })
+}
+
+function makeEvent(event) {
+    return "<div class='vevent'><p>"
+        + '<a type="text/calendar" title="Download iCal" href="'+ICAL+'"><img src="img/calendar_add.gif"></a> '
+        + "<strong class='dtstart'>" + formatDate(event.start_date.split(" ")[0]) + "</strong>: "
+        +  event.title + " at "
+        + "<span class='location'>" + event.venue.name + "</span>"
+        + " - <a href='" + event.url + "'>inscription</a> "
+        + "(" + event.num_attendee_rows + " participants)"
+        + "</p>"
+    + "</div>";
+}
+
+function makeTwitt(twitt) {
+    var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + linkify(twitt.text);
+    return $("<div></div>").addClass("twittbox").html(body);
+}
+
+function oldEvent(event) {
+    var date = event.start_date.split(" ")[0];
+    return $('<li></li>').addClass("vevent")
+        .append($('<a></a>').addClass('url').attr('href', event.url)
+            .html('<span class="dtstart" title="'+date+'">'+formatDate(date)+'</span> - '
+                  + '<span class="summary">' + event.title + '</span>')
+        );
+}
+
+function linkify(text) {
+  var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  return text.replace(exp,"<a href='$1'>$1</a>")
+             .replace(/@(\w+)/ig, "<a href='http://twitter.com/$1'>@$1</a>")
+             .replace(/(#[^\s]+)/ig, "<a href='http://twitter.com/search?q=$1'>$1</a>");
+}
+
+function formatDate(date) {
+    var year = date.split("-")[0];
+    var month = date.split("-")[1];
+    var day = date.split("-")[2];
+    return MONTH[month -1] + " " + day + ", " + year;
+}
+
+})();
