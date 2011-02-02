@@ -38,6 +38,7 @@ h1 {
     margin-bottom: 12px;
     padding: 5px 10px 5px 10px;
     font-size: 0.8em;
+    border: solid 2px white;
 }
 
 @-webkit-keyframes glow {
@@ -60,7 +61,6 @@ h1 {
     text-shadow: -3px -3px 60px #fff1ba;
 }
 
-
 h2, h3 {
     color: #4F4005;
     margin-top: 0.2em;
@@ -79,6 +79,13 @@ h2 {
     background-color: #FFF1BA;
 }
 
+.shadow {
+    -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+	-moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+	-o-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
+}
+
 ul {
     -webkit-transition: -webkit-transform 1s ease-in;
 }
@@ -91,32 +98,9 @@ a {
     color: #4F4005;
     text-decoration:underline;
 }
+
 a:hover {
     text-decoration: none;
-}
-
-.no-csstransforms3d .csstransforms3d {
-    display: none;
-}
-
-.switch_languages {
-    position: absolute;
-    top: 0;
-    right: 1em;
-    padding: 1em;
-    margin: 0;
-    list-style-type: none;
-    border-radius: 1em;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    background-color: white;
-}
-
-.switch_languages li {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
 }
 
 .promotejs img {
@@ -135,4 +119,13 @@ a:hover {
 
 img {
     border:none;
+}
+
+.vevent p:nth-child(1) {
+    font-size: 1.2em;
+    text-shadow: 0 1px 1px #f8fcee;
+}
+
+.vevent p:nth-child(2) {
+    max-width:650px;
 }

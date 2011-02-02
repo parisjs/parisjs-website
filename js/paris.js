@@ -97,12 +97,13 @@ function makeEvent(event) {
         + " - <a href='" + event.url + "'>inscription</a> "
         + "(" + event.num_attendee_rows + " participants)"
         + "</p>"
+        + event.description
     + "</div>";
 }
 
 function makeTwitt(twitt) {
     var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + linkify(twitt.text);
-    return $("<div></div>").addClass("twittbox").html(body);
+    return $("<div></div>").addClass("twittbox").addClass("shadow").html(body);
 }
 
 function oldEvent(event) {
