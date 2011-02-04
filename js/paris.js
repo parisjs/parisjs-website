@@ -1,7 +1,8 @@
-(function(){
+(function($){
 
-if (typeof console == "undefined" || typeof console.log == "undefined")
+if (typeof console == "undefined" || typeof console.log == "undefined") {
     var console = { log: function() {} };
+}
 
 var MONTH = [
     "January", "February", "March", "April", "May", "June",
@@ -32,6 +33,14 @@ var ParisJS = {
     ]
 }
 
+$.fn.reverse = function(fn) {
+   var i = this.length;
+   while(i) {
+       i--;
+       fn.call(this[i], i, this[i])
+   }
+};
+
 var Meetups = {};
 
 Meetups.init = function() {
@@ -55,7 +64,7 @@ Meetups.load = function(tries) {
             events = events.concat(ParisJS.OLDEVENTS);
             var $meetups = $("#meetups");
             var $old = $("#oldmeetups");
-            $(events).each(function(){
+            $(events).reverse(function(){
                 if (this.status == "Completed") {
                     $old.append(Meetups.oldEvent(this));
                 } else {
@@ -77,26 +86,32 @@ Meetups.oldEvent = function(event) {
         );
 }
 
-
-var Twitter = {};
+var Twitter = {
+    max: 6,
+    last_id: null
+};
 
 Twitter.init = function() {
+    this.$twitter = $("#twitts");
     Twitter.refresh();
     setInterval(Twitter.refresh, 10 * 1000);
 }
 
 Twitter.refresh = function() {
     $.jsonp({
-        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8",
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8"
+            + "&result_type=recent"
+            + (Twitter.last_id ? "&since_id=" + Twitter.last_id : ""),
         dataType: "jsonp",
         callbackParameter: "callback",
         success: function(result) {
-            console.log(result);
-            var $twitter = $("#twitts");
-            $(".twittbox").remove();
-            $(result.results).each(function(){
-                $twitter.append(Twitter.makeTwitt(this));
+            $(result.results).reverse(function(){
+                if (this.id != Twitter.last_id)
+                    Twitter.addTwitt(this, Twitter.last_id == null);
             });
+            if (result.results.length > 0) {
+                Twitter.last_id = result.results[0].id;
+            }
         },
         error: function(XHR, textStatus, errorThrown) {
             console.log(textStatus);
@@ -105,9 +120,15 @@ Twitter.refresh = function() {
     })
 }
 
-Twitter.makeTwitt = function(twitt) {
+Twitter.addTwitt = function(twitt, initial) {
+    while ($(".twittbox", this.$twitter).size() >= this.max) {
+        $(".twittbox", this.$twitter).last().remove();
+    }
     var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + Utils.linkify(twitt.text);
-    return $("<div></div>").addClass("twittbox").addClass("shadow").html(body);
+    var newTwitt = $("<div class='twittbox shadow' style='display:none'></div>").html(body)
+    this.$twitter.prepend(newTwitt);
+    if (initial) newTwitt.show();
+    else newTwitt.slideDown();
 }
 
 var Utils = {
@@ -133,4 +154,4 @@ $(function() {
     Twitter.init();
 });
 
-})();
+})(jQuery);
