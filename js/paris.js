@@ -62,6 +62,8 @@ Meetups.load = function(tries) {
                     $meetups.append($("#eventTmpl").tmpl({event: this}));
                 }
             });
+            $("#eventsSpinner").hide();
+            $("#events").show();
         }
     });
 }
