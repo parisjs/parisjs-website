@@ -53,6 +53,9 @@ Meetups.load = function(tries) {
         jsonp: "callback",
         success: function(result) {
             var events = [];
+            if (typeof result == "string") {
+                result = $.parseJSON(result);
+            }
             if (result.query.count === 0 && tries < 2) {
                 // Once in a while YQL sends an empty result: try again!
                 Meetups.load(tries + 1);
