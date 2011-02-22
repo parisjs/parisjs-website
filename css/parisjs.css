@@ -124,6 +124,15 @@ a:hover {
     height:149px;
     top:0;
     left:0;
+    opacity:0.3;
+    z-index:9999;
+    -webkit-transition-duration:500ms;
+    -moz-transition-duration:500ms;
+    -o-transition-duration:500ms;    
+}
+
+.forkme:hover{
+  opacity:0.9;
 }
 
 img {
