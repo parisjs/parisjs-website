@@ -128,7 +128,7 @@ Twitter.addTwitt = function(twitt, initial) {
         $(".twittbox", this.$twitter).last().remove();
     }
     var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + Utils.linkify(twitt.text);
-    var newTwitt = $("<div class='twittbox shadow' style='display:none'></div>").html(body)
+    var newTwitt = $("<div class='twittbox' style='display:none'></div>").html(body)
     this.$twitter.prepend(newTwitt);
     if (initial) newTwitt.show();
     else newTwitt.slideDown();
