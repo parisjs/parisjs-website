@@ -173,3 +173,22 @@ img {
 .vevent p:nth-child(2) {
     max-width:650px;
 }
+
+
+.links {
+    text-align: center;
+}
+
+.links h3 {
+    margin: 3px 0;
+}
+
+.links ul {
+    margin: 5px 0;
+}
+
+.links li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 2px;
+}
