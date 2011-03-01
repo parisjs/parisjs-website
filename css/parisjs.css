@@ -50,9 +50,9 @@ p, li {
 }
 
 h1 {
-    margin:20px 20px 10px 0;
+    width: 200px;
+    margin: 20px 50px;
     font-weight: normal;
-    text-align:right;
 }
 
 /* Events */
@@ -109,9 +109,9 @@ h2 {
 }
 
 .content {
-    padding: 20px;
+    margin: 30px 0;
+    padding: 5px 20px;
     background-color: #FFF1BA;
-    background-color:rgba(255, 241, 186, 0.7);
 }
 
 .leftContent{
@@ -139,7 +139,9 @@ a:hover {
     text-decoration: none;
 }
 
+
 .promotejs img {
+    margin: 20px 60px;
     border:none;
 }
 
@@ -149,7 +151,6 @@ a:hover {
     height:149px;
     top:0;
     left:0;
-    opacity:0.2;
     z-index:9999;
     -webkit-transition-duration:500ms;
     -moz-transition-duration:500ms;
@@ -171,4 +172,23 @@ img {
 
 .vevent p:nth-child(2) {
     max-width:650px;
+}
+
+
+.links {
+    text-align: center;
+}
+
+.links h3 {
+    margin: 3px 0;
+}
+
+.links ul {
+    margin: 5px 0;
+}
+
+.links li {
+    list-style-type: none;
+    display: inline;
+    margin: 0 2px;
 }
