@@ -1,7 +1,9 @@
 (function($){
 
-if (typeof console == "undefined" || typeof console.log == "undefined") {
-    var console = { log: function() {} };
+var log = function() {
+    if(this.console) {
+        console.log( Array.prototype.slice.call(arguments) )
+    }
 }
 
 var MONTH = [
@@ -13,9 +15,9 @@ var ParisJS = {
     ICAL: "http://h2vx.com/ics/www.eventbrite.com/org/862067525",
     OLDEVENTS: [
         {
-            title: "ParisJS Meetup 2",
-            start_date: "2010-11-24",
-            url: "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100",
+            title: "First ParisJS Meetup",
+            start_date: "2010-10-12",
+            url: "http://lanyrd.com/2010/first-js-meetup-paris/",
             status: "Completed"
         },
         {
@@ -25,9 +27,9 @@ var ParisJS = {
             status: "Completed"
         },
         {
-            title: "First ParisJS Meetup",
-            start_date: "2010-10-12",
-            url: "http://lanyrd.com/2010/first-js-meetup-paris/",
+            title: "ParisJS Meetup 2",
+            start_date: "2010-11-24",
+            url: "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100",
             status: "Completed"
         }
     ]
@@ -61,10 +63,11 @@ Meetups.load = function(tries) {
                 Meetups.load(tries + 1);
                 return;
             }
+            events = events.concat(ParisJS.OLDEVENTS);
+
             if (result.query.count > 0) {
                 events = events.concat(result.query.results.events.event);
             }
-            events = events.concat(ParisJS.OLDEVENTS);
             var $meetups = $("#meetups");
             var $old = $("#oldmeetups");
             $(events).reverse(function(){
@@ -117,8 +120,8 @@ Twitter.refresh = function() {
             }
         },
         error: function(XHR, textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
+            log(textStatus);
+            log(errorThrown);
         }
     })
 }
