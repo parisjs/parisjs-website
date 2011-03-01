@@ -139,7 +139,9 @@ a:hover {
     text-decoration: none;
 }
 
+
 .promotejs img {
+    margin: 20px 60px;
     border:none;
 }
 
