@@ -93,7 +93,7 @@ Meetups.oldEvent = function(event) {
 }
 
 var Twitter = {
-    max: 6,
+    max: 12,
     last_id: null
 };
 
@@ -105,7 +105,7 @@ Twitter.init = function() {
 
 Twitter.refresh = function() {
     $.jsonp({
-        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8"
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=" + this.max
             + "&result_type=recent"
             + (Twitter.last_id ? "&since_id=" + Twitter.last_id : ""),
         dataType: "jsonp",
