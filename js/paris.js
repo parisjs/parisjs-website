@@ -78,7 +78,7 @@ Meetups.load = function(tries) {
                 }
             });
             $("#eventsSpinner").hide();
-            $("#events").show();
+            $("#Events").show();
         }
     });
 }
