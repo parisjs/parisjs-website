@@ -15,7 +15,7 @@ img {border:none;}
 h1 > p{font-family: inherit}
 
 /* Main structure */
-.main{ background: #2E0F15; margin:auto; text-align:center;}
+.main{ background: #666; margin:auto; text-align:center;}
 .content{ max-width:980px; margin: auto; background-color: #FFEB99 /* FFF1BA*/; text-align:left;}
 .rightContent{float: right; width: 300px; padding: 0 5px;}
 .leftContent{margin-right:320px; padding: 0 5px;}
@@ -28,7 +28,7 @@ hr.break{height:20px; clear:both; border:none; background: #1D353B;}
 .vevent p:nth-child(2) { max-width:650px;}
 
 /* Twitter */
-.twittbox { background-color: #666; padding: 5px 10px 5px 10px; border-top: 1px solid #1D353B;color: #EEE}
+.twittbox { background-color: #2E0F15; padding: 5px 10px 5px 10px; border-top: 1px solid #1D353B;color: #EEE}
 
 .twittbox:first-child { 
   -moz-border-radius:1em 1em 0 0 ;
