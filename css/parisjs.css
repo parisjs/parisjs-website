@@ -101,6 +101,33 @@ hr.break{height:20px; clear:both; border:none; background: #1D353B;}
   background-size: 50px 50px;
 }
 
+.stripped2{
+  background-image: -webkit-gradient(linear, 0 0, 100% 100%, 
+    color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent), 
+    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
+    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
+    to(transparent));
+  background-image: -moz-linear-gradient(-45deg, 
+    rgba(255, 255, 255, 0.1) 25%, transparent 25%, 
+    transparent 50%, rgba(255, 255, 255, 0.1) 50%, 
+    rgba(255, 255, 255, 0.1) 75%, transparent 75%, 
+    transparent);
+  background-image: -o-linear-gradient(linear, 0 0, 100% 100%, 
+    color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent), 
+    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
+    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
+    to(transparent));
+  background-image: linear-gradient(linear, 0 0, 100% 100%, 
+    color-stop(.25, rgba(255, 255, 55, .1)), color-stop(.25, transparent), 
+    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
+    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
+    to(transparent));
+
+  -webkit-background-size: 50px 50px;
+  -moz-background-size: 50px 50px;
+  background-size: 50px 50px;
+}
+
 .gradiented{
   background-image: -webkit-gradient(
     linear,
