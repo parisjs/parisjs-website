@@ -31,7 +31,7 @@ hr.break{height:20px; clear:both; border:none; background: #1D353B;}
 .vevent p:nth-child(2) { max-width:650px;}
 
 /* Twitter */
-.twittbox { background-color: #2E0F15; padding: 5px 10px 5px 10px; border-top: 1px solid #1D353B;color: #EEE}
+.twittbox { background-color: #2E0F15; padding: 5px 10px 5px 10px; border-top: 1px solid #1D353B;color: #EEE; word-wrap: break-word; }
 
 .twittbox:first-child { 
   -moz-border-radius:1em 1em 0 0 ;
