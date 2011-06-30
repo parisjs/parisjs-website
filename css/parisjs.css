@@ -1,24 +1,26 @@
 *{margin: 0; padding: 0; font-family:inherit;}
-
-h1, h2, h3 { font-family: 'Lobster', arial, serif; color: #4F4005; margin-top: 0.2em; color:#111; text-shadow: 1px 1px 1px #DE973B;}
+body {
+    line-height: 1.5em;
+}
+h1, h2, h3 { font-family: 'Lobster', Georgia, serif; color: #4F4005; margin: .5em 0; color:#111; text-shadow: 1px 1px 1px #DE973B;}
 h1 { text-align: center;}
 h2 { font-size: 2em;}
 
-ul{margin:0 10px;}
+ul{margin:0;}
 p, li, div { font-family: 'Molengo', arial, serif; font-size:102% }
 li{ list-style: none}
 a{ color: #4F4005; text-decoration:underline;}
 a:hover { text-decoration: none;}
 
-img {border:none;}
+img {border: 0;}
 
 h1 > p{font-family: inherit}
 
 /* Main structure */
 .main{ background: #D4E2D7; margin:auto; text-align:center;}
 .content{ max-width:980px; margin: auto; background-color: #FFEB99 /* FFF1BA*/; text-align:left;}
-.rightContent{float: right; width: 300px; padding: 0 5px;}
-.leftContent{margin-right:320px; padding: 0 5px;}
+.rightContent{float: right; width: 300px; padding: 20px;}
+.leftContent{margin-right:340px; padding: 20px;}
 .header, .footer{background:#DE973B; padding: 20px 0; margin: 0 auto;}
 hr.break{height:20px; clear:both; border:none; background: #1D353B;}
 
