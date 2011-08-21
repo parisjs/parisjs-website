@@ -11,30 +11,6 @@ var MONTH = [
     "July", "August", "September", "October", "November", "December"
 ];
 
-var ParisJS = {
-    ICAL: "http://h2vx.com/ics/www.eventbrite.com/org/862067525",
-    OLDEVENTS: [
-        {
-            title: "First ParisJS Meetup",
-            start_date: "2010-10-12",
-            url: "http://lanyrd.com/2010/first-js-meetup-paris/",
-            status: "Completed"
-        },
-        {
-            title: "jscamp0",
-            start_date: "2010-10-20",
-            url: "http://barcamp.org/w/page/30731863/jscamp0",
-            status: "Completed"
-        },
-        {
-            title: "ParisJS Meetup 2",
-            start_date: "2010-11-24",
-            url: "http://www.hackingparty.org/event/hackingparty_parisjs_fr_paris_100",
-            status: "Completed"
-        }
-    ]
-}
-
 $.fn.reverse = function(fn) {
    var i = this.length;
    while(i) {
@@ -42,6 +18,67 @@ $.fn.reverse = function(fn) {
        fn.call(this[i], i, this[i])
    }
 };
+
+
+var Nav = {
+    init: function() {
+        var activeTarget,
+        $window = $(window),
+        nav = $('body .topbar li a'),
+        targets = nav.map(function () {
+            return $(this).attr('href');
+        }),
+        offsets = $.map(targets, function (id) {
+            return $(id).offset().top;
+        });
+
+
+        function setButton(id) {
+            nav.parent("li").removeClass('active');
+            $(nav[$.inArray(id, targets)]).parent("li").addClass('active');
+        }
+
+        function processScroll(e) {
+            var scrollTop = $window.scrollTop() + 10, i;
+            for (i = offsets.length; i--;) {
+                if (activeTarget != targets[i] && scrollTop >= offsets[i] && (!offsets[i + 1] || scrollTop <= offsets[i + 1])) {
+                    activeTarget = targets[i];
+                    setButton(activeTarget);
+                }
+            }
+        }
+
+        console.log(targets, nav);
+        nav.click(function () {
+            processScroll();
+        });
+
+        processScroll();
+
+        $window.scroll(processScroll);
+    }
+}
+
+var Tabs = {
+    init: function() {
+        function getPanel(tab) {
+            return $($('a', tab).attr('href'));
+        }
+
+        $('.panel').hide();
+        $('.tabs li').click(function() {
+            var previous  = $(this).parent().find('.active');
+            getPanel(previous).hide();
+            previous.removeClass('active');
+
+            $(this).addClass('active');
+            getPanel(this).show();
+
+            return false;
+        });
+        getPanel($('.tabs .active')).show();
+    }
+}
 
 var Meetups = {};
 
@@ -63,79 +100,19 @@ Meetups.load = function(tries) {
                 Meetups.load(tries + 1);
                 return;
             }
-            events = events.concat(ParisJS.OLDEVENTS);
 
             if (result.query.count > 0) {
                 events = events.concat(result.query.results.events.event);
             }
             var $meetups = $("#meetups");
-            var $old = $("#oldmeetups");
             $(events).reverse(function(){
-                if (this.status == "Completed") {
-                    $old.append(Meetups.oldEvent(this));
-                } else {
-                    $meetups.append($("#eventTmpl").tmpl({event: this}));
-                }
+                if (this.status == "Completed") return;
+                $meetups.append($("#eventTmpl").tmpl({event: this}));
             });
             $("#eventsSpinner").hide();
             $("#Events").show();
         }
     });
-}
-
-Meetups.oldEvent = function(event) {
-    var date = event.start_date.split(" ")[0];
-    return $('<li></li>').addClass("vevent")
-        .append($('<a></a>').addClass('url').attr('href', event.url)
-            .html('<span class="dtstart" title="'+date+'">'+Utils.formatDate(date)+'</span> - '
-                  + '<span class="summary">' + event.title + '</span>')
-        );
-}
-
-var Twitter = {
-    max: 12,
-    last_id: null
-};
-
-Twitter.init = function() {
-    this.$twitter = $("#twitts");
-    Twitter.refresh();
-    setInterval(Twitter.refresh, 10 * 1000);
-}
-
-Twitter.refresh = function() {
-    $.jsonp({
-        url: "http://search.twitter.com/search.json?q=parisjs&rpp=" + this.max
-            + "&result_type=recent"
-            + (Twitter.last_id ? "&since_id=" + Twitter.last_id : ""),
-        dataType: "jsonp",
-        callbackParameter: "callback",
-        success: function(result) {
-            if(!result.results) return ;
-            $(result.results).reverse(function(){
-                if (this.id != Twitter.last_id)
-                    Twitter.addTwitt(this, Twitter.last_id == null);
-            });
-            if (result.results.length > 0) {
-                Twitter.last_id = result.results[0].id;
-            }
-        },
-        error: function(XHR, textStatus, errorThrown) {
-            log(textStatus);
-            log(errorThrown);
-        }
-    })
-}
-
-Twitter.addTwitt = function(twitt, initial) {
-    while ($(".twittbox", this.$twitter).size() >= this.max) {
-        $(".twittbox", this.$twitter).last().remove();
-    }
-    var body = "<a href='http://twitter.com/"+twitt.from_user+"'>"+twitt.from_user+"</a>: " + Utils.linkify(twitt.text);
-    var newTwitt = $("<div class='twittbox' style='display:none'></div>").html(body)
-    this.$twitter.prepend(newTwitt);
-    if (initial) newTwitt.show();
-    else newTwitt.slideDown();
 }
 
 var Utils = {
@@ -154,11 +131,11 @@ var Utils = {
 }
 
 window.Utils = Utils;
-window.ParisJS = ParisJS;
 
 $(function() {
-    Meetups.init();
-    Twitter.init();
+    //Meetups.init(); // FIXME
+    Tabs.init();
+    Nav.init();
 });
 
 })(jQuery);

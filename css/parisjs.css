@@ -1,150 +1,29 @@
-*{margin: 0; padding: 0; font-family:inherit;}
-body {
-    line-height: 1.5em;
-}
-h1, h2, h3 { font-family: 'Lobster', Georgia, serif; color: #4F4005; margin: .5em 0; color:#111; text-shadow: 1px 1px 1px #DE973B;}
-h1 { text-align: center;}
-h2 { font-size: 2em;}
-
-ul{margin:0;}
-p, li, div { font-family: 'Molengo', arial, serif; font-size:102% }
-li{ list-style: none}
-a{ color: #4F4005; text-decoration:underline;}
-a:hover { text-decoration: none;}
-
-img {border: 0;}
-
-h1 > p{font-family: inherit}
-
-/* Main structure */
-.main{ background: #D4E2D7; margin:auto; text-align:center;}
-.content{ max-width:980px; margin: auto; background-color: #FFEB99 /* FFF1BA*/; text-align:left;}
-.rightContent{float: right; width: 300px; padding: 20px;}
-.leftContent{margin-right:340px; padding: 20px;}
-.header, .footer{background:#DE973B; padding: 20px 0; margin: 0 auto;}
-hr.break{height:20px; clear:both; border:none; background: #1D353B;}
-
-/* Infos box*/
-.infosBox{padding: 5px; background: #FC0; border-radius: 10px;}
-
-/* Events */
-#eventsSpinner{ text-align: center; padding-top: 50px;}
-.vevent p:nth-child(1) { font-size: 1.2em; text-shadow: 0 1px 1px #f8fcee;}
-.vevent p:nth-child(2) { max-width:650px;}
-
-/* Twitter */
-.twittbox { background-color: #2E0F15; padding: 5px 10px 5px 10px; border-top: 1px solid #1D353B;color: #EEE; word-wrap: break-word; }
-
-.twittbox:first-child { 
-  -moz-border-radius:1em 1em 0 0 ;
-  -webkit-border-radius:1em 1em 0 0 ;
-  border-radius:1em 1em 0 0 ;
-  border-top:none;
-}
-.twittbox:last-child {
-  -moz-border-radius: 0 0 1em 1em ; 
-  -webkit-border-radius: 0 0 1em 1em;
-  border-radius: 0 0 1em 1em;
-}
-
-.twittbox a{color:#999}
-
-/* Promote JS logo */
-.promotejs {width:100%; display:block; text-align: center; }
-.promotejs img { margin: 10px auto; }
-
 /* Github forkme label*/
-.forkme{ position:absolute; width:149px; height:149px; top:0; left:0; z-index:9999; opacity:0.7;
+.forkme{ position:absolute; width:149px; height:149px; top:0; left:0; z-index:09999; opacity:0.7;
   -webkit-transition-duration:500ms;
   -moz-transition-duration:500ms;
   -o-transition-duration:500ms;
 }
 
 .forkme:hover {opacity:0.9;}
+div.topbar {
+  z-index: 9000 !important; /** We have a Github ribbon */
+}
+
+
+/* Promote JS logo */
+.promotejs {width:100%; display:block; text-align: center; }
+.promotejs img { margin: 10px auto; }
+
+
+
+section {
+  padding-top: 20px;
+}
 
 /* Links to other communities */
-.links { text-align: center;}
+.links { text-align: center; padding-top: 4px; border-top: 1px solid #DDDDDD;}
 .links h3 { margin: 3px 0;}
 .links ul { margin: 5px 0;}
 .links li { display: inline; margin: 0 2px;}
 
-/* Special FX */
-.shadow {
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-  -moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-  -o-box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, .5), 0 2px 3px rgba(0, 0, 0, .5);
-}
-
-.stripped{
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), 
-    color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), 
-    to(transparent));
-  background-image: -moz-linear-gradient(-45deg, 
-    rgba(255, 255, 255, 0.2) 25%, transparent 25%, 
-    transparent 50%, rgba(255, 255, 255, 0.2) 50%, 
-    rgba(255, 255, 255, 0.2) 75%, transparent 75%, 
-    transparent);
-  background-image: -o-linear-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), 
-    color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), 
-    to(transparent));
-  background-image: linear-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 55, .2)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)), 
-    color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent), 
-    to(transparent));
-
-  -webkit-background-size: 50px 50px;
-  -moz-background-size: 50px 50px;
-  background-size: 50px 50px;
-}
-
-.stripped2{
-  background-image: -webkit-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
-    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
-    to(transparent));
-  background-image: -moz-linear-gradient(-45deg, 
-    rgba(255, 255, 255, 0.1) 25%, transparent 25%, 
-    transparent 50%, rgba(255, 255, 255, 0.1) 50%, 
-    rgba(255, 255, 255, 0.1) 75%, transparent 75%, 
-    transparent);
-  background-image: -o-linear-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 255, .1)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
-    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
-    to(transparent));
-  background-image: linear-gradient(linear, 0 0, 100% 100%, 
-    color-stop(.25, rgba(255, 255, 55, .1)), color-stop(.25, transparent), 
-    color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .1)), 
-    color-stop(.75, rgba(255, 255, 255, .1)), color-stop(.75, transparent), 
-    to(transparent));
-
-  -webkit-background-size: 50px 50px;
-  -moz-background-size: 50px 50px;
-  background-size: 50px 50px;
-}
-
-.gradiented{
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    color-stop(0, rgba(0,0,0,0.25)),
-    color-stop(1, rgba(255,255,255,0.1))
-  );
-  background-image: -moz-linear-gradient(
-    center bottom,
-    rgba(0,0,0,0.25) 0%,
-    rgba(255,255,255,0.1) 100%
-  );
-}
-
-.opacited{
-  opacity:0.9;
-}
