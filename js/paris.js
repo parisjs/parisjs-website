@@ -11,14 +11,9 @@ var MONTH = [
     "July", "August", "September", "October", "November", "December"
 ];
 
-$.fn.reverse = function(fn) {
-   var i = this.length;
-   while(i) {
-       i--;
-       fn.call(this[i], i, this[i])
-   }
-};
-
+var ParisJS = {
+    ICAL: "http://h2vx.com/ics/www.eventbrite.com/org/862067525"
+}
 
 var Nav = {
     init: function() {
@@ -41,14 +36,12 @@ var Nav = {
         function processScroll(e) {
             var scrollTop = $window.scrollTop() + 10, i;
             for (i = offsets.length; i--;) {
-                if (activeTarget != targets[i] && scrollTop >= offsets[i] && (!offsets[i + 1] || scrollTop <= offsets[i + 1])) {
-                    activeTarget = targets[i];
+                if (activeTarget != targets[i] && scrollTop >= offsets[i] && (!offsets[i + 1] || scrollTop <= offsets[i + 1])) {                    activeTarget = targets[i];
                     setButton(activeTarget);
                 }
             }
         }
 
-        console.log(targets, nav);
         nav.click(function () {
             processScroll();
         });
@@ -104,36 +97,42 @@ Meetups.load = function(tries) {
             if (result.query.count > 0) {
                 events = events.concat(result.query.results.events.event);
             }
-            var $meetups = $("#meetups");
-            $(events).reverse(function(){
+            var nextEvent = null;
+
+            $(events).each(function(){
                 if (this.status == "Completed") return;
-                $meetups.append($("#eventTmpl").tmpl({event: this}));
+                nextEvent = this;
             });
+            // FIXME: remove this line after feedback from parisjs
+            nextEvent = events[events.length - 1];
+            var $event = $("#event");
+            if (nextEvent) {
+                $event.find('h2').append(": "+ nextEvent.title);
+                $event.append($("#eventTmpl").tmpl({event: nextEvent}));
+            } else {
+                $event.append("No event scheduled yet.");
+            }
             $("#eventsSpinner").hide();
-            $("#Events").show();
         }
     });
 }
 
 var Utils = {
-    linkify: function(text) {
-      var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-      return text.replace(exp,"<a href='$1'>$1</a>")
-                 .replace(/@(\w+)/ig, "<a href='http://twitter.com/$1'>@$1</a>")
-                 .replace(/(#[^\s]+)/ig, "<a href='http://twitter.com/search?q=$1'>$1</a>");
-    },
     formatDate: function(date) {
+        var hour = date.split(" ")[1];
+        date = date.split(" ")[0];
         var year = date.split("-")[0];
         var month = date.split("-")[1];
         var day = date.split("-")[2];
-        return MONTH[month -1] + " " + day + ", " + year;
+        return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
     }
 }
 
 window.Utils = Utils;
+window.ParisJS = ParisJS;
 
 $(function() {
-    //Meetups.init(); // FIXME
+    Meetups.init();
     Tabs.init();
     Nav.init();
 });

@@ -67,24 +67,8 @@
             <div class="page-header">
                 <h2>Next event</h2>
             </div>
-
-            <div class="row alert-message info">
-                <div class="span5 columns">
-                    <h3>When</h3>
-                    
-                    <p>31 august 2011 at 07h30pm.</p>
-                </div>
-                <div class="span6 columns">
-                    <h3>Talks</h3>
-
-                    <p>Can you submit a talk on the mailing list.</p>
-                </div>
-
-                <div class="span4 columns">
-                    <h3>Location</h3>
-                    <p>Foobar<br />Rue Lorem Ipsum<br />7042 Paris</p>
-                </div>
-
+            <div id="eventsSpinner">
+                <img src="img/load.gif">
             </div>
         </section>
 
@@ -116,7 +100,7 @@
                 <li><a href="#parisjs8">Parisjs #8</a></li>
                 <li><a href="#parisjs9">Parisjs #9</a></li>
             </ul>
-            
+
             <ul id="parisjs1" class="panel">
                 <li><a href="http://javascript.training.free.fr/couchdb/intro/intro-couchdb.html">Introduction à CouchDB</a></li>
                 <li><a href="https://docs.google.com/present/view?id=0AVEtwWraWZ-3ZGcydnMyYjhfNTE2Y3o4cmJjZnE&hl=en&pli=1">Chargements Javascript asynchrones</a></li>
@@ -231,15 +215,31 @@
 
 
     <script id="eventTmpl" type="text/x-jquery-tmpl">
-    <div class='vevent'><p>
-        <a type="text/calendar" title="Download iCal" href="${ParisJS.ICAL}">
-            <img src="img/calendar_add.gif">
-        </a>
-        <strong class='dtstart'>${Utils.formatDate(event.start_date.split(" ")[0])}</strong>:
-            ${event.title} at <span class='location'>${event.venue.name}</span>
-            - <a href="${event.url}">inscription</a> (${event.num_attendee_rows} participants)
-        </p>
-        {{html event.description}}
+        <div class="row alert-message info vevent">
+            <div class="span4 columns">
+                <h3>Register</h3>
+
+                <p><a href="${event.url}">inscription</a> (${event.num_attendee_rows} participants)</p>
+            </div>
+            <div class="span3 columns">
+                <h3>When</h3>
+
+                <p class="dtstart">${Utils.formatDate(event.start_date)}.</p>
+                <a type="text/calendar" title="Download iCal" href="${ParisJS.ICAL}">
+                    <img src="img/calendar_add.gif">
+                </a>
+            </div>
+            <div class="span4 columns">
+                <h3>Description</h3>
+
+                {{html event.description}}
+            </div>
+
+            <div class="span4 columns">
+                <h3>Location</h3>
+                <p>${event.venue.name}<br />${event.venue.address}<br />${event.venue.address_2}<br />${event.venue.postal_code} ${event.venue.city}</p>
+            </div>
+        </div>
     </div>
     </script>
 
