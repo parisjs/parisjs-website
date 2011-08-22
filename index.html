@@ -236,26 +236,27 @@
 
     <script id="eventTmpl" type="text/x-jquery-tmpl">
         <div class="row alert-message info vevent">
-            <div class="span4 columns">
+            <div class="span4">
                 <h3>Register</h3>
 
                 <p><a href="${event.url}">inscription</a> (${event.num_attendee_rows} participants)</p>
             </div>
-            <div class="span3 columns">
+            <div class="span4">
                 <h3>When</h3>
 
-                <p class="dtstart">${Utils.formatDate(event.start_date)}.</p>
-                <a type="text/calendar" title="Download iCal" href="${ParisJS.ICAL}">
-                    <img src="img/calendar_add.gif">
-                </a>
+                <p class="dtstart">${Utils.formatDate(event.start_date)}
+                    <a type="text/calendar" title="Download iCal" href="${ParisJS.ICAL}">
+                        <img src="img/calendar_add.gif">
+                    </a>
+                </p>
             </div>
-            <div class="span4 columns">
+            <div class="span4">
                 <h3>Description</h3>
 
                 {{html event.description}}
             </div>
 
-            <div class="span4 columns">
+            <div class="span4">
                 <h3>Location</h3>
                 <p>${event.venue.name}<br />${event.venue.address}<br />${event.venue.address_2}<br />${event.venue.postal_code} ${event.venue.city}</p>
             </div>
