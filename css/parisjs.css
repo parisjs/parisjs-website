@@ -1,5 +1,5 @@
 /* Github forkme label*/
-.forkme{ position:absolute; width:149px; height:149px; top:0; left:0; z-index:09999; opacity:0.7;
+.forkme{ position:absolute; width:149px; height:149px; top:0; right:0; z-index:09999; opacity:0.7;
   -webkit-transition-duration:500ms;
   -moz-transition-duration:500ms;
   -o-transition-duration:500ms;
