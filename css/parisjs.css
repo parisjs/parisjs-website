@@ -29,7 +29,7 @@ section {
 #event .alert-message {
     text-shadow: none;
     background-image: none;
-    background-color: #F6C402;
+    background-color: #F7D55B;
     border-bottom: 0;
 }
 #event h3 {
@@ -42,7 +42,7 @@ section {
     word-wrap: break-word
 }
 #event .row .span4:not(:last-child) {
-    border-right: solid 2px #EAB700;
+    border-right: solid 2px #F2CE4D;
 }
 #event .row .span4 p {
     color: black;
