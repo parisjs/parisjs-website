@@ -26,6 +26,7 @@ section {
 #event .row .span4 {
     width: 210px;
     min-height: 130px;
+    word-wrap: break-word
 }
 #event .row .span4:not(:last-child) {
     border-right: solid 1px white;
