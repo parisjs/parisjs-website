@@ -52,7 +52,7 @@ section {
 }
 
 /* Links to other communities */
-.links { text-align: center; padding-top: 4px; border-top: 1px solid #DDDDDD;}
+.links { text-align: center; }
 .links h3 { margin: 3px 0;}
 .links ul { margin: 5px 0;}
 .links li { display: inline; margin: 0 2px;}
