@@ -259,7 +259,7 @@
 
             <div class="span4">
                 <h3>Location</h3>
-                <p class="location">${event.venue.name}<br />${event.venue.address}<br />${event.venue.address_2}<br />${event.venue.postal_code} ${event.venue.city}</p>
+                <p class="location"><a href="http://maps.google.com/maps?q=${event.venue.latitude},${event.venue.longitude}&z=15">${event.venue.name}</a><br />${event.venue.address}<br />${event.venue.address_2}<br />${event.venue.postal_code} ${event.venue.city}</p>
             </div>
         </div>
     </div>
