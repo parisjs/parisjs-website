@@ -30,6 +30,12 @@ section {
 #event .row .span4:not(:last-child) {
     border-right: solid 1px white;
 }
+#event .row .span4 p, #event h3 {
+    color: white !important; /** inline style by eventbrite */
+}
+#event .row .span4 p a {
+    color: #004A68;
+}
 
 /* Links to other communities */
 .links { text-align: center; padding-top: 4px; border-top: 1px solid #DDDDDD;}

@@ -103,12 +103,12 @@ Meetups.load = function(tries) {
                 if (this.status == "Completed") return;
                 nextEvent = this;
             });
-            // FIXME: remove this line after feedback from parisjs
-            nextEvent = events[events.length - 1];
             var $event = $("#event");
             if (nextEvent) {
                 $event.find('h2').append(": "+ nextEvent.title);
-                $event.append($("#eventTmpl").tmpl({event: nextEvent}));
+                var event = $("#eventTmpl").tmpl({event: nextEvent});
+                $event.append(event);
+                event.find(".span4").css('min-height', event.height());
             } else {
                 $event.append("No event scheduled yet.");
             }
