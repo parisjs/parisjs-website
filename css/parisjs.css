@@ -14,9 +14,6 @@ header .topbar h3 a {
     padding-left: 60px;
 }
 
-/* Promote JS logo */
-.promotejs {width:100%; display:block; text-align: center; }
-.promotejs img { margin: 10px auto; }
 
 #about p {
     font-size: 15px;
@@ -49,6 +46,15 @@ section {
 }
 #event .row .span4 p a {
     color: #004A68;
+}
+
+/* Promote JS logo */
+#propaganda {
+    padding-top: 20px;
+    text-align: center;
+}
+#propaganda > * {
+    margin: 0 30px;
 }
 
 /* Links to other communities */
