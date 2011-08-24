@@ -9,7 +9,10 @@
 div.topbar {
   z-index: 9000 !important; /** We have a Github ribbon */
 }
-
+header .topbar h3 a {
+    background: url(/img/logo_site.png) no-repeat center left;
+    padding-left: 60px;
+}
 
 /* Promote JS logo */
 .promotejs {width:100%; display:block; text-align: center; }
