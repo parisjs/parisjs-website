@@ -241,10 +241,10 @@
 
     <script id="eventTmpl" type="text/x-jquery-tmpl">
         <div class="row alert-message info vevent">
-            <div class="span4">
-                <h3>Register</h3>
+            <div class="span4" class="summary">
+                <h3>Description</h3>
 
-                <p><a href="${event.url}">Inscription</a> (${event.num_attendee_rows} participants)</p>
+                {{html event.description}}
             </div>
             <div class="span4">
                 <h3>When</h3>
@@ -255,15 +255,14 @@
                     </a>
                 </p>
             </div>
-            <div class="span4" class="summary">
-                <h3>Description</h3>
-
-                {{html event.description}}
-            </div>
-
             <div class="span4">
                 <h3>Location</h3>
                 <p class="location"><a href="http://maps.google.com/maps?q=${event.venue.latitude},${event.venue.longitude}&z=15">${event.venue.name}</a><br />${event.venue.address}<br />${event.venue.address_2}<br />${event.venue.postal_code} ${event.venue.city}</p>
+            </div>
+            <div class="span4">
+                <h3>Register</h3>
+
+                <p><a href="${event.url}">Inscription</a> (${event.num_attendee_rows} participants)</p>
             </div>
         </div>
     </div>
