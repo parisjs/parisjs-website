@@ -78,7 +78,7 @@ Meetups.load = function(tries) {
                 }
             });
             $("#eventsSpinner").hide();
-            $("#events").show();
+            $("#Events").show();
         }
     });
 }
@@ -111,6 +111,7 @@ Twitter.refresh = function() {
         dataType: "jsonp",
         callbackParameter: "callback",
         success: function(result) {
+            if(!result.results) return ;
             $(result.results).reverse(function(){
                 if (this.id != Twitter.last_id)
                     Twitter.addTwitt(this, Twitter.last_id == null);

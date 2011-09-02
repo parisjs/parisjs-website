@@ -3,11 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Paris.js - Javascript user group in Paris</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="profile" href="http://microformats.org/profile/hcalendar">
     <link rel="stylesheet" href="css/parisjs.css" type="text/css" media="screen" title="no title" charset="utf-8">
     <link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.5.min.js"%3E%3C/script%3E'))</script>
     <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
     <script>!window.jQuery.tmpl && document.write(unescape('%3Cscript src="js/jquery.tmpl.min.js"%3E%3C/script%3E'))</script>
@@ -16,29 +17,36 @@
 </head>
 <body>
     <a href="https://github.com/parisjs/parisjs-website" class="forkme">
-        <img  src="img/fork-us.png" alt="Fork us on GitHub">
+        <img src="https://d3nwyuy0nl342s.cloudfront.net/img/bec6c51521dcc8148146135149fe06a9cc737577/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f6461726b626c75655f3132313632312e706e67" alt="Fork us on GitHub">
     </a>
-
-    <div class="main">
-        
-        <div class="content shadow">
-            <div id="twitter">
-                
-                <h1><img  src="img/logo_site.png" alt="Paris.js"/></h1>
+    <div class="main stripped2">
+        <div class="content opacited shadow">
+          <h1 class="header gradiented">
+            <img  src="img/logo_site.png" alt="Paris.js"/>
+            <p class="motto">Event-driven community about Javascript</p>
+          </h1>
+            <hr class="break" />
+            <div id="twitter" class="rightContent">
                 <h2>Twitter</h2>
                 <div id="twitts"></div>
-                
                 <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function" title="JS Function arguments" class="promotejs">
                     <img src="http://static.jsconf.us/promotejsh.gif" height="150" width="180" alt="JS Function arguments">
                 </a>
-                
             </div>
             <div class="leftContent">
-                <div id="eventsSpinner">
-                    <img src="img/load.gif">
-                </div>
-                <div id="events" style="display: none;">
+                <div id="events" style="">
                     <h2>Events</h2>
+
+                    <div id="OrgaNextEvent">
+                    </div>
+
+                    <div id="eventsSpinner">
+                        <img src="img/load.gif">
+                    </div>
+
+                    <div id="Events">
+
+                    </div>
                     <div id="meetups"></div>
 
                     <h3>Older</h3>
@@ -53,9 +61,9 @@
                     <li><a href="https://github.com/parisjs/parisjs-website">Fork us</a> on github</li>
                     <li>Use the <a href="http://twitter.com/search?q=parisjs">#parisjs</a> tag on Twitter</li>
                 </ul>
-                
+
                 <h2>Seen and heard in the meetups</h2>
-                <ul>
+                <ul data-eventNumber="1">
                     <!-- #parisjs1 -->
                     <li><a href="http://javascript.training.free.fr/couchdb/intro/intro-couchdb.html">Introduction à CouchDB</a></li>
                     <li><a href="https://docs.google.com/present/view?id=0AVEtwWraWZ-3ZGcydnMyYjhfNTE2Y3o4cmJjZnE&hl=en&pli=1">Chargements Javascript asynchrones</a></li>
@@ -63,43 +71,80 @@
                     <li><a href="https://docs.google.com/document/pub?id=1ugTkpww_UWZbjFjJ7QjVP6KBG-5-4zzjfJ_VE1XEkgw&pli=1">“KEEP IT SIMPLE”</a></li>
                     <li><a href="http://42loops.com/playing-with-webkit">Playing with webkit transitions</a></li>
                     <li><a href="http://www.slideshare.net/jedisct1/abusing-javascript-to-speedup-mobile-web-sites">Abusing Javascript to speedup mobile web sites</a></li>
-                    
+                </ul>
+
+                <ul data-eventNumber="2">
                     <!-- #parisjs2 -->
-                    <li><a href="http://www.slideshare.net/sylvinus/web-crawling-with-nodejs1">Web Crawling with NodeJS</a></li>
+                    <li><a href="http://www.slideshare.net/sylvinus/web-crawling-with-nodejs">Web Crawling with NodeJS</a></li>
                     <li><a href="http://node-spore.heroku.com/">Spore et node-spore</a></li>
                     <li><a href="http://talks.challet.eu/html5_video_mooplay/">&lt;video&gt; et javascript</a></li>
                     <li><a href="http://html5gamejam.org/slides/">HTML5 pour les jeux</a></li>
-                    
+                </ul>
+
+                <ul data-eventNumber="3">
                     <!-- #parisjs3 -->
                     <li><a href="http://www.slideshare.net/tonyskn/backbonejs-6728018">Backbone.js</a></li>
                     <li><a href="http://raphael.imeuble.info/">Raphaël Keynote</a></li>
                     <li><a href="http://www.slideshare.net/sylvinus/kinect-javascript-tech-talk-at-parisjs-jan-2011">Kinect + Javascript</a></li>
+                </ul>
 
+                <ul data-eventNumber="4">
                     <!-- #parisjs4 -->
                     <li><a href="http://www.slideshare.net/sylvinus/node-quick-presentation-at-parisjs-4">no.de quick presentation</a></li>
                     <li><a href="http://www.slideshare.net/neyric/webhookit-parisjs-4">Webhookit</a></li>
                     <li><a href="http://jto.github.com/jseam/slides/">Canvas: Serious Business</a></li>
                     <li><a href="https://docs.google.com/present/view?id=dhng4bgf_50w9hhpkfx&revision=_latest">Webpeer - how to access p2p from a webpage</a></li>
-                
-                    <!-- #parisjs4 -->
+                </ul>
+
+                <ul data-eventNumber="5">
+                    <!-- #parisjs5 -->
                     <li><a href="https://github.com/jeromeetienne/arenajs">Arena js</a></li>
                     <li><a href="http://www.octaveoctave.com/parisjs/">Sencha Touch (et HTML5 mobile en général)</a></li>
                     <li><a href="http://pxdraw.com/HTML5DragAndDropSucks.com/">HTML5 Drag And Drop Sucks</a></li>
                     <li><a href="http://myjs.fr/">How to go faster than jQuery?</a></li>
-                    
-                    
                 </ul>
-                
-                <h2>Got something to talk about ?</h2>
-                <p>
-                    Pick a way of <a href="#community">contacting</a> the community and tell us about your topic. Any javascript or related to topic will be greatly welcomed.
-                </p>
-                
-                
+
+                <ul data-eventNumber="6">
+                    <!-- #parisjs6 -->
+                    <li><a href="https://github.com/eric-brechemier/introduction_to_lb_js_scalableApp">Introduction to The Scalable JavaScript Application Framework</a></li>
+                    <li><a href="https://docs.google.com/present/view?id=0AT-TyRjy_tjnZGhuZzRiZ2ZfNjNna3Mzc2tjZg&hl=en&pli=1">A trip HTML5 and Games - the pacmaze experiment</a></li>
+                    <li><a href="http://vinisketch.fr/downloads/prez/VAD_ParisJS6_en.pdf">Vinisketch Designer - Multi target authoring tool</a></li>
+                    <li><a href="http://plopbyte.net/insideglobetweeter/#1">Inside globe tweeter</a></li>
+                </ul>
+
+                <ul data-eventNumber="7">
+                    <!-- #parisjs7 -->
+                    <li><a href="http://parisjs-expressiveness.heroku.com/">Javascript expressiveness</a></li>
+                    <li><a href="http://www.slideshare.net/jpvincent/tls-connectes-et-dveloppement-web">Web TV and web development</a></li>
+                    <li><a href="http://notes.jetienne.com/2011/05/26/Parisjs-7-slides.html">Shortags.js, log.js, Pacmaze Update</a></li>
+                    <li><a href="http://www.slideshare.net/tbassetto/fr-capture-vido-avec-html5">Video cpature using HTML5</a></li>
+                    <li><a href="#">CouchDB user feedback</a></li>
+                </ul>
+                <ul data-eventNumber="8">
+                    <!-- #parisjs8 -->
+                    <li><a href="http://www.slideshare.net/alexandre_morgaut/paris-js-meetup-8-june-2011">Wakanda project</a></li>
+                    <li><a href="http://framework.joshfire.com/">Joshfire Framework</a></li>
+                    <li><a href="http://www.b2bweb.fr/molokoloco/javascript-from-1998-to-2011/">Javascript from 1998 to 2011</a></li>
+                    <li><a href="http://whyd.com/tmp/lambda.zip">Compiling into Javascript with Javascript</a></li>
+                    <li><a href="http://blog.adrienjoly.com/introduction-to-asynchronous-db-access-using">Introduction to asynchronous DB access using node.js and MongoDB</a></li>
+                    <li><a href="#">Cross-Browser JS Synthesizer</a></li>
+                    <li><a href="#">Observer pattern done right</a></li>
+                    <li><a href="http://www.revolunet.com/static/parisjs8/">SenchaTouch/ExtJs</a></li>
+                    <li><a href="#">Overview of awesome Mozilla Labs projects</a></li>
+                </ul>
+                <ul data-eventNumber="9">
+                    <!-- #parisjs9 -->
+                    <li><a href="http://www.slideshare.net/tbassetto/prsentation-de-phonegap">PhoneGap introduction</a></li>
+                    <li><a href="http://42loops.com/phonegap/static/index.html">PhoneGap tips and tricks</a></li>
+                    <li><a href="http://www.vinisketch.fr/downloads/prez/ParisJS9/PJS9_PGP_dthevenin.pdf">Faire un plugin et quelques astuces</a></li>
+                    <li><a href="http://www.slideshare.net/erpla/parisjs-9-phonegap-feedbacks">Retour d'expérience sur l'utilisation de PhoneGap pour des projets clients / internes</a></li>
+                    <li><a href="https://docs.google.com/present/view?id=dhng4bgf_71c9txhrdb">Three.js - an introduction</a></li>
+                    <li><a href="https://github.com/francois2metz/showoff-jssyntaxicsugar">Comment j'ai mis du sucre dans mon vin</a></li>
+                </ul>
             </div>
-            <div style="clear: both;"></div>
-            
-            <div class="links">
+
+            <hr class="break" />
+            <div class="links footer gradiented">
                 <h3>Other javascript user groups</h3>
                 <ul>
                     <li><a href="http://sydjs.com/">Sydney</a></li>
@@ -125,7 +170,7 @@
                     <li><a href="http://www.meetup.com/VegasJS/">Las Vegas</a></li>
                 </ul>
             </div>
-            
+
         </div>
     </div>
 
@@ -140,6 +185,19 @@
         </p>
         {{html event.description}}
     </div>
+    </script>
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23072906-1']);
+      _gaq.push(['_setDomainName', '.parisjs.org']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 
     <script type="text/javascript" src="js/vapor.min.js"></script>
