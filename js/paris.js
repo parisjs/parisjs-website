@@ -60,17 +60,41 @@ var Tabs = {
         }
 
         $('.panel').hide();
-        $('.tabs li').click(function() {
-            var previous  = $(this).parent().find('.active');
+        $('.tabs li').click(function(e) {
+            e.preventDefault();
+            var previous = $('.tabs .active');
             getPanel(previous).hide();
             previous.removeClass('active');
 
             $(this).addClass('active');
             getPanel(this).show();
-
-            return false;
         });
         getPanel($('.tabs .active')).show();
+        var tabs = $('.tabs');
+        var oldTabs = this._olderTabs();
+        if (oldTabs.size() == 0)
+            return;
+        oldTabs = oldTabs.add(oldTabs.first().prev());
+        $('<li>').addClass('dropdown').append(
+            $('<a>').addClass('dropdown-toggle').text('olders')
+        ).append(
+            $('<ul>').addClass('dropdown-menu').append(oldTabs)
+        ).click(function() {
+            $(this).toggleClass('open')
+        }).appendTo(tabs);
+    },
+
+    _olderTabs: function() {
+        var tabs = $('.tabs');
+        var maxWidth = tabs.width();
+        var actual = 0;
+        return $('li', tabs).filter(function() {
+            actual += $(this).width();
+            if (actual > maxWidth) {
+                return true;
+            }
+            return false;
+        });
     }
 }
 
