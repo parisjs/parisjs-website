@@ -90,10 +90,7 @@ var Tabs = {
         var actual = 0;
         return $('li', tabs).filter(function() {
             actual += $(this).width();
-            if (actual > maxWidth) {
-                return true;
-            }
-            return false;
+            return (actual > maxWidth);
         });
     }
 }
