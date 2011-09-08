@@ -166,12 +166,65 @@ header{
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
-section h1{
-	width: 50%;
-	margin: 20px 0 0 0;
-	font-family: "Lucida Grande", Helvetica, Arial, Serif;
-	font-weight:bold;
-	font-size: 24px;
-	color:rgba(0,0,0,0.7);
-	border-bottom:2px groove #FFF;
+
+#content{
+	width: 610px;
+	min-height: 390px;
+	padding: 15px 35px 15px 0;
+	background: url(../images/shadow_sidbar.png) no-repeat top right;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
+#sidebar{
+	width: 350px;
+	height: 300px;
+	float: left;
+}
+#about{
+	margin: 15px 0 0;
+}
+#sidebar h2{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	width: 100%;
+	height: 35px;
+	font-size: 18px;
+	color: #515151;
+	background: #f1f1f1;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	-o-border-radius:4px;
+	border-radius:4px;
+}
+#sidebar a{
+	color:#515151;
+	text-decoration: none;
+}
+#sidebar a:hover{
+	color:#da3e81;
+	text-decoration: underline;
+}
+#sidebar p{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 12px 10px;
+	width: 100%;
+	font-size: 12px;
+}
+#content{
+	padding: 30px 0;
+}
+#content h2{
+	width: 100%;
+	height: 35px;
+	font-family: "Museo", Helvetica, Arial, Serif;
+	font-weight: bold;
+	font-size: 18px;
+	color: #515151;
+}
+>>>>>>> small fixes
