@@ -72,11 +72,8 @@ Meetups.load = function(tries) {
             var nextEvent = null;
 
             $(events).each(function(){
-                // FIXME (for dev...)
-                if (this.status == "Completed") {
-                    nextEvent = this;
-                    return;
-                }
+                if (this.status == "Completed") { return; }
+                nextEvent = this;
             });
             var $event = $("#event"),
                 event;
@@ -84,15 +81,7 @@ Meetups.load = function(tries) {
             if (nextEvent) {
                 event = $("#eventTmpl").tmpl({event: nextEvent});
             } else {
-                event = $("#eventTmpl").tmpl(
-                    {
-                        // FIXME
-                        event: {
-                            description: "toto",
-                            url:"#"
-                        }
-                    }
-                );
+                event = $("#emptyEventTmpl").tmpl();
             }
             $event.html(event);
             Spin.stop();
@@ -102,17 +91,12 @@ Meetups.load = function(tries) {
 
 var Utils = {
     formatDate: function(date) {
-        try {
-            var hour = date.split(" ")[1];
-            date = date.split(" ")[0];
-            var year = date.split("-")[0];
-            var month = date.split("-")[1];
-            var day = date.split("-")[2];
-            return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
-        }catch(err) {
-            // FIXME;
-            return "&nbsp;";
-        }
+        var hour = date.split(" ")[1];
+        date = date.split(" ")[0];
+        var year = date.split("-")[0];
+        var month = date.split("-")[1];
+        var day = date.split("-")[2];
+        return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
     }
 };
 
