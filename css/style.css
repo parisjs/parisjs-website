@@ -70,12 +70,6 @@ header{
 	padding:8px 15px 6px 15px;
 	display:block;
 }
-.next_meetup .older{
-	margin: 7px 0 0 0;
-	color:#f4d9ab;
-	font-size: 12px;
-	text-decoration: underline;
-}
 .next_meetup a.inscription{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -84,6 +78,7 @@ header{
 	padding:13px;
 	margin:10px 0;
 	font-weight:bold;
+	text-decoration: none;
 	color:#4d9c80;
 	text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
 	text-align:center;
