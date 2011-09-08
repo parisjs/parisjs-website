@@ -60,12 +60,12 @@ header{
 	font-size: 34px;
 }
 .next_meetup a{
-	margin: 5px 0 0 0;
+	margin: 10px 0 0 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	color:#9591a4;
-	font-size: 16px;
+	font-size: 14px;
 	background:rgba(255,255,255,0.1);
 	padding:8px 15px 6px 15px;
 	display:block;
@@ -76,7 +76,7 @@ header{
 	box-sizing: border-box;
 	height:40px;
 	padding:13px;
-	margin:10px 0;
+	margin:15px 0;
 	font-weight:bold;
 	text-decoration: none;
 	color:#4d9c80;
@@ -214,12 +214,12 @@ header{
 #content{
 	padding: 30px 0;
 }
-#content h2{
-	width: 100%;
-	height: 35px;
+#meetups h2{
+	width: 570px;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #e3e3e2;
 	font-family: "Museo", Helvetica, Arial, Serif;
 	font-weight: bold;
 	font-size: 18px;
-	color: #515151;
+	color: #dc4084;
 }
->>>>>>> small fixes

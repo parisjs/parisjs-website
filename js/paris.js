@@ -36,6 +36,15 @@ Spin.stop = function () {
     this.spinner.stop();
 };
 
+var Toggle = {};
+
+Toggle.init = function () {
+    $(".hideMsg").click(function (evt) {
+      $(evt.target).parent().next().slideToggle("slow");
+    });
+    $(".click").hide();
+};
+
 var Meetups = {};
 
 Meetups.init = function() {
@@ -112,6 +121,7 @@ window.ParisJS = ParisJS;
 
 $(function() {
     Spin.init($("#event").get(0));
+    Toggle.init();
     Meetups.init();
 });
 
