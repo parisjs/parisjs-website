@@ -22,13 +22,8 @@
 		<div class="logo_header">
 			<img src="images/logo.png" alt="Paris JS on Twitter" />
 		</div>
-		<section class="next_meetup">
+		<section class="next_meetup vevent" id="event">
 			<h2>NEXT MEETUP</h2>
-			<p class="date">July 27, 2011</p>
-			<p class="titre">ParisJS Meetup 10</p>
-			<span>Introduction à Couch DB</span>
-			<span class="inscription">INSCRIPTION</span>
-			<p class="older">View older meetup</p>
 		</section>
 	</div>
 </div>
@@ -50,6 +45,22 @@
 <section class="container">
 	<h1>Seen and heard in the meetups</h1>
 </section>
+
+<script id="eventTmpl" type="text/x-jquery-tmpl">
+    <h2>NEXT MEETUP</h2>
+    <p class="dtstart date" title="${event.start_date}">${Utils.formatDate(event.start_date)}</p>
+    <p class="titre">{{html event.title}}</p>
+    <div class="summary">{{html event.description}}</div>
+    <a class="inscription" href="${event.url}">INSCRIPTION</a>
+    <p class="older">View older meetup</p>
+</script>
+
+<script type="text/javascript" src="js/jquery.1.6.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.jsonp-1.0.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+<script type="text/javascript" src="js/spin.js"></script>
+<script type="text/javascript" src="js/vapor.min.js"></script>
+<script type="text/javascript" src="js/paris.js"></script>
 
 </body>
 
