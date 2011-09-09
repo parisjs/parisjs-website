@@ -1,7 +1,7 @@
 body{
 	position:relative;
 	-webkit-font-smoothing: antialiased;
-	background:#fff;
+	background:#f9f9f8;
 	font-family: "Myria Pro", Helvetica, Arial, Serif;
 	font-size: 14px;
 	color:#a6a6a6;
@@ -20,7 +20,7 @@ header{
 	min-width:965px;
 	height:60px;
 	background:#e14680;
-	padding: 22px 0;
+	padding: 12px 0;
 	color: #fff;
 	border-bottom:1px solid #e86599;
 }
@@ -29,6 +29,16 @@ header{
 	height: 432px;
 	width:100%;
 	background:#271f46 url(../images/bg_header.png) no-repeat top center;
+}
+header #logo{
+	float: left;
+}
+header .text{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 12px;
+	float: left;
 }
 #header .logo_header{
 	position:absolute;
@@ -173,27 +183,72 @@ header{
 	box-sizing: border-box;
 }
 #sidebar{
-	width: 350px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 15px;
+	width: 340px;
 	height: 300px;
 	float: left;
 }
 #about{
 	margin: 15px 0 0;
 }
+#about p{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 12px 10px;
+	font-size:12px;
+	color:#515151;
+}
+#about p a{
+	color:#e14680;
+	font-weight: bold;
+}
+#about p a:hover{
+	text-decoration:underline;
+}
+#twitter{
+	margin: 15px 0 0;
+}
+#twitter span{
+	display:block	;
+	margin: 10px 0 5px 0;
+	color: #515151;
+	font-weight: bold;
+	font-size: 12px;
+}
+#twitter p {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 3px 12px 0;
+	font-size:12px;
+	margin:0;
+	color:rgba(0,0,0,0.6);
+}
+#twitter p a{
+	color:rgba(0,0,0,0.3);
+}
+#twitter p a:hover{
+	color:#e14680;
+	text-decoration:underline;
+}
+#twitter p.time{
+	font-size: 10px;
+	color: #71669c;
+}
 #sidebar h2{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 10px;
-	width: 100%;
-	height: 35px;
+	padding: 2px 0;
+	border-bottom: 1px solid #e3e3e2;
+	font-family: "Museo", Helvetica, Arial, Serif;
+	font-weight: bold;
 	font-size: 18px;
-	color: #515151;
-	background: #f1f1f1;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	-o-border-radius:4px;
-	border-radius:4px;
+	color: #dc4084;
 }
 #sidebar a{
 	color:#515151;
@@ -203,17 +258,13 @@ header{
 	color:#da3e81;
 	text-decoration: underline;
 }
-#sidebar p{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 12px 10px;
-	width: 100%;
-	font-size: 12px;
+#sidebar p strong{
+	font-weight: bold;
 }
 #content{
 	padding: 30px 0;
 }
+
 #meetups h2{
 	width: 570px;
 	padding: 0 0 5px 0;
@@ -222,4 +273,73 @@ header{
 	font-weight: bold;
 	font-size: 18px;
 	color: #dc4084;
+}
+#meetups .avatar{
+	background: url(../images/avatar.png) no-repeat;
+	border: 3px solid #ededed;
+	width: 72px;
+	height: 72px;
+	float: left;
+}
+#meetups .avatar img{
+	background: url(../images/avatar.png) no-repeat;
+	width: 72px;
+	height: 72px;
+}
+#meetups ul{
+	width: 590px;
+	float:left;
+	margin: 7px 5px;
+}
+.hideMsg{
+	margin: 12px 0;
+}
+.hideMsg a{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 0 0 22px;
+	text-decoration:none;
+	background: url(../images/ico_calendar.png) no-repeat;
+}
+.hideMsg a:hover{
+	text-decoration:underline;
+}
+li.titleTalk{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 5px 0 0 115px;
+	background: url(../images/ico_talk.png) no-repeat 95px 2px;
+	font-size: 14px;
+	color:#515151;
+}
+.descTalk,
+.authorTalk{
+	font-size: 12px;
+}
+.descTalk{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 7px 0 0 95px;
+	font-weight: 100;
+}
+.descTalk a{
+	color:#3e3759;
+	text-decoration:none;
+}
+.descTalk a:hover{
+	color:#71669c;
+	text-decoration: underline;
+}
+.authorTalk{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 3px 0 0 115px;
+}
+.authorTalk a{
+	color:#e66a98;
+	text-decoration: none;
 }

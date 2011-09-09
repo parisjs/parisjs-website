@@ -19,14 +19,14 @@ var Spin = { };
 
 Spin.init = function (target) {
     var opts = {
-      lines: 12,
-      length: 7,
-      width: 5,
-      radius: 10,
+      lines: 16,
+      length: 9,
+      width: 2,
+      radius: 12,
       color: '#FFFFFF',
       speed: 1,
       trail: 100,
-      shadow: false
+      shadow: true
     };
 
     this.spinner = new Spinner(opts).spin(target);
