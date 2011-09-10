@@ -41,6 +41,7 @@ var Toggle = {};
 Toggle.init = function () {
 
     $(".hideMsg").click(function (evt) {
+        evt.preventDefault();
         $(evt.target).parent()
                      .next()
                      .slideToggle("slow");
