@@ -2,7 +2,7 @@ body{
 	position:relative;
 	-webkit-font-smoothing: antialiased;
 	background:#f9f9f8;
-	font-family: "Myria Pro", Helvetica, Arial, Serif;
+	font-family: "Open Sans", Helvetica, Arial, Serif;
 	font-size: 14px;
 	color:#a6a6a6;
 }
@@ -48,6 +48,7 @@ header .text{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	font-family: "Myriad Pro", Helvetica, Arial, Serif;
 	padding: 100px 25px 10px 25px;
 	float:right;
 	width: 350px;
@@ -212,6 +213,13 @@ header .text{
 #twitter{
 	margin: 15px 0 0;
 }
+#twitter li{
+	border-left: 3px solid #f1f1f1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 5px;
+}
 #twitter span{
 	display:block	;
 	margin: 10px 0 5px 0;
@@ -245,8 +253,7 @@ header .text{
 	box-sizing: border-box;
 	padding: 2px 0;
 	border-bottom: 1px solid #e3e3e2;
-	font-family: "Museo", Helvetica, Arial, Serif;
-	font-weight: bold;
+	font-family: "MuseoSlab500", Helvetica, Arial, Serif;
 	font-size: 18px;
 	color: #dc4084;
 }
@@ -269,8 +276,7 @@ header .text{
 	width: 570px;
 	padding: 0 0 5px 0;
 	border-bottom: 1px solid #e3e3e2;
-	font-family: "Museo", Helvetica, Arial, Serif;
-	font-weight: bold;
+	font-family: "MuseoSlab500", Helvetica, Arial, Serif;
 	font-size: 18px;
 	color: #dc4084;
 }
@@ -309,7 +315,7 @@ li.titleTalk{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 5px 0 0 115px;
+	padding: 3px 0 0 115px;
 	background: url(../images/ico_talk.png) no-repeat 95px 2px;
 	font-size: 14px;
 	color:#515151;
@@ -323,7 +329,7 @@ li.titleTalk{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 7px 0 0 95px;
-	font-weight: 100;
+	font-weight: ;
 }
 .descTalk a{
 	color:#3e3759;
