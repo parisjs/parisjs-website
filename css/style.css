@@ -297,18 +297,19 @@ header .text{
 	float:left;
 	margin: 7px 5px;
 }
-.hideMsg{
+.meetup{
 	margin: 12px 0;
 }
-.hideMsg a{
+.meetup a{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 0 0 0 22px;
+    color:#551A8B;
 	text-decoration:none;
 	background: url(../images/ico_calendar.png) no-repeat;
 }
-.hideMsg a:hover{
+.meetup a:hover{
 	text-decoration:underline;
 }
 li.titleTalk{

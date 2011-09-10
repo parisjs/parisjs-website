@@ -40,14 +40,14 @@ var Toggle = {};
 
 Toggle.init = function () {
 
-    $(".hideMsg").click(function (evt) {
+    $(".meetup").click(function (evt) {
         evt.preventDefault();
         $(evt.target).parent()
                      .next()
                      .slideToggle("slow");
     });
 
-    $(".click").hide()
+    $(".meetup-content").hide()
                .first()
                .slideToggle("slow");
 };
