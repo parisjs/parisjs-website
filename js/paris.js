@@ -95,7 +95,66 @@ Meetups.load = function(tries) {
     });
 };
 
+var Twitter = {
+    max: 8,
+    last_id: null
+};
+
+Twitter.init = function() {
+    this.$twitter = $("#twitter-panel");
+    Twitter.refresh();
+    setInterval(Twitter.refresh, 10 * 1000);
+};
+
+Twitter.refresh = function() {
+    $.jsonp({
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8"
+            + "&result_type=recent"
+            + (Twitter.last_id ? "&since_id=" + Twitter.last_id : ""),
+        dataType: "jsonp",
+        callbackParameter: "callback",
+        success: function(result) {
+            $(result.results.reverse()).each(function(){
+                if (this.id != Twitter.last_id)
+                    Twitter.addTwitt(this, Twitter.last_id == null);
+            });
+            if (result.results.length > 0) {
+                Twitter.last_id = result.results[0].id;
+            }
+        },
+        error: function(XHR, textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
+        }
+    })
+};
+
+Twitter.addTwitt = function(twitt, initial) {
+    while ($(".tweet-box", this.$twitter).size() >= this.max) {
+        $(".tweet-box", this.$twitter).last().remove();
+    }
+    
+    var newTwitt = $("#tweetTmpl").tmpl({ 
+        tweet: { 
+            user : twitt.from_user ,
+            text : Utils.linkify(twitt.text),
+            time : (new Date(twitt.created_at)).toDateString() 
+        }
+    });
+
+    this.$twitter.prepend(newTwitt);
+
+    if (initial) newTwitt.show();
+    else newTwitt.slideDown();
+};
+
 var Utils = {
+    linkify: function(text) {
+      var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+      return text.replace(exp,"<a href='$1'>$1</a>")
+                 .replace(/@(\w+)/ig, "<a href='http://twitter.com/$1'>@$1</a>")
+                 .replace(/(#[^\s]+)/ig, "<a href='http://twitter.com/search?q=$1'>$1</a>");
+    },
     formatDate: function(date) {
         var hour = date.split(" ")[1];
         date = date.split(" ")[0];
@@ -113,6 +172,7 @@ $(function() {
     Spin.init($("#event").get(0));
     Toggle.init();
     Meetups.init();
+    Twitter.init();
 });
 
 })(jQuery);

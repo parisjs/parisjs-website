@@ -471,23 +471,7 @@
 
             <div id="twitter">
                 <h2>Twitter #ParisJS</h2>
-                <ul>
-                    <li>
-                        <span>@JulienCabanes</span>
-                        <p><a href="#">#parisjs</a> les slides de ma présentation de <a href="#">#requirejs</a> <a href="#">t.co/t9YeGM9</a> quelques slides supplémentaires notamment au sujet des plugins.</p>
-                        <p class="time">Il y a 3 min</p>
-                    </li>
-                    <li>
-                        <span>@amorgaut</span>
-                        <p>RT <a href="#">@mikeloukides</a>: The official Node Knockout winners! <a href="#">t.co/p8RyvIf</a> - congrats Joshfire team for chess@home <a href="#">#ParisJS</a></p>
-                        <p class="time">Il y a 3 min</p>
-                    </li>
-                    <li>
-                        <span>@42loops</span>
-                        <p>Here is a first draft of the new parisjs web site designed by <a href="#">@noxdzine</a>: <a href="#">t.co/Jm9bqnk</a></p>
-                        <p class="time">Il y a 3 min</p>
-                    </li>
-                </ul>
+                <ul id="twitter-panel"></ul>
             </div>
         </div>
         </section>
@@ -504,7 +488,15 @@
             <h2>NEXT MEETUP</h2>
             <span class="titre">Coming soon</span>
             <spam class="summary">, stay tuned!</span>
-    </script>
+        </script>
+
+        <script id="tweetTmpl" type="text/x-jquery-tmpl">
+            <li class="tweet-box">
+                <span><a href="http://twitter.com/{{html tweet.user}}">{{html tweet.user}}</a></span>
+                <p>{{html tweet.text}}</p>
+                <p class="time">{{html tweet.time}}</p>
+            </li>
+        </script>
 
     <script type="text/javascript" src="js/jquery.1.6.3.min.js"></script>
     <script type="text/javascript" src="js/jquery.jsonp-1.0.4.min.js"></script>
