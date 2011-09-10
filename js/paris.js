@@ -39,10 +39,16 @@ Spin.stop = function () {
 var Toggle = {};
 
 Toggle.init = function () {
+
     $(".hideMsg").click(function (evt) {
-      $(evt.target).parent().next().slideToggle("slow");
+        $(evt.target).parent()
+                     .next()
+                     .slideToggle("slow");
     });
-    $(".click").hide();
+
+    $(".click").hide()
+               .first()
+               .slideToggle("slow");
 };
 
 var Meetups = {};
