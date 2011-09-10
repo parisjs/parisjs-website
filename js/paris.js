@@ -96,7 +96,7 @@ Meetups.load = function(tries) {
 };
 
 var Twitter = {
-    max: 8,
+    max: 6,
     last_id: null
 };
 
