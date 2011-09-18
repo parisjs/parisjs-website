@@ -9,12 +9,14 @@
 div.topbar {
   z-index: 9000 !important; /** We have a Github ribbon */
 }
-header .topbar h3 a {
+header .topbar .brand {
     background: url(../img/logo_site.png) no-repeat center left;
     padding-left: 60px;
 }
 
-
+#about h1 {
+    font-size: 24px;
+}
 #about p {
     font-size: 15px;
 }
