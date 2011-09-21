@@ -1,13 +1,13 @@
 ﻿
 var parisJS = [
 	{
-    name:		"Paris.js Meetup 10",
-    date:		"August 31, 2011",
+	name:		"Paris.js Meetup 10",
+	date:		"August 31, 2011",
 	place:		{name: "La Cantine", site: "http://lacantine.org"},
 	sponsors:	[{name: "Ekino", site: "http://www.ekino.com/"}],
 	images:		[],
 	videos:		["http://lacantine.ubicast.eu/videos/parisjs-10/"],
-    talks:		[{
+	talks:		[{
 					name: "State of the art: Server-Side JavaScript",
 					slide: "http://www.slideshare.net/alexandre_morgaut/state-of-the-art-serverside-javascript-parisjs",
 					tags: ["server","webkit","engine","nodeJs"],
@@ -45,13 +45,13 @@ var parisJS = [
 					]
 				}]
 	},{
-    name:		"Paris.js Meetup 9",
-    date:		"July 27, 2011",
+	name:		"Paris.js Meetup 9",
+	date:		"July 27, 2011",
 	place:		{name: "Smile", site: "http://www.smile.fr"},
 	sponsors:	[{name: "Smile", site: "http://www.smile.fr"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "PhoneGap introduction",
 					slide: "http://www.slideshare.net/tbassetto/prsentation-de-phonegap",
 					tags: [],
@@ -95,13 +95,13 @@ var parisJS = [
 					]
 				}]
 	},{
-    name:		"Paris.js Meetup 8",
-    date:		"June 29, 2011",
+	name:		"Paris.js Meetup 8",
+	date:		"June 29, 2011",
 	place:		{name: "Valtech", site: "http://www.valtech.fr"},
 	sponsors:	[{name: "Valtech", site: "http://www.valtech.fr"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Wakanda project",
 					slide: "http://www.slideshare.net/alexandre_morgaut/paris-js-meetup-8-june-2011",
 					tags: [],
@@ -160,13 +160,13 @@ var parisJS = [
 					]
 				}]
 	},{
-    name:		"Paris.js Meetup 7",
-    date:		"May 25, 2011",
+	name:		"Paris.js Meetup 7",
+	date:		"May 25, 2011",
 	place:		{name: "Vidal", site: "http://www.vidal.fr"},
 	sponsors:	[{name: "Vidal", site: "http://www.vidal.fr"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Javascript expressiveness",
 					slide: "http://parisjs-expressiveness.heroku.com/#1",
 					tags: [],
@@ -203,13 +203,13 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"Paris.js Meetup 6",
-    date:		"April 27, 2011",
+	name:		"Paris.js Meetup 6",
+	date:		"April 27, 2011",
 	place:		{name: "Octave &amp; Octave", site: "http://www.octaveoctave.com"},
 	sponsors:	[{name: "Octave &amp; Octave", site: "http://www.octaveoctave.com"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Introduction to The Scalable JavaScript Application Framework",
 					slide: "https://github.com/eric-brechemier/introduction_to_lb_js_scalableApp",
 					tags: [],
@@ -240,13 +240,13 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"Paris.js Meetup 5",
-    date:		"March 30, 2011",
+	name:		"Paris.js Meetup 5",
+	date:		"March 30, 2011",
 	place:		{name: "Joshfire", site: "http://www.Joshfire.com"},
 	sponsors:	[{name: "Joshfire", site: "http://www.Joshfire.com"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Arena JS",
 					slide: "https://github.com/jeromeetienne/arenajs",
 					tags: [],
@@ -276,13 +276,13 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"Paris.js Meetup 4",
-    date:		"February 23, 2011",
+	name:		"Paris.js Meetup 4",
+	date:		"February 23, 2011",
 	place:		{name: "La Cantine", site: "http://lacantine.org"},
 	sponsors:	[{name: "La Cantine", site: "http://lacantine.org"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "no.de quick presentation",
 					slide: "http://www.slideshare.net/sylvinus/node-quick-presentation-at-parisjs-4",
 					tags: [],
@@ -312,14 +312,14 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"Paris.js Meetup 3",
+	name:		"Paris.js Meetup 3",
 
-    date:		"January 26, 2011",
+	date:		"January 26, 2011",
 	place:		{name: "Zenexity", site: "http://www.zenexity.com"},
 	sponsors:	[{name: "Zenexity", site: "http://www.zenexity.com"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Backbone.js",
 					slide: "http://www.slideshare.net/tonyskn/backbonejs-6728018",
 					tags: [],
@@ -342,13 +342,13 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"Paris.js Meetup 2",
-    date:		"November 24, 2010",
+	name:		"Paris.js Meetup 2",
+	date:		"November 24, 2010",
 	place:		{name: "ISART Digital", site: "http://www.isartdigital.com"},
 	sponsors:	[{name: "ISART Digital", site: "http://www.isartdigital.com"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Web Crawling with NodeJS",
 					slide: "http://www.slideshare.net/sylvinus/web-crawling-with-nodejs",
 					tags: [],
@@ -378,13 +378,13 @@ var parisJS = [
 					]
 				}]
   },{
-    name:		"First Paris.js Meetup",
-    date:		"October 12, 2010",
+	name:		"First Paris.js Meetup",
+	date:		"October 12, 2010",
 	place:		{name: "af83", site: "http://af83.com"},
 	sponsors:	[{name: "af83", site: "http://af83.com"}],
 	images:		[],
 	videos:		[],
-    talks:		[{
+	talks:		[{
 					name: "Introduction à CouchDB",
 					slide: "http://javascript.training.free.fr/couchdb/intro/intro-couchdb.html",
 					tags: [],
