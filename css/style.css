@@ -287,7 +287,7 @@ header .text{
 	height: 72px;
 	float: left;
 }
-#meetups .avatar img{
+#meetups .avatar img {
 	background: url(../images/avatar.png) no-repeat;
 	width: 72px;
 	height: 72px;
@@ -300,7 +300,7 @@ header .text{
 .meetup{
 	margin: 12px 0;
 }
-.meetup a{
+.meetup a:first-child {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -312,7 +312,7 @@ header .text{
 .meetup a:hover{
 	text-decoration:underline;
 }
-li.titleTalk{
+li.titleTalk {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -320,6 +320,11 @@ li.titleTalk{
 	background: url(../images/ico_talk.png) no-repeat 95px 2px;
 	font-size: 14px;
 	color:#515151;
+}
+li.titleTalk a {
+	font-size: 14px;
+	color:#515151;
+	font-weight:bold;
 }
 .descTalk,
 .authorTalk{

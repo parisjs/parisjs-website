@@ -170,7 +170,9 @@ window.Utils = Utils;
 window.ParisJS = ParisJS;
 
 $(function() {
-    Spin.init($("#event").get(0));
+    var parisJSTmpl = $('script#parisJSTmpl').tmpl(parisJS);
+	$(parisJSTmpl).appendTo('div#meetups ul:first');
+	Spin.init($("#event").get(0));
     Toggle.init();
     Meetups.init();
     Twitter.init();
