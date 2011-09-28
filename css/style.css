@@ -2,7 +2,7 @@ body{
 	position:relative;
 	-webkit-font-smoothing: antialiased;
 	background:#f9f9f8;
-	font-family: "Open Sans", Helvetica, Arial, Serif;
+	font-family: "Myriad Pro", Helvetica, Arial, Serif;
 	font-size: 14px;
 	color:#a6a6a6;
 }
@@ -148,6 +148,7 @@ header .text{
 	color:#fff;
 	padding:0 5px;
 	margin:12px;
+	font-size: 16px;
 }
 #navigation li a{
 	text-decoration:none;
@@ -199,7 +200,7 @@ header .text{
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 12px 10px;
-	font-size:12px;
+	font-size:14px;
 	color:#515151;
 }
 #about p a{
@@ -224,14 +225,14 @@ header .text{
 	margin: 10px 0 5px 0;
 	color: #515151;
 	font-weight: bold;
-	font-size: 12px;
+	font-size: 14px;
 }
 #twitter p {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 3px 12px 0;
-	font-size:12px;
+	font-size:14px;
 	margin:0;
 	color:rgba(0,0,0,0.6);
 }
@@ -322,14 +323,13 @@ li.titleTalk{
 }
 .descTalk,
 .authorTalk{
-	font-size: 12px;
+	font-size: 14px;
 }
 .descTalk{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 7px 0 0 95px;
-	font-weight: ;
 }
 .descTalk a{
 	color:#3e3759;
