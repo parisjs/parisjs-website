@@ -154,7 +154,7 @@ var Utils = {
       var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
       return text.replace(exp,"<a href='$1'>$1</a>")
                  .replace(/@(\w+)/ig, "<a target='_blank' href='http://twitter.com/$1'>@$1</a>")
-                 .replace(/(#[^\s]+)/ig, "<a target='_blank' href='http://twitter.com/search?q=$1'>$1</a>");
+                 .replace(/#([^\s]+)/ig, "<a target='_blank' href='http://twitter.com/search?q=%23$1'>#$1</a>");
     },
     formatDate: function(date) {
         var hour = date.split(" ")[1];
