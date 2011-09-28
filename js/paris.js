@@ -4,7 +4,7 @@ var log = function() {
     if(this.console) {
         console.log( Array.prototype.slice.call(arguments) )
     }
-}
+};
 
 var MONTH = [
     "January", "February", "March", "April", "May", "June",
@@ -13,49 +13,44 @@ var MONTH = [
 
 var ParisJS = {
     ICAL: "http://h2vx.com/ics/www.eventbrite.com/org/862067525"
-}
+};
 
-var Tabs = {
-    init: function() {
-        function getPanel(tab) {
-            return $($('a', tab).attr('href'));
-        }
+var Spin = { };
 
-        $('.panel').hide();
-        $('.tabs li').click(function(e) {
-            e.preventDefault();
-            var previous = $('.tabs .active');
-            getPanel(previous).hide();
-            previous.removeClass('active');
+Spin.init = function (target) {
+    var opts = {
+      lines: 16,
+      length: 9,
+      width: 2,
+      radius: 12,
+      color: '#FFFFFF',
+      speed: 1,
+      trail: 100,
+      shadow: true
+    };
 
-            $(this).addClass('active');
-            getPanel(this).show();
-        });
-        getPanel($('.tabs .active')).show();
-        var tabs = $('.tabs');
-        var oldTabs = this._olderTabs();
-        if (oldTabs.size() == 0)
-            return;
-        oldTabs = oldTabs.add(oldTabs.first().prev());
-        $('<li>').addClass('dropdown').append(
-            $('<a>').addClass('dropdown-toggle').text('olders')
-        ).append(
-            $('<ul>').addClass('dropdown-menu').append(oldTabs)
-        ).click(function() {
-            $(this).toggleClass('open')
-        }).appendTo(tabs);
-    },
+    this.spinner = new Spinner(opts).spin(target);
+};
 
-    _olderTabs: function() {
-        var tabs = $('.tabs');
-        var maxWidth = tabs.width();
-        var actual = 0;
-        return $('li', tabs).filter(function() {
-            actual += $(this).width();
-            return (actual > maxWidth);
-        });
-    }
-}
+Spin.stop = function () {
+    this.spinner.stop();
+};
+
+var Toggle = {};
+
+Toggle.init = function () {
+
+    $(".meetup").click(function (evt) {
+        evt.preventDefault();
+        $(evt.target).parent()
+                     .next()
+                     .slideToggle("slow");
+    });
+
+    $(".meetup-content").hide()
+                        .first()
+                        .slideToggle("slow");
+};
 
 var Meetups = {};
 
@@ -84,24 +79,83 @@ Meetups.load = function(tries) {
             var nextEvent = null;
 
             $(events).each(function(){
-                if (this.status == "Completed") return;
+                if (this.status == "Completed") { return; }
                 nextEvent = this;
             });
-            var $event = $("#event");
+            var $event = $("#event"),
+                event;
+
             if (nextEvent) {
-                $event.find('h2').append(": "+ nextEvent.title);
-                var event = $("#eventTmpl").tmpl({event: nextEvent});
-                $event.append(event);
-                event.find(".span4").css('min-height', event.height());
+                event = $("#eventTmpl").tmpl({event: nextEvent});
             } else {
-                $event.append("No event scheduled yet.");
+                event = $("#emptyEventTmpl").tmpl();
             }
-            $("#eventsSpinner").hide();
+            $event.html(event);
+            Spin.stop();
         }
     });
-}
+};
+
+var Twitter = {
+    max: 6,
+    last_id: null
+};
+
+Twitter.init = function() {
+    this.$twitter = $("#twitter-panel");
+    Twitter.refresh();
+    setInterval(Twitter.refresh, 10 * 1000);
+};
+
+Twitter.refresh = function() {
+    $.jsonp({
+        url: "http://search.twitter.com/search.json?q=parisjs&rpp=8"
+            + "&result_type=recent"
+            + (Twitter.last_id ? "&since_id=" + Twitter.last_id : ""),
+        dataType: "jsonp",
+        callbackParameter: "callback",
+        success: function(result) {
+            $(result.results.reverse()).each(function(){
+                if (this.id != Twitter.last_id)
+                    Twitter.addTwitt(this, Twitter.last_id == null);
+            });
+            if (result.results.length > 0) {
+                Twitter.last_id = result.results[0].id;
+            }
+        },
+        error: function(XHR, textStatus, errorThrown) {
+            console.log(textStatus);
+            console.log(errorThrown);
+        }
+    })
+};
+
+Twitter.addTwitt = function(twitt, initial) {
+    while ($(".tweet-box", this.$twitter).size() >= this.max) {
+        $(".tweet-box", this.$twitter).last().remove();
+    }
+    
+    var newTwitt = $("#tweetTmpl").tmpl({ 
+        tweet: { 
+            user : twitt.from_user ,
+            text : Utils.linkify(twitt.text),
+            time : (new Date(twitt.created_at)).toDateString() 
+        }
+    });
+
+    this.$twitter.prepend(newTwitt);
+
+    if (initial) newTwitt.show();
+    else newTwitt.slideDown();
+};
 
 var Utils = {
+    linkify: function(text) {
+      var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+      return text.replace(exp,"<a href='$1'>$1</a>")
+                 .replace(/@(\w+)/ig, "<a href='http://twitter.com/$1'>@$1</a>")
+                 .replace(/(#[^\s]+)/ig, "<a href='http://twitter.com/search?q=$1'>$1</a>");
+    },
     formatDate: function(date) {
         var hour = date.split(" ")[1];
         date = date.split(" ")[0];
@@ -110,15 +164,16 @@ var Utils = {
         var day = date.split("-")[2];
         return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
     }
-}
+};
 
 window.Utils = Utils;
 window.ParisJS = ParisJS;
 
 $(function() {
+    Spin.init($("#event").get(0));
+    Toggle.init();
     Meetups.init();
-    Tabs.init();
-    $('.topbar').scrollSpy()
+    Twitter.init();
 });
 
 })(jQuery);
