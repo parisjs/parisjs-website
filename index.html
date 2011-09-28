@@ -495,6 +495,9 @@
             <h2>NEXT MEETUP</h2>
             <p class="dtstart date" title="${event.start_date}">${Utils.formatDate(event.start_date)}</p>
             <p class="titre">{{html event.title}}</p>
+            <p class="where">
+                <a href="http://maps.google.com/maps?q={{html event.venue.latitude}},{{html event.venue.longitude}}&z=15">hosted by {{html event.venue.name}}</a>
+            </p>
             <div class="summary">{{html event.description}}</div>
             <a class="inscription" href="${event.url}">INSCRIPTION</a>
         </script>

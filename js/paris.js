@@ -48,8 +48,8 @@ Toggle.init = function () {
     });
 
     $(".meetup-content").hide()
-               .first()
-               .slideToggle("slow");
+                        .first()
+                        .slideToggle("slow");
 };
 
 var Meetups = {};
