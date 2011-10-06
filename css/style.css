@@ -389,7 +389,7 @@ li.titleTalk{
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	padding: 12px 0;
+	padding: 15px 0;
 }
 .noxdzine:hover{
 	opacity: 1;
