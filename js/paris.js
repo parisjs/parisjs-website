@@ -120,7 +120,7 @@ Twitter.refresh = function() {
                     Twitter.addTwitt(this, Twitter.last_id == null);
             });
             if (result.results.length > 0) {
-                Twitter.last_id = result.results[0].id;
+                Twitter.last_id = result.max_id;
             }
         },
         error: function(XHR, textStatus, errorThrown) {
