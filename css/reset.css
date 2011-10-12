@@ -6,5 +6,6 @@ blockquote:before, blockquote:after, q:before, q:after {content: "";}
 blockquote, q {quotes: "" "";}
 ol, ul {list-style: none;}
 hr {display: none; visibility: hidden;}
-:focus {outline: 0;}
 
+a { color: rgba(0, 0, 0, 0.3);}
+a:hover { color: #E14680; text-decoration: underline;}
