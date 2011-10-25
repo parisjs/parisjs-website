@@ -118,7 +118,10 @@ header .text{
 }
 
 .next_meetup div.summary a {
-    text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+    text-overflow: ellipsis; 
+    overflow: hidden; 
+    white-space: nowrap;
+    color:white !important;
 }
 
 .next_meetup div.summary {
