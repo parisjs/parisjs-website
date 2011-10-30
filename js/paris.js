@@ -11,10 +11,6 @@ var MONTH = [
     "July", "August", "September", "October", "November", "December"
 ];
 
-var ParisJS = {
-    ICAL: "http://h2vx.com/ics/www.eventbrite.com/org/862067525"
-};
-
 var Spin = { };
 
 Spin.init = function (target) {
@@ -59,9 +55,16 @@ Meetups.init = function() {
 }
 
 Meetups.load = function(tries) {
+    var $event = $("#event");
+
     $.ajax({
-        url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true",
-        jsonp: "callback",
+        dataType: 'json',
+        type: 'GET',
+        url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true&callback=?",
+        error: function (jqXHR, status, errorThrown) {
+            $event.html($("#emptyEventTmpl").tmpl());
+            Spin.stop();
+        },
         success: function(result) {
             var events = [];
             if (typeof result == "string") {
@@ -82,15 +85,8 @@ Meetups.load = function(tries) {
                 if (this.status == "Completed") { return; }
                 nextEvent = this;
             });
-            var $event = $("#event"),
-                event;
 
-            if (nextEvent) {
-                event = $("#eventTmpl").tmpl({event: nextEvent});
-            } else {
-                event = $("#emptyEventTmpl").tmpl();
-            }
-            $event.html(event);
+            $event.html(nextEvent ? $("#eventTmpl").tmpl({event: nextEvent}) : $("#emptyEventTmpl").tmpl());
             Spin.stop();
         }
     });
@@ -115,7 +111,7 @@ Twitter.refresh = function() {
         dataType: "jsonp",
         callbackParameter: "callback",
         success: function(result) {
-            $(result.results.reverse()).each(function(){
+            $(jQuery.makeArray(result.results).reverse()).each(function(){
                 if (this.id != Twitter.last_id)
                     Twitter.addTwitt(this, Twitter.last_id == null);
             });
@@ -124,8 +120,8 @@ Twitter.refresh = function() {
             }
         },
         error: function(XHR, textStatus, errorThrown) {
-            console.log(textStatus);
-            console.log(errorThrown);
+            log(textStatus);
+            log(errorThrown);
         }
     })
 };
@@ -149,7 +145,7 @@ Twitter.addTwitt = function(twitt, initial) {
     else newTwitt.slideDown();
 };
 
-var Utils = {
+window.Utils = {
     linkify: function(text) {
       var exp = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
       return text.replace(exp,"<a href='$1'>$1</a>")
@@ -165,9 +161,6 @@ var Utils = {
         return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
     }
 };
-
-window.Utils = Utils;
-window.ParisJS = ParisJS;
 
 $(function() {
     Spin.init($("#event").get(0));

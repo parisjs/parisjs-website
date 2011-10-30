@@ -93,6 +93,7 @@ header .text{
 	color:#3c7a64;
 	text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
 	text-align:center;
+	background: #62AB91;
 	background: -webkit-gradient(linear, left top, left bottom, from(#8dd6b6), to(#62ab91));
     background: -moz-linear-gradient(-90deg,#8dd6b6,#62ab91);
 	border-radius: 6px;
