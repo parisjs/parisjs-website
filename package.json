@@ -1,0 +1,15 @@
+{
+  "name": "parisjs-website",
+  "description": "The website of parisjs.org",
+  "version": "0.0.1",
+  "homepage": "http://parisjs.org/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/parisjs/parisjs-website.git"
+  },
+  "dependencies": {
+      "jsdom": "",
+      "underscore": ""
+  },
+  "devDependencies": {}
+}

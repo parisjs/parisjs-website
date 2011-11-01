@@ -2,6 +2,20 @@
 
 This is the source of the parisjs.org website.
 
+## Utils
+
+Before everything else:
+
+    npm install
+
+### Parsing all meetups and talks
+
+    node utils/meetups.js parse
+
+### Writing all meetups
+
+    node utils/meetups.js update
+
 ## License
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
