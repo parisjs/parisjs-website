@@ -130,12 +130,12 @@ Twitter.addTwitt = function(twitt, initial) {
     while ($(".tweet-box", this.$twitter).size() >= this.max) {
         $(".tweet-box", this.$twitter).last().remove();
     }
-    
-    var newTwitt = $("#tweetTmpl").tmpl({ 
-        tweet: { 
+
+    var newTwitt = $("#tweetTmpl").tmpl({
+        tweet: {
             user : twitt.from_user ,
             text : Utils.linkify(twitt.text),
-            time : (new Date(twitt.created_at)).toDateString() 
+            time : (new Date(twitt.created_at)).toDateString()
         }
     });
 
