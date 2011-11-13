@@ -17,7 +17,6 @@
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/font.css" />
-        <script type="text/javascript" src="http://communityjs.org/data"></script>
     </head>
 
     <body>
@@ -613,14 +612,16 @@
 
         <script id="communityTmpl" type="text/x-jquery-tmpl">
           {{each(i, v) meetups}} 
-            <li><a href="{{html v.link}}">{{html v.town}} - {{html v.country}}</a></li>
+            <li><a href="{{html v.link}}"> ٠ {{html v.town}} - {{html v.country}}</a></li>
           {{/each}}
         </script>
 
+        <script type="text/javascript" src="js/es5-shim.js"></script>
         <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="js/jquery.jsonp-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
         <script type="text/javascript" src="js/spin.js"></script>
+        <script type="text/javascript" src="http://communityjs.org/data"></script>
         <script type="text/javascript" src="js/paris.js"></script>
 
         <script type="text/javascript">

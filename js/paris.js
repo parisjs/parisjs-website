@@ -175,11 +175,11 @@ $(function() {
 });
 
 (function pickAndAddRandomCommunities($, d){
-    var meetups = data.filter(function(e){return e.continent!="Conference"}),
-        chosen = Utils.range(10).map(function(e){ return meetups.splice(Math.floor(Math.random()*meetups.length), 1)[0] }),
+    var meetups = data.filter(function(e){return e.continent!="Conference"; }),
+        chosen = Utils.range(10).map(function(e){ return meetups.splice(Math.floor(Math.random()*meetups.length), 1)[0]; }),
         $place = $("#communities ul"),
         $tmpl = $("#communityTmpl"); 
     $place.html($tmpl.tmpl({meetups : chosen}));
-})($, data|[]);
+})($, data || []);
 
 })(jQuery);

@@ -196,7 +196,7 @@ header .text{
 	width: 340px;
 	float: left;
 }
-#sidebar div:nth-child(1n+2){
+#communities{
 	margin: 15px 0 0;
 }
 #sidebar p{
@@ -270,13 +270,18 @@ header .text{
 	color: #71669c;
 }
 #communities ul{
-        padding: 12px 10px; 
+    padding: 12px 10px; 
+}
+#communities li{
+    padding: 1px 0; 
 }
 #communities p{
-        padding : 0px 10px;
+    padding: 12px 10px;
 }
-
-
+#communities p a {
+    color: #E14680;
+    font-weight: bold;
+}
 #content{
 	padding: 30px 0;
 }
