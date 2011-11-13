@@ -270,7 +270,7 @@ header .text{
 	color: #71669c;
 }
 #communities ul{
-    padding: 12px 10px; 
+    padding: 12px 10px 0 10px; 
 }
 #communities li{
     padding: 1px 0; 
