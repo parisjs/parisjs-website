@@ -17,7 +17,7 @@
         <link rel="stylesheet" type="text/css" href="css/reset.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/font.css" />
-
+        <script type="text/javascript" src="http://communityjs.org/data"></script>
     </head>
 
     <body>
@@ -567,6 +567,12 @@
                 <h2>Twitter #ParisJS</h2>
                 <ul id="twitter-panel"></ul>
             </div>
+            <div id="communities">
+                <h2>Communities around the world</h2>
+                  <ul>
+                  </ul>
+                <p>More on <a href="http://www.communityjs.org">communityJS.org</a></p>
+            </div>
         </div>
         </section>
 
@@ -594,7 +600,7 @@
         <script id="emptyEventTmpl" type="text/x-jquery-tmpl">
             <h2>NEXT MEETUP</h2>
             <span class="titre">Coming soon</span>
-            <spam class="summary">, stay tuned!</span>
+            <span class="summary">, stay tuned!</span>
         </script>
 
         <script id="tweetTmpl" type="text/x-jquery-tmpl">
@@ -603,6 +609,12 @@
                 <p>{{html tweet.text}}</p>
                 <p class="time">{{html tweet.time}}</p>
             </li>
+        </script>
+
+        <script id="communityTmpl" type="text/x-jquery-tmpl">
+          {{each(i, v) meetups}} 
+            <li><a href="{{html v.link}}">{{html v.town}} - {{html v.country}}</a></li>
+          {{/each}}
         </script>
 
         <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>

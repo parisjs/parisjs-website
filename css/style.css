@@ -196,60 +196,16 @@ header .text{
 	width: 340px;
 	float: left;
 }
-#about{
+#sidebar div:nth-child(1n+2){
 	margin: 15px 0 0;
 }
-#about p{
+#sidebar p{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	padding: 12px 10px;
 	font-size:14px;
 	color:#515151;
-}
-#about p a{
-	color:#e14680;
-	font-weight: bold;
-}
-#about p a:hover{
-	text-decoration:underline;
-}
-#twitter{
-	margin: 15px 0 0;
-}
-#twitter li{
-	border-left: 3px solid #f1f1f1;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0 5px;
-}
-#twitter span{
-	display:block	;
-	margin: 10px 0 5px 0;
-	color: #515151;
-	font-weight: bold;
-	font-size: 14px;
-}
-#twitter p {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 3px 12px 0;
-	font-size:14px;
-	margin:0;
-	color:rgba(0,0,0,0.6);
-}
-#twitter p a{
-	color:rgba(0,0,0,0.3);
-}
-#twitter p a:hover{
-	color:#e14680;
-	text-decoration:underline;
-}
-#twitter p.time{
-	font-size: 10px;
-	color: #71669c;
 }
 #sidebar h2{
 	-webkit-box-sizing: border-box;
@@ -272,6 +228,55 @@ header .text{
 #sidebar p strong{
 	font-weight: bold;
 }
+#about{
+	margin: 15px 0 0;
+}
+#about p a{
+	color:#e14680;
+	font-weight: bold;
+}
+#about p a:hover{
+	text-decoration:underline;
+}
+#twitter li{
+	border-left: 3px solid #f1f1f1;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0 5px;
+}
+#twitter span{
+	display:block	;
+	margin: 10px 0 5px 0;
+	color: #515151;
+	font-weight: bold;
+	font-size: 14px;
+}
+#twitter p {
+	padding: 3px 12px 0;
+	font-size:14px;
+	margin:0;
+	color:rgba(0,0,0,0.6);
+}
+#twitter p a{
+	color:rgba(0,0,0,0.3);
+}
+#twitter p a:hover{
+	color:#e14680;
+	text-decoration:underline;
+}
+#twitter p.time{
+	font-size: 10px;
+	color: #71669c;
+}
+#communities ul{
+        padding: 12px 10px; 
+}
+#communities p{
+        padding : 0px 10px;
+}
+
+
 #content{
 	padding: 30px 0;
 }
