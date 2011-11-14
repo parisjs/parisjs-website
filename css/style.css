@@ -196,10 +196,10 @@ header .text{
 	width: 340px;
 	float: left;
 }
-#about{
+#about, #proposal {
 	margin: 15px 0 0;
 }
-#about p{
+#about p, #proposal p{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -207,11 +207,11 @@ header .text{
 	font-size:14px;
 	color:#515151;
 }
-#about p a{
+#about p a, #proposal p a{
 	color:#e14680;
 	font-weight: bold;
 }
-#about p a:hover{
+#about p a:hover, #proposal p a:hover{
 	text-decoration:underline;
 }
 #twitter{
