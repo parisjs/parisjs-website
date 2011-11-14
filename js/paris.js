@@ -1,4 +1,4 @@
-(function($){
+(function($, _){
 
 var log = function() {
     if(this.console) {
@@ -159,11 +159,6 @@ window.Utils = {
         var month = date.split("-")[1];
         var day = date.split("-")[2];
         return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
-    },
-    range : function(n){
-        var res = [];
-        for(var i=1; i<=n; i++){ res.push(i)}
-        return res;        
     }
 };
 
@@ -174,12 +169,12 @@ $(function() {
     Twitter.init();
 });
 
-(function pickAndAddRandomCommunities($, d){
-    var meetups = data.filter(function(e){return e.continent!="Conference"; }),
-        chosen = Utils.range(10).map(function(e){ return meetups.splice(Math.floor(Math.random()*meetups.length), 1)[0]; }),
+(function pickAndAddRandomCommunities($, d, _){
+    var meetups = _.filter(data, function(e){return e.continent!="Conference"; }),
+        chosen = _.map(_.range(10),function(e){ return meetups.splice(Math.floor(Math.random()*meetups.length), 1)[0]; }),
         $place = $("#communities ul"),
         $tmpl = $("#communityTmpl"); 
     $place.html($tmpl.tmpl({meetups : chosen}));
-})($, data || []);
+})($, data || [], _);
 
-})(jQuery);
+})(jQuery, _);
