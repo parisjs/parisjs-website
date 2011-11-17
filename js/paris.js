@@ -1,4 +1,4 @@
-(function($){
+(function($, _){
 
 var log = function() {
     if(this.console) {
@@ -169,4 +169,11 @@ $(function() {
     Twitter.init();
 });
 
-})(jQuery);
+(function pickAndAddRandomCommunities($, d, _){
+    var meetups = _(d).chain().filter(function(e){return e.continent!="Conference"; }).shuffle().first(10).value(),
+        $place = $("#communities ul"),
+        $tmpl = $("#communityTmpl"); 
+    $place.html($tmpl.tmpl({meetups : meetups}));
+})($, data || [], _);
+
+})(jQuery, _);
