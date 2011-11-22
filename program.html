@@ -9,7 +9,7 @@
 	  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8">
 	  <link rel="stylesheet" href="css/program.css" type="text/css" media="screen" charset="utf-8">
 </head>
-<body onload="init ();">
+<body onload="Spin.init (document.getElementById ('spin'));">
     <header>
       <div class="container">
         <div id="logo">
@@ -21,12 +21,11 @@
       </div>
     </header>
     <div id="navigation">
-            <div class="container">
-                <span class="title">Programme {Paris.js}</span>
-    <a class="add_prez" href="https://docs.google.com/spreadsheet/viewform?formkey=dDNDbU93eUh1NXpCenNXT1FqQksxZmc6MQ">Proposer une présentation</a>
-            </div>
-
-        </div>
+      <div class="container">
+        <span class="title">Programme {Paris.js}</span>
+        <a class="add_prez" href="https://docs.google.com/spreadsheet/viewform?formkey=dDNDbU93eUh1NXpCenNXT1FqQksxZmc6MQ">Proposer une présentation</a>
+      </div>
+    </div>
     <section class="container">
     <div id="spin"></div>
     <div id="content" style="visibility:hidden">
