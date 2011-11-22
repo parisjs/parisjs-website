@@ -1,0 +1,158 @@
+.container .title {
+  width: 410px;
+}
+
+h1 {
+  color: #DC4084;
+  font-weight: bold;
+  font-size: 18px;
+  border-bottom: 1px solid #453C62;
+  padding: 20px 0 0 10px;
+  font-family: "MuseoSlab500", Helvetica, Arial, Serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  color: #DC4084;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 20px 0 0 10px;
+  font-family: "MuseoSlab500", Helvetica, Arial, Serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1.title {
+  background-color: #271F46;
+  color: #F4D9AB;
+  font-family: 'Andale Mono', Helvetica, Arial, serif;
+  font-size: 30px;
+  -webkit-font-smoothing: antialiased;
+  outline-color: #F4D9AB;
+}
+
+a.add_prez {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 13px;
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3C7A64;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.4);
+  text-align: center;
+  background: #62AB91;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8DD6B6), to(#62AB91));
+  background: -moz-linear-gradient(-90deg,#8DD6B6,#62AB91);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -moz-box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.7) inset,0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.7) inset,0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.7) inset,0px 1px 3px rgba(0, 0, 0, 0.5);
+  float: left;
+}
+
+a.add_prez:hover{
+  color:#497e6c;
+  cursor:pointer;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
+  background: -webkit-gradient(linear, left top, left bottom, from(#62ab91), to(#8dd6b6));
+  background: -moz-linear-gradient(-90deg,#62ab91,#8dd6b6);
+  -moz-box-shadow: 0px 1px 2px rgba(255,255,255,0.7) inset,0px 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0px 1px 2px rgba(255,255,255,0.7) inset,0px 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 0px 1px 2px rgba(255,255,255,0.7) inset,0px 1px 3px rgba(0,0,0,0.5);
+}
+
+article.prez {
+  margin: 10px;
+  border-color: #F1F1F1;;
+  border-style: solid;
+  border-width: 0 0px 1px 4px;
+}
+
+article.prez header {
+  width: 100%;
+  min-width: 100px;
+  background: transparent;
+  padding: 0px;
+  border-bottom: none;
+  height: 30px;
+}
+
+article.prez header h1 {
+  color: black;
+  text-shadow: 1px 1px white;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 6px;
+  background-color: #DDD;
+  padding: 5px 10px 0 10px;
+  font-size : 14px;
+}
+
+article.prez.lightning header h1{
+  background: #888;
+  text-shadow: 1px 1px 0px rgba(200,200,200,0.4)
+}
+
+article header h1::after {
+  content:"Normal";
+  float: right;
+  font-size: 0.7em;
+} 
+
+article.lightning header h1::after {
+  content:"Lightning";
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
+} 
+
+section.authors span {
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
+}
+
+section.authors span:nth-child(1)::before {
+  content: "Auteur(s) : ";
+  font-weight: bold;
+  padding-left: 10px;
+  color: #000;
+  font-style: normal;
+}
+
+section.authors span:nth-child(2)::before {
+  content: "Contact(s) : ";
+  font-weight: bold;
+  margin-left: 20px;
+  color: #000;
+  font-style: normal;
+}
+
+section.abstract {
+  font-size: 13px;
+  margin-top: 30px;
+}
+
+section.abstract pre {
+  border-top: 1px solid #F0F0F0;
+  padding: 10px 10px;
+  font-style: italic;
+  color: #666;
+}
+
+section.abstract:before {
+  content: "Résumé";
+  margin: -20px 0 0 0;
+  padding: 5px 0 0 10px;
+  float:left;
+  font-weight: bold;
+  width: 100%;
+}
+
+#spin {
+  margin-top: 200px;
+  margin-left: -100px;
+}
