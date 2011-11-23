@@ -600,7 +600,12 @@
             <p class="where">
                 <a href="http://maps.google.com/maps?q={{html event.venue.latitude}},{{html event.venue.longitude}}&z=15">hosted by {{html event.venue.name}}</a>
             </p>
-            <div class="summary">{{html event.description}}</div>
+            <div class="summary">
+              <p>Program:</p>
+              <div>
+                <a href="program.html">programme</a>
+              </div>
+            </div>
             <a class="inscription" href="${event.url}">INSCRIPTION</a>
         </script>
 
