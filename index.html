@@ -600,7 +600,10 @@
             <p class="where">
                 <a href="http://maps.google.com/maps?q={{html event.venue.latitude}},{{html event.venue.longitude}}&z=15">hosted by {{html event.venue.name}}</a>
             </p>
-            <div class="summary">{{html event.description}}</div>
+            <div class="summary">
+                {{html event.description}}
+                <a href="program.html">SEE THE PROGRAM</a>
+            </div>
             <a class="inscription" href="${event.url}">INSCRIPTION</a>
         </script>
 
@@ -608,6 +611,9 @@
             <h2>NEXT MEETUP</h2>
             <span class="titre">Coming soon</span>
             <span class="summary">, stay tuned!</span>
+            <div class="summary">
+                <a href="program.html">SEE THE PROGRAM</a>
+            </div>
         </script>
 
         <script id="tweetTmpl" type="text/x-jquery-tmpl">

@@ -123,6 +123,7 @@ header .text{
     overflow: hidden; 
     white-space: nowrap;
     color:white !important;
+    text-align:center;
 }
 
 .next_meetup div.summary {
