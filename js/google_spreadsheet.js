@@ -152,13 +152,22 @@ function queryResult (response)
   var data = response.getDataTable ();
   var talks = parseDataTable (data);
   
+  // Un programme est dispo
   if (Talk.hasAcceptedTalk)
+  {
     generateGUI (".prez", talks, Talk.STATE_ACCEPTED);
+    document.querySelector (".prez.prochain").style.visibility = "hidden";
+    document.querySelector (".prez.avenir").style.visibility = "hidden";
+  }
+  // Pas de programme dispo, on affiche les propositions
   else
+  {
+    document.querySelector ("a.add_prez").style.visibility = "visible";
     document.querySelector (".prez").innerHTML = "<h2>Programme du prochain ParisJS en cours de finalisation...<h2>";
 
-  generateGUI (".prez.prochain", talks, Talk.STATE_NEXT);
-  generateGUI (".prez.avenir", talks, Talk.STATE_NEXT_NEXT);
+    generateGUI (".prez.prochain", talks, Talk.STATE_NEXT);
+    generateGUI (".prez.avenir", talks, Talk.STATE_NEXT_NEXT);
+  }
 }
 
 /**
