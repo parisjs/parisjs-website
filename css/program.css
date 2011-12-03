@@ -135,6 +135,7 @@ section.authors span:nth-child(2)::before {
 section.abstract {
   font-size: 13px;
   margin-top: 30px;
+  padding: 5px;
 }
 
 section.abstract pre {
@@ -146,11 +147,12 @@ section.abstract pre {
 
 section.abstract:before {
   content: "Résumé";
-  margin: -20px 0 0 0;
-  padding: 5px 0 0 10px;
+  margin: -25px 0 0 0;
+  padding: 5px 0 0 5px;
   float:left;
   font-weight: bold;
   width: 100%;
+  color: black;
 }
 
 #spin {
