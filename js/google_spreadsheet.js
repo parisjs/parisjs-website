@@ -38,7 +38,7 @@ function Talk (title, authors, contacts, type, abstract, state)
   this.state = state;
 }
 
-Talk.TEMPLATE = "<article class=\"prez\"><header><h1>{title}</h1></header><section class=\"authors\"><span>{authors}</span><span>{contacts}</span></section><section class=\"abstract\"><pre>{abstract}</pre></section></article>";
+Talk.TEMPLATE = "<article class=\"prez\"><header><h1>{title}</h1></header><section class=\"authors\"><span>{authors}</span><span>{contacts}</span></section><section class=\"abstract\"><p>{abstract}</p></section></article>";
 
 Talk.TYPE_NORMAL = 1;
 Talk.TYPE_SHORT = 2;
@@ -50,7 +50,12 @@ Talk.STATE_NEXT_NEXT = 'Suivant';
 Talk.prototype.generateView = function ()
 {
   var str = Talk.TEMPLATE;
-  for (var key in this) str = str.replace ('{' + key + '}', this [key]);
+  for (var key in this)
+  {
+    text = this [key];
+    if (text.replace) text = text.replace (/\n/g, '<br/>');
+    str = str.replace ('{' + key + '}',text);
+  }
 
   var div = document.createElement (div);
   div.innerHTML = str;
