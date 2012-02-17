@@ -42,10 +42,19 @@ Toggle.init = function () {
                      .next()
                      .slideToggle("slow");
     });
+    
+    $(".meetup-content").hide();
 
-    $(".meetup-content").hide()
-                        .first()
-                        .slideToggle("slow");
+    var hash = window.location.hash;
+    if (-1 != hash.indexOf("#meetup-")) {
+        //Open selected meetup
+        $(hash).toggle();
+    } else {
+        //Open first by default
+        $(".meetup-content")
+            .first()
+            .toggle();
+    }
 };
 
 var Meetups = {};
