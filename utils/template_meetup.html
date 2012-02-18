@@ -1,5 +1,5 @@
-                    <li class="meetup">
-                        <a href="#" class="meetup-title"><%= title %></a>
+                    <li class="meetup" id="meetup-<%= num %>">
+                        <a href="#meetup-<%= num %>" class="meetup-title"><%= title %></a>
                         <ul class="meetup-content"><% talks.forEach(function(talk) { %>
                             <li>
                                 <ul>

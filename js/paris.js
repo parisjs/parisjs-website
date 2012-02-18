@@ -41,9 +41,18 @@ Toggle.init = function () {
         $('.meetup-content', this).slideToggle("slow");
     });
 
-    $(".meetup-content").hide()
-                        .first()
-                        .slideToggle("slow");
+    $(".meetup-content").hide();
+
+    var hash = window.location.hash;
+    if (-1 != hash.indexOf("#meetup-")) {
+        //Open selected meetup
+        $('.meetup-content', hash).toggle();
+    } else {
+        //Open first by default
+        $(".meetup-content")
+            .first()
+            .toggle();
+    }
 };
 
 var Meetups = {};

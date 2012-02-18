@@ -69,7 +69,9 @@ function updateMeetups() {
 
 function generateHTMLFor(meetups) {
     var template = _.template(fs.readFileSync(__dirname +'/template_meetup.html', 'utf8'));
-    var html = meetups.map(function(meetup) {
+    var total = meetups.length;
+    var html = meetups.map(function(meetup, num) {
+        meetup.num = total - num;
         return template(meetup);
     });
     return "\n"+ html.join('')+"\n\n";
