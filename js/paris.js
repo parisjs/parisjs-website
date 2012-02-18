@@ -36,9 +36,9 @@ var Toggle = {};
 
 Toggle.init = function () {
 
-    $(".meetup").click(function (evt) {
+    $(".meetup-title").click(function (evt) {
         evt.preventDefault();
-        $('.meetup-content', this).slideToggle("slow");
+        $(this).parent().find('.meetup-content').slideToggle("slow");
     });
 
     $(".meetup-content").hide();
