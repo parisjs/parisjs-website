@@ -133,10 +133,10 @@ function extractMeetups($) {
     $meetups.each(function() {
         var $meetup = $(this);
         var meetup = {
-            title: $(this).text(),
+            title: $('.meetup-title', this).text(),
             talks: []
         };
-        var $talks = $meetup.next('.meetup-content').find('> ul');
+        var $talks = $meetup.find('.meetup-content').find('> li');
         meetup.talks = extractTalks($, $talks);
         meetups.push(meetup);
     });
