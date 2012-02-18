@@ -4,17 +4,9 @@ This is the source of the parisjs.org website.
 
 ## Utils
 
-Before everything else:
+The list of meetups and talks is very long. If you want to update the HTML, the easiest way is to use a script located in utils/meetups.js
 
-    npm install
-
-### Parsing all meetups and talks
-
-    node utils/meetups.js parse
-
-### Writing all meetups
-
-    node utils/meetups.js update
+Read comments on top of the script for more details.
 
 ## License
 

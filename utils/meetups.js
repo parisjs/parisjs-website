@@ -4,14 +4,30 @@
  *
  * It's a two way parser:
  *  - read index.html and extract the list of events/talks/people and output JSON on stdout
- *  - read a JSON from stdin and update index.html
+ *  - read a JSON from stdin and output the new HTML on stdout
+ *
+ * Dependencies:
+ *  * node
+ *  * npm (bundled with node \o/)
+ *
+ * Install deps: npm install
  *
  * Why JSON?
  *  Because there is no good yaml parser in javascript, and it was out of the scope for now
  *
  * How to use it?
- *  node utils/meetups.js parse > meetup.json
- *  node utils/meetups.js update < meetup.json
+ *  node utils/meetups.js parse > meetups.json
+ *  node utils/meetups.js update < meetups.json
+ *
+ * Example:
+ * You want to update the HTML of all talks
+ *  1. Parse meetups and export to json
+ *      node utils/meetups.js parse > meetups.json
+ *  2. edit utils/template_meetup.html and update it (the hard part)
+ *  3. Generate the new html of the page
+ *      node utils/meetups.js update < meetups.json > index2.html
+ *  4. Move the generated HTML to index.html
+ *      mv index2.html index.html
  */
 
 var jsdom = require('jsdom')
