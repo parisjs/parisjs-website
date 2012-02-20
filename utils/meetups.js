@@ -107,39 +107,7 @@ function parseMeetups() {
                   var $ = window.$;
                   var meetups = extractMeetups($);
                   console.log(JSON.stringify(meetups));
-                  //var normalization = normalizeMeetups(meetups);
-                  //console.log(JSON.stringify(normalization));
               });
-}
-
-/**
- * The hard part
- * find same authors to have a ref to each ones
- */
-function normalizeMeetups(meetups) {
-    var authors = {};
-    // don't worry, this is only the first level of indentation
-    meetups.forEach(function(meetup) {
-        // don't worry, this is only the second level of indentation
-        meetup.talks.forEach(function(talk) {
-            // don't worry, this is only the last level of indentation
-            talk.authors = talk.authors.map(function(author) {
-                if (authors[author.name]) {
-                    var previous = authors[author.name];
-                    ['url', 'avatar'].forEach(function(property) {
-                        if (author[property] != previous[property])
-                            console.error('grrrr! '+ property +' mismatch for '+ author.name);
-                    });
-                }
-                authors[author.name] = author;
-                return author.name;
-            });
-        })
-    });
-    return {
-        meetups: meetups,
-        authors: authors
-    }
 }
 
 /**
