@@ -7,6 +7,7 @@
     "type": "git",
     "url": "git://github.com/parisjs/parisjs-website.git"
   },
+  "main": "./utils/meetups.js",
   "dependencies": {
       "jsdom": "",
       "underscore": ""

@@ -19,7 +19,7 @@
  *  node utils/meetups.js parse > meetups.json
  *  node utils/meetups.js update < meetups.json
  *
- * Example:
+ * Examples:
  * You want to update the HTML of all talks
  *  1. Parse meetups and export to json
  *      node utils/meetups.js parse > meetups.json
@@ -28,6 +28,10 @@
  *      node utils/meetups.js update < meetups.json > index2.html
  *  4. Move the generated HTML to index.html
  *      mv index2.html index.html
+ *
+ * You want to extract talks informations from your code
+ *  1. var parisjs = require('parisjs-website');
+ *  2. parisjs.parseMeetups('http://parisjs.org', function(meetups) {})
  */
 
 var jsdom = require('jsdom')
@@ -35,18 +39,21 @@ var jsdom = require('jsdom')
   , _ = require('underscore')
 ;
 
-if (process.argv.length == 3) {
-    var website = __dirname + '/../index.html';
-    if (process.argv[2] == 'parse') {
-        return parseMeetups(website, console.log);
-    } else if (process.argv[2] == 'update') {
-        return updateMeetups(website, console.log);
+function cli() {
+    if (process.argv.length == 3) {
+        var website = __dirname + '/../index.html';
+        if (process.argv[2] == 'parse') {
+            return parseMeetups(website, console.log);
+        } else if (process.argv[2] == 'update') {
+            return updateMeetups(website, console.log);
+        }
     }
+    console.log('usage');
+    console.log('node utils/meetups.js parse');
+    console.log('node utils/meetups.js update');
 }
-console.log('usage');
-console.log('node utils/meetups.js parse');
-console.log('node utils/meetups.js update');
-return;
+if (process.argv.length >= 2 && process.argv[1] == __filename)
+    cli();
 
 function readStdin(callback) {
     var data = "";
@@ -158,3 +165,5 @@ function extractTalks($, $talks) {
         }
     });
 }
+
+exports.parseMeetups = parseMeetups;
