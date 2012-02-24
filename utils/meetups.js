@@ -36,10 +36,11 @@ var jsdom = require('jsdom')
 ;
 
 if (process.argv.length == 3) {
+    var website = __dirname + '/../index.html';
     if (process.argv[2] == 'parse') {
-        return parseMeetups();
+        return parseMeetups(website);
     } else if (process.argv[2] == 'update') {
-        return updateMeetups();
+        return updateMeetups(website);
     }
 }
 console.log('usage');
@@ -60,12 +61,10 @@ function readStdin(callback) {
     });
 }
 
-function updateMeetups() {
+function updateMeetups(website) {
     readStdin(function(data) {
         var meetups = JSON.parse(data);
         var html = generateHTMLFor(meetups);
-        var website = fs.readFileSync(__dirname + '/../index.html', 'utf8');
-
         var jquery = 'http://code.jquery.com/jquery-1.5.min.js';
         jsdom.env(website, [jquery],
                   function(errors, window) {
@@ -95,9 +94,7 @@ function generateHTMLFor(meetups) {
 
 //
 
-function parseMeetups() {
-    var website = fs.readFileSync(__dirname + '/../index.html', 'utf8');
-
+function parseMeetups(website) {
     var jquery = 'http://code.jquery.com/jquery-1.5.min.js';
     jsdom.env(website, [jquery],
               function(errors, window) {
