@@ -38,9 +38,9 @@ var jsdom = require('jsdom')
 if (process.argv.length == 3) {
     var website = __dirname + '/../index.html';
     if (process.argv[2] == 'parse') {
-        return parseMeetups(website);
+        return parseMeetups(website, console.log);
     } else if (process.argv[2] == 'update') {
-        return updateMeetups(website);
+        return updateMeetups(website, console.log);
     }
 }
 console.log('usage');
@@ -61,7 +61,7 @@ function readStdin(callback) {
     });
 }
 
-function updateMeetups(website) {
+function updateMeetups(website, callback) {
     readStdin(function(data) {
         var meetups = JSON.parse(data);
         var html = generateHTMLFor(meetups);
@@ -77,7 +77,7 @@ function updateMeetups(website) {
                       // remove the jquery inserted by jsdom
                       $('script:last', document).remove();
                       var output = document.doctype + document.innerHTML;
-                      console.log(output.trim());
+                      callback(output.trim());
                   });
     });
 }
@@ -94,7 +94,7 @@ function generateHTMLFor(meetups) {
 
 //
 
-function parseMeetups(website) {
+function parseMeetups(website, callback) {
     var jquery = 'http://code.jquery.com/jquery-1.5.min.js';
     jsdom.env(website, [jquery],
               function(errors, window) {
@@ -103,7 +103,7 @@ function parseMeetups(website) {
                   }
                   var $ = window.$;
                   var meetups = extractMeetups($);
-                  console.log(JSON.stringify(meetups));
+                  callback(JSON.stringify(meetups));
               });
 }
 
