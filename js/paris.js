@@ -142,7 +142,8 @@ Twitter.addTwitt = function(twitt, initial) {
         tweet: {
             user : twitt.from_user ,
             text : Utils.linkify(twitt.text),
-            time : (new Date(twitt.created_at)).toDateString()
+            time : (new Date(twitt.created_at)).toDateString(),
+            id: twitt.id_str
         }
     });
 
