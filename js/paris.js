@@ -1,5 +1,4 @@
 (function($, _){
-
 var log = function() {
     if(this.console) {
         console.log( Array.prototype.slice.call(arguments) )
@@ -183,5 +182,7 @@ $(function() {
         $tmpl = $("#communityTmpl"); 
     $place.html($tmpl.tmpl({meetups : meetups}));
 })($, data || [], _);
+
+$("a[href='']").attr("href","http://www.youtube.com/watch?v=oHg5SJYRHA0")
 
 })(jQuery, _);
