@@ -13,7 +13,7 @@
         <header>
             <div class="container">
                 <div id="logo">
-                    <a href="http://parisjs.org">
+                    <a href="/">
                         <img src="images/logo.png" alt="ParisJS.org - Home">
                     </a>
                 </div>
@@ -28,29 +28,27 @@
         </div>
         <section class="container">
             <div id="spin"></div>
-            <div id="content" style="visibility:hidden">
-                <div class="prez">
-                    <div class="normal"></div>
-                    <div class="lightning"></div>
+            <div id="content">
+                <div class="switch">
+                    <a class="" href="#">Programme du prochain Paris.js</a>
+                    <a class="" href="#submitted">Présentations soumises</a>
                 </div>
-                <div class="prez prochain">
-                    <h1>Propositions pour le prochain Paris JS</h1>
-                    <div class="normal"></div>
-                    <div class="lightning"></div>
+                <div id="prezs-scheduled">
+                    <div class="prezs"></div>
                 </div>
-                <div class="prez avenir">
-                    <h1>Propositions pour Paris JS à venir</h1>
-                    <div class="normal"></div>
-                    <div class="lightning"></div>
+                <div id="prezs-submitted" style="display:none;">
+                    <h1>Propositions soumises pour les prochains Paris.js</h1>
+                    <div class="prezs"></div>
                 </div>
             </div>
         </section>
 
-        <script src="http://www.google.com/jsapi?key=ABQIAAAAE4BGaIh0t-7l9PDR7PA0rRR6KW34AlT62yZeC298tyhOjAL-9hQQpk22pW6ZfaCFEr3zjz2Q8rjqAw&callback=_google_on_laoded" type="text/javascript"></script>
-
         <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
         <script type="text/javascript" src="js/spin.js"></script>
+        <script type="text/javascript" src="js/underscore-min.js"></script>
+        <script type="text/javascript" src="js/backbone-min.js"></script>
         <script type="text/javascript" src="js/google_spreadsheet.js"></script>
+        <script src="http://www.google.com/jsapi?key=ABQIAAAAE4BGaIh0t-7l9PDR7PA0rRR6KW34AlT62yZeC298tyhOjAL-9hQQpk22pW6ZfaCFEr3zjz2Q8rjqAw&callback=_google_on_loaded" type="text/javascript"></script>
         <script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-23072906-1']);
@@ -63,5 +61,18 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
         </script>
+
+        <script id="talk-template" type="text/x-template">
+          <header>
+            <h1><%= title %></h1>
+          </header>
+          <section class="authors">
+            <span><%= authors  %></span>
+            <span><%= contacts %></span>
+          </section>
+          <section class="abstract">
+            <p><%= abstract %></p>
+          </section>
+       </script>
     </body>
 </html>

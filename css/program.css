@@ -52,10 +52,9 @@ a.add_prez {
   -webkit-box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.7) inset,0px 1px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 1px 2px rgba(255, 255, 255, 0.7) inset,0px 1px 3px rgba(0, 0, 0, 0.5);
   float: left;
-  visibility: hidden;
 }
 
-a.add_prez:hover{
+a.add_prez:hover {
   color:#497e6c;
   cursor:pointer;
   text-shadow: 1px 1px 0px rgba(255,255,255,0.4);
