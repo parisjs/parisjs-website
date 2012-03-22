@@ -20,7 +20,7 @@ Spin.stop = function ()
 {
   this.spinner.stop();
 };
-
+ onload="Spin.init (document.getElementById ('spin'));"
 /****************************************************************
  *    Data and Parse
  ****************************************************************/
