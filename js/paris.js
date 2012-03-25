@@ -68,7 +68,7 @@ Meetups.load = function(tries) {
         type: 'GET',
         url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true&callback=?",
         error: function (jqXHR, status, errorThrown) {
-            $event.html($("#emptyEventTmpl").tmpl());
+            $event.html(_.template($("#emptyEventTmpl").html(), {}));
             Spin.stop();
         },
         success: function(result) {
@@ -92,7 +92,7 @@ Meetups.load = function(tries) {
                 nextEvent = this;
             });
 
-            $event.html(nextEvent ? $("#eventTmpl").tmpl({event: nextEvent}) : $("#emptyEventTmpl").tmpl());
+            $event.html(nextEvent ? _.template($("#eventTmpl").html(), {event: nextEvent}) : _.template($("#emptyEventTmpl").html(), {}));
             Spin.stop();
         }
     });
@@ -137,7 +137,7 @@ Twitter.addTwitt = function(twitt, initial) {
         $(".tweet-box", this.$twitter).last().remove();
     }
 
-    var newTwitt = $("#tweetTmpl").tmpl({
+    var newTwitt = _.template($("#tweetTmpl").html(), {
         tweet: {
             user : twitt.from_user ,
             text : Utils.linkify(twitt.text),
@@ -148,8 +148,8 @@ Twitter.addTwitt = function(twitt, initial) {
 
     this.$twitter.prepend(newTwitt);
 
-    if (initial) newTwitt.show();
-    else newTwitt.slideDown();
+    if (initial) $(newTwitt).show();
+    else $(newTwitt).slideDown();
 };
 
 window.Utils = {
@@ -179,8 +179,8 @@ $(function() {
 (function pickAndAddRandomCommunities($, d, _){
     var meetups = _(d).chain().filter(function(e){return e.continent!="Conference"; }).shuffle().first(10).value(),
         $place = $("#communities ul"),
-        $tmpl = $("#communityTmpl"); 
-    $place.html($tmpl.tmpl({meetups : meetups}));
+        tmpl = _.template($("#communityTmpl").html());
+    $place.html(tmpl({meetups : meetups}));
 })($, data || [], _);
 
 $("a[href='']").attr("href","http://www.youtube.com/watch?v=oHg5SJYRHA0")

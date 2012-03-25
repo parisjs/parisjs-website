@@ -871,20 +871,20 @@
             </div>
         </section>
 
-        <script id="eventTmpl" type="text/x-jquery-tmpl">
+        <script id="eventTmpl" type="text/x-template">
             <h2>NEXT MEETUP</h2>
-            <p class="dtstart date" title="${event.start_date}">${Utils.formatDate(event.start_date)}</p>
-            <p class="titre">{{html event.title}}</p>
+            <p class="dtstart date" title="<%= event.start_date %>"><%= Utils.formatDate(event.start_date) %></p>
+            <p class="titre"><%=  event.title %></p>
             <p class="where">
-                <a href="http://maps.google.com/maps?q={{html event.venue.latitude}},{{html event.venue.longitude}}&z=15">hosted by {{html event.venue.name}}</a>
+                <a href="http://maps.google.com/maps?q=<%= event.venue.latitude %>,<%= event.venue.longitude %>&z=15">hosted by <%= event.venue.name %></a>
             </p>
             <div class="summary">
                 <a href="program.html">SEE THE PROGRAM</a>
             </div>
-            <a class="inscription" href="${event.url}">INSCRIPTION</a>
+            <a class="inscription" href="<%= event.url %>">INSCRIPTION</a>
         </script>
 
-        <script id="emptyEventTmpl" type="text/x-jquery-tmpl">
+        <script id="emptyEventTmpl" type="text/x-template">
             <h2>NEXT MEETUP</h2>
             <span class="titre">Coming soon</span>
             <span class="summary">, stay tuned!</span>
@@ -893,24 +893,23 @@
             </div>
         </script>
 
-        <script id="tweetTmpl" type="text/x-jquery-tmpl">
+        <script id="tweetTmpl" type="text/x-template">
             <li class="tweet-box">
-                <span><a target="_blank" href="http://twitter.com/{{html tweet.user}}">{{html tweet.user}}</a></span>
-                <p>{{html tweet.text}}</p>
-                <p class="time"><a href="http://twitter.com/{{html tweet.user }}/status/{{html tweet.id }}">{{html tweet.time}}</a></p>
+                <span><a target="_blank" href="http://twitter.com/<%= tweet.user %>"><%= tweet.user %></a></span>
+                <p><%= tweet.text %></p>
+                <p class="time"><a href="http://twitter.com/<%= tweet.user %>/status/<%= tweet.id %>"><%= tweet.time %></a></p>
             </li>
         </script>
 
-        <script id="communityTmpl" type="text/x-jquery-tmpl">
-          {{each(i, v) meetups}} 
-            <li><a href="{{html v.link}}"> ٠ {{html v.town}} - {{html v.country}}</a></li>
-          {{/each}}
+        <script id="communityTmpl" type="text/x-template">
+          <% _(meetups).each(function(v) { %>
+            <li><a href="<%= v.link %>"> ٠ <%= v.town %> - <%= v.country %></a></li>
+          <% }); %>
         </script>
 
         <script type="text/javascript" src="js/underscore-min.js"></script>
-        <script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.jsonp-2.1.4.min.js"></script>
-        <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
         <script type="text/javascript" src="js/spin.js"></script>
         <script type="text/javascript" src="http://communityjs.org/data"></script>
         <script type="text/javascript" src="js/paris.js"></script>
