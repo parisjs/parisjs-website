@@ -175,28 +175,23 @@ App.Program = Backbone.Router.extend({
         this.talksSubmitted = new App.collections.Talks();
         this.talks.on('reset', this.onReset, this);
         this.talks.fetch();
-    },
-
-    onReset: function() {
-        $("#spin").hide();
-        Spin.stop();
-        var accepted = this.talks.accepted();
-        if (accepted.length > 0) {
-            this.talksAccepted.reset(accepted);
-        } else {
-            // show only submitted talks
-            this.submitted();
-            $('.switch').hide();
-        }
-        var submitted = this.talks.submitted();
-        if (submitted.length > 0) {
-            this.talksSubmitted.reset(submitted);
-        }
         new App.views.Talks({collection: this.talksAccepted,
                              el: $('#prezs-scheduled .prezs').get(0)}).render();
 
         new App.views.Talks({collection: this.talksSubmitted,
                              el: $('#prezs-submitted .prezs').get(0)}).render();
+    },
+
+    onReset: function() {
+        $("#spin").hide();
+        Spin.stop();
+        this.talksAccepted.reset(this.talks.accepted());
+        if (this.talksAccepted.length == 0) {
+            // show only submitted talks
+            this.submitted();
+            $('.switch').hide();
+        }
+        this.talksSubmitted.reset(this.talks.submitted());
     },
 
     index: function() {
