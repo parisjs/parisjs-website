@@ -78,7 +78,7 @@ article.prez header {
   background: transparent;
   padding: 0px;
   border-bottom: none;
-  height: 30px;
+  height: inherit;
 }
 
 article.prez header h1 {
