@@ -133,7 +133,7 @@ App.views.Talk = Backbone.View.extend({
         data.abstract = data.abstract.replace(/\n/g, '<br/>');
         this.$el.append(template(data));
 
-        if (this.model.get('type') === this.TYPE_SHORT)
+        if (this.model.get('type') === this.model.TYPE_SHORT)
             this.$el.addClass("lightning");
 
         return this;
