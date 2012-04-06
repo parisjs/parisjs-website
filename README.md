@@ -13,7 +13,7 @@ Read comments on top of the script for more details.
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
                     Version 2, December 2004
 
-    Copyright (C) 2010-2011 the parisjs community <http://parisjs.org>
+    Copyright (C) 2010-2012 the parisjs community <http://parisjs.org>
 
     Everyone is permitted to copy and distribute verbatim or modified
     copies of this license document, and changing it is allowed as long
