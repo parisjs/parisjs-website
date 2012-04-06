@@ -107,6 +107,10 @@ App.collections.Talks = Backbone.Collection.extend({
         return data.rows;
     },
 
+    comparator: function(talk) {
+        return talk.get('type');
+    },
+
     /**
      * Custom sync for google spreadsheets
      */
