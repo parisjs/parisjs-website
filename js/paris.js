@@ -85,11 +85,9 @@ Meetups.load = function(tries) {
             if (result.query.count > 0) {
                 events = events.concat(result.query.results.events.event);
             }
-            var nextEvent = null;
 
-            $(events).each(function(){
-                if (this.status == "Completed") { return; }
-                nextEvent = this;
+            var nextEvent = _(events).find(function(evt){
+                return evt.status == "Live";
             });
 
             $event.html(nextEvent ? _.template($("#eventTmpl").html(), {event: nextEvent}) : _.template($("#emptyEventTmpl").html(), {}));
