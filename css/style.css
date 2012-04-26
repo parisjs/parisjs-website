@@ -289,10 +289,6 @@ header .text{
 	color: #dc4084;
 }
 
-#content a img{
-        margin : 7px 5px;
-}
-
 #meetups .avatar{
 	background: url(../images/avatar.png) no-repeat;
 	border: 3px solid #ededed;
