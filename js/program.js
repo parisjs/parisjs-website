@@ -174,6 +174,7 @@ App.Program = Backbone.Router.extend({
 
     initialize: function() {
         Spin.init($('#spin').get(0));
+        $('.switch').hide();
         this.talks = new App.collections.Talks();
         this.talksAccepted = new App.collections.Talks();
         this.talksSubmitted = new App.collections.Talks();
@@ -193,7 +194,8 @@ App.Program = Backbone.Router.extend({
         if (this.talksAccepted.length == 0) {
             // show only submitted talks
             this.submitted();
-            $('.switch').hide();
+        } else {
+            $('.switch').show();
         }
         this.talksSubmitted.reset(this.talks.submitted());
     },
