@@ -197,10 +197,10 @@ header .text{
 	width: 340px;
 	float: left;
 }
-#about, #proposal, #communities, #host {
+#about, #proposal, #communities, #host, #jobs {
 	margin: 15px 0 0;
 }
-#about p, #proposal p, #communities p, #host p {
+#about p, #proposal p, #communities p, #host p, #jobs p {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -208,11 +208,11 @@ header .text{
 	font-size:14px;
 	color:#515151;
 }
-#about p a, #proposal p a, #communities p a, #host p a {
+#about p a, #proposal p a, #communities p a, #host p a, #jobs p a {
 	color:#e14680;
 	font-weight: bold;
 }
-#about p a:hover, #proposal p a:hover, #communities p a:hover, #host p a:hover {
+#about p a:hover, #proposal p a:hover, #communities p a:hover, #host p a:hover, #jobs p a:hover {
 	text-decoration:underline;
 }
 #communities ul {
