@@ -23,7 +23,7 @@
  * You want to update the HTML of all talks
  *  1. Parse meetups and export to json
  *      node utils/meetups.js parse > meetups.json
- *  2. edit utils/template_meetup.html and update it (the hard part)
+ *  2. edit utils/meetups.json and update it (the hard part)
  *  3. Generate the new html of the page
  *      node utils/meetups.js update < meetups.json > index2.html
  *  4. Move the generated HTML to index.html
