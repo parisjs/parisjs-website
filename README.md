@@ -6,7 +6,7 @@ This is the source of the parisjs.org website.
 
 The list of meetups and talks is very long. If you want to update the HTML, the easiest way is to use a script located in utils/meetups.js
 
-Read comments on top of the script for more details.
+See the [special readme](utils/README.md) for more details.
 
 ## License
 
