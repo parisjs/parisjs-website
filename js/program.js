@@ -19,6 +19,12 @@ Spin.stop = function() {
   this.spinner.stop();
 };
 
+marked.setOptions({
+  gfm: true,
+  tables: true,
+  breaks: false,
+  sanitize: true
+});
 
 /**
  * Backbone App
@@ -30,7 +36,7 @@ var App = {
 };
 
 /**
- * Tall model
+ * Talk model
  */
 App.models.Talk = Backbone.Model.extend({
     // normal talk (10-20 min)
@@ -38,40 +44,21 @@ App.models.Talk = Backbone.Model.extend({
     // lightning talk
     TYPE_SHORT      : 2,
 
-    // accepted scheduled for the next parisjs
-    STATE_ACCEPTED  : 'Accepte',
-    // can be scheduled on the next parisjs by not yet accepted
-    STATE_NEXT      : 'Prochain',
-    // cannot be scheduled on the next parisjs
-    STATE_NEXT_NEXT : 'Suivant',
-
     defaults: {
         title: '',
-        authors: '',
-        contacts: '',
         type: '',
-        abstract: '',
-        state: ''
+        abstract: ''
     },
 
     /**
      * Parse the json returned by the spreadsheet
      */
-    parse: function(response) {
-        var row = response.c;
-        var title = (row[1]) ?row[1].v : "";
-        var authors = (row[2])  ? row[2].v : "";
-        var contacts = (row[3]) ? row[3].v : "";
-        var type = (row[4] && row[4].v.indexOf("Lightning") === 0) ? this.TYPE_SHORT : this.TYPE_NORMAL;
-        var abstract = (row[5]) ? row[5].v: "";
-        var state = (row[7]) ? row[7].v : this.STATE_NEXT_NEXT;
+    parse: function(card) {
+        var type = _(card.labels).chain().pluck('color').indexOf('yellow').value() == -1 ? this.TYPE_NORMAL : this.TYPE_SHORT;
         return {
-            title: title,
-            authors: authors,
-            contacts: contacts,
+            title: card.name,
             type: type,
-            abstract: abstract,
-            state: state
+            abstract: card.desc
         };
     }
 });
@@ -82,44 +69,25 @@ App.models.Talk = Backbone.Model.extend({
 App.collections.Talks = Backbone.Collection.extend({
     model: App.models.Talk,
 
-    /**
-     * Return only accepted prezs
-     */
-    accepted: function() {
-        return this.where({state: App.models.Talk.prototype.STATE_ACCEPTED});
-    },
-
-    /**
-     * Return all non-accepted prezs
-     */
-    submitted: function() {
-        return this.filter(function(talk) {
-            return talk.get('state') != App.models.Talk.prototype.STATE_ACCEPTED;
-        });
-    },
-
-    /**
-     * Parse the json returned by the spreadsheet
-     */
-    parse: function(response) {
-        // the easiest way :(
-        var data = JSON.parse(response.toJSON());
-        return data.rows;
-    },
-
     comparator: function(talk) {
         return talk.get('type');
-    },
+    }
+});
 
+/**
+ *
+ */
+App.models.Board = Backbone.Model.extend({
     /**
-     * Custom sync for google spreadsheets
+     * Custom sync for trello
      */
     sync: function(method, model, options) {
         if (method != "read") throw new Error("not (yet) supported");
-        var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=0AnLhUwtBNx3zdDNDbU93eUh1NXpCenNXT1FqQksxZmc&pub=1');
-        query.send(function(response) {
-            if (response.isError()) options.error(response);
-            else options.success(response.getDataTable());
+        Trello.get('/board/4f7d53a2cbcb1a6878c92c2e', {
+            cards: 'visible',
+            lists: 'open'
+        }, function(data) {
+            options.success(model, data, options);
         });
     }
 });
@@ -134,7 +102,6 @@ App.views.Talk = Backbone.View.extend({
     render: function() {
         var template = _.template($('#talk-template').html());
         var data = this.model.toJSON();
-        data.abstract = data.abstract.replace(/\n/g, '<br/>');
         this.$el.append(template(data));
 
         if (this.model.get('type') === this.model.TYPE_SHORT)
@@ -148,10 +115,11 @@ App.views.Talk = Backbone.View.extend({
  */
 App.views.Talks = Backbone.View.extend({
     initialize: function() {
-        this.collection.bind('reset', this.render, this);
+        this.collection.on('reset', this.render, this);
     },
 
     render: function() {
+        this.$el.append($('<h1>').text(this.options.title));
         this.collection.each(_.bind(this.renderTalk, this));
         return this;
     },
@@ -166,58 +134,66 @@ App.views.Talks = Backbone.View.extend({
  * The basic router of the page
  */
 App.Program = Backbone.Router.extend({
-
     routes: {
-        "": "index",
-        "submitted": "submitted"
+        ""     : "index",
+        ":list": "show"
     },
 
     initialize: function() {
         Spin.init($('#spin').get(0));
         $('.switch').hide();
-        this.talks = new App.collections.Talks();
-        this.talksAccepted = new App.collections.Talks();
-        this.talksSubmitted = new App.collections.Talks();
-        this.talks.on('reset', this.onReset, this);
-        this.talks.fetch();
-        new App.views.Talks({collection: this.talksAccepted,
-                             el: $('#prezs-scheduled .prezs').get(0)}).render();
-
-        new App.views.Talks({collection: this.talksSubmitted,
-                             el: $('#prezs-submitted .prezs').get(0)}).render();
+        this.board = new App.models.Board();
+        this.board.fetch({
+            success: _.bind(this.onSuccess, this)
+        });
     },
 
-    onReset: function() {
-        $("#spin").hide();
+    onSuccess: function() {
+        $("#spin").remove();
         Spin.stop();
-        this.talksAccepted.reset(this.talks.accepted());
-        if (this.talksAccepted.length == 0) {
-            // show only submitted talks
-            this.submitted();
-        } else {
-            $('.switch').show();
-        }
-        this.talksSubmitted.reset(this.talks.submitted());
+
+        this._renderSwitch();
+        this._renderLists();
+        $('.switch').show();
+        this.show(_(this.board.get('lists')).last().id);
     },
 
-    index: function() {
-        $('#prezs-scheduled').show();
-        $('#prezs-submitted').hide();
+    _renderSwitch: function() {
+        _(this.board.get('lists')).each(function(list, idList) {
+            // remove the 'infos' list
+            if (list.id == '4f7d53a2cbcb1a6878c92c32') return;
+            $("#content .switch").append($('<a>').attr({
+                href: "#"+ list.id
+            }).text(list.name)).append(' ');
+        });
     },
 
-    submitted: function() {
-        $('#prezs-scheduled').hide();
-        $('#prezs-submitted').show();
+    _renderLists: function() {
+        var board = this.board;
+        var lists = _(this.board.get('cards')).groupBy('idList');
+        _(lists).each(function(list, idList) {
+            // remove the 'infos' list
+            if (idList == '4f7d53a2cbcb1a6878c92c32') return;
+            var talks = new App.collections.Talks();
+            var view = new App.views.Talks({
+                id: idList,
+                title: _(board.get('lists')).find(function(list) {
+                    return list.id == idList;
+                }).name,
+                className: 'list',
+                collection: talks.reset(list, {parse: true})
+            }).render();
+            view.$el.appendTo($('#content'));
+        });
+    },
+
+    show: function(id) {
+        $('#content .list').hide();
+        $('#content #'+ id).show();
     }
 });
 
-/**
- * Callback when the google jsapi is loaded
- */
-function _google_on_loaded() {
-    google.load("visualization", "1");
-    google.setOnLoadCallback(function() {
-        new App.Program();
-        Backbone.history.start();
-    });
-}
+$(function() {
+    new App.Program();
+    Backbone.history.start();
+});
