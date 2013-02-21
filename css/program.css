@@ -101,34 +101,12 @@ article header h1::after {
   content:"Normal";
   float: right;
   font-size: 0.7em;
-} 
+}
 
 article.lightning header h1::after {
   content:"Lightning";
   color: white;
   text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
-} 
-
-section.authors span {
-  font-size: 13px;
-  font-style: italic;
-  color: #666;
-}
-
-section.authors span:nth-child(1)::before {
-  content: "Auteur(s) : ";
-  font-weight: bold;
-  padding-left: 10px;
-  color: #000;
-  font-style: normal;
-}
-
-section.authors span:nth-child(2)::before {
-  content: "Contact(s) : ";
-  font-weight: bold;
-  margin-left: 20px;
-  color: #000;
-  font-style: normal;
 }
 
 section.abstract {
@@ -158,4 +136,25 @@ section.abstract:before {
 #spin {
   margin-top: 200px;
   margin-left: -100px;
+}
+
+ul li {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+ul, p {
+  margin-bottom: .5em;
+}
+
+p {
+  line-height: 1.5em;
 }
