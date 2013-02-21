@@ -28,6 +28,30 @@ Write the list of talks and output HTML
 
     node utils/meetups.js update < meetups.json
 
+## Data structure
+
+    [{
+      "title": "January 30, 2013 - Paris.js Meetup 25 - Sponsor",
+      "talks": [
+        {
+          "title": "Name of the talk",
+          "slides": ["url1", "url2"],
+          "videos": ["video1", "video2"],
+          "projects": ["url1", "url2"],
+          "authors": [
+            {
+              "name": "name",
+              "url": "url",
+              "avatar": "avatar"
+            }
+          ]
+        },
+        ...
+      ]
+    },
+    ...
+    ]
+
 ## Examples
 
 ### You want to add a meetup
