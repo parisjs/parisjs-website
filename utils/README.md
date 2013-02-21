@@ -72,3 +72,10 @@ And then in your code
     parisjs.parseMeetups('http://parisjs.org', function(meetups) {
       console.log(meetups);
     });
+
+## Tests
+
+So you want to test the parsing? Here is a simple roundtrip.
+
+    node utils/meetups.js parse > meetups.json && node utils/meetups.js update < meetups.json > index2.html
+    diff index.html index2.html

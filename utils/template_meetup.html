@@ -6,8 +6,8 @@
                                     <li class="avatar"><% if (talk.authors[0].avatar) { %><img alt="<%= talk.authors[0].name %>" src="<%= talk.authors[0].avatar %>"><% } %></li>
                                     <li class="titleTalk"><%- talk.title %></li>
                                     <li class="authorTalk">By: <% for (var i=0; i<talk.authors.length; i++) { var author = talk.authors[i]; var end = (i == talk.authors.length - 1); %><a href="<%= author.url %>"><%= author.name %></a><% if (!end) print(" and "); } %></li>
-                                    <li class="descTalk">Here are the <% if (talk.projects.length == 1) { %><a href="<%= talk.projects[0] %>">project</a><% } %><% if (talk.slides.length == 1) { if (talk.slides[0] == "#") print('<s>'); %><a href="<%= talk.slides[0] %>">Slides</a><%if (talk.slides[0] == "#") print('</s>'); } %><% if (talk.videos.length > 0) { %>
-                                        and the <% for (var j=0; j<talk.videos.length; j++) { %><a href="<%= talk.videos[j] %>">video<% if (talk.videos.length > 1) print(' part.'+ (j+1)); %></a><% } }%>.</li>
+                                    <li class="descTalk"><% if (talk.projects.length > 0 || talk.slides.length > 0 || talk.videos.length > 0) { %>Here are the <% if (talk.projects.length == 1) { %><a href="<%= talk.projects[0] %>">project</a><% } %><% if (talk.slides.length == 1) { if (talk.slides[0] == "#") print('<s>'); %><a href="<%= talk.slides[0] %>">Slides</a><%if (talk.slides[0] == "#") print('</s>'); } %><% if (talk.videos.length > 0) { %>
+                                        and the <% for (var j=0; j<talk.videos.length; j++) { %><a href="<%= talk.videos[j] %>">video<% if (talk.videos.length > 1) print(' part.'+ (j+1)); %></a><% } }%>.<% } %></li>
                                 </ul>
                             </li><% }); %>
                         </ul>
