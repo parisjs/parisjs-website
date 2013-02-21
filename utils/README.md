@@ -30,13 +30,28 @@ Write the list of talks and output HTML
 
 ## Examples
 
+### You want to add a meetup
+
+1. Parse meetups and export to json
+
+       node utils/meetups.js parse > meetups.json
+
+2. Edit the *meetups.json* (keep strong)
+
+       $EDITOR meetups.json
+
+3. Regenerate the new html
+
+       node utils/meetups.js update < meetups.json > index2.html
+       mv index2.html index.html
+
 ### You want to update the HTML of all talks
 
 1. Parse meetups and export to json
 
     node utils/meetups.js parse > meetups.json
 
-2. edit utils/template_meetup.html and update it (the hard part)
+2. Edit *utils/template_meetup.html* and update it (the hard part)
 3. Generate the new html of the page
 
     node utils/meetups.js update < meetups.json > index2.html
@@ -54,4 +69,6 @@ Install the package
 And then in your code
 
     var parisjs = require('parisjs-website');
-    parisjs.parseMeetups('http://parisjs.org', function(meetups) {})
+    parisjs.parseMeetups('http://parisjs.org', function(meetups) {
+      console.log(meetups);
+    });
