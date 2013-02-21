@@ -34,31 +34,31 @@ Write the list of talks and output HTML
 
 1. Parse meetups and export to json
 
-       node utils/meetups.js parse > meetups.json
+        node utils/meetups.js parse > meetups.json
 
 2. Edit the *meetups.json* (keep strong)
 
-       $EDITOR meetups.json
+        $EDITOR meetups.json
 
 3. Regenerate the new html
 
-       node utils/meetups.js update < meetups.json > index2.html
-       mv index2.html index.html
+        node utils/meetups.js update < meetups.json > index2.html
+        mv index2.html index.html
 
 ### You want to update the HTML of all talks
 
 1. Parse meetups and export to json
 
-    node utils/meetups.js parse > meetups.json
+        node utils/meetups.js parse > meetups.json
 
 2. Edit *utils/template_meetup.html* and update it (the hard part)
 3. Generate the new html of the page
 
-    node utils/meetups.js update < meetups.json > index2.html
+        node utils/meetups.js update < meetups.json > index2.html
 
 4. Move the generated HTML to index.html
 
-    mv index2.html index.html
+        mv index2.html index.html
 
 ### You want to extract talks informations from your code
 
