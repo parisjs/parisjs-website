@@ -136,6 +136,7 @@ App.views.Talks = Backbone.View.extend({
 App.Program = Backbone.Router.extend({
     routes: {
         ""     : "index",
+        "add"  : "add",
         ":list": "show"
     },
 
@@ -187,9 +188,18 @@ App.Program = Backbone.Router.extend({
         });
     },
 
+    add: function() {
+        this.show(null);
+        $('#content').append($('<iframe>').attr({
+            src: 'http://parisjstalks-francois2metz.dotcloud.com/',
+            width: '100%'
+        }));
+    },
+
     show: function(id) {
         $('#content .list').hide();
         $('#content #'+ id).show();
+        $('#content iframe').remove();
     }
 });
 
