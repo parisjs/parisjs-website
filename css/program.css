@@ -158,3 +158,8 @@ ul, p {
 p {
   line-height: 1.5em;
 }
+
+iframe {
+  width: 100%;
+  min-height: 700px;
+}
