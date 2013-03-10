@@ -136,25 +136,18 @@ App.views.Talks = Backbone.View.extend({
 App.Program = Backbone.Router.extend({
     routes: {
         ""     : "index",
+        "add"  : "add",
         ":list": "show"
     },
 
-    initialize: function() {
-        Spin.init($('#spin').get(0));
-        $('.switch').hide();
-        this.board = new App.models.Board();
-        this.board.fetch({
-            success: _.bind(this.onSuccess, this)
-        });
-    },
-
-    onSuccess: function() {
-        $("#spin").remove();
-        Spin.stop();
+    initialize: function(options) {
+        this.board = options.board;
 
         this._renderSwitch();
         this._renderLists();
-        $('.switch').show();
+    },
+
+    index: function() {
         this.show(_(this.board.get('lists')).last().id);
     },
 
@@ -187,13 +180,35 @@ App.Program = Backbone.Router.extend({
         });
     },
 
+    add: function() {
+        this.show(null);
+        $('#content').append($('<iframe>').attr({
+            src: 'http://parisjstalks-francois2metz.dotcloud.com/',
+            width: '100%'
+        }));
+    },
+
     show: function(id) {
         $('#content .list').hide();
         $('#content #'+ id).show();
+        $('#content iframe').remove();
     }
 });
 
 $(function() {
-    new App.Program();
-    Backbone.history.start();
+    Spin.init($('#spin').get(0));
+    $('.switch').hide();
+
+    var board = new App.models.Board();
+    board.fetch({
+        success: function() {
+
+            new App.Program({board: board});
+            Backbone.history.start();
+
+            Spin.stop();
+            $("#spin").remove();
+            $('.switch').show();
+        }
+    });
 });
