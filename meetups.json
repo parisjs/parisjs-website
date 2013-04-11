@@ -1,0 +1,2719 @@
+[
+  {
+    "title": "March 28, 2013 - Paris.js meetup 27 - Devoxx",
+    "talks": [
+      {
+        "title" : "Async.js",
+        "slides" : ["http://djebbz.github.io/async-paris-js/#/intro"],
+        "videos" : [],
+        "projects" : [],
+        "authors" : [
+          {
+            "name": "Khalid Jebbari",
+            "url": "https://twitter.com/Dj3bbZ",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1341164960/photo.jpeg"
+          }
+        ]
+      },
+      {
+        "title" : "Zanimo : transitions with promises fulfilled",
+        "slides" : ["http://peutetre.github.io/talk-zanimo-parisjs-28/"],
+        "videos" : [],
+        "projects" : ["https://github.com/peutetre/Zanimo"],
+        "authors" : [
+          {
+            "name": "@42loops",
+            "url": "http://twitter.com/#!/42loops",
+            "avatar": "http://a1.twimg.com/profile_images/1436522974/paul_reasonably_small.JPG"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "February 27, 2013 - Paris.js Meetup 26 - Agence-e / Nuxeo",
+    "talks": [
+      {
+        "title": "Le templating en Javascript \u00e0 la vitesse de la lumi\u00e8re avec doT.js",
+        "slides": [
+          "http://fr.slideshare.net/soatexpert/prez-dot-jsparisjs27022013"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "https://github.com/olado/doT"
+        ],
+        "authors": [
+          {
+            "name": "Mathieu Parisot",
+            "url": "https://twitter.com/matparisot"
+          }
+        ]
+      },
+      {
+        "title": "The Opa Framework for JavaScript - Rapid + Secure Web Development",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "http://opalang.org/"
+        ],
+        "authors": [
+          {
+            "name": "C\u00e9dric Soulas",
+            "url": "https://twitter.com/CedricSoulas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "January 30, 2013 - Paris.js Meetup 25 - Xebia",
+    "talks": [
+      {
+        "title": "TipTap.js",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "https://github.com/marcbourlon/TipTap"
+        ],
+        "authors": [
+          {
+            "name": "Marc Bourlon",
+            "url": "https://github.com/marcbourlon",
+            "avatar": "https://si0.twimg.com/profile_images/2043955374/Picture_1_bigger.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Tests fonctionnels avec mocha et zombie.js",
+        "slides": [
+          "http://dotheweb.posterous.com/functional-testing-for-nodejs-using-mocha-and"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Fran\u00e7ois Zaninotto",
+            "url": "https://twitter.com/francoisz",
+            "avatar": "https://si0.twimg.com/profile_images/2679766409/e0f5fdf4fb2483ac3fe52fc9cbd45a7b_bigger.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "Minesweeper CoffeeScript & Dart",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Jean-Laurent Morlhon",
+            "url": "https://twitter.com/morlhon"
+          },
+          {
+            "name": "Benoit Lemoine",
+            "url": "https://twitter.com/benoit_lemoine"
+          },
+          {
+            "name": "Mathieu Breton",
+            "url": "https://twitter.com/MatBreton"
+          }
+        ]
+      },
+      {
+        "title": "Filtre vid\u00e9o color\u00e9",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "http://www.spacegoo.com/demos/parisjs"
+        ],
+        "authors": [
+          {
+            "name": "Xavier Bourry",
+            "url": "http://www.linkedin.com/pub/xavier-bourry/33/89a/1a6",
+            "avatar": "http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/5/000/1c9/108/1b51032.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "November 28, 2012 - Paris.js Meetup 24 - Synerg'hetic",
+    "talks": [
+      {
+        "title": "Introduction \u00e0 AngularJS",
+        "slides": [
+          "http://www.slideshare.net/patcito/introduction-to-angularjs-15394765"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Patrick Aljord",
+            "url": "",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/3275173099/d03d3857be1b4932e590156133ec533e.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "6 mois de dev Backbone en 20mn",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Mathieu Magnin",
+            "url": ""
+          },
+          {
+            "name": "Simon Lehericey",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "Brunch, an HTML5 application assembler",
+        "slides": [
+          "http://www.rvl.io/djebbz/brunch/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "http://brunch.io"
+        ],
+        "authors": [
+          {
+            "name": "Khalid Jebbari",
+            "url": "https://twitter.com/Dj3bbZ",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1341164960/photo.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "jQuery : continuous data stream",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Julien Gu\u00e9zennec",
+            "url": "https://twitter.com/molokoloco",
+            "avatar": "https://si0.twimg.com/profile_images/2281609675/rvsbl2ick7xhqm1hxkpd_bigger.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "October 31, 2012 - Paris.js Meetup 23 - Ippon Technologies",
+    "talks": [
+      {
+        "title": "Pr\u00e9sentation de TypeScript, le chainon manquant ?",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Emmanuel REMY",
+            "url": "https://twitter.com/@manuremy",
+            "avatar": "https://si0.twimg.com/profile_images/1869699800/100_0646.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Server Push Technologies : Le bilan",
+        "slides": [
+          "http://www.jsintime.com/wp-content/uploads/presentations/Server%20Push%20Technologies%20Le%20bilan.pdf"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Emmanuel BOURMALO",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "Explorer son r\u00e9seau Facebook avec sigma.js",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Alexis Jacomy",
+            "url": "https://twitter.com/jacomyal",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1029713009/Pretty_Alexi_2_bigger.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "September 26, 2012 - Paris.js Meetup 22 - 1000Mercis",
+    "talks": [
+      {
+        "title": "FullProof : fulltext search on client side",
+        "slides": [
+          "http://kornr.net/prez/paris.js22/#/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Rodrigo Reyes",
+            "url": "https://github.com/reyesr",
+            "avatar": "https://secure.gravatar.com/avatar/0a3de34ae7bf89df41720dbda1bd8915?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"
+          }
+        ]
+      },
+      {
+        "title": "Hack the web",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Evan G\u00e9nieur",
+            "url": "http://twitter.com/evangenieur",
+            "avatar": "https://si0.twimg.com/profile_images/83725129/gunnm2_small_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Js Application Development - The 10 commandments",
+        "slides": [
+          "http://xcambar.github.com/parisjs_22/#/intro"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Xavier Cambar",
+            "url": "https://twitter.com/xcambar",
+            "avatar": "https://si0.twimg.com/profile_images/1873134717/DSC_0163_2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Lightning talk : Image Resolver",
+        "slides": [
+          "https://speakerdeck.com/u/mauricesvay/p/imageresolver-dot-js"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Maurice Svay",
+            "url": "http://twitter.com/mauriz",
+            "avatar": "https://si0.twimg.com/profile_images/566295477/maurice_svay_20081114_bigger.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Lightning talk : osmLeaflet.jQuery",
+        "slides": [
+          "https://gist.github.com/3778385"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Mathieu Robin",
+            "url": "http://twitter.com/mathrobin",
+            "avatar": "http://a0.twimg.com/profile_images/1369959547/Avatar_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Lightning talk : La gestion des Images Responsives",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Emmanuel Remy",
+            "url": "https://twitter.com/manuremy",
+            "avatar": "https://si0.twimg.com/profile_images/1869699800/100_0646_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "July 25, 2012 - Paris.js Meetup 21 - P\u00e9pini\u00e8re 27 / Bistri / Agence-e",
+    "talks": [
+      {
+        "title": "Construire un plugin pour jQuery de fa\u00e7on industrielle",
+        "slides": [
+          "http://www.slideshare.net/mathrobin/construire-un-plugin-pour-jquery-15"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Mathieu Robin",
+            "url": "http://twitter.com/mathrobin",
+            "avatar": "http://a0.twimg.com/profile_images/1369959547/Avatar_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "cell.js: Simple Hierarchical Rendering Web Framework",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Stanislas Polu",
+            "url": "http://twitter.com/spolu",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/2008060134/423231_3486704046246_1230777314_33453905_1333098466_n_reasonably_small.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "Cr\u00e9ation de jeux en HTML5/JS et Node.js",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Samuel Ronce",
+            "url": "http://twitter.com/webcreative5",
+            "avatar": "https://si0.twimg.com/profile_images/1725850023/creative5_a2_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Lightning talk : Pr\u00e9sentation de WebFWD",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Thomas Bassetto",
+            "url": "http://twitter.com/tbassetto",
+            "avatar": "http://a0.twimg.com/profile_images/1575803986/_thomas2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Lightning talk : Processingjs: une visualisation pour les syst\u00e8mes d'informations",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Franck Ernewein",
+            "url": "http://twitter.com/FranckErnewein",
+            "avatar": "https://si0.twimg.com/profile_images/1539864082/twitter_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "June 27, 2012 - Paris.js Meetup 20 - ENSAM",
+    "talks": [
+      {
+        "title": "Orbit : R\u00e9seau Temps-R\u00e9el Avec HTML5",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Jean-Marc Le Roux",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "AMD loader pour un code Javascript organis\u00e9 et performant",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Emmanuel REMY",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "Aper\u00e7u du navigateur de BB10 et portage d'app sous WebWorks",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Thomas Bassetto",
+            "url": ""
+          },
+          {
+            "name": "Pierre-Loic Doulcet",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "Sencha Touch 2 en action",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@revolunet",
+            "url": "http://twitter.com/#!/revolunet",
+            "avatar": "http://a1.twimg.com/profile_images/1244148446/logo-revolunet-carre2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "envi: vim and dwm having a baby at a party organized by mosaic",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Stanislas Polu",
+            "url": ""
+          }
+        ]
+      },
+      {
+        "title": "docco viewer",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "May 30, 2012 - Paris.js Meetup 19 - Eyrolles",
+    "talks": [
+      {
+        "title": "Lib\u00e9rez la puissance du canvas de HTML5 pour vos jeux",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "David Catuhe",
+            "url": "https://twitter.com/"
+          }
+        ]
+      },
+      {
+        "title": "Un nouveau framework JS orient\u00e9 d\u00e9veloppement mobile",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Mathias DESLOGES",
+            "url": "https://twitter.com/"
+          }
+        ]
+      },
+      {
+        "title": "Ember Data",
+        "slides": [
+          "https://speakerdeck.com/u/tchak/p/ember-data"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Tchak13",
+            "url": "http://twitter.com/tchak13",
+            "avatar": "http://a2.twimg.com/profile_images/1499737633/avatar.jpg"
+          }
+        ]
+      },
+      {
+        "title": "G\u00e9n\u00e9rez vos sites web avec DocPad et Node.js",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Khalid Jebbari",
+            "url": "https://twitter.com/"
+          }
+        ]
+      },
+      {
+        "title": "BoxFX.js, a CSS3 Proxy",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Julien Gu\u00e9zennec",
+            "url": "https://twitter.com/molocoloco"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "April 25, 2012 - Paris.js Meetup 18 - Eyrolles",
+    "talks": [
+      {
+        "title": "js_of_ocaml",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Fabrice Le Fessant",
+            "url": "https://twitter.com/b8_bavard"
+          }
+        ]
+      },
+      {
+        "title": "HTML5 pour les jeux. Ce que j'ai appris en d\u00e9veloppant / encadrant 300 productions.",
+        "slides": [
+          "http://pierreloicdoulcet.fr/parisjs/#/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@hexapode",
+            "url": "http://twitter.com/hexapode",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1432571433/photo_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Web vs. WebApp vs. HybridApp",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@d_thevenin",
+            "url": "http://twitter.com/d_thevenin",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1553057419/a6130e591c14b71ccd77e4b38ae02988_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Votre 1ere appli Backbone.js en 10 minutes",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Node Streams",
+        "slides": [
+          "http://francois2metz.github.com/showoff-nodestreams/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "http://twitter.com/francois2metz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1668190373/avatar_normal.png"
+          }
+        ]
+      },
+      {
+        "title": "tquery augmented gesture",
+        "slides": [
+          "http://jeromeetienne.github.com/slides/augmentedgesture.web5/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "April 16, 2012 - Node Meetup - dotCloud, hosted by La Cantine",
+    "talks": [
+      {
+        "title": "Pr\u00e9sentation de nodejs",
+        "slides": [
+          "http://francois2metz.github.com/showoff-nodejs/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "http://twitter.com/francois2metz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1668190373/avatar_normal.png"
+          }
+        ]
+      },
+      {
+        "title": "Bonnes pratiques de d\u00e9veloppement d'applications Node.js",
+        "slides": [
+          "http://www.slideshare.net/francoisz/bonnes-pratiques-node-js"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francoisz",
+            "url": "http://twitter.com/francoisz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/912470499/P1000697_reasonably_small.JPG"
+          }
+        ]
+      },
+      {
+        "title": "Les nouveaut\u00e9s de NodeJS 0.7.x",
+        "slides": [
+          "http://noledgedis.com/slides/en_route_pour_node-v0.8.0/assets/fallback/index.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Shinuza",
+            "url": "http://twitter.com/shinuza",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1252804654/24750_1238080394441_1302186545_30538088_1432027_n_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Retour d'exp\u00e9rience sur node.js en production",
+        "slides": [
+          "http://www.slideshare.net/sterengiannini/joshfire-factory-using-nodejs-in-production"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@steren",
+            "url": "http://twitter.com/steren",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1384219717/avatar_normal.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Win(g) Commander.js",
+        "slides": [
+          "http://athieriot.github.com/wing-commander-js/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@a_thieriot",
+            "url": "http://twitter.com/a_thieriot",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/70433339/a8wTPUovSP0BlSS0HoGjT5pl8mE_30HlcNDALg7Jxj55jIryGmvLgNldY9mxnNhD_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Une d\u00e9mo d'Hubot",
+        "slides": [
+          "http://codestre.am/f20ee7b2aadfb13755f6f54ca"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "http://twitter.com/francois2metz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1668190373/avatar_normal.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "March 28, 2012 - Paris.js Meetup 17 - Intel, hosted by Epitech",
+    "talks": [
+      {
+        "title": "Crafty JS",
+        "slides": [
+          "http://t.co/8ogiFLLj"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Shinuza",
+            "url": "http://twitter.com/shinuza",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1252804654/24750_1238080394441_1302186545_30538088_1432027_n_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Snappy X",
+        "slides": [
+          "http://www.slideshare.net/florianharmel/snapyx-parisjs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@florianharmel",
+            "url": "http://twitter.com/florianharmel",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/99573173/n775724777_1731828_1007_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Ember.js",
+        "slides": [
+          "http://speakerdeck.com/u/tchak/p/emberjs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Tchak13",
+            "url": "http://twitter.com/tchak13",
+            "avatar": "http://a2.twimg.com/profile_images/1499737633/avatar.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Joshfire factory",
+        "slides": [
+          "http://www.slideshare.net/sylvinus/dvelopper-en-javascript-pour-linternet-des-objets"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Sylvinus",
+            "url": "http://twitter.com/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "February 29, 2012 - Paris.js Meetup 16 - Viadeo",
+    "talks": [
+      {
+        "title": "Gestion des d\u00e9pendances - CommonsJS vs AMD vs ES:Harmony",
+        "slides": [
+          ""
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xp6gg9_paris-js-16-gestion-des-dependances-commonsjs-vs-amd-vs-es-harmony_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@XCambar",
+            "url": "http://twitter.com/xcambar",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1873134717/DSC_0163_2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Making a webgl game in 48h",
+        "slides": [
+          ""
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xp6gm0_paris-js-16-make-webgl-game-in-48h_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Trigrou",
+            "url": "http://twitter.com/trigrou",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1276195637/me-square_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Shadow DOM",
+        "slides": [
+          "http://www.slideshare.net/tbassetto/web-components-shadow-dom"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xp6ght_paris-js-16-web-components_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tbassetto",
+            "url": "http://twitter.com/tbassetto",
+            "avatar": "https://si0.twimg.com/profile_images/1500074506/5825926997_3a11d50cd9_b.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "Hacking RFID with Node.JS",
+        "slides": [
+          "http://www.slideshare.net/mauricesvay/hacking-rfid-with-nodejs"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xp6gjl_paris-js-16-hacking-rfid-with-nodejs_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@mauriz",
+            "url": "http://twitter.com/mauriz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/566295477/maurice_svay_20081114_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "January 25, 2012 - Paris.js Meetup 15 - Megalo & company",
+    "talks": [
+      {
+        "title": "Testing javascript",
+        "slides": [
+          "http://noledgedis.com/slides/tdd_and_javascript"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@shinuza",
+            "url": "http://twitter.com/shinuza",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1252804654/24750_1238080394441_1302186545_30538088_1432027_n_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Making off Nouvelle Vague",
+        "slides": [
+          "http://cedricpinson.com/nouvellevague/conf/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@Trigrou",
+            "url": "http://twitter.com/trigrou",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1276195637/me-square_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "VS Toolkit - D\u00e9velloper une toolkit en HTML5",
+        "slides": [
+          "http://vinisketch.fr/prez/ParisJS15/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@d_thevenin",
+            "url": "http://twitter.com/d_thevenin",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1553057419/a6130e591c14b71ccd77e4b38ae02988_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "CoffeeScript",
+        "slides": [
+          "http://speakerdeck.com/u/sgruhier/p/coffeescript"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sgruhier",
+            "url": "http://twitter.com/sgruhier",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/203157097/seb_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Boilerplate builder",
+        "slides": [
+          "http://jeromeetienne.github.com/slides-boilerplate-builder"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/#!/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "December 21, 2011 - Paris.js Meetup 14 - Isart",
+    "talks": [
+      {
+        "title": "WakandaDB: a NoSQL Object datastore",
+        "slides": [
+          "http://www.slideshare.net/ThibArg/wakanda-db-parisjs201112"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@amorgaut",
+            "url": "http://twitter.com/amorgaut",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          },
+          {
+            "name": "@ThibArg",
+            "url": "https://twitter.com/ThibArg",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "A Boilerplate for Three.js",
+        "slides": [
+          "http://jeromeetienne.github.com/slides-3jsbp-parisjs14"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/#!/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Syntaxe simplifi\u00e9e pour declarer un module",
+        "slides": [
+          "http://www.slideshare.net/ericbrechemier/scope-or-not"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@eric_brechemier",
+            "url": "http://twitter.com/#!/eric_brechemier",
+            "avatar": "http://a1.twimg.com/profile_images/541895110/Eric-BRECHEMIER-profile-picture-by-Julien-Spiewak_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Extending node.js with c++",
+        "slides": [
+          "http://noledgedis.com/slides/extending_nodejs_with_c++.zip"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@shinuza",
+            "url": "https://twitter.com/#!/shinuza",
+            "avatar": "https://si0.twimg.com/profile_images/1252804654/24750_1238080394441_1302186545_30538088_1432027_n.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "November 30, 2011 - Paris.js Meetup 13 - Microsoft France",
+    "talks": [
+      {
+        "title": "Making of DemoJS FFF",
+        "slides": [
+          "http://cedricpinson.com/demojs-fff/conf/#/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@trigrou",
+            "url": "http://twitter.com/#!/trigrou",
+            "avatar": "http://a3.twimg.com/profile_images/1276195637/me-square_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Browser Extensions",
+        "slides": [
+          "http://www.slideshare.net/erwanl/paris-js-extensions"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@erwan",
+            "url": "http://twitter.com/#!/erwan",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/16957172/erwan_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "ReadR.js, an experiment about reading experience",
+        "slides": [
+          "http://www.b2bweb.fr/bonus/my-book-readr/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Julien Gu\u00e9zennec",
+            "url": "https://twitter.com/molokoloco",
+            "avatar": "https://si0.twimg.com/profile_images/2281609675/rvsbl2ick7xhqm1hxkpd_bigger.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "HTML5 for 2D Particles Games",
+        "slides": [
+          "http://pierreloicdoulcet.fr/slides/parisjs13/#/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@hexapode",
+            "url": "http://twitter.com/#!/hexapode",
+            "avatar": "http://a1.twimg.com/profile_images/1432571433/photo_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "jQuery.htmlize()",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "https://github.com/ZeeAgency/jquery.htmlize"
+        ],
+        "authors": [
+          {
+            "name": "@JulienCabanes",
+            "url": "http://twitter.com/JulienCabanes",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1508242397/avatar_reasonably_small"
+          }
+        ]
+      },
+      {
+        "title": "RxJS",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jbrwk",
+            "url": "https://twitter.com/#!/jbrwk"
+          }
+        ]
+      },
+      {
+        "title": "Sproutcha",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          "http://goldledoigt.github.com/sproutcha/"
+        ],
+        "authors": [
+          {
+            "name": "@tchak13",
+            "url": "http://twitter.com/#!/tchak13",
+            "avatar": "http://a2.twimg.com/profile_images/1499737633/avatar.jpg"
+          },
+          {
+            "name": "@goldledoigt",
+            "url": "https://twitter.com/#!/goldledoigt",
+            "avatar": "http://a2.twimg.com/profile_images/1499737633/avatar.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "October 26, 2011 - Paris.js Meetup 12 - af83",
+    "talks": [
+      {
+        "title": "Paris.js summary",
+        "slides": [
+          "http://bobylito.github.com/ParisJS12-Intro/presentation.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@bobylito",
+            "url": "http://twitter.com/#!/bobylito",
+            "avatar": "http://a1.twimg.com/profile_images/809040483/twitterProfilePhoto_reasonably_small.jpg"
+          },
+          {
+            "name": "@42loops",
+            "url": "http://twitter.com/#!/42loops",
+            "avatar": "http://a1.twimg.com/profile_images/809040483/twitterProfilePhoto_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Streamer VS spaghetti ninjas",
+        "slides": [
+          "http://speakerdeck.com/u/gozala/p/streamer-vs-spaghetti-ninjas"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xmk2rs_paris-js-12-streamer-vs-spaghetti-ninjas_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@gozala",
+            "url": "http://twitter.com/gozala",
+            "avatar": "http://a2.twimg.com/profile_images/185290825/face.big_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "D\u00e9velopper une appli Windows 8 en JS",
+        "slides": [
+          "http://braincracking.org/portfolio/presentation/win8/"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xmk2vs_paris-js-12-developper-une-application-windows8-en-js_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@theystolemynick",
+            "url": "http://twitter.com/#!/theystolemynick",
+            "avatar": "http://a3.twimg.com/profile_images/416108368/avatar_JP_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Microphysics.js a 3D physics engine in 500 lines",
+        "slides": [
+          "http://www.google.com/url?sa=D&q=https://docs.google.com/present/view%3Fid%3Ddhng4bgf_77fkzsn9dt&usg=AFQjCNHwFduDSLogTln8WTzb5_tMtI5UgA"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xmkxrt_paris-js-12-microphysics_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/#!/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "10 projets en 10 minutes",
+        "slides": [
+          "http://www.google.com/url?sa=D&q=http://nono.github.com/Presentations/20111026_10_projects_JS/&usg=AFQjCNFuFlzWJEIYV0vEHulo-FJs0wFk0A"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xmkxrw_paris-js-12-10-projets-10-minutes_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@brmichel",
+            "url": "http://twitter.com/#!/brmichel",
+            "avatar": "http://a0.twimg.com/profile_images/919273189/Bruno-Michel_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "140byt.es & Le c\u00f4t\u00e9 obscur du JS",
+        "slides": [
+          "http://www.google.com/url?sa=D&q=http://www.slideshare.net/sylvinus/140bytes-the-dark-side-of-javascript&usg=AFQjCNE8m-rKR7wOktuTTNnVvCsC0gIGYA"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/#!/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Web Workers",
+        "slides": [
+          
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@anotherlin",
+            "url": "http://twitter.com/#!/anotherlin",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1609229799/av-3106_reasonably_small.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "September 28, 2011 - Paris.js Meetup 11 - Netvibes",
+    "talks": [
+      {
+        "title": "SASS & Compass",
+        "slides": [
+          " http://www.slideshare.net/JulienZee/parisjs-11-sass-compass-9472811"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xllgsf_paris-js-11-sass-and-compass_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@JulienCabanes",
+            "url": "http://twitter.com/JulienCabanes",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1508242397/avatar_reasonably_small"
+          }
+        ]
+      },
+      {
+        "title": "socket.io",
+        "slides": [
+          "http://www.slideshare.net/3rdEden/going-real-time-with-socketio"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xlmfsm_paris-js-11-socketio_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/#!/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "SproutCore 2.0 - The new Beginning",
+        "slides": [
+          "http://sproutcore20-new-beggining.tchak.net/"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xlkqgd_paris-js-11-sproutcore-2-0-a-new-beginning-by-paul-chavard_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tchak13",
+            "url": "http://twitter.com/#!/tchak13",
+            "avatar": "http://a2.twimg.com/profile_images/1499737633/avatar.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Learningthreejs or WebGL for dummy",
+        "slides": [
+          "https://docs.google.com/present/view?id=dhng4bgf_72dg8qqjcp&pli=1"
+        ],
+        "videos": [
+          "http://www.dailymotion.com/video/xlkckj_paris-js-11-learning-three-js-by-jerome-etienne_tech"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "August 31, 2011 - Paris.js Meetup 10 - La Cantine",
+    "talks": [
+      {
+        "title": "State of the art: Server-Side JavaScript",
+        "slides": [
+          "http://www.slideshare.net/alexandre_morgaut/state-of-the-art-serverside-javascript-parisjs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@amorgaut",
+            "url": "http://twitter.com/amorgaut",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          },
+          {
+            "name": "@thibarg",
+            "url": "http://twitter.com/thibarg",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Brunch With Coffee",
+        "slides": [
+          "http://www.slideshare.net/sgruhier/brunch-with-coffee"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sgruhier",
+            "url": "http://twitter.com/sgruhier",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/203157097/seb_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Chess@Home",
+        "slides": [
+          "https://docs.google.com/present/view?id=dhpp9dcj_8fxbgxcd5"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@chess_at_home",
+            "url": "http://twitter.com/chess_at_home"
+          }
+        ]
+      },
+      {
+        "title": "PhantomJs",
+        "slides": [
+          "http://www.slideshare.net/mauricesvay/parisjs-10-phantomjs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@mauriz",
+            "url": "http://twitter.com/mauriz",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/566295477/maurice_svay_20081114_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Dependency Management with RequireJS",
+        "slides": [
+          "http://www.slideshare.net/JulienZee/parisjs-10-requirejs-9111799"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@JulienCabanes",
+            "url": "http://twitter.com/JulienCabanes",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1508242397/avatar_reasonably_small"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "July 27, 2011 - Paris.js Meetup 9 - Smile",
+    "talks": [
+      {
+        "title": "PhoneGap introduction",
+        "slides": [
+          "http://www.slideshare.net/tbassetto/prsentation-de-phonegap"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tbassetto",
+            "url": "http://twitter.com/tbassetto",
+            "avatar": "https://si0.twimg.com/profile_images/1500074506/5825926997_3a11d50cd9_b.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "PhoneGap tips and tricks",
+        "slides": [
+          "http://42loops.com/phonegap/static/index.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@42loops",
+            "url": "http://twitter.com/42loops",
+            "avatar": "http://a1.twimg.com/profile_images/1436522974/paul_reasonably_small.JPG"
+          }
+        ]
+      },
+      {
+        "title": "Faire un plugin et quelques astuces",
+        "slides": [
+          "http://www.vinisketch.fr/downloads/prez/ParisJS9/PJS9_PGP_dthevenin.pdf"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@d_thevenin",
+            "url": "http://twitter.com/d_thevenin"
+          }
+        ]
+      },
+      {
+        "title": "Retour d'exp\u00e9rience sur l'utilisation de PhoneGap pour des projets clients / internes",
+        "slides": [
+          "http://www.slideshare.net/erpla/parisjs-9-phonegap-feedbacks"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@ericplaquevent",
+            "url": "http://twitter.com/#!/ericplaquevent",
+            "avatar": "http://a0.twimg.com/profile_images/1381755500/avatar_6fc18d4520db_128_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Three.js - an introduction",
+        "slides": [
+          "https://docs.google.com/present/view?id=dhng4bgf_71c9txhrdb"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/#!/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Comment j'ai mis du sucre dans mon vin",
+        "slides": [
+          "https://github.com/francois2metz/showoff-jssyntaxicsugar"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "https://github.com/francois2metz",
+            "avatar": "https://secure.gravatar.com/avatar/ba1d6472ee5893bdfc012225e9afa263"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "June 29, 2011 - Paris.js Meetup 8 - Valtech",
+    "talks": [
+      {
+        "title": "Wakanda project",
+        "slides": [
+          "http://www.slideshare.net/alexandre_morgaut/paris-js-meetup-8-june-2011"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@amorgaut",
+            "url": "http://twitter.com/amorgaut",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          },
+          {
+            "name": "@thibarg",
+            "url": "http://twitter.com/thibarg",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/1386942812/Photo_on_2011-06-08_at_12.11__2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Joshfire Framework",
+        "slides": [
+          "http://framework.joshfire.com/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/#!/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Javascript from 1998 to 2011",
+        "slides": [
+          "http://www.b2bweb.fr/molokoloco/javascript-from-1998-to-2011/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "Julien Gu\u00e9zennec",
+            "url": "https://twitter.com/molokoloco",
+            "avatar": "https://si0.twimg.com/profile_images/2281609675/rvsbl2ick7xhqm1hxkpd_bigger.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "Compiling into Javascript with Javascript",
+        "slides": [
+          "http://whyd.com/tmp/lambda.zip"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jie",
+            "url": "http://twitter.com/#!/jie",
+            "avatar": "http://a3.twimg.com/profile_images/1362637461/J6_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Introduction to asynchronous DB access using node.js and MongoDB",
+        "slides": [
+          "http://blog.adrienjoly.com/introduction-to-asynchronous-db-access-using"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@adrienjoly",
+            "url": "http://twitter.com/#!/adrienjoly",
+            "avatar": "http://a1.twimg.com/profile_images/1105693255/2010-08_300px_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Cross-Browser JS Synthesizer",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@hexapode",
+            "url": "http://twitter.com/#!/hexapode",
+            "avatar": "http://a1.twimg.com/profile_images/1432571433/photo_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Observer pattern done right",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@shinuza",
+            "url": "http://twitter.com/#!/shinuza",
+            "avatar": "http://a2.twimg.com/profile_images/1252804654/24750_1238080394441_1302186545_30538088_1432027_n_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "SenchaTouch/ExtJs",
+        "slides": [
+          "http://www.revolunet.com/static/parisjs8/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@revolunet",
+            "url": "http://twitter.com/#!/revolunet",
+            "avatar": "http://a1.twimg.com/profile_images/1244148446/logo-revolunet-carre2_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Overview of awesome Mozilla Labs projects",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tbassetto",
+            "url": "http://twitter.com/tbassetto",
+            "avatar": "https://si0.twimg.com/profile_images/1500074506/5825926997_3a11d50cd9_b.jpeg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "May 25, 2011 - Paris.js Meetup 7 - Vidal",
+    "talks": [
+      {
+        "title": "Javascript expressiveness",
+        "slides": [
+          "http://parisjs-expressiveness.heroku.com/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "https://github.com/francois2metz",
+            "avatar": "https://secure.gravatar.com/avatar/ba1d6472ee5893bdfc012225e9afa263"
+          }
+        ]
+      },
+      {
+        "title": "Web TV and web development",
+        "slides": [
+          "http://www.slideshare.net/jpvincent/tls-connectes-et-dveloppement-web"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@theystolemynick",
+            "url": "http://twitter.com/#!/theystolemynick",
+            "avatar": "http://a3.twimg.com/profile_images/416108368/avatar_JP_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Shortags.js, log.js, Pacmaze Update",
+        "slides": [
+          "http://notes.jetienne.com/2011/05/26/Parisjs-7-slides.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Video capture using HTML5",
+        "slides": [
+          "http://www.slideshare.net/tbassetto/fr-capture-vido-avec-html5"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tbassetto",
+            "url": "http://twitter.com/tbassetto",
+            "avatar": "https://si0.twimg.com/profile_images/1500074506/5825926997_3a11d50cd9_b.jpeg"
+          }
+        ]
+      },
+      {
+        "title": "CouchDB user feedback",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@challet",
+            "url": "http://twitter.com/#!/challet",
+            "avatar": "http://a1.twimg.com/profile_images/762702904/12870_229006808135_636953135_4441217_1387053_n_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "April 27, 2011 - Paris.js Meetup 6 - Octave & Octave",
+    "talks": [
+      {
+        "title": "Introduction to The Scalable JavaScript Application Framework",
+        "slides": [
+          "https://github.com/eric-brechemier/introduction_to_lb_js_scalableApp"
+        ],
+        "videos": [
+          "http://vimeo.com/26719486",
+          "http://vimeo.com/26996020"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@eric_brechemier",
+            "url": "http://twitter.com/#!/eric_brechemier",
+            "avatar": "http://a1.twimg.com/profile_images/541895110/Eric-BRECHEMIER-profile-picture-by-Julien-Spiewak_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "A trip HTML5 and Games - the pacmaze experiment",
+        "slides": [
+          "https://docs.google.com/present/view?id=0AT-TyRjy_tjnZGhuZzRiZ2ZfNjNna3Mzc2tjZg"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/#!/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Vinisketch Designer - Multi target authoring tool",
+        "slides": [
+          "http://vinisketch.fr/downloads/prez/VAD_ParisJS6_en.pdf"
+        ],
+        "videos": [
+          "http://vimeo.com/27502334"
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@d_thevenin",
+            "url": "http://twitter.com/#!/d_thevenin"
+          }
+        ]
+      },
+      {
+        "title": "Inside globe tweeter",
+        "slides": [
+          "http://plopbyte.net/insideglobetweeter/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@trigrou",
+            "url": "http://twitter.com/#!/trigrou",
+            "avatar": "http://a3.twimg.com/profile_images/1276195637/me-square_reasonably_small.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "March 30, 2011 - Paris.js Meetup 5 - Joshfire",
+    "talks": [
+      {
+        "title": "Arena js",
+        "slides": [
+          "https://github.com/jeromeetienne/arenajs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Sencha Touch (et HTML5 mobile en g\u00e9n\u00e9ral)",
+        "slides": [
+          "http://www.centurion-project.org/static/parisjs/index-en.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@freakdev",
+            "url": "http://twitter.com/#!/freakdev",
+            "avatar": "http://a0.twimg.com/profile_images/837493848/logo_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "HTML5 Drag And Drop Sucks",
+        "slides": [
+          "http://pxdraw.com/HTML5DragAndDropSucks.com/#slide1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@hexapode",
+            "url": "http://twitter.com/hexapode",
+            "avatar": "http://a1.twimg.com/profile_images/1432571433/photo_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "How to go faster than jQuery?",
+        "slides": [
+          "http://myjs.fr/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jie",
+            "url": "http://twitter.com/jie",
+            "avatar": "http://a3.twimg.com/profile_images/1362637461/J6_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "February 23, 2011 - Paris.js Meetup 4 - La Cantine",
+    "talks": [
+      {
+        "title": "no.de quick presentation",
+        "slides": [
+          "http://www.slideshare.net/sylvinus/node-quick-presentation-at-parisjs-4"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Webhookit",
+        "slides": [
+          "http://www.slideshare.net/neyric/webhookit-parisjs-4"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@neyric",
+            "url": "http://twitter.com/neyric",
+            "avatar": "http://a1.twimg.com/profile_images/53603312/neyric_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Canvas: Serious Business",
+        "slides": [
+          "http://jto.github.com/jseam/slides/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@skaalf",
+            "url": "http://twitter.com/skaalf",
+            "avatar": "http://a1.twimg.com/profile_images/1253268983/philip-j-fry-aiuto_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Webpeer - how to access p2p from a webpage",
+        "slides": [
+          "https://docs.google.com/present/view?id=dhng4bgf_50w9hhpkfx"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jerome_etienne",
+            "url": "http://twitter.com/jerome_etienne",
+            "avatar": "http://a1.twimg.com/profile_images/306747278/jetienne-avatar_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "January 26, 2011 - Paris.js Meetup 3 - Zenexity",
+    "talks": [
+      {
+        "title": "Backbone.js",
+        "slides": [
+          "http://www.slideshare.net/tonyskn/backbonejs-6728018"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@tonyskn",
+            "url": "http://twitter.com/tonyskn",
+            "avatar": "http://a0.twimg.com/profile_images/759939768/IMG_7329_reasonably_small.JPG"
+          }
+        ]
+      },
+      {
+        "title": "Rapha\u00ebl Keynote",
+        "slides": [
+          "http://raphael.imeuble.info/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@meuble",
+            "url": "http://twitter.com/#!/meuble",
+            "avatar": "http://a0.twimg.com/profile_images/23926412/MacGeek_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "Kinect + Javascript",
+        "slides": [
+          "http://www.slideshare.net/sylvinus/kinect-javascript-tech-talk-at-parisjs-jan-2011"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "November 24, 2010 - Paris.js Meetup 2 - ISART Digital",
+    "talks": [
+      {
+        "title": "Web Crawling with NodeJS",
+        "slides": [
+          "http://www.slideshare.net/sylvinus/web-crawling-with-nodejs"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@sylvinus",
+            "url": "http://twitter.com/sylvinus",
+            "avatar": "http://a1.twimg.com/profile_images/57443879/me_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Spore et node-spore",
+        "slides": [
+          "http://node-spore.heroku.com/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "https://github.com/francois2metz",
+            "avatar": "https://secure.gravatar.com/avatar/ba1d6472ee5893bdfc012225e9afa263"
+          }
+        ]
+      },
+      {
+        "title": "<video> et javascript",
+        "slides": [
+          "http://talks.challet.eu/html5_video_mooplay/"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@challet",
+            "url": "http://twitter.com/challet",
+            "avatar": "http://a1.twimg.com/profile_images/762702904/12870_229006808135_636953135_4441217_1387053_n_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Offline mobile web apps",
+        "slides": [
+          "#"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@mrspeaker",
+            "url": "https://twitter.com/#!/mrspeaker",
+            "avatar": "https://twimg0-a.akamaihd.net/profile_images/423384530/Picture_2_bigger_reasonably_small.png"
+          }
+        ]
+      },
+      {
+        "title": "HTML5 pour les jeux",
+        "slides": [
+          "http://html5gamejam.org/slides/#slide1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@hexapode",
+            "url": "http://twitter.com/hexapode",
+            "avatar": "http://a1.twimg.com/profile_images/1432571433/photo_reasonably_small.png"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "October 12, 2010 - First Paris.js Meetup - af83",
+    "talks": [
+      {
+        "title": "Introduction \u00e0 CouchDB",
+        "slides": [
+          "http://javascript.training.free.fr/couchdb/intro/intro-couchdb.html"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@paulgreg",
+            "url": "http://twitter.com/paulgreg",
+            "avatar": "http://a3.twimg.com/profile_images/141206708/PAUL_Gregory_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Chargements Javascript asynchrones",
+        "slides": [
+          "https://docs.google.com/present/view?id=0AVEtwWraWZ-3ZGcydnMyYjhfNTE2Y3o4cmJjZnE"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@gcachet",
+            "url": "https://github.com/gcachet",
+            "avatar": "https://secure.gravatar.com/avatar/7faaf83c547b6cffed44e7a5ffbfad73"
+          }
+        ]
+      },
+      {
+        "title": "Tests javascript avec Qunit et Testswarm",
+        "slides": [
+          "http://tests-parisjs.heroku.com/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@francois2metz",
+            "url": "http://github.com/francois2metz",
+            "avatar": "https://secure.gravatar.com/avatar/ba1d6472ee5893bdfc012225e9afa263"
+          }
+        ]
+      },
+      {
+        "title": "\u201cKEEP IT SIMPLE\u201d",
+        "slides": [
+          "https://docs.google.com/document/pub?id=1ugTkpww_UWZbjFjJ7QjVP6KBG-5-4zzjfJ_VE1XEkgw"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@no_way",
+            "url": "http://twitter.com/no_way",
+            "avatar": "http://a3.twimg.com/profile_images/1110580155/3776002408_67dbb49535_z_reasonably_small.jpg"
+          }
+        ]
+      },
+      {
+        "title": "Playing with webkit transitions",
+        "slides": [
+          "http://42loops.com/playing-with-webkit/#1"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@42loops",
+            "url": "http://twitter.com/42loops",
+            "avatar": "http://a1.twimg.com/profile_images/1436522974/paul_reasonably_small.JPG"
+          }
+        ]
+      },
+      {
+        "title": "Abusing Javascript to speedup mobile web sites",
+        "slides": [
+          "http://www.slideshare.net/jedisct1/abusing-javascript-to-speedup-mobile-web-sites"
+        ],
+        "videos": [
+          
+        ],
+        "projects": [
+          
+        ],
+        "authors": [
+          {
+            "name": "@jedisct1",
+            "url": "http://twitter.com/jedisct1",
+            "avatar": "https://si0.twimg.com/profile_images/64543895/cv_reasonably_small.jpg"
+          }
+        ]
+      }
+    ]
+  }
+]
