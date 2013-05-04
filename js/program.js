@@ -183,7 +183,7 @@ App.Program = Backbone.Router.extend({
     add: function() {
         this.show(null);
         $('#content').append($('<iframe>').attr({
-            src: 'http://parisjstalks-francois2metz.dotcloud.com/',
+            src: 'http://parisjstalks.nodejitsu.com/',
             width: '100%'
         }));
     },
