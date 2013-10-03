@@ -1426,8 +1426,9 @@
             </div>
 
             <div id="twitter">
-                <h2>Twitter #ParisJS</h2>
-                <ul id="twitter-panel"></ul>
+                <h2>Twitter @ParisJS</h2>
+                <a class="twitter-timeline" href="https://twitter.com/parisjs" data-widget-id="385870789804699648">Tweets by @parisjs</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
 
             <div id="communities">
@@ -1469,14 +1470,6 @@
             <div class="summary">
                 <a href="program.html">SEE THE PROGRAM</a>
             </div>
-        </script>
-
-        <script id="tweetTmpl" type="text/x-template">
-            <li class="tweet-box">
-                <span><a target="_blank" href="http://twitter.com/<%= tweet.user %>"><%= tweet.user %></a></span>
-                <p><%= tweet.text %></p>
-                <p class="time"><a href="http://twitter.com/<%= tweet.user %>/status/<%= tweet.id %>"><%= tweet.time %></a></p>
-            </li>
         </script>
 
         <script id="communityTmpl" type="text/x-template">
