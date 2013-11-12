@@ -76,7 +76,7 @@ function parseMeetups(website, callback) {
                   }
                   var $ = window.$;
                   var meetups = extractMeetups($);
-                  callback(JSON.stringify(meetups));
+                  callback(JSON.stringify(meetups, null, 4));
               });
 }
 
