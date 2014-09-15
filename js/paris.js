@@ -119,13 +119,6 @@ $(function() {
     Meetups.init();
 });
 
-(function pickAndAddRandomCommunities($, d, _){
-    var meetups = _(d).chain().filter(function(e){return e.continent!="Conference"; }).shuffle().first(10).value(),
-        $place = $("#communities ul"),
-        tmpl = _.template($("#communityTmpl").html());
-    $place.html(tmpl({meetups : meetups}));
-})($, data || [], _);
-
 $("a[href='']").attr("href","http://www.youtube.com/watch?v=oHg5SJYRHA0")
 
 })(jQuery, _);
