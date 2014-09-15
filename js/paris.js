@@ -61,38 +61,31 @@ Meetups.init = function() {
 }
 
 Meetups.load = function(tries) {
+
+    var signed_url = 'http://api.meetup.com/2/events?group_id=13092622&status=upcoming&order=time&limited_events=False&desc=false&offset=0&photo-host=public&format=json&page=20&fields=&sig_id=29041352&sig=dab9854bf9e82e510a2a2d37d36509e8d3317c68';
     var $event = $("#event");
 
     $.ajax({
-        dataType: 'json',
+        url: signed_url,
         type: 'GET',
-        url: "http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20xml%20where%20url%3D'https%3A%2F%2Fwww.eventbrite.com%2Fxml%2Forganizer_list_events%3Fapp_key%3DOTlkMWFkODNjYThl%26id%3D856075'&format=json&diagnostics=true&callback=?",
+        dataType: 'jsonp',
+        success: function(responseData) {
+            console.log(responseData);
+            var nextEvent;
+            var out = '';
+            if (responseData && responseData.results && responseData.results.length > 0) {
+                nextEvent = responseData.results[0];
+                out = _.template($("#eventTmpl").html(), {event: nextEvent});
+            } else {
+                out = _.template($("#emptyEventTmpl").html(), {});
+            }
+            $event.html(out);
+            Spin.stop();
+        },
         error: function (jqXHR, status, errorThrown) {
             $event.html(_.template($("#emptyEventTmpl").html(), {}));
             Spin.stop();
         },
-        success: function(result) {
-            var events = [];
-            if (typeof result == "string") {
-                result = $.parseJSON(result);
-            }
-            if (result.query.count === 0 && tries < 2) {
-                // Once in a while YQL sends an empty result: try again!
-                Meetups.load(tries + 1);
-                return;
-            }
-
-            if (result.query.count > 0) {
-                events = events.concat(result.query.results.events.event);
-            }
-
-            var nextEvent = _(events).find(function(evt){
-                return evt.status == "Live";
-            });
-
-            $event.html(nextEvent ? _.template($("#eventTmpl").html(), {event: nextEvent}) : _.template($("#emptyEventTmpl").html(), {}));
-            Spin.stop();
-        }
     });
 };
 
@@ -103,13 +96,15 @@ window.Utils = {
                  .replace(/@(\w+)/ig, "<a target='_blank' href='http://twitter.com/$1'>@$1</a>")
                  .replace(/#([^\s]+)/ig, "<a target='_blank' href='http://twitter.com/search?q=%23$1'>#$1</a>");
     },
-    formatDate: function(date) {
-        var hour = date.split(" ")[1];
-        date = date.split(" ")[0];
-        var year = date.split("-")[0];
-        var month = date.split("-")[1];
-        var day = date.split("-")[2];
-        return MONTH[month -1] + " " + day + ", " + year + " "+ hour;
+    formatDate: function(timestamp) {
+        console.log(timestamp);
+        var d = new Date(timestamp);
+        console.log(d);
+        var hour = d.getHours();
+        var year = d.getFullYear();
+        var month = d.getMonth();
+        var day = d.getDate();
+        return MONTH[month] + " " + day + ", " + year + " "+ hour + "h";
     }
 };
 
