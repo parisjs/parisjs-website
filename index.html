@@ -1674,15 +1674,15 @@
 
         <script id="eventTmpl" type="text/x-template">
             <h2>NEXT MEETUP</h2>
-            <p class="dtstart date" title="<%= event.start_date %>"><%= Utils.formatDate(event.start_date) %></p>
-            <p class="titre"><%=  event.title %></p>
+            <p class="dtstart date" title="<%= event.time %>"><%= Utils.formatDate(event.time) %></p>
+            <p class="titre"><%=  event.name %></p>
             <p class="where">
-                <a href="http://maps.google.com/maps?q=<%= event.venue.latitude %>,<%= event.venue.longitude %>&z=15">hosted by <%= event.venue.name %></a>
+                <a href="http://maps.google.com/maps?q=<%= event.venue.lat %>,<%= event.venue.lon %>&z=15">hosted by <%= event.venue.name %></a>
             </p>
             <div class="summary">
                 <a href="program.html">SEE THE PROGRAM</a>
             </div>
-            <a class="inscription" href="<%= event.url %>">INSCRIPTION</a>
+            <a class="inscription" href="http://www.meetup.com/<%= event.group.urlname %>/events/<%= event.id %>/">INSCRIPTION</a>
         </script>
 
         <script id="emptyEventTmpl" type="text/x-template">
