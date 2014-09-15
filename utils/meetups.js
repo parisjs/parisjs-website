@@ -49,7 +49,7 @@ function updateMeetups(website, callback) {
                       var document = window.document;
                       // remove the jquery inserted by jsdom
                       $('script:last', document).remove();
-                      var output = document.doctype + document.innerHTML;
+                      var output = document.doctype + document.documentElement.outerHTML;
                       callback(output.trim());
                   });
     });
