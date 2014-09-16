@@ -119,7 +119,7 @@ $(function() {
         $place = $("#communities ul"),
         tmpl = _.template($("#communityTmpl").html());
     $place.html(tmpl({meetups : meetups}));
-})($, data || [], _);
+})($, rawdata || [], _);
 
 $("a[href='']").attr("href","http://www.youtube.com/watch?v=oHg5SJYRHA0")
 
