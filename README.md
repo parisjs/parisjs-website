@@ -2,11 +2,24 @@
 
 This is the source of the parisjs.org website.
 
-## Utils
+## Updating the site
+* Create 1 markdown file in `_posts` per talk
+  * the filename must be in this format: `YYYY-MM-DD-the-post-title.md`
+* The file must contain
+  * Metadata (see existing posts for available metadata)
+  * Content
+* Update `_data/meetups.yml` to add data for the meetup
 
-The list of meetups and talks is very long. If you want to update the HTML, the easiest way is to use a script located in utils/meetups.js
+## Testing locally:
+* Install Bundler: `gem install bundler`
+* Install Jekyll: `bundle install`
+* Start the local server: `bundle exec jekyll serve`
+* Open [http://localhost:4000]
 
-See the [special readme](utils/README.md) for more details.
+Learn more about about Jekyll setup https://help.github.com/articles/using-jekyll-with-pages/
+
+## Deploying the site:
+* Merge `master` into `gh-pages`
 
 ## License
 

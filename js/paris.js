@@ -43,7 +43,7 @@ Toggle.init = function () {
     $(".meetup-content").hide();
 
     var hash = window.location.hash;
-    if (-1 != hash.indexOf("#meetup-")) {
+    if (-1 != hash.indexOf("#parisjs")) {
         //Open selected meetup
         $('.meetup-content', hash).toggle();
     } else {
