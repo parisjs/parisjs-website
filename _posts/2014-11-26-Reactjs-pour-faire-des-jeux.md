@@ -4,6 +4,7 @@ title: "React.js pour faire des jeux"
 authors:
     - name: "Alexandre Stanislawski"
       url: https://twitter.com/bobylito
+      avatar: https://twitter.com/bobylito/profile_image?size=bigger
 projects:
     - https://github.com/bobylito/littleshooter2
 slides:
