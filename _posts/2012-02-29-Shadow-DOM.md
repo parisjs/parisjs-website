@@ -4,7 +4,7 @@ title: "Shadow DOM"
 authors:
     - name: "@tbassetto"
       url: http://twitter.com/tbassetto
-      avatar: http://pbs.twimg.com/profile_images/440225621780615168/QD6srNEX_bigger.jpeg
+      avatar: https://twitter.com/tbassetto/profile_image?size=bigger
 projects:
 slides:
     - http://www.slideshare.net/tbassetto/web-components-shadow-dom

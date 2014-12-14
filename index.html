@@ -82,7 +82,7 @@
                                         <img src="{{ post.authors[0].avatar }}" alt="">
                                         {% endif %}
                                     </li>
-                                    <li class="titleTalk"><span data-href="{{ post.url }}">{{ post.title }}</span></li>
+                                    <li class="titleTalk"><span data-href="{{ post.url }}">{{ post.title | xml_escape }}</span></li>
                                     <li class="authorTalk">By:
                                         {% for author in post.authors %}
                                             <a href="{{ author.url }}">{{ author.name }}</a>

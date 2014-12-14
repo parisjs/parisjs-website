@@ -4,7 +4,7 @@ title: "Lightning talk : La gestion des Images Responsives"
 authors:
     - name: "Emmanuel Remy"
       url: https://twitter.com/manuremy
-      avatar: http://pbs.twimg.com/profile_images/1869699800/100_0646_bigger.jpg
+      avatar: https://twitter.com/manuremy/profile_image?size=bigger
 projects:
 slides:
 videos:
