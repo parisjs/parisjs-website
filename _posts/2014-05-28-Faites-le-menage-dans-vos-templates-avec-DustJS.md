@@ -1,5 +1,6 @@
 ---
 tags: parisjs37
+title: "Faites le ménage dans vos templates avec DustJS !"
 authors:
     - name: "TBA"
 projects:

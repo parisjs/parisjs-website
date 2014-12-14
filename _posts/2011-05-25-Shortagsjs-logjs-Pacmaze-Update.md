@@ -1,5 +1,6 @@
 ---
 tags: parisjs7
+title: "Shortags.js, log.js, Pacmaze Update"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "Introduction à CouchDB"
 authors:
     - name: "@paulgreg"
       url: http://twitter.com/paulgreg

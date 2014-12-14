@@ -1,5 +1,6 @@
 ---
 tags: parisjs6
+title: "Introduction to The Scalable JavaScript Application Framework"
 authors:
     - name: "@eric_brechemier"
       url: http://twitter.com/eric_brechemier

@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "Développer une appli Windows 8 en JS"
 authors:
     - name: "@theystolemynick"
       url: http://twitter.com/theystolemynick

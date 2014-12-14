@@ -1,5 +1,6 @@
 ---
 tags: parisjs4
+title: "Canvas: Serious Business"
 authors:
     - name: "@skaalf"
       url: http://twitter.com/skaalf

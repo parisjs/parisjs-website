@@ -1,5 +1,6 @@
 ---
 tags: parisjs29
+title: "Hacking Mootools Fx"
 authors:
     - name: "Clément Hallet"
       url: https://twitter.com/challet

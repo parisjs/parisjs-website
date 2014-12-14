@@ -1,5 +1,6 @@
 ---
 tags: parisjs32
+title: "Comparaison des JS Loaders"
 authors:
     - name: "Mathieu Robin"
       url: http://www.twitter.com/mathrobin

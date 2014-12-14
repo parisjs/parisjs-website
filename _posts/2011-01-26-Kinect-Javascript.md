@@ -1,5 +1,6 @@
 ---
 tags: parisjs3
+title: "Kinect + Javascript"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

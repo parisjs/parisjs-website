@@ -1,5 +1,6 @@
 ---
 tags: parisjs11
+title: "Learningthreejs or WebGL for dummy"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

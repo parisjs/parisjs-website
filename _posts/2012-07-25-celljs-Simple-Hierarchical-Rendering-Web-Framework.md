@@ -1,5 +1,6 @@
 ---
 tags: parisjs21
+title: "cell.js: Simple Hierarchical Rendering Web Framework"
 authors:
     - name: "Stanislas Polu"
       url: http://twitter.com/spolu

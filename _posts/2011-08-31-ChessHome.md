@@ -1,5 +1,6 @@
 ---
 tags: parisjs10
+title: "Chess@Home"
 authors:
     - name: "@chess_at_home"
       url: http://twitter.com/chess_at_home

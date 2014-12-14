@@ -1,5 +1,6 @@
 ---
 tags: parisjs19
+title: "Libérez la puissance du canvas de HTML5 pour vos jeux"
 authors:
     - name: "David Catuhe"
       url: https://twitter.com/deltakosh

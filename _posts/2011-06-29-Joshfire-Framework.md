@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Joshfire Framework"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

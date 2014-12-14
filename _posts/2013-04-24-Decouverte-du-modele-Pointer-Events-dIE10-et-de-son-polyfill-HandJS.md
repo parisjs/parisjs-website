@@ -1,5 +1,6 @@
 ---
 tags: parisjs28
+title: "Découverte du modèle Pointer Events d'IE10 et de son polyfill HandJS"
 authors:
     - name: "David Rousset"
       url: https://twitter.com/davrous

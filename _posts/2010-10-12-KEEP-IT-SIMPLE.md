@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "“KEEP IT SIMPLE”"
 authors:
     - name: "@no_way"
       url: http://twitter.com/no_way

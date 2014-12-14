@@ -1,5 +1,6 @@
 ---
 tags: parisjs15
+title: "Boilerplate builder"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

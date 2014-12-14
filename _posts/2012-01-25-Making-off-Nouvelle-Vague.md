@@ -1,5 +1,6 @@
 ---
 tags: parisjs15
+title: "Making off Nouvelle Vague"
 authors:
     - name: "@Trigrou"
       url: http://twitter.com/trigrou

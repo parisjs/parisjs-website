@@ -1,5 +1,6 @@
 ---
 tags: parisjs18
+title: "tquery augmented gesture"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

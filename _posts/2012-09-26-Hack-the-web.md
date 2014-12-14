@@ -1,5 +1,6 @@
 ---
 tags: parisjs22
+title: "Hack the web"
 authors:
     - name: "Evan Génieur"
       url: http://twitter.com/evangenieur

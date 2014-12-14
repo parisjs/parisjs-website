@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "10 projets en 10 minutes"
 authors:
     - name: "@brmichel"
       url: http://twitter.com/brmichel

@@ -1,5 +1,6 @@
 ---
 tags: parisjs21
+title: "Lightning talk : Processingjs: une visualisation pour les systèmes d'informations"
 authors:
     - name: "Franck Ernewein"
       url: http://twitter.com/FranckErnewein

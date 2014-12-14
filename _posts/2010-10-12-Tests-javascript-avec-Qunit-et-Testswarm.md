@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "Tests javascript avec Qunit et Testswarm"
 authors:
     - name: "@francois2metz"
       url: http://github.com/francois2metz

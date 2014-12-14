@@ -1,5 +1,6 @@
 ---
 tags: parisjs7
+title: "Video capture using HTML5"
 authors:
     - name: "@tbassetto"
       url: http://twitter.com/tbassetto

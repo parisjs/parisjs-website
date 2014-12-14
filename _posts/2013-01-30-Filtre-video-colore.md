@@ -1,5 +1,6 @@
 ---
 tags: parisjs25
+title: "Filtre vidéo coloré"
 authors:
     - name: "Xavier Bourry"
       url: http://www.linkedin.com/pub/xavier-bourry/33/89a/1a6

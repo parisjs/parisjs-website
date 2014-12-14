@@ -1,5 +1,6 @@
 ---
 tags: parisjs18
+title: "HTML5 pour les jeux. Ce que j'ai appris en développant / encadrant 300 productions."
 authors:
     - name: "@hexapode"
       url: http://twitter.com/hexapode

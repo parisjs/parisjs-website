@@ -1,5 +1,6 @@
 ---
 tags: parisjs21
+title: "Lightning talk : Présentation de WebFWD"
 authors:
     - name: "Thomas Bassetto"
       url: http://twitter.com/tbassetto

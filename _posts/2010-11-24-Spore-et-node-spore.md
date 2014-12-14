@@ -1,5 +1,6 @@
 ---
 tags: parisjs2
+title: "Spore et node-spore"
 authors:
     - name: "@francois2metz"
       url: https://github.com/francois2metz

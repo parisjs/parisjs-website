@@ -1,5 +1,6 @@
 ---
 tags: parisjs27
+title: "Zanimo : transitions with promises fulfilled"
 authors:
     - name: "@42loops"
       url: http://twitter.com/42loops

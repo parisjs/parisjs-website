@@ -1,5 +1,6 @@
 ---
 tags: parisjs6
+title: "A trip HTML5 and Games - the pacmaze experiment"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

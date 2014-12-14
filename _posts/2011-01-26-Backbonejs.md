@@ -1,5 +1,6 @@
 ---
 tags: parisjs3
+title: "Backbone.js"
 authors:
     - name: "@tonyskn"
       url: http://twitter.com/tonyskn

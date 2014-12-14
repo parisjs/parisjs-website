@@ -1,5 +1,6 @@
 ---
 tags: parisjs22
+title: "Js Application Development - The 10 commandments"
 authors:
     - name: "Xavier Cambar"
       url: https://twitter.com/xcambar

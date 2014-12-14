@@ -1,5 +1,6 @@
 ---
 tags: parisjs32
+title: "Yeoman For Three.js"
 authors:
     - name: "Jerome Etienne"
       url: https://twitter.com/jerome_etienne

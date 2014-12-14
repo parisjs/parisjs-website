@@ -1,5 +1,6 @@
 ---
 tags: parisjs19
+title: "BoxFX.js, a CSS3 Proxy"
 authors:
     - name: "Julien Guézennec"
       url: https://twitter.com/molocoloco

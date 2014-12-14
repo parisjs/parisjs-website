@@ -1,5 +1,6 @@
 ---
 tags: parisjs22
+title: "Lightning talk : Image Resolver"
 authors:
     - name: "Maurice Svay"
       url: http://twitter.com/mauriz

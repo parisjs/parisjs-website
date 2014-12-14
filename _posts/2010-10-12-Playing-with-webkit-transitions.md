@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "Playing with webkit transitions"
 authors:
     - name: "@42loops"
       url: http://twitter.com/42loops

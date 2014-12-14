@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "PhoneGap tips and tricks"
 authors:
     - name: "@42loops"
       url: http://twitter.com/42loops

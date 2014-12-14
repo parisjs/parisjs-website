@@ -1,5 +1,6 @@
 ---
 tags: parisjs10
+title: "Dependency Management with RequireJS"
 authors:
     - name: "@JulienCabanes"
       url: http://twitter.com/JulienCabanes

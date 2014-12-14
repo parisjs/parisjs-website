@@ -1,5 +1,6 @@
 ---
 tags: parisjs22
+title: "FullProof : fulltext search on client side"
 authors:
     - name: "Rodrigo Reyes"
       url: https://github.com/reyesr

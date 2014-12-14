@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "HTML5 for 2D Particles Games"
 authors:
     - name: "@hexapode"
       url: http://twitter.com/hexapode

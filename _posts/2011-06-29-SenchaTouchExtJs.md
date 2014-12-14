@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "SenchaTouch/ExtJs"
 authors:
     - name: "@revolunet"
       url: http://twitter.com/revolunet

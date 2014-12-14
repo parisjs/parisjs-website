@@ -1,5 +1,6 @@
 ---
 tags: parisjs40
+title: "Développer une application Bitcoin"
 authors:
     - name: "Gabriel Majoulet"
       url: https://twitter.com/gmajoulet

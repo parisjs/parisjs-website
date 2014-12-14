@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "Abusing Javascript to speedup mobile web sites"
 authors:
     - name: "@jedisct1"
       url: http://twitter.com/jedisct1

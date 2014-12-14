@@ -1,5 +1,6 @@
 ---
 tags: parisjs4
+title: "no.de quick presentation"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

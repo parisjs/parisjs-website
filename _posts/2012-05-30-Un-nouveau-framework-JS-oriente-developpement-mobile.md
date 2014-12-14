@@ -1,5 +1,6 @@
 ---
 tags: parisjs19
+title: "Un nouveau framework JS orienté développement mobile"
 authors:
     - name: "Mathias DESLOGES"
       url: https://twitter.com/freakdev

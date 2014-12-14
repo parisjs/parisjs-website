@@ -1,5 +1,6 @@
 ---
 tags: parisjs14
+title: "WakandaDB: a NoSQL Object datastore"
 authors:
     - name: "@amorgaut"
       url: http://twitter.com/amorgaut

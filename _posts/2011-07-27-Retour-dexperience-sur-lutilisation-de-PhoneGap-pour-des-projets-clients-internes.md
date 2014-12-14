@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "Retour d'expérience sur l'utilisation de PhoneGap pour des projets clients / internes"
 authors:
     - name: "@ericplaquevent"
       url: http://twitter.com/ericplaquevent

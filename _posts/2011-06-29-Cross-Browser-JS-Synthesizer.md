@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Cross-Browser JS Synthesizer"
 authors:
     - name: "@hexapode"
       url: http://twitter.com/hexapode

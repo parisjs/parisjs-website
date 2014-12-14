@@ -1,5 +1,6 @@
 ---
 tags: parisjs7
+title: "CouchDB user feedback"
 authors:
     - name: "@challet"
       url: http://twitter.com/challet

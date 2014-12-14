@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "Streamer VS spaghetti ninjas"
 authors:
     - name: "@gozala"
       url: http://twitter.com/gozala

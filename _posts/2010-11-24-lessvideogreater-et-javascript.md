@@ -1,5 +1,6 @@
 ---
 tags: parisjs2
+title: "<video> et javascript"
 authors:
     - name: "@challet"
       url: http://twitter.com/challet

@@ -1,5 +1,6 @@
 ---
 tags: parisjs18
+title: "Votre 1ere appli Backbone.js en 10 minutes"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

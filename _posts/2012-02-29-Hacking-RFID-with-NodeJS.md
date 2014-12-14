@@ -1,5 +1,6 @@
 ---
 tags: parisjs16
+title: "Hacking RFID with Node.JS"
 authors:
     - name: "@mauriz"
       url: http://twitter.com/mauriz

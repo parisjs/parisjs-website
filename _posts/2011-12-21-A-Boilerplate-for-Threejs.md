@@ -1,5 +1,6 @@
 ---
 tags: parisjs14
+title: "A Boilerplate for Three.js"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

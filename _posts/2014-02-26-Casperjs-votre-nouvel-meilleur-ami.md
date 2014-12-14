@@ -1,5 +1,6 @@
 ---
 tags: parisjs34
+title: "Casperjs, votre nouvel meilleur ami"
 authors:
     - name: "Mickael Andrieu"
       url: http://twitter.com/mickael_andrieu

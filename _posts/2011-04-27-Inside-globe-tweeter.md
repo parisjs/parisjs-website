@@ -1,5 +1,6 @@
 ---
 tags: parisjs6
+title: "Inside globe tweeter"
 authors:
     - name: "@trigrou"
       url: http://twitter.com/trigrou

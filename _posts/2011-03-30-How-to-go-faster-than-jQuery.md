@@ -1,5 +1,6 @@
 ---
 tags: parisjs5
+title: "How to go faster than jQuery?"
 authors:
     - name: "@jie"
       url: http://twitter.com/jie

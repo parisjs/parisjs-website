@@ -1,5 +1,6 @@
 ---
 tags: parisjs17
+title: "Joshfire factory"
 authors:
     - name: "@Sylvinus"
       url: http://twitter.com/sylvinus

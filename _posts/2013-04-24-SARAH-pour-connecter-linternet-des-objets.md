@@ -1,5 +1,6 @@
 ---
 tags: parisjs28
+title: "SARAH pour connecter l'internet des objets"
 authors:
     - name: "Jean-Philippe Encausse"
       url: https://twitter.com/JpEncausse

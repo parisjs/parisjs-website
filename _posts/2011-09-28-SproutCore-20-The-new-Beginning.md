@@ -1,5 +1,6 @@
 ---
 tags: parisjs11
+title: "SproutCore 2.0 - The new Beginning"
 authors:
     - name: "@tchak13"
       url: http://twitter.com/tchak13

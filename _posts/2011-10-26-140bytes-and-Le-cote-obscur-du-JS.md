@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "140byt.es & Le côté obscur du JS"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

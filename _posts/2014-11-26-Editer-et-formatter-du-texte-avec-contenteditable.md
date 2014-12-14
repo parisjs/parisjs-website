@@ -1,5 +1,6 @@
 ---
 tags: parisjs41
+title: "Éditer et formatter du texte avec contenteditable"
 authors:
     - name: "Laurent Perrin"
       url: https://twitter.com/l_perrin

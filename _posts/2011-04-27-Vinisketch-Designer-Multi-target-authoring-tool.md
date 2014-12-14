@@ -1,5 +1,6 @@
 ---
 tags: parisjs6
+title: "Vinisketch Designer - Multi target authoring tool"
 authors:
     - name: "@d_thevenin"
       url: http://twitter.com/d_thevenin

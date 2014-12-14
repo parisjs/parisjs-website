@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "ReadR.js, an experiment about reading experience"
 authors:
     - name: "Julien Guézennec"
       url: https://twitter.com/molokoloco

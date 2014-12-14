@@ -1,5 +1,6 @@
 ---
 tags: parisjs25
+title: "Tests fonctionnels avec mocha et zombie.js"
 authors:
     - name: "François Zaninotto"
       url: https://twitter.com/francoisz

@@ -1,5 +1,6 @@
 ---
 tags: parisjs41
+title: "React.js pour faire des jeux"
 authors:
     - name: "Alexandre Stanislawski"
       url: https://twitter.com/bobylito

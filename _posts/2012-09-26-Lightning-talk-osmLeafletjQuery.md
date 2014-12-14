@@ -1,5 +1,6 @@
 ---
 tags: parisjs22
+title: "Lightning talk : osmLeaflet.jQuery"
 authors:
     - name: "Mathieu Robin"
       url: http://twitter.com/mathrobin

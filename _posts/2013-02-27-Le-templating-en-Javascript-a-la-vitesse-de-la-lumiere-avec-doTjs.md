@@ -1,5 +1,6 @@
 ---
 tags: parisjs26
+title: "Le templating en Javascript à la vitesse de la lumière avec doT.js"
 authors:
     - name: "Mathieu Parisot"
       url: https://twitter.com/matparisot

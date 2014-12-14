@@ -1,5 +1,6 @@
 ---
 tags: parisjs5
+title: "HTML5 Drag And Drop Sucks"
 authors:
     - name: "@hexapode"
       url: http://twitter.com/hexapode

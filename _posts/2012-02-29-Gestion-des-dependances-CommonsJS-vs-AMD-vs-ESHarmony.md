@@ -1,5 +1,6 @@
 ---
 tags: parisjs16
+title: "Gestion des dépendances - CommonsJS vs AMD vs ES:Harmony"
 authors:
     - name: "@XCambar"
       url: http://twitter.com/xcambar

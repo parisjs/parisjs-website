@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "PhoneGap introduction"
 authors:
     - name: "@tbassetto"
       url: http://twitter.com/tbassetto

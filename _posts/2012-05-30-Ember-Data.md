@@ -1,5 +1,6 @@
 ---
 tags: parisjs19
+title: "Ember Data"
 authors:
     - name: "@Tchak13"
       url: http://twitter.com/tchak13

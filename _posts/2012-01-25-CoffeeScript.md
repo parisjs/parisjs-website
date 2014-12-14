@@ -1,5 +1,6 @@
 ---
 tags: parisjs15
+title: "CoffeeScript"
 authors:
     - name: "@sgruhier"
       url: http://twitter.com/sgruhier

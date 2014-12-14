@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "Comment j'ai mis du sucre dans mon vin"
 authors:
     - name: "@francois2metz"
       url: https://github.com/francois2metz

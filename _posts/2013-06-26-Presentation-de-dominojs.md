@@ -1,5 +1,6 @@
 ---
 tags: parisjs29
+title: "Présentation de domino.js"
 authors:
     - name: "Alexis Jacomy"
       url: https://twitter.com/jacomyal

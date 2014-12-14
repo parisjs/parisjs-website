@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "Three.js - an introduction"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

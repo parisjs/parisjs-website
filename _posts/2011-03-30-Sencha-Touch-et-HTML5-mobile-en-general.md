@@ -1,5 +1,6 @@
 ---
 tags: parisjs5
+title: "Sencha Touch (et HTML5 mobile en général)"
 authors:
     - name: "@freakdev"
       url: http://twitter.com/freakdev

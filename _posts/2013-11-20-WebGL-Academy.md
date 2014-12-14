@@ -1,5 +1,6 @@
 ---
 tags: parisjs31
+title: "WebGL Academy"
 authors:
     - name: "Xavier Bourry"
       url: http://twitter.com/xavgoo

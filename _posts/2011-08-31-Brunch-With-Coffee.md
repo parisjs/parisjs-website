@@ -1,5 +1,6 @@
 ---
 tags: parisjs10
+title: "Brunch With Coffee"
 authors:
     - name: "@sgruhier"
       url: http://twitter.com/sgruhier

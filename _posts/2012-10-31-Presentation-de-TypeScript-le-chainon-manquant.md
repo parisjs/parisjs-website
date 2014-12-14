@@ -1,5 +1,6 @@
 ---
 tags: parisjs23
+title: "Présentation de TypeScript, le chainon manquant ?"
 authors:
     - name: "Emmanuel REMY"
       url: https://twitter.com/@manuremy

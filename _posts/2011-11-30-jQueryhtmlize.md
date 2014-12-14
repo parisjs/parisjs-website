@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "jQuery.htmlize()"
 authors:
     - name: "@JulienCabanes"
       url: http://twitter.com/JulienCabanes

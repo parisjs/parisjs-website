@@ -1,5 +1,6 @@
 ---
 tags: parisjs28
+title: "Bower, un package manager pour le browser"
 authors:
     - name: "Paul Dijou"
       url: https://twitter.com/paul_dijou

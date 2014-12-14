@@ -1,5 +1,6 @@
 ---
 tags: parisjs4
+title: "Webpeer - how to access p2p from a webpage"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

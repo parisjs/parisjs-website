@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Compiling into Javascript with Javascript"
 authors:
     - name: "@jie"
       url: http://twitter.com/jie

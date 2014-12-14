@@ -1,5 +1,6 @@
 ---
 tags: parisjs34
+title: "Browserify explained"
 authors:
     - name: "Khalid Jebbari"
       url: http://twitter.com/Dj3bbZ

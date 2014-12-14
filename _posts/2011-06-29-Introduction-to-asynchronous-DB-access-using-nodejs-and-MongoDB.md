@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Introduction to asynchronous DB access using node.js and MongoDB"
 authors:
     - name: "@adrienjoly"
       url: http://twitter.com/adrienjoly

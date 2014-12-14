@@ -1,5 +1,6 @@
 ---
 tags: parisjs30
+title: "Galaxy: async/await grâce aux générateurs \"harmony\""
 authors:
     - name: "Bruno Jouhier"
       url: https://twitter.com/bjouhier

@@ -1,5 +1,6 @@
 ---
 tags: parisjs26
+title: "The Opa Framework for JavaScript - Rapid + Secure Web Development"
 authors:
     - name: "Cédric Soulas"
       url: https://twitter.com/CedricSoulas

@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Observer pattern done right"
 authors:
     - name: "@shinuza"
       url: http://twitter.com/shinuza

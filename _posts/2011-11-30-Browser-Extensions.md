@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "Browser Extensions"
 authors:
     - name: "@erwan"
       url: http://twitter.com/erwan

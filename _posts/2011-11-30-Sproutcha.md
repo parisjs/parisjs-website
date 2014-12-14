@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "Sproutcha"
 authors:
     - name: "@tchak13"
       url: http://twitter.com/tchak13

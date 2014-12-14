@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Wakanda project"
 authors:
     - name: "@amorgaut"
       url: http://twitter.com/amorgaut

@@ -1,5 +1,6 @@
 ---
 tags: parisjs24
+title: "Brunch, an HTML5 application assembler"
 authors:
     - name: "Khalid Jebbari"
       url: https://twitter.com/Dj3bbZ

@@ -1,5 +1,6 @@
 ---
 tags: parisjs3
+title: "Raphaël Keynote"
 authors:
     - name: "@meuble"
       url: http://twitter.com/meuble

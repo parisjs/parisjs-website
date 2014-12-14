@@ -1,5 +1,6 @@
 ---
 tags: parisjs40
+title: "Lightning talk : hello.js"
 authors:
     - name: "Freddy Harris"
       url: https://twitter.com/harrisfreddy

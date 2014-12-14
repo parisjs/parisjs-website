@@ -1,5 +1,6 @@
 ---
 tags: parisjs25
+title: "Minesweeper CoffeeScript & Dart"
 authors:
     - name: "Jean-Laurent Morlhon"
       url: https://twitter.com/morlhon

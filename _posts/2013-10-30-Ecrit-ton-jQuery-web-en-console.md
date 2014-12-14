@@ -1,5 +1,6 @@
 ---
 tags: parisjs30
+title: "Écrit ton jQuery web en console"
 authors:
     - name: "Marek Kalnik"
       url: https://twitter.com/marekkalnik

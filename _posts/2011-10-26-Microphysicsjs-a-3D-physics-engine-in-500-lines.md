@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "Microphysics.js a 3D physics engine in 500 lines"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

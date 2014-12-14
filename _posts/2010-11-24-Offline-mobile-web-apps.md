@@ -1,5 +1,6 @@
 ---
 tags: parisjs2
+title: "Offline mobile web apps"
 authors:
     - name: "@mrspeaker"
       url: https://twitter.com/mrspeaker

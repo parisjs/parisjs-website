@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "Web Workers"
 authors:
     - name: "@anotherlin"
       url: http://twitter.com/anotherlin

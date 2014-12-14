@@ -1,5 +1,6 @@
 ---
 tags: parisjs1
+title: "Chargements Javascript asynchrones"
 authors:
     - name: "@gcachet"
       url: https://github.com/gcachet

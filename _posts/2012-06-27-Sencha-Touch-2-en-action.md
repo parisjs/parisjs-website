@@ -1,5 +1,6 @@
 ---
 tags: parisjs20
+title: "Sencha Touch 2 en action"
 authors:
     - name: "@revolunet"
       url: http://twitter.com/revolunet

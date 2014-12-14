@@ -1,5 +1,6 @@
 ---
 tags: parisjs9
+title: "Faire un plugin et quelques astuces"
 authors:
     - name: "@d_thevenin"
       url: http://twitter.com/d_thevenin

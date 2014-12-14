@@ -1,5 +1,6 @@
 ---
 tags: parisjs16
+title: "Shadow DOM"
 authors:
     - name: "@tbassetto"
       url: http://twitter.com/tbassetto

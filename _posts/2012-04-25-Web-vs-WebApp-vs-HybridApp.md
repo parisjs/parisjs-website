@@ -1,5 +1,6 @@
 ---
 tags: parisjs18
+title: "Web vs. WebApp vs. HybridApp"
 authors:
     - name: "@d_thevenin"
       url: http://twitter.com/d_thevenin

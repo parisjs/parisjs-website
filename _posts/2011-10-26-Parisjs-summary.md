@@ -1,5 +1,6 @@
 ---
 tags: parisjs12
+title: "Paris.js summary"
 authors:
     - name: "@bobylito"
       url: http://twitter.com/bobylito

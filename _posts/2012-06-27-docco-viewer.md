@@ -1,5 +1,6 @@
 ---
 tags: parisjs20
+title: "docco viewer"
 authors:
     - name: "@jerome_etienne"
       url: http://twitter.com/jerome_etienne

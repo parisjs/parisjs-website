@@ -1,5 +1,6 @@
 ---
 tags: parisjs2
+title: "HTML5 pour les jeux"
 authors:
     - name: "@hexapode"
       url: http://twitter.com/hexapode

@@ -1,5 +1,6 @@
 ---
 tags: parisjs10
+title: "State of the art: Server-Side JavaScript"
 authors:
     - name: "@amorgaut"
       url: http://twitter.com/amorgaut

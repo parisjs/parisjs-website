@@ -1,5 +1,6 @@
 ---
 tags: parisjs10
+title: "PhantomJs"
 authors:
     - name: "@mauriz"
       url: http://twitter.com/mauriz

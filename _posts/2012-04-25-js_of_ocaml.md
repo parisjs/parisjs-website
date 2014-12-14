@@ -1,5 +1,6 @@
 ---
 tags: parisjs18
+title: "js_of_ocaml"
 authors:
     - name: "Fabrice Le Fessant"
       url: https://twitter.com/b8_bavard

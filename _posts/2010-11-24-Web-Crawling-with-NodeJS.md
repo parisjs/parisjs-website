@@ -1,5 +1,6 @@
 ---
 tags: parisjs2
+title: "Web Crawling with NodeJS"
 authors:
     - name: "@sylvinus"
       url: http://twitter.com/sylvinus

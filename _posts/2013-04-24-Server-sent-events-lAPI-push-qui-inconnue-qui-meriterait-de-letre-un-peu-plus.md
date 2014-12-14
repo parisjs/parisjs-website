@@ -1,5 +1,6 @@
 ---
 tags: parisjs28
+title: "Server-sent events: l'API push qui inconnue qui mériterait de l'être un peu plus"
 authors:
     - name: "Steren Giannini"
       url: https://twitter.com/steren

@@ -1,5 +1,6 @@
 ---
 tags: parisjs21
+title: "Construire un plugin pour jQuery de façon industrielle"
 authors:
     - name: "Mathieu Robin"
       url: http://twitter.com/mathrobin

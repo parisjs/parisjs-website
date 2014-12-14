@@ -1,5 +1,6 @@
 ---
 tags: parisjs30
+title: "ExoBrowser: The Experimentation Platform to Build a Next generation Web Browser"
 authors:
     - name: "Stanislas Polu"
       url: https://twitter.com/spolu

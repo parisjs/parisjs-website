@@ -1,5 +1,6 @@
 ---
 tags: parisjs21
+title: "Création de jeux en HTML5/JS et Node.js"
 authors:
     - name: "Samuel Ronce"
       url: http://twitter.com/webcreative5

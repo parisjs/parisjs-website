@@ -1,5 +1,6 @@
 ---
 tags: parisjs29
+title: "Building a mutli-screen animated 3D analogue clock with jQuery and CSS3"
 authors:
     - name: "Julien Guézennec"
       url: https://twitter.com/molokoloco

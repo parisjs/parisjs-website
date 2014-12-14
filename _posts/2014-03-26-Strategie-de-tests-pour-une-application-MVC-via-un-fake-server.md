@@ -1,5 +1,6 @@
 ---
 tags: parisjs35
+title: "Stratégie de tests pour une application MVC via un fake server"
 authors:
     - name: "Gabriel Majoulet"
       url: http://twitter.com/gmajoulet

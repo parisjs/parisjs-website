@@ -1,5 +1,6 @@
 ---
 tags: parisjs16
+title: "Making a webgl game in 48h"
 authors:
     - name: "@Trigrou"
       url: http://twitter.com/trigrou

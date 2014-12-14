@@ -1,5 +1,6 @@
 ---
 tags: parisjs40
+title: "Back to stack: a french tech inventory"
 authors:
     - name: "Jean-Loup Karst"
       url: https://twitter.com/jeanloupkarst

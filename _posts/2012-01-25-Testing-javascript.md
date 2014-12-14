@@ -1,5 +1,6 @@
 ---
 tags: parisjs15
+title: "Testing javascript"
 authors:
     - name: "@shinuza"
       url: http://twitter.com/shinuza

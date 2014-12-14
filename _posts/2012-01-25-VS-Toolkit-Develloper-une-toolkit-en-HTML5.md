@@ -1,5 +1,6 @@
 ---
 tags: parisjs15
+title: "VS Toolkit - Dévelloper une toolkit en HTML5"
 authors:
     - name: "@d_thevenin"
       url: http://twitter.com/d_thevenin

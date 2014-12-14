@@ -1,5 +1,6 @@
 ---
 tags: parisjs31
+title: "Cozy et le développement web sans souffrance"
 authors:
     - name: "Frank Rousseau"
       url: http://twitter.com/mycozycloud

@@ -1,5 +1,6 @@
 ---
 tags: parisjs8
+title: "Overview of awesome Mozilla Labs projects"
 authors:
     - name: "@tbassetto"
       url: http://twitter.com/tbassetto

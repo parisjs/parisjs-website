@@ -1,5 +1,6 @@
 ---
 tags: parisjs34
+title: "Shadow DOM et API Web Component"
 authors:
     - name: "Emmanuel Remy"
       url: http://twitter.com/manuremy

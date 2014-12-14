@@ -1,5 +1,6 @@
 ---
 tags: parisjs14
+title: "Extending node.js with c++"
 authors:
     - name: "@shinuza"
       url: https://twitter.com/shinuza

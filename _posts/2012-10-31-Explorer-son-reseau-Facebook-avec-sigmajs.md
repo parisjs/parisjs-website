@@ -1,5 +1,6 @@
 ---
 tags: parisjs23
+title: "Explorer son réseau Facebook avec sigma.js"
 authors:
     - name: "Alexis Jacomy"
       url: https://twitter.com/jacomyal

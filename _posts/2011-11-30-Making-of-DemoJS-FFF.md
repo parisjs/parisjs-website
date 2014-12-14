@@ -1,5 +1,6 @@
 ---
 tags: parisjs13
+title: "Making of DemoJS FFF"
 authors:
     - name: "@trigrou"
       url: http://twitter.com/trigrou

@@ -1,5 +1,6 @@
 ---
 tags: parisjs11
+title: "SASS & Compass"
 authors:
     - name: "@JulienCabanes"
       url: http://twitter.com/JulienCabanes
