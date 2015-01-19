@@ -11,10 +11,10 @@ This is the source of the parisjs.org website.
 * Update `_data/meetups.yml` to add data for the meetup
 
 ## Testing locally:
-* Install Bundler: `gem install bundler`
-* Install Jekyll: `bundle install`
-* Start the local server: `bundle exec jekyll serve`
-* Open [http://localhost:4000]
+
+Run:
+
+    ./script/bootstrap
 
 Learn more about about Jekyll setup https://help.github.com/articles/using-jekyll-with-pages/
 
