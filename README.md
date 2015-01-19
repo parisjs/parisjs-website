@@ -2,7 +2,8 @@
 
 This is the source of the parisjs.org website.
 
-## Updating the site
+## Add a new talk
+
 * Create 1 markdown file in `_posts` per talk
   * the filename must be in this format: `YYYY-MM-DD-the-post-title.md`
 * The file must contain
