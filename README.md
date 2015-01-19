@@ -1,6 +1,6 @@
 # Parisjs.org
 
-This is the source of the parisjs.org website.
+This is the source of the parisjs.org website, powered by [jekyll][].
 
 ## Add a new talk
 
@@ -34,3 +34,5 @@ Learn more about about Jekyll setup https://help.github.com/articles/using-jekyl
     TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
     0. You just DO WHAT THE FUCK YOU WANT TO.
+
+[jekyll]: http://jekyllrb.com/
