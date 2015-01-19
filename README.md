@@ -18,9 +18,6 @@ This is the source of the parisjs.org website.
 
 Learn more about about Jekyll setup https://help.github.com/articles/using-jekyll-with-pages/
 
-## Deploying the site:
-* Merge `master` into `gh-pages`
-
 ## License
 
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
