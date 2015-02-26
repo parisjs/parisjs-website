@@ -6,7 +6,7 @@ authors:
       url: https://twitter.com/freelancis
       avatar: https://twitter.com/freelancis/profile_image?size=bigger
 projects:
-slides: https://tag.freelancis.net/2015/webrtconf
+slides: http://tag.freelancis.net/2015/webrtconf
 videos:
 ---
 # WebRTC made Simple
