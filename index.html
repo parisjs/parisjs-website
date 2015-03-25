@@ -100,9 +100,14 @@
                                             {% endfor %}
                                         {% endif %}
                                         {% if post.videos %}
-                                            {% for video in post.videos %}
-                                                Here is the <a href="{{ video }}">video</a>.
-                                            {% endfor %}
+                                            {% if post.videos.size > 1 %}
+                                                Videos :
+                                                {% for video in post.videos %}
+                                                    <a href="{{ video }}">part {{ forloop.index }}</a>
+                                                {% endfor %}
+                                            {% else %}
+                                                Here is the <a href="{{ video }}">video</a>
+                                            {% endif %}
                                         {% endif %}
                                     </li>
                                 </ul>
