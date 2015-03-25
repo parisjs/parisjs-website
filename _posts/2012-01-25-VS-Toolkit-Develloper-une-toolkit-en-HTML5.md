@@ -9,5 +9,6 @@ projects:
 slides:
     - http://vinisketch.fr/prez/ParisJS15/
 videos:
+    - http://www.dailymotion.com/video/xpzp1k_paris-js-15-vs-toolkit-developper-une-toolkit-en-html5-d-thevenin_tech
 ---
 #VS Toolkit - Dévelloper une toolkit en HTML5

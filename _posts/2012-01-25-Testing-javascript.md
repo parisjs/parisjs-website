@@ -9,5 +9,6 @@ projects:
 slides:
     - http://noledgedis.com/slides/tdd_and_javascript
 videos:
+    - http://www.dailymotion.com/video/xpzoyt_paris-js-15-testing-javascript-shinuza_tech
 ---
 #Testing javascript

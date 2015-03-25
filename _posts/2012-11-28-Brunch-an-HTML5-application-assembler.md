@@ -10,5 +10,6 @@ projects:
 slides:
     - http://www.rvl.io/djebbz/brunch/
 videos:
+    - http://www.dailymotion.com/video/x2kjtwk_parisjs-24-khalid-jebbari-brunch-an-html5-application-assembler_webcam
 ---
 #Brunch, an HTML5 application assembler

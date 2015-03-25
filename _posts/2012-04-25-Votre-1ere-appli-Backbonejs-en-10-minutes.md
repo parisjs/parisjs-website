@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/xqfps9_pjs18-backbone-js_tech
 ---
 #Votre 1ere appli Backbone.js en 10 minutes

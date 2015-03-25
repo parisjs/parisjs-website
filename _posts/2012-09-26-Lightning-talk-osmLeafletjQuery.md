@@ -9,5 +9,6 @@ projects:
 slides:
     - https://gist.github.com/3778385
 videos:
+    - http://www.dailymotion.com/video/x2kgjga_parisjs-22-mathieu-robin-osmleaflet-jquery_school
 ---
 #Lightning talk : osmLeaflet.jQuery

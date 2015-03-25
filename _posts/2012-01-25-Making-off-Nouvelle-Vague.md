@@ -9,5 +9,6 @@ projects:
 slides:
     - http://cedricpinson.com/nouvellevague/conf/
 videos:
+    - http://www.dailymotion.com/video/xpzp0t_paris-js-15-making-of-nouvelle-vague-trigrou_tech
 ---
 #Making off Nouvelle Vague

@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kg74r_parisjs-21-samuel-ronce-creation-de-jeux-en-html5-js-et-node-js_webcam
 ---
 #Création de jeux en HTML5/JS et Node.js

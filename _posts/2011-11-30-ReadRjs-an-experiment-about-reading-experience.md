@@ -9,5 +9,6 @@ projects:
 slides:
     - http://www.b2bweb.fr/bonus/my-book-readr/
 videos:
+    - http://www.dailymotion.com/video/xmt4wi_paris-js-13-readr-js_tech
 ---
 #ReadR.js, an experiment about reading experience

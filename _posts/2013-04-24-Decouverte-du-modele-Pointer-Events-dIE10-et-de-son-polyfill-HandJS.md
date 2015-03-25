@@ -9,5 +9,6 @@ projects:
 slides:
     - http://fr.slideshare.net/davrous/pointer-events
 videos:
+    - http://www.dailymotion.com/video/x2kjvfh_parisjs-27-david-rousset-decouverte-du-modele-pointer-events-d-ie10-et-de-son-polyfill-handjs_webcam
 ---
 #Découverte du modèle Pointer Events d'IE10 et de son polyfill HandJS

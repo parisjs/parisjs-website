@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/xqfps4_pjs18-apps-vs-webapps_tech
 ---
 #Web vs. WebApp vs. HybridApp

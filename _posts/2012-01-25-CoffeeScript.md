@@ -9,5 +9,6 @@ projects:
 slides:
     - http://speakerdeck.com/u/sgruhier/p/coffeescript
 videos:
+    - http://www.dailymotion.com/video/xpzp2b_paris-js-15-coffeescript-sgruhier_tech
 ---
 #CoffeeScript

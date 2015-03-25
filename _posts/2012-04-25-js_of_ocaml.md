@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/xqktdl_pjs18-js-of-ocaml_webcam
 ---
 #js_of_ocaml

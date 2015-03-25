@@ -9,5 +9,6 @@ projects:
 slides:
     - https://speakerdeck.com/u/mauricesvay/p/imageresolver-dot-js
 videos:
+    - http://www.dailymotion.com/video/x2kgiin_parisjs-22-maurice-svay-image-resolver_school
 ---
 #Lightning talk : Image Resolver

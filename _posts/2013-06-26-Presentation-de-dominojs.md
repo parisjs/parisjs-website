@@ -9,5 +9,6 @@ projects:
 slides:
     - http://jacomyal.github.io/parisjs-201306-domino/
 videos:
+    - http://www.dailymotion.com/video/x2kjvye_parisjs-29-alexis-jacomy-presentation-de-domino-js_webcam
 ---
 #Présentation de domino.js

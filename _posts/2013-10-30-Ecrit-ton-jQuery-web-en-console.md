@@ -9,5 +9,6 @@ projects:
 slides:
     - https://speakerdeck.com/marekkalnik/write-your-jquery-in-console-1
 videos:
+    - http://www.dailymotion.com/video/x2kkbyi_parisjs-30-marek-kalnik-ecrit-ton-jquery-web-en-console_webcam
 ---
 #Écrit ton jQuery web en console

@@ -9,5 +9,6 @@ projects:
 slides:
     - http://pierreloicdoulcet.fr/parisjs/#/
 videos:
+    - http://www.dailymotion.com/video/xqkq20_pjs18-html5-300-jeux-plus-tard_videogames
 ---
 #HTML5 pour les jeux. Ce que j'ai appris en développant / encadrant 300 productions.

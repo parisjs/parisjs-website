@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kjsih_parisjs-23-alexis-jacomy-explorer-son-reseau-facebook-avec-sigma-js_webcam
 ---
 #Explorer son réseau Facebook avec sigma.js

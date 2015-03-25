@@ -9,5 +9,6 @@ projects:
 slides:
     - http://xcambar.github.com/parisjs_22/#/intro
 videos:
+    - http://www.dailymotion.com/video/x2kgeah_parisjs-22-xavier-cambar-js-application-development-the-10-commandments_school
 ---
 #Js Application Development - The 10 commandments

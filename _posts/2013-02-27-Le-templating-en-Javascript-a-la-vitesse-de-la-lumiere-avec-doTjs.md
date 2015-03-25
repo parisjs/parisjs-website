@@ -10,5 +10,6 @@ projects:
 slides:
     - http://fr.slideshare.net/soatexpert/prez-dot-jsparisjs27022013
 videos:
+    - http://www.dailymotion.com/video/x2kjut2_parisjs-26-mathieu-parisot-le-templating-en-javascript-a-la-vitesse-de-la-lumiere-avec-dot-js_webcam
 ---
 #Le templating en Javascript à la vitesse de la lumière avec doT.js

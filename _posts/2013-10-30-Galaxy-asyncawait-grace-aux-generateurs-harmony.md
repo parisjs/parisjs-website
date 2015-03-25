@@ -10,5 +10,6 @@ projects:
 slides:
     - http://prezi.com/y4zkffcri6w1/asyncawait-avec-les-generateurs-harmony/
 videos:
+    - http://www.dailymotion.com/video/x2kjz5c_parisjs-30-david-boureau-introduction-a-la-programmation-fonctionnelle-2-2_webcam
 ---
 #Galaxy: async/await grâce aux générateurs "harmony"
