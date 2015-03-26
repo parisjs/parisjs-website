@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kg77a_parisjs-21-thomas-bassetto-presentation-de-webfwd_webcam
 ---
 #Lightning talk : Présentation de WebFWD

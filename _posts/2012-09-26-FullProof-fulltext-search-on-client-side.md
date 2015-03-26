@@ -9,5 +9,6 @@ projects:
 slides:
     - http://kornr.net/prez/paris.js22/#/
 videos:
+    - http://www.dailymotion.com/video/x2kggof_parisjs-22-rodrigo-reyes-fullproof-fulltext-search-on-client-side_school
 ---
 #FullProof : fulltext search on client side

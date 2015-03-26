@@ -9,5 +9,6 @@ projects:
 slides:
     - http://www.slideshare.net/mathrobin/construire-un-plugin-pour-jquery-15
 videos:
+    - http://www.dailymotion.com/video/x2kg68c_parisjs-21-mathieu-robin-construire-un-plugin-pour-jquery-de-facon-industrielle_webcam
 ---
 #Construire un plugin pour jQuery de façon industrielle

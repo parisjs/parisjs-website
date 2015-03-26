@@ -10,5 +10,6 @@ projects:
 slides:
     - http://breach.cc/parisjs/#/
 videos:
+    - http://www.dailymotion.com/video/x2kk05t_parisjs-30-stanislas-polu-exobrowser-the-experimentation-platform-to-build-a-next-generation-web-bro_webcam
 ---
 #ExoBrowser: The Experimentation Platform to Build a Next generation Web Browser

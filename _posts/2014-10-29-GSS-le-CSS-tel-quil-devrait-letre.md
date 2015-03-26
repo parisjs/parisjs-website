@@ -9,5 +9,7 @@ projects:
     - https://github.com/DjebbZ/gss-paris-js
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kkghm_parisjs-40-khalid-jebbari-gss-le-css-tel-qu-il-devrait-l-etre-1-2_webcam
+    - http://www.dailymotion.com/video/x2kkgk9_parisjs-40-khalid-jebbari-gss-le-css-tel-qu-il-devrait-l-etre-2-2_webcam
 ---
 #GSS : le CSS tel qu'il devrait l'être

@@ -9,5 +9,6 @@ projects:
 slides:
     - http://fr.slideshare.net/gmajoulet/parisjs-40-deezer-france
 videos:
+    - http://www.dailymotion.com/video/x2kkgms_parisjs-40-gabriel-majoulet-developper-une-application-bitcoin-en-javascript_webcam
 ---
 #Développer une application Bitcoin

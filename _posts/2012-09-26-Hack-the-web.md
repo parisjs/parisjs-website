@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kgh8f_parisjs-22-evan-genieur-hack-the-web_school
 ---
 #Hack the web

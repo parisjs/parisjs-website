@@ -9,5 +9,6 @@ projects:
 slides:
     - http://slid.es/thyb/webshell
 videos:
+    - http://www.dailymotion.com/video/x2kjvtx_parisjs-29-thibaud-arnault-webshell-io-une-surcouche-node-js-pour-apis_webcam
 ---
 #Webshell.io : une surcouche Node.js pour APIs

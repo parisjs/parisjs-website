@@ -6,5 +6,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kke00_parisjs-35-bertrand-coizy-box2d-dans-un-canvas_webcam
 ---
 #Box2D dans un canvas

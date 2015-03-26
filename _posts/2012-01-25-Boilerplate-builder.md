@@ -9,5 +9,6 @@ projects:
 slides:
     - http://jeromeetienne.github.com/slides-boilerplate-builder
 videos:
+    - http://www.dailymotion.com/video/xpzp2p_paris-js-15-boilerplate-builder-jerome-etienne_tech
 ---
 #Boilerplate builder

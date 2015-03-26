@@ -8,5 +8,6 @@ authors:
 projects:
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kgjtt_parisjs-22-emmanuel-remy-la-gestion-des-images-responsives_school
 ---
 #Lightning talk : La gestion des Images Responsives

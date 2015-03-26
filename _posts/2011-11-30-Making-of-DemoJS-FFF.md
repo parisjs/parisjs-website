@@ -9,5 +9,6 @@ projects:
 slides:
     - http://cedricpinson.com/demojs-fff/conf/#/
 videos:
+    - http://www.dailymotion.com/video/xmt4wg_paris-js-13-making-offdemojsfff_tech
 ---
 #Making of DemoJS FFF

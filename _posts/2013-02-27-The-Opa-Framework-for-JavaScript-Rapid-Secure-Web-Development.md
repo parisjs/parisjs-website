@@ -9,5 +9,6 @@ projects:
     - http://opalang.org/
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kjuxj_parisjs-26-cedric-soulas-the-opa-framework-for-javascript-rapid-secure-web-development_webcam
 ---
 #The Opa Framework for JavaScript - Rapid + Secure Web Development

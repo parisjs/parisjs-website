@@ -9,5 +9,7 @@ projects:
 slides:
     - http://fr.slideshare.net/gmajoulet/paris-js35-stratgie-de-tests
 videos:
+    - http://www.dailymotion.com/video/x2kkdo6_parisjs-35-gabriel-majoulet-strategie-de-tests-pour-une-application-mvc-via-un-fake-server-1-2_webcam
+    - http://www.dailymotion.com/video/x2kkdts_parisjs-35-gabriel-majoulet-strategie-de-tests-pour-une-application-mvc-via-un-fake-server-2-2_webcam
 ---
 #Stratégie de tests pour une application MVC via un fake server

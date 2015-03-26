@@ -9,5 +9,7 @@ projects:
     - http://www.spacegoo.com/demos/parisjs
 slides:
 videos:
+    - http://www.dailymotion.com/video/x2kjuix_parisjs-25-xavier-bourry-filtre-video-colore-1-2_webcam
+    - http://www.dailymotion.com/video/x2kjunx_parisjs-25-xavier-bourry-filtre-video-colore-2-2_webcam
 ---
 #Filtre vidéo coloré
