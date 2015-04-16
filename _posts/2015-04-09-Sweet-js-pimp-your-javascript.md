@@ -1,5 +1,5 @@
 ---
-tags: parisjs55
+tags: parisjs45
 title: "Sweet.js - Pimp your Javascript"
 authors:
     - name: "Thomas Crevoisier"
