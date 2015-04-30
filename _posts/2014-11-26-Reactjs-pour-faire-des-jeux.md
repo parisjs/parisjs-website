@@ -1,6 +1,6 @@
 ---
 tags: parisjs41
-title: "React.js pour faire des jeux"
+title: "React.js and games"
 authors:
     - name: "Alexandre Stanislawski"
       url: https://twitter.com/bobylito
@@ -11,4 +11,4 @@ slides:
     - https://speakerdeck.com/bobylito/react-and-games
 videos:
 ---
-#React.js pour faire des jeux
+#React.js and games
