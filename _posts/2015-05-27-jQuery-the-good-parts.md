@@ -1,11 +1,12 @@
 ---
 tags: parisjs47
-title: "ng-admin, ou comment utiliser Angular et une API REST pour construire une interface d'administration"
+title: "jQuery (2015) - The good parts"
 authors:
-    - name: "François Zaninotto"
-      url: https://twitter.com/francoisz
-      avatar: https://pbs.twimg.com/profile_images/554969596101267456/wvlcHVWx_400x400.jpeg
-project:
-    - https://github.com/marmelab/ng-admin
+    - name: "Julien Guéznet"
+      url: https://twitter.com/molokoloco
+      avatar: https://pbs.twimg.com/profile_images/597359238596427776/hgldehey_400x400.jpg
+slides:
+    - http://slides.com/molokoloco/jquery/
 ---
-Beaucoup de frameworks backend proposent des applications d'administration (Django admin, Symfony Sonata Admin, etc). Le problème est que les produits se basent de plus en plus sur de multiples applications. Faut-il que les utilisateurs d'administration utilisent plein d'applications différentes, aux interfaces toujours nouvelles ? Nous pensons qu'une autre voie est possible. La plupart des applications exposent des API REST. Et si on s'appuyait sur ces API pour fournir une interface d'administration exécutée sur le poste du client ? C'est à partir de cette idée qu'est né ng-admin. Je propose une rapide présentation des fonctionnalités et de la configuration de ng-admin, ainsi qu'un retour d'expérience sur l'utilisation d'Angular.js sur ce projet.
+Is jQuery always relevant today ? TL;DR Yep !
+Panorama des méthodes de jQuery utiles et efficaces : Manipulation avancées du DOM, animations et motion design, multimédia et asynchrone, stabilité cross-plateforme -une centaine de bugs pris en compte dans les navigateurs modernes-, son écosystème ouvert et prolifique...
