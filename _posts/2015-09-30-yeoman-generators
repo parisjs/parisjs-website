@@ -1,0 +1,13 @@
+---
+tags: paris49
+title: "Yo! Génère moi un Générateur"
+authors:
+    - name: "Wassim Chegham"
+      url: https://twitter.com/manekinekko
+      avatar: https://avatars3.githubusercontent.com/u/1699357
+projects:
+slides:
+    - http://slides.com/wassimchegham/yo-generator#/
+videos:
+---
+#Un rapide talk sur comment créer son propre générateur avec Yeoman
