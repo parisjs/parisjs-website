@@ -1,0 +1,13 @@
+---
+tags: paris49
+title: "Angular Universal"
+authors:
+    - name: "Wassim Chegham"
+      url: https://twitter.com/manekinekko
+      avatar: https://avatars3.githubusercontent.com/u/1699357
+projects:
+slides:
+    - http://slides.com/wassimchegham/angular-universal#/
+videos:
+---
+#tl;dr: The universal project allows angular 2 apps to run everywhere (client and server sides).
