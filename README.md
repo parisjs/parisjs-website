@@ -17,7 +17,7 @@ Run:
 
     ./script/bootstrap
 
-Learn more about about Jekyll setup https://help.github.com/articles/using-jekyll-with-pages/
+Learn more about Jekyll setup https://help.github.com/articles/using-jekyll-with-pages/
 
 ## License
 
