@@ -183,7 +183,7 @@ App.Program = Backbone.Router.extend({
     add: function() {
         this.show(null);
         $('#content').append($('<iframe>').attr({
-            src: 'http://parisjstalks.nodejitsu.com/',
+            src: 'https://parisjs-talks.herokuapp.com/',
             width: '100%'
         }));
     },
