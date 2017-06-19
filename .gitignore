@@ -1,2 +1,9 @@
+# vscode
+.vscode
+
+# node / npm
 node_modules
-_site
+*.log
+
+# phenomic build
+dist
