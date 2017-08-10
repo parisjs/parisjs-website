@@ -16,7 +16,7 @@ const routes = () => (
     <Route path="/" component={ HomeContainer } />
     <Route path="/faq" component={ FAQContainer } />
     <Route path="/after/:after" component={ HomeContainer } />
-    <Route path="/meetup/*" component={ MeetupContainer } collection="meetups" />
+    <Route path="/meetup/*" component={ MeetupContainer } />
     <Route path="/propositions/talk" component={ TalkSubmissionContainer } />
     <Route path="/propositions/sponsor" component={ SponsorSubmissionContainer } />
     <Route path="*" component={PageError} />
