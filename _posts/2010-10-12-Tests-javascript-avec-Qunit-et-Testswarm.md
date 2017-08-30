@@ -1,6 +1,6 @@
 ---
 tags: parisjs1
-title: "Tests javascript avec Qunit et Testswarm"
+title: "Tests JavaScript avec Qunit et Testswarm"
 authors:
     - name: "@francois2metz"
       url: http://github.com/francois2metz
@@ -10,4 +10,4 @@ slides:
     - http://tests-parisjs.herokuapp.com/#1
 videos:
 ---
-#Tests javascript avec Qunit et Testswarm
+#Tests JavaScript avec Qunit et Testswarm

@@ -14,7 +14,7 @@ videos:
 
 Il y a quelques mois, j'avais fait une présentation de
 [Virtjs](https://github.com/arcanis/virtjs),
-bibliothèque Javascript dédiée à l'émulation. Au fil des semaines et des
+bibliothèque JavaScript dédiée à l'émulation. Au fil des semaines et des
 commits elle s'est amélioré, réinventé, et un nouveau projet en est venu à se
 développer autour. Start9.
 

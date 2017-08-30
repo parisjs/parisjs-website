@@ -1,6 +1,6 @@
 ---
 tags: parisjs7
-title: "Javascript expressiveness"
+title: "JavaScript expressiveness"
 authors:
     - name: "@francois2metz"
       url: https://github.com/francois2metz
@@ -10,4 +10,4 @@ slides:
     - http://parisjs-expressiveness.herokuapp.com/#1
 videos:
 ---
-#Javascript expressiveness
+#JavaScript expressiveness

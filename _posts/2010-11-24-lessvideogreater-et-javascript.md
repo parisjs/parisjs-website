@@ -1,6 +1,6 @@
 ---
 tags: parisjs2
-title: "video et javascript"
+title: "video et javaScript"
 authors:
     - name: "@challet"
       url: http://twitter.com/challet
@@ -10,4 +10,4 @@ slides:
     - http://talks.challet.eu/html5_video_mooplay/
 videos:
 ---
-#video et javascript
+#video et javaScript

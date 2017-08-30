@@ -1,6 +1,6 @@
 ---
 tags: parisjs15
-title: "Testing javascript"
+title: "Testing JavaScript"
 authors:
     - name: "@shinuza"
       url: http://twitter.com/shinuza
@@ -11,4 +11,4 @@ slides:
 videos:
     - http://www.dailymotion.com/video/xpzoyt_paris-js-15-testing-javascript-shinuza_tech
 ---
-#Testing javascript
+#Testing JavaScript

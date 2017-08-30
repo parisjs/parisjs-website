@@ -1,6 +1,6 @@
 ---
 tags: parisjs26
-title: "Le templating en Javascript à la vitesse de la lumière avec doT.js"
+title: "Le templating en JavaScript à la vitesse de la lumière avec doT.js"
 authors:
     - name: "Mathieu Parisot"
       url: https://twitter.com/matparisot
@@ -12,4 +12,4 @@ slides:
 videos:
     - http://www.dailymotion.com/video/x2kjut2_parisjs-26-mathieu-parisot-le-templating-en-javascript-a-la-vitesse-de-la-lumiere-avec-dot-js_webcam
 ---
-#Le templating en Javascript à la vitesse de la lumière avec doT.js
+#Le templating en JavaScript à la vitesse de la lumière avec doT.js

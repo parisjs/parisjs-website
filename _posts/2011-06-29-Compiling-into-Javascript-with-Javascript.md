@@ -1,6 +1,6 @@
 ---
 tags: parisjs8
-title: "Compiling into Javascript with Javascript"
+title: "Compiling into JavaScript with Javascript"
 authors:
     - name: "@jie"
       url: http://twitter.com/jie
@@ -10,4 +10,4 @@ slides:
     - http://whyd.com/tmp/lambda.zip
 videos:
 ---
-#Compiling into Javascript with Javascript
+#Compiling into JavaScript with Javascript

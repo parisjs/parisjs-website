@@ -10,7 +10,7 @@ slides:
     - http://slides.com/florianrival/javascript-games#/
 videos:
 ---
-C++, Java ou C# sont les langages rois de la création de jeux, mais de plus en plus de libraries et frameworks Javascript sont disponibles, notamment depuis l'arrivée de WebGL !
+C++, Java ou C# sont les langages rois de la création de jeux, mais de plus en plus de libraries et frameworks JavaScript sont disponibles, notamment depuis l'arrivée de WebGL !
 
 Le talk vise à présenter les bibliothèques disponibles (Pixi.js, Cocos2d-JS, Phaser...) et les solutions utilisées par des moteurs professionnels (Unity, Unreal + Emscripten...).
 

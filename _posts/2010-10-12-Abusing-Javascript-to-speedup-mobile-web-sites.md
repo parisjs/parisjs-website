@@ -1,6 +1,6 @@
 ---
 tags: parisjs1
-title: "Abusing Javascript to speedup mobile web sites"
+title: "Abusing JavaScript to speedup mobile web sites"
 authors:
     - name: "@jedisct1"
       url: http://twitter.com/jedisct1
@@ -10,4 +10,4 @@ slides:
     - http://www.slideshare.net/jedisct1/abusing-javascript-to-speedup-mobile-web-sites
 videos:
 ---
-#Abusing Javascript to speedup mobile web sites
+#Abusing JavaScript to speedup mobile web sites

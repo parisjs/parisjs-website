@@ -15,6 +15,6 @@ videos:
 
 Présentation de l'outil [http://yellowlab.tools](http://yellowlab.tools)
 
- - Pourquoi le JavaScript peut-il être si lent ? 
- - Comment l'accélérer en diminuant le nombre d'accès au DOM ? 
+ - Pourquoi le JavaScript peut-il être si lent ?
+ - Comment l'accélérer en diminuant le nombre d'accès au DOM ?
  - Comment utiliser Yellow Lab Tools pour analyser le code JS et trouver des axes d'optimisaiton ?
