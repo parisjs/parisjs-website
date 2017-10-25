@@ -8,33 +8,31 @@ import MeetupPreview from './MeetupPreview'
 
 const Home =  ({ meetups }) => (
   <Layout>
-    <div>
-      <Head>
-        <title>Hello world</title>
-        <meta name="description" content="Everything is awaysome!" />
-      </Head>
-      <h1>Home</h1>
-      <ul>
-        { meetups && meetups.node && meetups.node.list &&
-          meetups.node.list.map((meetup) => (
-            <li key={ meetup.id }>
-              <MeetupPreview { ...meetup } />
-            </li>
-          ))
-        }
-      </ul>
-      <p>
-        {
-          meetups && meetups.node && meetups.node.hasNextPage &&
-          <Link to={ `/after/${ meetups.node.next }`}>Older meetups</Link>
-        }
-      </p>
-    </div>
+    <Head>
+      <title>Hello world</title>
+      <meta name="description" content="Everything is awaysome!" />
+    </Head>
+    <h1>Home</h1>
+    <ul>
+      { meetups && meetups.node && meetups.node.list &&
+        meetups.node.list.map((meetup) => (
+          <li key={ meetup.id }>
+            <MeetupPreview { ...meetup } />
+          </li>
+        ))
+      }
+    </ul>
+    <p>
+      {
+        meetups && meetups.node && meetups.node.hasNextPage &&
+        <Link to={ `/after/${ meetups.node.next }`}>Older meetups</Link>
+      }
+    </p>
   </Layout>
 )
 
 const HomeContainer = createContainer(Home, (props) => ({
-  meetups: query({ collection: 'meetups', limit: 12, after: props.params.after }),
+  meetups: query({ path: 'meetups', limit: 12, after: props.params.after }),
 }))
 
 export default HomeContainer

@@ -15,32 +15,30 @@ const Meetup = ({ hasError, meetup }) => {
 
   return (
     <Layout>
-      <div>
-        { meetup.node && (
-          <article>
-            <Head>
-              <title>{ `Paris.js #${ meetup.node.edition } chez ${ meetup.node.host }` }</title>
-              <meta name="description" content={"" /* meetup.node.body.slice(0, 50)*/} />
-            </Head>
-            <h1>Paris.js #{ meetup.node.edition } chez { meetup.node.host }</h1>
-            <div>
-              <ul>
-              { meetup.node.talks && meetup.node.talks.map((talk) => (
-                <li key={ talk.title }>
-                  <Talk { ...talk } />
-                </li>
-              )) }
-              </ul>
-            </div>
-          </article>
-        ) }
-      </div>
+      { meetup.node && (
+        <article>
+          <Head>
+            <title>{ `Paris.js #${ meetup.node.edition } chez ${ meetup.node.host }` }</title>
+            <meta name="description" content={"" /* meetup.node.body.slice(0, 50)*/} />
+          </Head>
+          <h1>Paris.js #{ meetup.node.edition } chez { meetup.node.host }</h1>
+          <div>
+            <ul>
+            { meetup.node.talks && meetup.node.talks.map((talk) => (
+              <li key={ talk.title }>
+                <Talk { ...talk } />
+              </li>
+            )) }
+            </ul>
+          </div>
+        </article>
+      ) }
     </Layout>
   )
 }
 
 const BlogPostContainer = createContainer(Meetup, (props) => ({
-  meetup: query({ collection: 'meetups', id: props.params.splat }),
+  meetup: query({ path: 'meetups', id: props.params.splat }),
 }))
 
 export default BlogPostContainer

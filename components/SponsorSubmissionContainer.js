@@ -8,32 +8,30 @@ import MeetupPreview from './MeetupPreview'
 
 const SponsorSubmissionContainer = () => (
   <Layout>
-    <div>
-      <Head>
-        <title>Hello world</title>
-        <meta name="description" content="Everything is awaysome!" />
-      </Head>
+    <Head>
+      <title>Hello world</title>
+      <meta name="description" content="Everything is awaysome!" />
+    </Head>
 
-      <form>
-        <label>
-          Entité (nom de la personne, école, entreprise, etc...) :
-          <input type="text" name="who" required />
-        </label>
+    <form>
+      <label>
+        Entité (nom de la personne, école, entreprise, etc...) :
+        <input type="text" name="who" required />
+      </label>
 
-        <label>
-          Type
-          <input type="checkbox" name="type" value="host" /> Lieu<br />
-          <input type="checkbox" name="type" value="food" /> Buffet
-        </label>
+      <label>
+        Type
+        <input type="checkbox" name="type" value="host" /> Lieu<br />
+        <input type="checkbox" name="type" value="food" /> Buffet
+      </label>
 
-        <label>
-          Nombre de places
-          <input type="number" name="hostSize" required />
-        </label>
+      <label>
+        Nombre de places
+        <input type="number" name="hostSize" required />
+      </label>
 
-        <input type="submit" value="Submit" />
-      </form>
-    </div>
+      <input type="submit" value="Submit" />
+    </form>
   </Layout>
 )
 

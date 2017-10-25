@@ -2,7 +2,6 @@ import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 import { createApp, renderApp } from '@phenomic/preset-react-app/lib/client'
 
-import Html from './components/Html'
 import PageError from './components/PageError'
 
 import FAQContainer from './components/FAQContainer'
@@ -23,7 +22,7 @@ const routes = () => (
   </Router>
 )
 
-export default createApp(routes, Html)
+export default createApp(routes)
 
 if (module.hot) {
   module.hot.accept(() => renderApp(routes))
