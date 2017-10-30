@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
-const SponsorSubmissionContainer = () => (
+const SponsorsContainer = () => (
   <Layout>
     <Head>
       <title>Hello world</title>
@@ -35,4 +35,4 @@ const SponsorSubmissionContainer = () => (
   </Layout>
 )
 
-export default SponsorSubmissionContainer
+export default SponsorsContainer

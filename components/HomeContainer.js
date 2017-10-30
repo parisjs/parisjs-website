@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'react-helmet'
 import { createContainer, query, BodyRenderer } from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
+import { LocalLink } from '../intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
@@ -25,7 +26,7 @@ const Home =  ({ meetups }) => (
     <p>
       {
         meetups && meetups.node && meetups.node.hasNextPage &&
-        <Link to={ `/after/${ meetups.node.next }`}>Older meetups</Link>
+        <LocalLink to={ `/after/${ meetups.node.next }`}>Older meetups</LocalLink>
       }
     </p>
   </Layout>
