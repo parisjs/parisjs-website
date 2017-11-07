@@ -1,18 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { FormattedDate, FormattedMessage } from 'react-intl'
+import { LocalLink } from '../intl'
 
 const PagePreview = ({ id, edition, title, date, talks, host }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
     <div>
-      <Link to={ `/meetup/${ id }`}>
+      <LocalLink to={ `/meetup/${ id }`}>
         Paris.js #{ edition } chez { host }
-      </Link>
+      </LocalLink>
 
       <div>
         <time key={ pageDate.toISOString() }>
-          { pageDate.toDateString() }
+          <FormattedDate
+            value={ pageDate }
+            weekday='short'
+            day='2-digit'
+            month='long'
+            year='numeric'
+          />
         </time>
         <span> - Paris.js #{ edition } - Hebergé par { host }</span>
       </div>
@@ -23,9 +31,9 @@ const PagePreview = ({ id, edition, title, date, talks, host }) => {
         )) }
         </ul>
       </div>
-      <Link to={ `/meetup/${ id }`}>
+      <LocalLink to={ `/meetup/${ id }`}>
         Detail →
-      </Link>
+      </LocalLink>
     </div>
   )
 }

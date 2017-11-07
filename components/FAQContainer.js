@@ -1,31 +1,37 @@
 import React from 'react'
 import Head from 'react-helmet'
-import { createContainer, query, BodyRenderer } from '@phenomic/preset-react-app/lib/client'
+import { createContainer, query, BodyRenderer, textRenderer } from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
+
+import { getLocale } from '../intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
-const FAQContainer = () => (
+const FAQ = ({ hasError, isLoading, faq }) => (
   <Layout>
-    <Head>
-      <title>Hello world</title>
-      <meta name="description" content="Everything is awaysome!" />
-    </Head>
-
-    <h1>La Foire Aux Question</h1>
-
-    <h2>Lorem ipsum</h2>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    { faq.node && (
+      <article>
+        <Head>
+          <title>{ faq.node.title }</title>
+          <meta
+            name="description"
+            content={ textRenderer(faq.node.body).slice(0, 150) + "…" }
+          />
+        </Head>
+        <h1>{ faq.node.title }</h1>
+        <BodyRenderer>{ faq.node.body }</BodyRenderer>
+      </article>
+    ) }
   </Layout>
 )
+
+const FAQContainer = createContainer(FAQ, (props, context) => {
+  const locale = getLocale(props.location ? props.location.pathname : '/faq')
+
+  return {
+    faq: query({ path: 'faq', id: locale }),
+  }
+})
 
 export default FAQContainer
