@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import Link from '@phenomic/plugin-renderer-react/lib/components/Link'
 import { addLocaleData, FormattedMessage } from 'react-intl'
 import en from 'react-intl/locale-data/en'
 import fr from 'react-intl/locale-data/fr'
