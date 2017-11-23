@@ -20,19 +20,21 @@ const SponsorsContainer = () => {
         <meta name="description" content="Everything is awaysome!" />
       </Head>
 
-      <h1>
-        <FormattedMessage id="SPONSOR_TITLE" />
-      </h1>
-      <p>
-        <FormattedHTMLMessage id="SPONSOR_INTRO" />
-      </p>
+      <div className="container">
+        <h1>
+          <FormattedMessage id="SPONSOR_TITLE" />
+        </h1>
+        <p>
+          <FormattedHTMLMessage id="SPONSOR_INTRO" />
+        </p>
 
-      { sponsors.map(({ img, name }) => (
-        <figure key={ name }>
-          <img src={ img } alt={ name } />
-          <figcaption>{ name }</figcaption>
-        </figure>
-      )) }
+        { sponsors.map(({ img, name }) => (
+          <figure key={ name }>
+            <img src={ img } alt={ name } />
+            <figcaption>{ name }</figcaption>
+          </figure>
+        )) }
+      </div>
     </Layout>
   )
 }

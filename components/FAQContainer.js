@@ -19,8 +19,10 @@ const FAQ = ({ hasError, isLoading, faq }) => (
             content={ textRenderer(faq.node.body).slice(0, 150) + "…" }
           />
         </Head>
-        <h1>{ faq.node.title }</h1>
-        <BodyRenderer>{ faq.node.body }</BodyRenderer>
+        <div className="container">
+          <h1>{ faq.node.title }</h1>
+          <BodyRenderer>{ faq.node.body }</BodyRenderer>
+        </div>
       </article>
     ) }
   </Layout>

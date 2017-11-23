@@ -1,0 +1,53 @@
+.hero {
+    background: #FFFFFF;
+    padding: 72px 0;
+}
+
+.hero h3 {
+    margin: 0 0 24px 0;
+    padding: 12px 0;
+}
+
+.hero__actions {
+    display: flex;
+    align-items: center;
+}
+
+.hero__actions p {
+    margin-left: 20px;
+    color: #45494D;
+    font-size: 14px;
+}
+
+.hero__actions p a {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 3px;
+    color: #45494D;
+    text-decoration: none;
+}
+
+.hero__actions p a:hover {
+    color: #000000;
+    background: #EDF0F2;
+}
+
+.hero__actions img {
+    vertical-align: bottom;
+}
+
+.meetups__title {
+    line-height: 48px;
+    margin: 48px 0;
+}
+
+.meetups__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.meetups__list li {
+    margin: 0;
+    padding: 0;
+}
