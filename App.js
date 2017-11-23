@@ -10,8 +10,20 @@ import MeetupContainer from './components/MeetupContainer'
 import SponsorsContainer from './components/SponsorsContainer'
 import TalkSubmissionContainer from './components/TalkSubmissionContainer'
 
+function hashLinkScroll() {
+  const { hash } = window.location
+
+  if (hash !== '') {
+    setTimeout(() => {
+      const id = hash.replace('#', '')
+      const element = document.getElementById(id)
+      if (element) element.scrollIntoView()
+    }, 0)
+  }
+}
+
 const routes = () => (
-  <Router history={ browserHistory }>
+  <Router history={ browserHistory } onUpdate={ hashLinkScroll } >
     <Route path="/" component={ HomeContainer } />
     <Route path="/en" component={ HomeContainer } />
 
