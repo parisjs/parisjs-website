@@ -10,6 +10,8 @@ import MeetupContainer from './components/MeetupContainer'
 import SponsorsContainer from './components/SponsorsContainer'
 import TalkSubmissionContainer from './components/TalkSubmissionContainer'
 
+import "./styles.css";
+
 function hashLinkScroll() {
   const { hash } = window.location
 

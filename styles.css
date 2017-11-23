@@ -1,0 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/hack-font/build/web/hack-subset.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+@import "styles/normalize.css";
+
+body {
+    background: #ECEFF2;
+    font-family: Hack, monospace;
+}
