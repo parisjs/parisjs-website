@@ -7,23 +7,26 @@ const PagePreview = ({ id, edition, title, date, talks, host }) => {
   const pageDate = date ? new Date(date) : null
 
   return (
-    <div>
-      <LocalLink to={ `/meetup/${ id }`}>
-        Paris.js #{ edition } chez { host }
-      </LocalLink>
-
-      <div>
-        <time key={ pageDate.toISOString() }>
-          <FormattedDate
-            value={ pageDate }
-            weekday='short'
-            day='2-digit'
-            month='long'
-            year='numeric'
-          />
-        </time>
-        <span> - Paris.js #{ edition } - Hebergé par { host }</span>
+    <div className="MeetupPreview">
+      <div className="MeetupPreview__title">
+        <h3>
+          <LocalLink to={ `/meetup/${ id }`}>
+            Paris.js #{ edition } chez { host }
+          </LocalLink>
+        </h3>
+        <div>
+          <time key={ pageDate.toISOString() }>
+            <FormattedDate
+              value={ pageDate }
+              weekday='short'
+              day='2-digit'
+              month='long'
+              year='numeric'
+            />
+          </time>
+        </div>
       </div>
+
       <div>
         <ul>
         { talks && talks.map(({ title }) => (

@@ -17,18 +17,25 @@ const Layout = ({ children }) => {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-        <header>
-          <IntlLink to="PAGE_HOME" title="HOME" /><br />
-          <IntlLink to="PAGE_FAQ" title="FAQ" /><br />
-          <IntlLink to="PAGE_SUBMIT_TALK" title="SUBMIT_TALK" /><br />
-          <IntlLink to="PAGE_SPONSORS" title="SPONSORS" /><br />
+        <header className="header">
+          <div className="container">
+            <div className="header__logo">Paris.JS</div>
+            <nav className="header__nav">
+              <IntlLink to="PAGE_HOME" title="HOME" />
+              <IntlLink to="PAGE_FAQ" title="FAQ" />
+              <IntlLink to="PAGE_SUBMIT_TALK" title="SUBMIT_TALK" />
+              <IntlLink to="PAGE_SPONSORS" title="SPONSORS" />
+            </nav>
 
-          <Link to={ `/` }>FR</Link> <br />
-          <Link to={ `/en` }>EN</Link> <br />
+            <div className="languageSwitcher">
+              <Link to={ `/` }>FR</Link>
+              <Link to={ `/en` }>EN</Link>
+            </div>
+          </div>
         </header>
-        <div>{ children }</div>
-        <footer>
-          { /* ... */ }
+        { children }
+        <footer className="footer container">
+          🚀 Paris.JS
         </footer>
       </div>
     </IntlProvider>

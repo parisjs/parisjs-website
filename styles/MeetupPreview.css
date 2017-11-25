@@ -1,0 +1,29 @@
+.MeetupPreview {
+    background: #FFFFFF;
+    padding: 24px 32px 32px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.MeetupPreview__title {
+    display: flex;
+
+}
+
+.MeetupPreview__title h3,
+.MeetupPreview__title h3 a {
+    margin: 0;
+    color: #E14680;
+    text-decoration: none;
+}
+
+.MeetupPreview__title h3 {
+    flex: 1 1 auto;
+}
+
+.MeetupPreview__title {
+    line-height: 48px;
+    border-bottom: 4px solid #EDF0F2;
+    margin: 0 0 16px 0;
+}

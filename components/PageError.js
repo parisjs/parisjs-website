@@ -10,7 +10,9 @@ const PageError = ({ error }) => {
       <Head>
         <title>{ message }</title>
       </Head>
-      <h1>{ message }</h1>
+      <div className="container">
+        <h1>{ message }</h1>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,51 @@
+.header {
+    background: #E14680;
+    color: #FFFFFF;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    height: 96px;
+}
+
+.header a {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.header a:hover {
+    background: #C72A63;
+}
+
+.header__logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 16px;
+    color: #E14680;
+    background: #FFF;
+    border-radius: 3px;
+}
+
+.header__nav {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.header__nav a {
+    padding: 16px;
+}
+
+.languageSwitcher {
+    flex: 0 0 auto;
+}
+
+.languageSwitcher a {
+    height: 24px;
+    padding: 3px 8px;
+}
