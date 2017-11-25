@@ -21,12 +21,17 @@ const Meetup = ({ hasError, meetup }) => {
             <title>{ `Paris.js #${ meetup.node.edition } chez ${ meetup.node.host }` }</title>
             <meta name="description" content={"" /* meetup.node.body.slice(0, 50)*/} />
           </Head>
-          <div className="container">
-            <h1>Paris.js #{ meetup.node.edition } chez { meetup.node.host }</h1>
+          <div className="container meetupContainer">
+            <div className="meetupContainer__title">
+              <h1>
+                Paris.js #{ meetup.node.edition }
+              </h1>
+              <h2>chez { meetup.node.host }</h2>
+            </div>
             <div>
-              <ul>
+              <ul className="meetupContainer__list">
               { meetup.node.talks && meetup.node.talks.map((talk) => (
-                <li key={ talk.title }>
+                <li key={ talk.title } className="meetupContainer__item">
                   <Talk { ...talk } />
                 </li>
               )) }

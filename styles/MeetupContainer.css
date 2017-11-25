@@ -1,0 +1,18 @@
+.meetupContainer__title h1 {
+    color: #551A8B;
+    margin-bottom: 0;
+}
+
+.meetupContainer__title h2 {
+    color: #45494D;
+}
+
+.meetupContainer__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.meetupContainer__item {
+    margin: 32px 0;
+}
