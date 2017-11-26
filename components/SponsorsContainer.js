@@ -28,12 +28,16 @@ const SponsorsContainer = () => {
           <FormattedHTMLMessage id="SPONSOR_INTRO" />
         </p>
 
+        <ul className="sponsors__list">
         { sponsors.map(({ img, name }) => (
-          <figure key={ name }>
-            <img src={ img } alt={ name } />
-            <figcaption>{ name }</figcaption>
-          </figure>
+          <li className="sponsors__item">
+            <figure key={ name } className="card">
+              <img src={ img } alt={ name } />
+              <figcaption>{ name }</figcaption>
+            </figure>
+          </li>
         )) }
+        </ul>
       </div>
     </Layout>
   )

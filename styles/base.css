@@ -8,6 +8,15 @@ body {
     font-size: 14px;
 }
 
+p {
+    line-height: 24px;
+    margin: 24px 0;
+}
+
+ul {
+    line-height: 24px;
+}
+
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -17,6 +26,7 @@ h1 {
     font-family: Poppins, sans-serif;
     font-size: 72px;
     font-weight: bold;
+    color: #551A8B;
 }
 
 h2 {
@@ -75,4 +85,9 @@ h5 {
     box-shadow: inset 0 -2px 0 rgba(0,0,0,0.2);
     text-decoration: none;
     white-space: nowrap;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 3px;
 }
