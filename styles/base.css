@@ -121,6 +121,6 @@ h5 {
     border-radius: 3px;
 }
 
-.formGroup {
+.formGroup, .form-group {
     margin: 24px 0;
 }
