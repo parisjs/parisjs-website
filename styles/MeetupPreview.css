@@ -8,7 +8,6 @@
 
 .MeetupPreview__title {
     display: flex;
-
 }
 
 .MeetupPreview__title h3,
@@ -26,4 +25,10 @@
     line-height: 48px;
     border-bottom: 4px solid #EDF0F2;
     margin: 0 0 16px 0;
+}
+
+@media (max-width: 600px) {
+    .MeetupPreview__title {
+        display: block;
+    }
 }

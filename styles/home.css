@@ -36,8 +36,28 @@
     vertical-align: bottom;
 }
 
+@media (max-width: 1024px) {
+    .hero {
+        padding: 24px 0;
+    }
+
+    .hero__actions {
+        display: block;
+    }
+
+    .hero__actions p {
+        margin: 24px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .hero__actions p a {
+        display: block;
+    }
+}
+
 .meetups__title {
-    line-height: 48px;
     margin: 48px 0;
 }
 

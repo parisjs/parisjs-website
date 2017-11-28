@@ -49,3 +49,20 @@
     height: 24px;
     padding: 3px 8px;
 }
+
+@media (max-width: 600px) {
+    .header .container {
+        display: block;
+        height: auto;
+    }
+    .header__nav {
+        display: block;
+    }
+    .header__nav a {
+        display: block;
+        padding: 3px 8px;
+    }
+    .languageSwitcher a {
+        display: block;
+    }
+}
