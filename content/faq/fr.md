@@ -25,7 +25,7 @@ Il existe de multiples façons de contribuer à Paris.js:
   + participer à l’organisation
   + proposer des améliorations sur le site web
 
-Le plus simple est de venir faire un petit coucou sur la mailing-list [lien], le slack [lien] ou tout simplement venir nous parler pendant un événement !
+Le plus simple est de venir faire un petit coucou sur la [mailing-list](groups.google.com/forum/#!forum/parisjs), le [slack](https://slack-francejs.now.sh/) ou tout simplement venir nous parler pendant un événement !
 
 ### Paris.js / France.js / Apéro.js / Whatever.js
 
@@ -47,7 +47,7 @@ Nous proposons **une soirée chaque dernier mercredi du mois**. Environ 10 par a
 
 ### Comment venir, combien ça coûte?
 
-C’est **gratuit** ! Environ une bonne semaine avant, nous annonçons l’événement sur notre page meetup.com [lien]. Il suffit alors de s’inscrire sur meetup.com. Attention, les places partent assez vite..
+C’est **gratuit** ! Environ une bonne semaine avant, nous annonçons l’événement sur notre page [meetup.com](https://www.meetup.com/fr-FR/Paris-js/). Il suffit alors de s’inscrire sur meetup.com. Attention, les places partent assez vite..
 
 ### Je veux proposer un sujet
 
