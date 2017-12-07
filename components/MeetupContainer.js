@@ -26,7 +26,8 @@ const Meetup = ({ hasError, meetup }) => {
               <h1>
                 Paris.js #{ meetup.node.edition }
               </h1>
-              <h2>chez { meetup.node.host }</h2>
+              { meetup.node.host && <h2>chez { meetup.node.host }</h2> }
+              { meetup.node.meetupLink && <a href={ meetup.node.meetupLink }>Lien meetup</a> }
             </div>
             <div>
               <ul className="meetupContainer__list">

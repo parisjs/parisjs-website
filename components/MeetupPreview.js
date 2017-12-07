@@ -11,7 +11,7 @@ const PagePreview = ({ id, edition, title, date, talks, host }) => {
       <div className="MeetupPreview__title">
         <h3>
           <LocalLink to={ `/meetup/${ id }`}>
-            Paris.js #{ edition } chez { host }
+            Paris.js #{ edition } { host ? `@ ${host}` : '' }
           </LocalLink>
         </h3>
         <div>
