@@ -35,7 +35,7 @@ const PagePreview = ({ id, edition, title, date, talks, host }) => {
         </ul>
       </div>
       <LocalLink to={ `/meetup/${ id }`}>
-        Detail →
+        <FormattedMessage id="PREVIEW_DETAIL" />
       </LocalLink>
     </div>
   )

@@ -3,42 +3,30 @@ import Head from 'react-helmet'
 import { createContainer, query, BodyRenderer } from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
 import { LocalLink } from '../intl'
+import { FormattedMessage } from 'react-intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
+import NextMeetup from './NextMeetup'
 
-const Home =  ({ meetups }) => (
+const Home =  ({ meetups, intl }) => (
   <Layout>
     <Head>
       <title>Paris.JS - Event-driven community about JavaScript</title>
-      <meta name="description" content="Everything is awaysome!" />
+      <meta name="description" content="" />
     </Head>
     <div className="hero">
       <div className="container">
-        <h2>Meetup mensuel autour de JavaScript</h2>
-        <h3>Prochain meetup:</h3>
-        <div className="hero__actions">
-          <a className="btn" href="https://www.meetup.com/fr-FR/Paris-js/">Inscriptions sur Meetup.com</a>
-          <p>
-            Rejoignez aussi la communauté sur
-            { " " }
-            <a href="https://slack-francejs.now.sh/">
-              <img src="assets/icons/icon-slack.svg" alt="" width="24" height="24" /> Slack
-            </a> 
-            { " " }
-            <a href="https://twitter.com/parisjs">
-              <img src="assets/icons/icon-twitter.svg" alt="" width="24" height="24" /> Twitter
-            </a> 
-            { " " }
-            <a href="http://groups.google.com/group/parisjs">
-              <img src="assets/icons/icon-google.svg" alt="" width="24" height="24" /> Google Groups
-            </a>
-          </p>
-        </div>
+        <h2>
+          <FormattedMessage id="HOME_HERO_TITLE" />
+        </h2>
+        <NextMeetup />
       </div>
     </div>
     <div className="container meetups">
-      <h2 className="meetups__title --withChevron">Précédents meetups</h2>
+      <h2 className="meetups__title --withChevron">
+        <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
+      </h2>
       <ul className="meetups__list">
         { meetups && meetups.node && meetups.node.list &&
           meetups.node.list.map((meetup) => (
@@ -51,7 +39,9 @@ const Home =  ({ meetups }) => (
       <p>
         {
           meetups && meetups.node && meetups.node.hasNextPage &&
-          <LocalLink to={ `/after/${ meetups.node.next }`}>Older meetups</LocalLink>
+          <LocalLink to={ `/after/${ meetups.node.next }`}>
+            <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
+          </LocalLink>
         }
       </p>
     </div>
