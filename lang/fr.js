@@ -7,6 +7,11 @@ export default {
   "NEXTMEETUP_MEET_THE_COMMUNITY_ON": "Rejoignez aussi la communauté sur",
   "NEXTMEETUP_NEXT": "Prochain meetup:",
   "NEXTMEETUP_NO_EVENT": "Aucun événement planifié",
+  "NEXTMEETUP_PERSONS": `{ persons, plural,
+    =0 {Personne inscrite}
+    one {# personne}
+    other {# personnes inscrites}
+  }`,
   "NEXTMEETUP_RVSP": "Inscription sur meetup.com",
   "PAGE_FAQ": "/faq",
   "PAGE_HOME": "/",

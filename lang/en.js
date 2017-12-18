@@ -7,6 +7,11 @@ export default {
   "NEXTMEETUP_MEET_THE_COMMUNITY_ON": "Meet the communauty on",
   "NEXTMEETUP_NEXT": "Next meetup:",
   "NEXTMEETUP_NO_EVENT": "No event planned yet",
+  "NEXTMEETUP_PERSONS": `{ persons, plural,
+    =0 {Nobody registered}
+    one {# person}
+    other {# registered peoples}
+  }`,
   "NEXTMEETUP_RVSP": "Register on meetup.com",
   "PAGE_FAQ": "/en/faq",
   "PAGE_HOME": "/en",
