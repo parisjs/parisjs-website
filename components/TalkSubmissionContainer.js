@@ -37,8 +37,9 @@ const schema = {
     kind: {
       type: "string",
       title: "Type de sujet",
-      enum: [" Long (20 mins + questions)", " Court (5 mins)"],
-      default: " Long (20 mins + questions)"
+      enum: ["Long", "Short"],
+      enumNames: [" Long (20 mins + questions)", " Court (5 mins)"],
+      default: "Long"
     },
     slideLink: {
       type: "string",
@@ -92,14 +93,88 @@ function getHelloGithubCred() {
   }
 }
 
+function formatTalkSubmission({
+  title,
+  kind,
+  description,
+  slideLink,
+  projectLink,
+  twitter
+}) {
+  const formattedDescription = description.replace(/(.+)/g, "> $1");
+  return `
+## ${title}
+
+*Talk format :* ${kind}
+
+*Description :*
+
+${formattedDescription}
+
+*Slides :* ${slideLink}
+*Projet :* ${projectLink}
+*Twitter :* ${twitter}
+`;
+}
+
+class TalkSubmissionForm extends React.Component {
+  render() {
+    return (
+      <Form
+        className="card talkSubmission__form"
+        schema={schema}
+        uiSchema={uiSchema}
+        onSubmit={this.props.onSubmit}
+      >
+        <div className="formGroup">
+          <input type="submit" value="Soumettre" className="btn" />
+        </div>
+      </Form>
+    );
+  }
+}
+
+class TalkSubmissionSummary extends React.Component {
+  render() {
+    return (
+      <div className="card talkSubmission__form">
+        <p>
+          Your talk has been successfully submitted! Click{" "}
+          <a href={this.props.talkSubmissionLink}>here</a> to view it.
+        </p>
+        <input
+          type="button"
+          value="Submit a new talk"
+          className="btn"
+          onClick={this.props.onSubmit}
+        />
+      </div>
+    );
+  }
+}
+
+class TalkSubmissionLoginButton extends React.Component {
+  render() {
+    return (
+      <div className="card talkSubmission__form">
+        <p>You should first log-in before submitting your talk.</p>
+        <input
+          type="button"
+          value="Login avec github"
+          className="btn"
+          onClick={this.props.onSubmit}
+        />
+      </div>
+    );
+  }
+}
+
 class TalkSubmissionContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      githubToken: getHelloGithubCred(),
-      talk: {}
+      githubToken: getHelloGithubCred()
     };
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
   componentDidMount() {
@@ -112,40 +187,35 @@ class TalkSubmissionContainer extends React.Component {
     });
   }
 
-  getSubmitButtonLabel() {
-    return this.state.githubToken ? "Soumettre" : "Login avec github";
-  }
-
-  onSubmit({ formData }) {
+  handleSubmit = ({ formData }) => {
     const { githubToken } = this.state;
-    if (!githubToken) {
-      hello("github").login();
-    } else {
-      const gh = new GitHub({ token: githubToken });
+    const gh = new GitHub({ token: githubToken });
 
-      //console.log(gh.getUser());
+    const remoteIssues = gh.getIssues("PierrickP", "fluffy-octo-broccoli");
 
-      const remoteIssues = gh.getIssues("PierrickP", "fluffy-octo-broccoli");
-
-      console.log("formData", formData);
-      const { title, description, slideLink, projectLink } = formData;
-
-      remoteIssues.createIssue({
-        title: title,
-        body: `
-      *${title}*
-      
-      *Description :*
-      > ${description}
-      
-      *Slides :* ${slideLink}
-      *Projet :* ${projectLink}
-      
-      **
-      `.trim()
+    remoteIssues
+      .createIssue({
+        title: formData.title,
+        body: formatTalkSubmission(formData)
+      })
+      .then(({ status, data }) => {
+        if (status === 201) {
+          this.setState({ talkSubmissionLink: data.html_url });
+        }
+        // should handle the errors
+      })
+      .catch(() => {
+        // should handle the errors
       });
-    }
-  }
+  };
+
+  handleLogin = () => {
+    hello("github").login();
+  };
+
+  resetForm = () => {
+    this.setState({ talkSubmissionLink: null });
+  };
 
   render() {
     return (
@@ -163,21 +233,18 @@ class TalkSubmissionContainer extends React.Component {
             delectus, possimus temporibus suscipit non ratione laudantium ullam
             doloremque eius!
           </p>
-          <Form
-            className="card talkSubmission__form"
-            schema={schema}
-            uiSchema={uiSchema}
-            formData={this.state.talk}
-            onSubmit={this.onSubmit}
-          >
-            <div className="formGroup">
-              <input
-                type="submit"
-                value={this.getSubmitButtonLabel()}
-                className="btn"
+          {this.state.githubToken ? (
+            !this.state.talkSubmissionLink ? (
+              <TalkSubmissionForm onSubmit={this.handleSubmit} />
+            ) : (
+              <TalkSubmissionSummary
+                talkSubmissionLink={this.state.talkSubmissionLink}
+                onSubmit={this.resetForm}
               />
-            </div>
-          </Form>
+            )
+          ) : (
+            <TalkSubmissionLoginButton onSubmit={this.handleLogin} />
+          )}
         </div>
       </Layout>
     );
