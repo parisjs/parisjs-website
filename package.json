@@ -30,13 +30,9 @@
     "react-router": "^3.2.0"
   },
   "phenomic": {
-    "presets": [
-      "@phenomic/preset-react-app"
-    ]
+    "presets": ["@phenomic/preset-react-app"]
   },
   "lint-staged": {
-    "*.{js,json,css,md}": [
-      "prettier --write"
-    ]
+    "*.{js,json,css,md}": ["prettier --write"]
   }
 }

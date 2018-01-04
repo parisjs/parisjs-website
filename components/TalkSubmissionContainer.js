@@ -9,6 +9,7 @@ import { Link } from 'react-router'
 import hello from 'hellojs'
 import GitHub from 'github-api'
 import Form from 'react-jsonschema-form'
+import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
@@ -139,8 +140,11 @@ class TalkSubmissionSummary extends React.Component {
     return (
       <div className="card talkSubmission__form">
         <p>
-          Your talk has been successfully submitted! Click{' '}
-          <a href={this.props.talkSubmissionLink}>here</a> to view it.
+          <FormattedMessage id="TALK_SUBMITTED_PRE" />{' '}
+          <a href={this.props.talkSubmissionLink}>
+            <FormattedMessage id="TALK_SUBMITTED_HERE" />
+          </a>{' '}
+          <FormattedMessage id="TALK_SUBMITTED_POST" />
         </p>
         <input
           type="button"
@@ -157,7 +161,9 @@ class TalkSubmissionLoginButton extends React.Component {
   render() {
     return (
       <div className="card talkSubmission__form">
-        <p>You should first log-in before submitting your talk.</p>
+        <p>
+          <FormattedMessage id="NEED_LOGIN_BEFORE" />
+        </p>
         <input
           type="button"
           value="Login avec github"
@@ -226,12 +232,11 @@ class TalkSubmissionContainer extends React.Component {
         </Head>
 
         <div className="container talkSubmission">
-          <h1>Proposer un sujet</h1>
+          <h1>
+            <FormattedMessage id="SUBMIT_TALK" />
+          </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
-            corporis illo sequi qui velit molestiae, in dicta eos totam magnam
-            delectus, possimus temporibus suscipit non ratione laudantium ullam
-            doloremque eius!
+            <FormattedHTMLMessage id="TALK_EXPLAIN" />
           </p>
           {this.state.githubToken ? (
             !this.state.talkSubmissionLink ? (
