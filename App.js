@@ -10,7 +10,7 @@ import MeetupContainer from './components/MeetupContainer'
 import SponsorsContainer from './components/SponsorsContainer'
 import TalkSubmissionContainer from './components/TalkSubmissionContainer'
 
-import "./styles.css";
+import './styles.css'
 
 function hashLinkScroll() {
   const { hash } = window.location
@@ -25,24 +25,24 @@ function hashLinkScroll() {
 }
 
 const routes = () => (
-  <Router history={ browserHistory } onUpdate={ hashLinkScroll } >
-    <Route path="/" component={ HomeContainer } />
-    <Route path="/en" component={ HomeContainer } />
+  <Router history={browserHistory} onUpdate={hashLinkScroll}>
+    <Route path="/" component={HomeContainer} />
+    <Route path="/en" component={HomeContainer} />
 
-    <Route path="/faq" component={ FAQContainer } />
-    <Route path="/en/faq" component={ FAQContainer } />
+    <Route path="/faq" component={FAQContainer} />
+    <Route path="/en/faq" component={FAQContainer} />
 
-    <Route path="/after/:after" component={ HomeContainer } />
-    <Route path="/en/after/:after" component={ HomeContainer } />
+    <Route path="/after/:after" component={HomeContainer} />
+    <Route path="/en/after/:after" component={HomeContainer} />
 
-    <Route path="/meetup/*" component={ MeetupContainer } />
-    <Route path="/en/meetup/*" component={ MeetupContainer } />
+    <Route path="/meetup/*" component={MeetupContainer} />
+    <Route path="/en/meetup/*" component={MeetupContainer} />
 
-    <Route path="/partenaires" component={ SponsorsContainer } />
-    <Route path="/en/sponsors" component={ SponsorsContainer } />
+    <Route path="/partenaires" component={SponsorsContainer} />
+    <Route path="/en/sponsors" component={SponsorsContainer} />
 
-    <Route path="/propositions/sujet" component={ TalkSubmissionContainer } />
-    <Route path="/en/submission/talk" component={ TalkSubmissionContainer } />
+    <Route path="/propositions/sujet" component={TalkSubmissionContainer} />
+    <Route path="/en/submission/talk" component={TalkSubmissionContainer} />
 
     <Route path="*" component={PageError} />
   </Router>

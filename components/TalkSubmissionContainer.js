@@ -1,95 +1,95 @@
-import React from "react";
-import Head from "react-helmet";
+import React from 'react'
+import Head from 'react-helmet'
 import {
   createContainer,
   query,
   BodyRenderer
-} from "@phenomic/preset-react-app/lib/client";
-import { Link } from "react-router";
-import hello from "hellojs";
-import GitHub from "github-api";
-import Form from "react-jsonschema-form";
+} from '@phenomic/preset-react-app/lib/client'
+import { Link } from 'react-router'
+import hello from 'hellojs'
+import GitHub from 'github-api'
+import Form from 'react-jsonschema-form'
 
-import Layout from "./Layout";
-import MeetupPreview from "./MeetupPreview";
+import Layout from './Layout'
+import MeetupPreview from './MeetupPreview'
 
 hello.init(
   {
-    github: "Iv1.c13e7b19e913ffeb"
+    github: 'Iv1.c13e7b19e913ffeb'
   },
   {
-    redirect_uri: "http://127.0.0.1:3333/propositions/sujet"
+    redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
   }
-);
+)
 
 const schema = {
-  type: "object",
-  required: ["title", "description"],
+  type: 'object',
+  required: ['title', 'description'],
   properties: {
     title: {
-      type: "string",
-      title: "Titre"
+      type: 'string',
+      title: 'Titre'
     },
     description: {
-      type: "string",
-      title: "Description"
+      type: 'string',
+      title: 'Description'
     },
     kind: {
-      type: "string",
-      title: "Type de sujet",
-      enum: ["Long", "Short"],
-      enumNames: [" Long (20 mins + questions)", " Court (5 mins)"],
-      default: "Long"
+      type: 'string',
+      title: 'Type de sujet',
+      enum: ['Long', 'Short'],
+      enumNames: [' Long (20 mins + questions)', ' Court (5 mins)'],
+      default: 'Long'
     },
     slideLink: {
-      type: "string",
-      format: "uri",
-      title: "Lien des slides"
+      type: 'string',
+      format: 'uri',
+      title: 'Lien des slides'
     },
     projectLink: {
-      type: "string",
-      format: "uri",
-      title: "Lien du projet"
+      type: 'string',
+      format: 'uri',
+      title: 'Lien du projet'
     },
     twitter: {
-      type: "string",
-      title: "Twitter"
+      type: 'string',
+      title: 'Twitter'
     }
   }
-};
+}
 
 const uiSchema = {
   description: {
-    "ui:widget": "textarea",
-    "ui:options": {
+    'ui:widget': 'textarea',
+    'ui:options': {
       rows: 5
     }
   },
   kind: {
-    "ui:widget": "radio"
+    'ui:widget': 'radio'
   },
   slideLink: {
-    "ui:placeholder": "http://"
+    'ui:placeholder': 'http://'
   },
   projectLink: {
-    "ui:placeholder": "http://"
+    'ui:placeholder': 'http://'
   },
   twitter: {
-    "ui:placeholder": "@parisjs"
+    'ui:placeholder': '@parisjs'
   }
-};
+}
 
 function getHelloGithubCred() {
-  const helloCreds = localStorage.getItem("hello");
+  const helloCreds = localStorage.getItem('hello')
 
   if (helloCreds) {
-    const parsedData = JSON.stringify(helloCreds);
+    const parsedData = JSON.stringify(helloCreds)
 
     return parsedData.github && parsedData.github.access_token
       ? parsedData.github.access_token
-      : null;
+      : null
   } else {
-    return null;
+    return null
   }
 }
 
@@ -101,7 +101,7 @@ function formatTalkSubmission({
   projectLink,
   twitter
 }) {
-  const formattedDescription = description.replace(/(.+)/g, "> $1");
+  const formattedDescription = description.replace(/(.+)/g, '> $1')
   return `
 ## ${title}
 
@@ -114,7 +114,7 @@ ${formattedDescription}
 *Slides :* ${slideLink}
 *Projet :* ${projectLink}
 *Twitter :* ${twitter}
-`;
+`
 }
 
 class TalkSubmissionForm extends React.Component {
@@ -130,7 +130,7 @@ class TalkSubmissionForm extends React.Component {
           <input type="submit" value="Soumettre" className="btn" />
         </div>
       </Form>
-    );
+    )
   }
 }
 
@@ -139,7 +139,7 @@ class TalkSubmissionSummary extends React.Component {
     return (
       <div className="card talkSubmission__form">
         <p>
-          Your talk has been successfully submitted! Click{" "}
+          Your talk has been successfully submitted! Click{' '}
           <a href={this.props.talkSubmissionLink}>here</a> to view it.
         </p>
         <input
@@ -149,7 +149,7 @@ class TalkSubmissionSummary extends React.Component {
           onClick={this.props.onSubmit}
         />
       </div>
-    );
+    )
   }
 }
 
@@ -165,33 +165,33 @@ class TalkSubmissionLoginButton extends React.Component {
           onClick={this.props.onSubmit}
         />
       </div>
-    );
+    )
   }
 }
 
 class TalkSubmissionContainer extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       githubToken: getHelloGithubCred()
-    };
+    }
   }
 
   componentDidMount() {
-    hello.on("auth.login", () => {
-      const auth = hello("github").getAuthResponse();
+    hello.on('auth.login', () => {
+      const auth = hello('github').getAuthResponse()
 
       this.setState({
         githubToken: auth.access_token
-      });
-    });
+      })
+    })
   }
 
   handleSubmit = ({ formData }) => {
-    const { githubToken } = this.state;
-    const gh = new GitHub({ token: githubToken });
+    const { githubToken } = this.state
+    const gh = new GitHub({ token: githubToken })
 
-    const remoteIssues = gh.getIssues("PierrickP", "fluffy-octo-broccoli");
+    const remoteIssues = gh.getIssues('PierrickP', 'fluffy-octo-broccoli')
 
     remoteIssues
       .createIssue({
@@ -200,22 +200,22 @@ class TalkSubmissionContainer extends React.Component {
       })
       .then(({ status, data }) => {
         if (status === 201) {
-          this.setState({ talkSubmissionLink: data.html_url });
+          this.setState({ talkSubmissionLink: data.html_url })
         }
         // should handle the errors
       })
       .catch(() => {
         // should handle the errors
-      });
-  };
+      })
+  }
 
   handleLogin = () => {
-    hello("github").login();
-  };
+    hello('github').login()
+  }
 
   resetForm = () => {
-    this.setState({ talkSubmissionLink: null });
-  };
+    this.setState({ talkSubmissionLink: null })
+  }
 
   render() {
     return (
@@ -247,8 +247,8 @@ class TalkSubmissionContainer extends React.Component {
           )}
         </div>
       </Layout>
-    );
+    )
   }
 }
 
-export default TalkSubmissionContainer;
+export default TalkSubmissionContainer
