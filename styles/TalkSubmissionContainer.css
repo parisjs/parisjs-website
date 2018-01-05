@@ -2,6 +2,12 @@
     padding: 32px;
 }
 
+.talkSubmission__form fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
 .talkSubmission__form label {
     display: block;
     line-height: 24px;
