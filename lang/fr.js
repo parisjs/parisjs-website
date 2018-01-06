@@ -24,6 +24,7 @@ export default {
     'Un grand merci aux entreprises sponsors de nous avoir accueilli dans leurs locaux ou offert le buffet.<br />Si vous souhaitez nous sponsoriser, il suffit de remplir <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyJchaXT8Rv1bMFtdECCeW5Np-TvN1QVipYQvcfMLdLj6Vcw/viewform">ce formulaire</a>',
   SPONSOR_TITLE: 'Nos partenaires',
   SPONSORS: 'Partenaires',
+  LOGIN_GITHUB: 'Login avec GitHub',
   SUBMIT_TALK: 'Soumettre un sujet',
   TALK_EXPLAIN: `
     <p>Nous proposons 2 formats différents :</p>
@@ -33,7 +34,13 @@ export default {
     </ul>
   `,
   NEED_LOGIN_BEFORE: 'Vous devez vous connecter avant de proposer votre sujet',
-  TALK_SUBMITTED_PRE: 'Votre sujet a bien été soumis ! Cliquez',
-  TALK_SUBMITTED_HERE: 'ici',
-  TALK_SUBMITTED_POST: 'pour le voir.'
+  TALK_SUBMITTED:
+    'Votre sujet a bien été soumis ! Cliquez <a href="{link}">ici</a> pour le voir.',
+  TALK_SCHEMA_TITLE: 'Titre',
+  TALK_SCHEMA_DESCRIPTION: 'Description',
+  TALK_SCHEMA_FORMAT: 'Format du talk',
+  TALK_SCHEMA_FORMAT_LONG: ' Long (20 mins + questions)',
+  TALK_SCHEMA_FORMAT_SHORT: ' Court (5 mins)',
+  TALK_SCHEMA_SLIDES: 'Lien vers les slides',
+  TALK_SCHEMA_PROJECT: 'Lien vers le project'
 }

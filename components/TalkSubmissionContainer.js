@@ -9,7 +9,7 @@ import { Link } from 'react-router'
 import hello from 'hellojs'
 import GitHub from 'github-api'
 import Form from 'react-jsonschema-form'
-import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
+import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
@@ -22,63 +22,6 @@ hello.init(
     redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
   }
 )
-
-const schema = {
-  type: 'object',
-  required: ['title', 'description'],
-  properties: {
-    title: {
-      type: 'string',
-      title: 'Titre'
-    },
-    description: {
-      type: 'string',
-      title: 'Description'
-    },
-    kind: {
-      type: 'string',
-      title: 'Type de sujet',
-      enum: ['Long', 'Short'],
-      enumNames: [' Long (20 mins + questions)', ' Court (5 mins)'],
-      default: 'Long'
-    },
-    slideLink: {
-      type: 'string',
-      format: 'uri',
-      title: 'Lien des slides'
-    },
-    projectLink: {
-      type: 'string',
-      format: 'uri',
-      title: 'Lien du projet'
-    },
-    twitter: {
-      type: 'string',
-      title: 'Twitter'
-    }
-  }
-}
-
-const uiSchema = {
-  description: {
-    'ui:widget': 'textarea',
-    'ui:options': {
-      rows: 5
-    }
-  },
-  kind: {
-    'ui:widget': 'radio'
-  },
-  slideLink: {
-    'ui:placeholder': 'http://'
-  },
-  projectLink: {
-    'ui:placeholder': 'http://'
-  },
-  twitter: {
-    'ui:placeholder': '@parisjs'
-  }
-}
 
 function getHelloGithubCred() {
   const helloCreds = localStorage.getItem('hello')
@@ -118,62 +61,141 @@ ${formattedDescription}
 `
 }
 
-class TalkSubmissionForm extends React.Component {
-  render() {
-    return (
-      <Form
-        className="card talkSubmission__form"
-        schema={schema}
-        uiSchema={uiSchema}
-        onSubmit={this.props.onSubmit}
-      >
-        <div className="formGroup">
-          <input type="submit" value="Soumettre" className="btn" />
+const TalkSubmissionForm = injectIntl(
+  class extends React.Component {
+    componentWillMount() {
+      this.setupSchema(this.props.intl)
+    }
+
+    componentWillReceiveProps({ intl }) {
+      this.setupSchema(intl)
+    }
+
+    setupSchema(intl) {
+      this.schema = {
+        type: 'object',
+        required: ['title', 'description'],
+        properties: {
+          title: {
+            type: 'string',
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_TITLE' })
+          },
+          description: {
+            type: 'string',
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_DESCRIPTION' })
+          },
+          kind: {
+            type: 'string',
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT' }),
+            enum: ['Long', 'Short'],
+            enumNames: [
+              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_LONG' }),
+              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_SHORT' })
+            ],
+            default: 'Long'
+          },
+          slideLink: {
+            type: 'string',
+            format: 'uri',
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_SLIDES' })
+          },
+          projectLink: {
+            type: 'string',
+            format: 'uri',
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_PROJECT' })
+          },
+          twitter: {
+            type: 'string',
+            title: 'Twitter'
+          }
+        }
+      }
+    }
+    schema = {}
+    uiSchema = {
+      description: {
+        'ui:widget': 'textarea',
+        'ui:options': {
+          rows: 5
+        }
+      },
+      kind: {
+        'ui:widget': 'radio'
+      },
+      slideLink: {
+        'ui:placeholder': 'http://'
+      },
+      projectLink: {
+        'ui:placeholder': 'http://'
+      },
+      twitter: {
+        'ui:placeholder': '@parisjs'
+      }
+    }
+
+    render() {
+      return (
+        <Form
+          className="card talkSubmission__form"
+          schema={this.schema}
+          uiSchema={this.uiSchema}
+          onSubmit={this.props.onSubmit}
+        >
+          <div className="formGroup">
+            <input
+              type="submit"
+              value={this.props.intl.formatMessage({ id: 'SUBMIT_TALK' })}
+              className="btn"
+            />
+          </div>
+        </Form>
+      )
+    }
+  }
+)
+
+const TalkSubmissionSummary = injectIntl(
+  class extends React.Component {
+    render() {
+      return (
+        <div className="card talkSubmission__form">
+          <p>
+            <FormattedHTMLMessage
+              id="TALK_SUBMITTED"
+              values={{ link: this.props.talkSubmissionLink }}
+            />
+          </p>
+          <input
+            type="button"
+            value={this.props.intl.formatMessage({ id: 'SUBMIT_TALK' })}
+            className="btn"
+            onClick={this.props.onSubmit}
+          />
         </div>
-      </Form>
-    )
+      )
+    }
   }
-}
+)
 
-class TalkSubmissionSummary extends React.Component {
-  render() {
-    return (
-      <div className="card talkSubmission__form">
-        <p>
-          <FormattedMessage id="TALK_SUBMITTED_PRE" />{' '}
-          <a href={this.props.talkSubmissionLink}>
-            <FormattedMessage id="TALK_SUBMITTED_HERE" />
-          </a>{' '}
-          <FormattedMessage id="TALK_SUBMITTED_POST" />
-        </p>
-        <input
-          type="button"
-          value="Submit a new talk"
-          className="btn"
-          onClick={this.props.onSubmit}
-        />
-      </div>
-    )
+const TalkSubmissionLoginButton = injectIntl(
+  class extends React.Component {
+    render() {
+      return (
+        <div className="card talkSubmission__form">
+          <p>
+            <FormattedMessage id="NEED_LOGIN_BEFORE" />
+          </p>
+          <input
+            type="button"
+            value={this.props.intl.formatMessage({ id: 'LOGIN_GITHUB' })}
+            className="btn"
+            onClick={this.props.onSubmit}
+          />
+        </div>
+      )
+    }
   }
-}
-
-class TalkSubmissionLoginButton extends React.Component {
-  render() {
-    return (
-      <div className="card talkSubmission__form">
-        <p>
-          <FormattedMessage id="NEED_LOGIN_BEFORE" />
-        </p>
-        <input
-          type="button"
-          value="Login avec github"
-          className="btn"
-          onClick={this.props.onSubmit}
-        />
-      </div>
-    )
-  }
-}
+)
 
 class TalkSubmissionContainer extends React.Component {
   constructor(props) {
