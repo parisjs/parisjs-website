@@ -84,7 +84,7 @@ function getHelloGithubCred() {
   const helloCreds = localStorage.getItem('hello')
 
   if (helloCreds) {
-    const parsedData = JSON.stringify(helloCreds)
+    const parsedData = JSON.parse(helloCreds)
 
     return parsedData.github && parsedData.github.access_token
       ? parsedData.github.access_token
