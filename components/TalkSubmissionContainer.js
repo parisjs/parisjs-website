@@ -6,7 +6,6 @@ import {
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
-import hello from 'hellojs'
 import GitHub from 'github-api'
 import Form from 'react-jsonschema-form'
 import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl'
@@ -14,14 +13,20 @@ import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
-hello.init(
-  {
-    github: 'Iv1.c13e7b19e913ffeb'
-  },
-  {
-    redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
+let hellojsInitialized = false
+function initializeHellojs() {
+  if (!hellojsInitialized) {
+    hello.init(
+      {
+        github: 'Iv1.c13e7b19e913ffeb'
+      },
+      {
+        redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
+      }
+    )
+    hellojsInitialized = true
   }
-)
+}
 
 function getHelloGithubCred() {
   const helloCreds = localStorage.getItem('hello')
@@ -201,11 +206,15 @@ class TalkSubmissionContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      githubToken: getHelloGithubCred()
+      githubToken: null
     }
   }
 
   componentDidMount() {
+    initializeHellojs()
+    this.setState({
+      githubToken: getHelloGithubCred()
+    })
     hello.on('auth.login', () => {
       const auth = hello('github').getAuthResponse()
 
