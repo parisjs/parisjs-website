@@ -13,20 +13,16 @@ import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
-let hellojsInitialized = false
-function initializeHellojs() {
-  if (!hellojsInitialized) {
-    hello.init(
-      {
-        github: 'Iv1.c13e7b19e913ffeb'
-      },
-      {
-        redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
-      }
-    )
-    hellojsInitialized = true
-  }
-}
+try {
+  hello.init(
+    {
+      github: 'Iv1.c13e7b19e913ffeb'
+    },
+    {
+      redirect_uri: 'http://127.0.0.1:3333/propositions/sujet'
+    }
+  )
+} catch (e) {}
 
 function getHelloGithubCred() {
   const helloCreds = localStorage.getItem('hello')
@@ -211,7 +207,6 @@ class TalkSubmissionContainer extends React.Component {
   }
 
   componentDidMount() {
-    initializeHellojs()
     this.setState({
       githubToken: getHelloGithubCred()
     })
