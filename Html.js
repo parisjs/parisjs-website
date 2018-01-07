@@ -1,11 +1,11 @@
-import * as React from "react";
-import Head from "react-helmet";
+import * as React from 'react'
+import Head from 'react-helmet'
 
 export default ({ App, render }) => {
   // if needed, you can know if you are in development or in static rendering
   // const isDev = process.env.PHENOMIC_ENV === "development"
-  const { Main, State, Script, Style } = render(<App />);
-  const helmet = Head.renderStatic();
+  const { Main, State, Script, Style } = render(<App />)
+  const helmet = Head.renderStatic()
   return (
     <html {...helmet.htmlAttributes.toComponent()}>
       <head>
@@ -17,6 +17,7 @@ export default ({ App, render }) => {
         {helmet.style.toComponent()}
         {helmet.script.toComponent()}
         {helmet.noscript.toComponent()}
+        <script src="https://unpkg.com/hellojs@1.16.1/dist/hello.all.js" />
       </head>
       <body {...helmet.bodyAttributes.toComponent()}>
         <Main />
@@ -24,5 +25,5 @@ export default ({ App, render }) => {
         <Script />
       </body>
     </html>
-  );
-};
+  )
+}

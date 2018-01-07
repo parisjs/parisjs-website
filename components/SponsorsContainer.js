@@ -1,6 +1,10 @@
 import React from 'react'
 import Head from 'react-helmet'
-import { createContainer, query, BodyRenderer } from '@phenomic/preset-react-app/lib/client'
+import {
+  createContainer,
+  query,
+  BodyRenderer
+} from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
@@ -8,10 +12,7 @@ import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
 const SponsorsContainer = () => {
-
-  const sponsors = [
-    { name: 'Parisjs', img: '/sponsors/parisjs.png' }
-  ]
+  const sponsors = [{ name: 'Parisjs', img: '/sponsors/parisjs.png' }]
 
   return (
     <Layout>
@@ -29,14 +30,14 @@ const SponsorsContainer = () => {
         </p>
 
         <ul className="sponsors__list">
-        { sponsors.map(({ img, name }) => (
-          <li className="sponsors__item">
-            <figure key={ name } className="card">
-              <img src={ img } alt={ name } />
-              <figcaption>{ name }</figcaption>
-            </figure>
-          </li>
-        )) }
+          {sponsors.map(({ img, name }) => (
+            <li key={name} className="sponsors__item">
+              <figure className="card">
+                <img src={img} alt={name} />
+                <figcaption>{name}</figcaption>
+              </figure>
+            </li>
+          ))}
         </ul>
       </div>
     </Layout>
