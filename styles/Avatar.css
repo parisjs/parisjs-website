@@ -1,0 +1,26 @@
+.Avatar {
+    display: block;
+    width: 66px;
+    height: 66px;
+    border-radius: 33px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    overflow: hidden;
+
+    background-color: #ECEFF2;
+}
+
+.Avatar--small {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+}
+
+.Avatar__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

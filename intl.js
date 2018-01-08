@@ -39,11 +39,14 @@ export function IntlLink({ to, title }) {
   )
 }
 
-export function LocalLink({ to, children }) {
+export function LocalLink({ to, children, ...otherProps }) {
   const locale = getLocale(typeof location !== 'undefined' ? location.pathname : '/')
 
   return (
-    <Link to={`${locale !== defaultLocale ? locale : ''}${to}`} >
+    <Link
+      to={`${locale !== defaultLocale ? locale : ''}${to}`}
+      { ...otherProps }
+    >
       {children}
     </Link>
   )

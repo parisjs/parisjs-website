@@ -1,9 +1,15 @@
 .MeetupPreview {
-    background: #FFFFFF;
+    display: block;
     padding: 24px 32px 32px;
+    margin-bottom: 48px;
+
+    background: #FFFFFF;
     border-radius: 3px;
+
     font-size: 14px;
     line-height: 24px;
+    text-decoration: initial;
+    color: initial;
 }
 
 .MeetupPreview__title {
@@ -31,4 +37,9 @@
     .MeetupPreview__title {
         display: block;
     }
+}
+
+.MeetupPreview__talks {
+    display: flex;
+    flex-wrap: wrap;
 }

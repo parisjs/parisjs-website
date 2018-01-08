@@ -1,18 +1,33 @@
 import React from 'react'
 
+import Avatar from './avatar'
+
+const TalkAuthor = ({ author }) => {
+  const TagName = author.url ? 'a' : 'div'
+
+  return (
+    <TagName
+      href={ author.url }
+      className="Talk_author"
+    >
+      <Avatar imageUrl={author.avatar} size="small" />
+      <div>{ author.name }</div>
+    </TagName>
+  )
+}
+
 const Talk = ({ title, extract, authors, slides, links, videos }) => {
   return (
     <div className="Talk">
-      <h3 className="Talk__title">{ title }</h3>
-      <ul className="Talk_authors">
-        { authors && authors.map(({ name, url, avatar}) => (
-          <li key={ name }>
-            { avatar && <img src={ avatar } />}
-            { url ? <a href={ url }>{ name }</a> : name }
-          </li>
+      <h3>{ title }</h3>
+      <div className="Talk_authors">
+        { authors && authors.map((author) => (
+          <TalkAuthor key={ author.name } author={ author } />
         )) }
-      </ul>
+      </div>
+
       <div className="Talk__description">{ extract }</div>
+
       <ul>
         { slides && slides.map((slide, idx) => (
           <li key={ idx }><a href={ slide }>{ slide }</a></li>

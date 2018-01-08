@@ -4,21 +4,22 @@
     border-radius: 3px;
 }
 
-.Talk__title {
-    margin-top: 0;
-}
-
 .Talk_authors {
-    list-style: none;
-    margin: 24px 0;
-    padding: 0;
+    display: flex;
 }
 
-.Talk_authors li {
-    display: inline-block;
+.Talk_author {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+    padding-right: 24px;
+
     font-weight: bold;
+    text-decoration: initial;
+    color: initial;
 }
 
 .Talk__description {
     line-height: 24px;
+    margin: 6px 0;
 }
