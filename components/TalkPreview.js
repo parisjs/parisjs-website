@@ -7,17 +7,11 @@ const TalkPreview = ({ talk }) => {
 
   return (
     <div className="TalkPreview">
-      { authors && authors.map((author) => (
-        <Avatar imageUrl={author.avatar} />
-      )) }
+      {authors && authors.map(author => <Avatar imageUrl={author.avatar} />)}
       <div>
-        <strong>{ title }</strong>
-        { '\xa0-\xa0' }
-        <span>
-        {
-          authors && authors.map((author) => author.name).join(', ')
-        }
-        </span>
+        <strong>{title}</strong>
+        {'\xa0-\xa0'}
+        <span>{authors && authors.map(author => author.name).join(', ')}</span>
       </div>
     </div>
   )

@@ -23,14 +23,14 @@ export function getIntl(locale) {
     locale: locale,
     key: locale,
     messages: messages[locale],
-    defaultLocale: defaultLocale,
+    defaultLocale: defaultLocale
   }
 }
 
 export function IntlLink({ to, title }) {
   return (
     <FormattedMessage id={to}>
-      {(txt) => (
+      {txt => (
         <Link to={txt}>
           <FormattedMessage id={title} />
         </Link>
@@ -40,13 +40,12 @@ export function IntlLink({ to, title }) {
 }
 
 export function LocalLink({ to, children, ...otherProps }) {
-  const locale = getLocale(typeof location !== 'undefined' ? location.pathname : '/')
+  const locale = getLocale(
+    typeof location !== 'undefined' ? location.pathname : '/'
+  )
 
   return (
-    <Link
-      to={`${locale !== defaultLocale ? locale : ''}${to}`}
-      { ...otherProps }
-    >
+    <Link to={`${locale !== defaultLocale ? locale : ''}${to}`} {...otherProps}>
       {children}
     </Link>
   )

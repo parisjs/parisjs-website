@@ -1,25 +1,25 @@
 .Talk {
-    background: #FFFFFF;
-    padding: 32px;
-    border-radius: 3px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 3px;
 }
 
 .Talk_authors {
-    display: flex;
+  display: flex;
 }
 
 .Talk_author {
-    display: flex;
-    align-items: center;
-    flex-grow: 0;
-    padding-right: 24px;
+  display: flex;
+  align-items: center;
+  flex-grow: 0;
+  padding-right: 24px;
 
-    font-weight: bold;
-    text-decoration: initial;
-    color: initial;
+  font-weight: bold;
+  text-decoration: initial;
+  color: initial;
 }
 
 .Talk__description {
-    line-height: 24px;
-    margin: 6px 0;
+  line-height: 24px;
+  margin: 6px 0;
 }
