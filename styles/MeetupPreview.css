@@ -1,34 +1,45 @@
 .MeetupPreview {
-    background: #FFFFFF;
-    padding: 24px 32px 32px;
-    border-radius: 3px;
-    font-size: 14px;
-    line-height: 24px;
+  display: block;
+  padding: 24px 32px 32px;
+  margin-bottom: 48px;
+
+  background: #ffffff;
+  border-radius: 3px;
+
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: initial;
+  color: initial;
 }
 
 .MeetupPreview__title {
-    display: flex;
+  display: flex;
 }
 
 .MeetupPreview__title h3,
 .MeetupPreview__title h3 a {
-    margin: 0;
-    color: #E14680;
-    text-decoration: none;
+  margin: 0;
+  color: #e14680;
+  text-decoration: none;
 }
 
 .MeetupPreview__title h3 {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 .MeetupPreview__title {
-    line-height: 48px;
-    border-bottom: 4px solid #EDF0F2;
-    margin: 0 0 16px 0;
+  line-height: 48px;
+  border-bottom: 4px solid #edf0f2;
+  margin: 0 0 16px 0;
 }
 
 @media (max-width: 600px) {
-    .MeetupPreview__title {
-        display: block;
-    }
+  .MeetupPreview__title {
+    display: block;
+  }
+}
+
+.MeetupPreview__talks {
+  display: flex;
+  flex-wrap: wrap;
 }

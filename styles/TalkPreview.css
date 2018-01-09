@@ -1,0 +1,8 @@
+.TalkPreview {
+  flex: 1 1 360px;
+  display: flex;
+  align-items: center;
+  padding-right: 24px;
+
+  line-height: 20px;
+}
