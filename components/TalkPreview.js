@@ -7,7 +7,10 @@ const TalkPreview = ({ talk }) => {
 
   return (
     <div className="TalkPreview">
-      {authors && authors.map(author => <Avatar imageUrl={author.avatar} />)}
+      {authors &&
+        authors.map(author => (
+          <Avatar key={author.name} imageUrl={author.avatar} />
+        ))}
       <div>
         <strong>{title}</strong>
         {'\xa0-\xa0'}

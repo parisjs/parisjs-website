@@ -12,9 +12,7 @@ const PagePreview = ({ id, edition, title, date, talks, host }) => {
     <LocalLink to={`/meetup/${id}`} className="MeetupPreview">
       <div className="MeetupPreview__title">
         <h3>
-          <LocalLink to={`/meetup/${id}`}>
-            Paris.js #{edition} {host ? `@ ${host}` : ''}
-          </LocalLink>
+          Paris.js #{edition} {host ? `@ ${host}` : ''}
         </h3>
         <div>
           <time key={pageDate.toISOString()}>

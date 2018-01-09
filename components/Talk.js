@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Avatar from './avatar'
+import Avatar from './Avatar'
 
 const TalkAuthor = ({ author }) => {
   const TagName = author.url ? 'a' : 'div'
