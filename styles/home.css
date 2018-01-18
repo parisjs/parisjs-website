@@ -1,73 +1,66 @@
 .hero {
-    background: #FFFFFF;
-    padding: 72px 0;
-}
-
-.hero h3 {
-    margin: 0 0 24px 0;
-    padding: 12px 0;
+  background: #ffffff;
+  padding: 72px 0;
 }
 
 .hero__actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .hero__actions p {
-    margin-left: 20px;
-    color: #45494D;
-    font-size: 14px;
+  color: #45494d;
+  font-size: 14px;
 }
 
 .hero__actions p a {
-    display: inline-block;
-    padding: 6px;
-    border-radius: 3px;
-    color: #45494D;
-    text-decoration: none;
+  display: inline-block;
+  padding: 6px;
+  border-radius: 3px;
+  color: #45494d;
+  text-decoration: none;
 }
 
 .hero__actions p a:hover {
-    color: #000000;
-    background: #EDF0F2;
+  color: #000000;
+  background: #edf0f2;
 }
 
 .hero__actions img {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 @media (max-width: 1024px) {
-    .hero {
-        padding: 24px 0;
-    }
+  .hero {
+    padding: 24px 0;
+  }
 
-    .hero__actions {
-        display: block;
-    }
+  .hero__actions {
+    display: block;
+  }
 
-    .hero__actions p {
-        margin: 24px 0;
-    }
+  .hero__actions p {
+    margin: 24px 0;
+  }
 }
 
 @media (max-width: 600px) {
-    
-    .hero__actions p a {
-        display: block;
-    }
+  .hero__actions p a {
+    display: block;
+  }
 }
 
 .meetups__title {
-    margin: 48px 0;
+  margin: 48px 0;
 }
 
 .meetups__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .meetups__list li {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
