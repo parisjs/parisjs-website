@@ -1,0 +1,11 @@
+.DS_Store
+
+# vscode
+.vscode
+
+# node / npm
+node_modules
+*.log
+
+# phenomic build
+dist
