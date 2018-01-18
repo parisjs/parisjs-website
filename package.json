@@ -9,7 +9,7 @@
     "#</git hooks>": "handled by husky",
     "start": "phenomic start",
     "build": "phenomic build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
