@@ -227,7 +227,7 @@ class TalkSubmissionContainer extends React.Component {
     const { githubToken } = this.state
     const gh = new GitHub({ token: githubToken })
 
-    const remoteIssues = gh.getIssues('PierrickP', 'fluffy-octo-broccoli')
+    const remoteIssues = gh.getIssues('parisjs', 'talks')
 
     remoteIssues
       .createIssue({
