@@ -1,0 +1,36 @@
+.NextMeetup__Title {
+  padding: 12px 0;
+  margin: 0;
+}
+
+.NextMeetup__TitleNoMeetup {
+  margin: 0 0 24px 0;
+}
+
+.NextMeetup__Info {
+  height: 28px;
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  color: #45494d;
+}
+
+.NextMeetup__InfoIcon {
+  margin-right: 12px;
+}
+
+.NextMeetup__RegisterButton {
+  padding-top: 6px;
+  padding-left: 6px;
+  padding-bottom: 6px;
+  margin-right: 20px;
+}
+
+.NextMeetup__RegisterButtonIcon {
+  margin-right: 12px;
+}
+
+.NextMeetup__RegisterButtonText {
+  vertical-align: middle;
+}

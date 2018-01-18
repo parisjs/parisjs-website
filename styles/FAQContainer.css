@@ -1,0 +1,7 @@
+.FAQContainer .card {
+  padding: 32px;
+}
+
+.FAQContainer h2 ~ h2 {
+  margin-top: 48px;
+}

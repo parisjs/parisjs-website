@@ -1,0 +1,25 @@
+.talkSubmission__form {
+  padding: 32px;
+}
+
+.talkSubmission__form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.talkSubmission__form label {
+  display: block;
+  line-height: 24px;
+}
+
+.talkSubmission__form input[type='text'],
+.talkSubmission__form textarea,
+.talkSubmission__form input[type='url'] {
+  width: 100%;
+  border: 1px solid #551a8b;
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 15px;
+  font-family: Hack, monospace;
+}

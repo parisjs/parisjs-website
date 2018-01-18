@@ -1,0 +1,37 @@
+.sponsors__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sponsors__item {
+  flex: 0 0 20%;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.sponsors__item:nth-child(5n + 1) {
+  padding-left: 0;
+}
+
+.sponsors__item:nth-child(5n) {
+  padding-right: 0;
+}
+
+.sponsors__item .card {
+  display: block;
+  margin: 0;
+  padding: 32px;
+}
+
+.sponsors__item .card img {
+  max-width: 100%;
+}
+
+.sponsors__item .card figcaption {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 32px;
+}
