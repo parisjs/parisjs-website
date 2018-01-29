@@ -18,17 +18,11 @@
   border-radius: 3px;
 }
 
-.header a:hover {
-  background: #c72a63;
-}
-
-.header__logo {
+.header__logo a {
   font-family: 'Poppins', sans-serif;
-  font-size: 18px;
+  font-size: 36px;
   font-weight: bold;
-  padding: 16px;
-  color: #e14680;
-  background: #fff;
+  margin-right: 16px;
   border-radius: 3px;
 }
 
@@ -39,6 +33,11 @@
 
 .header__nav a {
   padding: 16px;
+}
+
+.header__nav a:hover,
+.header__nav a.active {
+  background: #c72a63;
 }
 
 .languageSwitcher {
