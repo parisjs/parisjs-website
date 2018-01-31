@@ -6,37 +6,47 @@ import { IntlProvider, FormattedMessage } from 'react-intl'
 import { getLocale, getIntl, IntlLink } from '../intl'
 
 const Layout = ({ children }) => {
-  const locale = getLocale(typeof location !== 'undefined' ? location.pathname : '/')
+  const locale = getLocale(
+    typeof location !== 'undefined' ? location.pathname : '/'
+  )
   const intl = getIntl(locale)
 
   return (
     <IntlProvider {...intl}>
       <div>
         <Head>
-          <html lang={ locale } /> { /* this is valid react-helmet usage! */ }
+          <html lang={locale} /> {/* this is valid react-helmet usage! */}
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
         <header className="header">
           <div className="container">
-            <div className="header__logo">Paris.JS</div>
+            <div className="header__logo">
+              <Link to="/">Paris.JS</Link>
+            </div>
             <nav className="header__nav">
-              <IntlLink to="PAGE_HOME" title="HOME" />
-              <IntlLink to="PAGE_FAQ" title="FAQ" />
-              <IntlLink to="PAGE_SUBMIT_TALK" title="SUBMIT_TALK" />
-              <IntlLink to="PAGE_SPONSORS" title="SPONSORS" />
+              <IntlLink to="PAGE_HOME" title="HOME" activeClassName="active" />
+              <IntlLink to="PAGE_FAQ" title="FAQ" activeClassName="active" />
+              <IntlLink
+                to="PAGE_SUBMIT_TALK"
+                title="SUBMIT_TALK"
+                activeClassName="active"
+              />
+              <IntlLink
+                to="PAGE_SPONSORS"
+                title="SPONSORS"
+                activeClassName="active"
+              />
             </nav>
 
             <div className="languageSwitcher">
-              <Link to={ `/` }>FR</Link>
-              <Link to={ `/en` }>EN</Link>
+              <Link to={`/`}>FR</Link>
+              <Link to={`/en`}>EN</Link>
             </div>
           </div>
         </header>
-        { children }
-        <footer className="footer container">
-          🚀 Paris.JS
-        </footer>
+        {children}
+        <footer className="footer container">🚀 Paris.JS</footer>
       </div>
     </IntlProvider>
   )

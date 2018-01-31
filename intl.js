@@ -27,11 +27,11 @@ export function getIntl(locale) {
   }
 }
 
-export function IntlLink({ to, title }) {
+export function IntlLink({ to, title, activeClassName }) {
   return (
     <FormattedMessage id={to}>
       {txt => (
-        <Link to={txt}>
+        <Link to={txt} activeClassName={activeClassName}>
           <FormattedMessage id={title} />
         </Link>
       )}
