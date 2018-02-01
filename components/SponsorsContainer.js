@@ -12,7 +12,10 @@ import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
 const SponsorsContainer = () => {
-  const sponsors = [{ name: 'Parisjs', img: '/sponsors/parisjs.png' }]
+  const sponsors = [
+    { name: 'Algolia', img: '/sponsors/algolia-logo-light.png' },
+    { name: 'Parisjs', img: '/sponsors/parisjs.png' }
+  ]
 
   return (
     <Layout>
