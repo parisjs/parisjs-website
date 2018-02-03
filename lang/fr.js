@@ -21,7 +21,7 @@ export default {
   SPONSOR_DESCRIPTION:
     'Liste de nos derniers partenaires. Sponsorisez un Paris.js en replissant le formulaire.',
   SPONSOR_INTRO:
-    'Un grand merci aux entreprises sponsors de nous avoir accueilli dans leurs locaux ou offert le buffet.<br />Si vous souhaitez nous sponsoriser, il suffit de remplir <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyJchaXT8Rv1bMFtdECCeW5Np-TvN1QVipYQvcfMLdLj6Vcw/viewform">ce formulaire</a>',
+    'Un grand merci aux sponsors de nous avoir accueilli dans leurs locaux ou offert le buffet.<br />Si vous souhaitez nous sponsoriser, il suffit de remplir <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyJchaXT8Rv1bMFtdECCeW5Np-TvN1QVipYQvcfMLdLj6Vcw/viewform">ce formulaire</a>',
   SPONSOR_TITLE: 'Nos partenaires',
   SPONSORS: 'Partenaires',
   LOGIN_GITHUB: 'Login avec GitHub',
