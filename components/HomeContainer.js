@@ -7,7 +7,7 @@ import {
 } from '@phenomic/preset-react-app/lib/client'
 import { Link, withRouter } from 'react-router'
 import { LocalLink } from '../intl'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, injectIntl } from 'react-intl'
 
 import { InstantSearch, SearchBox } from 'react-instantsearch/dom'
 
@@ -15,7 +15,7 @@ import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 import NextMeetup from './NextMeetup'
 
-const Home = ({ meetups, intl, router }) => (
+const Home = ({ meetups, router }) => (
   <Layout>
     <Head>
       <title>Paris.JS - Event-driven community about JavaScript</title>
@@ -43,7 +43,7 @@ const Home = ({ meetups, intl, router }) => (
           <h2 className="meetups__title --withChevron">
             <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
           </h2>
-          <SearchBox onFocus={() => router.push('/search')} />
+          <SearchInput router={router} />
         </div>
         <ul className="meetups__list">
           {meetups &&
@@ -68,6 +68,18 @@ const Home = ({ meetups, intl, router }) => (
     </div>
   </Layout>
 )
+
+const SearchInput = injectIntl(({ intl, router }) => {
+  const localeSubPath = intl.locale === 'fr' ? '' : `${intl.locale}/`
+  return (
+    <SearchBox
+      onFocus={() => router.push(`/${localeSubPath}search`)}
+      translations={{
+        placeholder: intl.formatMessage({ id: 'SEARCH_PLACEHOLDER' })
+      }}
+    />
+  )
+})
 
 const HomeContainer = createContainer(withRouter(Home), props => ({
   meetups: query({ path: 'meetups', limit: 12, after: props.params.after })

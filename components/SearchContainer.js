@@ -6,7 +6,7 @@ import {
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client'
 import { Link } from 'react-router'
-import { FormattedMessage } from 'react-intl'
+import { injectIntl, FormattedMessage } from 'react-intl'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
@@ -27,6 +27,38 @@ function Meetup({ hit }) {
   )
 }
 
+const Search = injectIntl(({ intl }) => (
+  <div className="container meetups">
+    <InstantSearch
+      appId="JTH1JDTDFT"
+      apiKey="34a4c1b994546fbec45a670a06ba0c33"
+      indexName="paris.js-meetups"
+    >
+      <Configure hitsPerPage={12} />
+      <div className="meetups__header">
+        <h2 className="meetups__title --withChevron">
+          <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
+        </h2>
+        <SearchBox
+          autoFocus
+          showLoadingIndicator
+          translations={{
+            placeholder: intl.formatMessage({ id: 'SEARCH_PLACEHOLDER' })
+          }}
+        />
+      </div>
+      <ul className="meetups__list">
+        <InfiniteHits
+          hitComponent={Meetup}
+          translations={{
+            loadMore: intl.formatMessage({ id: 'SEARCH_LOADMORE' })
+          }}
+        />
+      </ul>
+    </InstantSearch>
+  </div>
+))
+
 const SearchContainer = () => (
   <Layout>
     <Head>
@@ -37,24 +69,7 @@ const SearchContainer = () => (
         href="https://cdn.jsdelivr.net/npm/react-instantsearch-theme-algolia@4.4.2"
       />
     </Head>
-    <div className="container meetups">
-      <InstantSearch
-        appId="JTH1JDTDFT"
-        apiKey="34a4c1b994546fbec45a670a06ba0c33"
-        indexName="paris.js-meetups"
-      >
-        <Configure hitsPerPage={12} />
-        <div className="meetups__header">
-          <h2 className="meetups__title --withChevron">
-            <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
-          </h2>
-          <SearchBox autoFocus showLoadingIndicator />
-        </div>
-        <ul className="meetups__list">
-          <InfiniteHits hitComponent={Meetup} />
-        </ul>
-      </InstantSearch>
-    </div>
+    <Search />
   </Layout>
 )
 
