@@ -41,7 +41,18 @@ const PagePreview = meetup => {
 
       <div className="MeetupPreview__talks">
         {talks &&
-          talks.map(talk => <TalkPreview key={talk.title} talk={talk} />)}
+          talks.map((talk, i) => {
+            const highlights = meetup._highlightResult
+              ? { _highlightResult: meetup._highlightResult.talks[i] }
+              : undefined
+            return (
+              <TalkPreview
+                key={talk.title}
+                talk={talk}
+                highlights={highlights}
+              />
+            )
+          })}
         {talks && talks.length % 2 > 0 && <div className="TalkPreview" />}
       </div>
     </LocalLink>
