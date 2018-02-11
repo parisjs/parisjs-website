@@ -8,7 +8,6 @@ import TalkPreview from './TalkPreview'
 
 const Host = function({ host, meetup }) {
   if (!host) return <span />
-  console.log(meetup)
   const h = meetup._highlightResult ? (
     <Highlight hit={meetup} attributeName="host" />
   ) : (
