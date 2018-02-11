@@ -48,7 +48,7 @@ const SearchContainer = () => (
           <h2 className="meetups__title --withChevron">
             <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
           </h2>
-          <SearchBox autoFocus/>
+          <SearchBox autoFocus />
         </div>
         <ul className="meetups__list">
           <InfiniteHits hitComponent={Meetup} />

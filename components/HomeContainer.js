@@ -43,7 +43,7 @@ const Home = ({ meetups, intl, router }) => (
           <h2 className="meetups__title --withChevron">
             <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
           </h2>
-          <SearchBox onClick={() => router.push('/search')} />
+          <SearchBox onFocus={() => router.push('/search')} />
         </div>
         <ul className="meetups__list">
           {meetups &&
