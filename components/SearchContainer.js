@@ -30,8 +30,8 @@ function Meetup({ hit }) {
 const Search = injectIntl(({ intl }) => (
   <div className="container meetups">
     <InstantSearch
-      appId="JTH1JDTDFT"
-      apiKey="34a4c1b994546fbec45a670a06ba0c33"
+      appId="KQPF9BC268"
+      apiKey="5eabe9bbceee31443c075723136fa826"
       indexName="paris.js-meetups"
     >
       <Configure hitsPerPage={12} />
