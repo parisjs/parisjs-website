@@ -20,7 +20,7 @@ Non ce n’est pas nouveau, bien au contraire: le premier événement a été or
 ### Comment contribuer ?
 
 Il existe de multiples façons de contribuer à Paris.js:
-  + [proposer un talks](#je-veux-proposer-un-sujet)
+  + [proposer un talk](#je-veux-proposer-un-sujet)
   + [héberger le meetup](#je-veux-vous-accueillir-)
   + participer à l’organisation
   + proposer des améliorations sur le site web
