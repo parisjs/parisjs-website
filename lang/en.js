@@ -42,5 +42,7 @@ export default {
   TALK_SCHEMA_FORMAT_LONG: ' Long (20 mins + Q&A)',
   TALK_SCHEMA_FORMAT_SHORT: ' Short (5 mins)',
   TALK_SCHEMA_SLIDES: 'Link to your slides',
-  TALK_SCHEMA_PROJECT: 'Link to your project'
+  TALK_SCHEMA_PROJECT: 'Link to your project',
+  SEARCH_PLACEHOLDER: 'Search for talks, authors or partners',
+  SEARCH_LOADMORE: 'Show more results'
 }

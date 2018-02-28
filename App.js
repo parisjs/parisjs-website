@@ -7,6 +7,7 @@ import PageError from './components/PageError'
 import FAQContainer from './components/FAQContainer'
 import HomeContainer from './components/HomeContainer'
 import MeetupContainer from './components/MeetupContainer'
+import SearchContainer from './components/SearchContainer'
 import SponsorsContainer from './components/SponsorsContainer'
 import TalkSubmissionContainer from './components/TalkSubmissionContainer'
 
@@ -43,6 +44,8 @@ const routes = () => (
 
     <Route path="/propositions/sujet" component={TalkSubmissionContainer} />
     <Route path="/en/submission/talk" component={TalkSubmissionContainer} />
+
+    <Route path="/*search" component={SearchContainer} />
 
     <Route path="*" component={PageError} />
   </Router>

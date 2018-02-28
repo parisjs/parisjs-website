@@ -50,6 +50,25 @@
   }
 }
 
+.meetups__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ais-SearchBox__root {
+  align-self: center;
+  border: 1px solid #551a8b;
+  border-radius: 3px;
+}
+
+.meetups__list .ais-InfiniteHits__loadMore {
+  font-size: 120%;
+  border: 1px solid #551a8b;
+  background: white;
+  padding: 6px 12px;
+  border-radius: 3px;
+}
+
 .meetups__title {
   margin: 48px 0;
 }
