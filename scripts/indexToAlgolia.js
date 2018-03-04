@@ -1,9 +1,9 @@
 const fs = require('fs')
-const fm = require('front-matter')
 const path = require('path')
 const utils = require('util')
+const crypto = require('crypto')
 
-const md5 = require('md5')
+const fm = require('front-matter')
 const algolia = require('algoliasearch')
 
 const readdir = utils.promisify(fs.readdir)
@@ -12,6 +12,13 @@ const readFile = utils.promisify(fs.readFile)
 const baseDir = '../content/meetups'
 
 indexMeetups().catch(console.error)
+
+function md5(m) {
+  return crypto
+    .createHash('md5')
+    .update(m)
+    .digest('hex')
+}
 
 async function indexMeetups() {
   const meetups = await readMeetups()
@@ -44,7 +51,7 @@ function meetupsToRecords(meetups) {
     ...m,
     dateUnix: new Date(m.date).getTime(),
     objectID: m.edition,
-    hash: md5(m)
+    hash: md5(JSON.stringify(m))
   }))
 }
 

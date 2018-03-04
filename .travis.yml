@@ -9,13 +9,14 @@ notifications:
     on_failure: always
 
 deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npm run algolia:index
+    on:
+      branch: master
   - provider: pages
     local-dir: dist
     skip-cleanup: true
     github-token: $GITHUB_TOKEN
-    on:
-      branch: master
-  - provider: script
-    script: npm run algolia:index
     on:
       branch: master
