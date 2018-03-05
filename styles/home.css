@@ -51,8 +51,20 @@
 }
 
 .meetups__header {
+  position: relative;
   display: flex;
   justify-content: space-between;
+}
+
+.ais-PoweredBy__root {
+  position: absolute;
+  bottom: 1em;
+  right: 0px;
+}
+
+.ais-PoweredBy__algoliaLink svg {
+  height: 1.2em;
+  vertical-align: bottom;
 }
 
 .ais-SearchBox__root {
