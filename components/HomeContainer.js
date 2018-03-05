@@ -9,7 +9,7 @@ import { Link, withRouter } from 'react-router'
 import { LocalLink } from '../intl'
 import { FormattedMessage, injectIntl } from 'react-intl'
 
-import { InstantSearch, SearchBox } from 'react-instantsearch/dom'
+import { InstantSearch, SearchBox, PoweredBy } from 'react-instantsearch/dom'
 
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
@@ -44,6 +44,7 @@ const Home = ({ meetups, router }) => (
             <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
           </h2>
           <SearchInput router={router} />
+          <PoweredBy />
         </div>
         <ul className="meetups__list">
           {meetups &&

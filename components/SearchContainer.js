@@ -16,6 +16,7 @@ import {
   InstantSearch,
   InfiniteHits,
   SearchBox,
+  PoweredBy,
   Configure
 } from 'react-instantsearch/dom'
 
@@ -46,6 +47,7 @@ const Search = injectIntl(({ intl }) => (
             placeholder: intl.formatMessage({ id: 'SEARCH_PLACEHOLDER' })
           }}
         />
+        <PoweredBy />
       </div>
       <ul className="meetups__list">
         <InfiniteHits
