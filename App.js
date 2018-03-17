@@ -45,7 +45,8 @@ const routes = () => (
     <Route path="/propositions/sujet" component={TalkSubmissionContainer} />
     <Route path="/en/submission/talk" component={TalkSubmissionContainer} />
 
-    <Route path="/*search" component={SearchContainer} />
+    <Route path="/search" component={SearchContainer} />
+    <Route path="/en/search" component={SearchContainer} />
 
     <Route path="*" component={PageError} />
   </Router>
