@@ -13,8 +13,18 @@ import MeetupPreview from './MeetupPreview'
 
 const SponsorsContainer = () => {
   const sponsors = [
-    { name: 'Keymetrics', img: '/sponsors/keymetrics.jpg' },
-    { name: 'Algolia', img: '/sponsors/algolia-logo-light.png' },
+    {
+      name: 'Keymetrics',
+      img: '/sponsors/keymetrics.jpg',
+      website: 'https://keymetrics.io/',
+      link: { name: 'Jobs', url: 'https://jobs.keymetrics.io/' }
+    },
+    {
+      name: 'Algolia',
+      img: '/sponsors/algolia-logo-light.png',
+      website: 'https://www.algolia.com/',
+      link: { name: 'Careers', url: 'https://www.algolia.com/careers' }
+    },
     { name: 'Parisjs', img: '/sponsors/parisjs.png' }
   ]
 
@@ -34,11 +44,18 @@ const SponsorsContainer = () => {
         </p>
 
         <ul className="sponsors__list">
-          {sponsors.map(({ img, name }) => (
+          {sponsors.map(({ img, name, website, link }) => (
             <li key={name} className="sponsors__item">
               <figure className="card">
                 <img src={img} alt={name} />
-                <figcaption>{name}</figcaption>
+                <figcaption>
+                  {website ? <a href={website}>{name}</a> : name}
+                  {link && (
+                    <p>
+                      <a href={link.url}>{link.name}</a>
+                    </p>
+                  )}
+                </figcaption>
               </figure>
             </li>
           ))}
