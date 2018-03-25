@@ -1,39 +1,68 @@
 .sponsors__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 -10px 0 -10px;
   padding: 0;
   list-style: none;
 }
 
 .sponsors__item {
-  flex: 0 0 20%;
+  flex: 0 0 25%;
   overflow: hidden;
   padding: 10px;
 }
 
-.sponsors__item:nth-child(5n + 1) {
-  padding-left: 0;
-}
-
-.sponsors__item:nth-child(5n) {
-  padding-right: 0;
-}
-
-.sponsors__item .card {
+.sponsor {
   display: block;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 32px;
 }
 
-.sponsors__item .card img {
-  max-width: 100%;
+.sponsor__thumbnail {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+.sponsor__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  max-width: 80%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.sponsors__item .card figcaption {
+.sponsor__info {
+  border-top: 1px solid #edf0f2;
+  padding: 20px;
+}
+
+.sponsor__name {
+  font-size: 16px;
+  display: block;
   font-weight: bold;
-  text-align: center;
-  margin-top: 32px;
+  color: #e14680;
+}
+
+.sponsor__links a {
+  color: #45494d;
+  text-decoration: none;
+  border-bottom: 1px solid #c4c9cc;
+}
+
+.sponsor__links a:hover {
+  color: #e14680;
+  text-decoration: none;
+  border-bottom: 1px solid #e14680;
+}
+
+@media (max-width: 800px) {
+  .sponsors__item {
+    flex: 0 0 50%;
+  }
 }
 
 @media (max-width: 600px) {
