@@ -8,7 +8,7 @@ export default {
   NEXTMEETUP_NEXT: 'Prochain meetup:',
   NEXTMEETUP_NO_EVENT: 'Aucun événement planifié',
   NEXTMEETUP_PERSONS: `{ persons, plural,
-    =0 {Personne inscrite}
+    =0 {Aucun inscrit}
     one {# personne}
     other {# personnes inscrites}
   }`,
@@ -25,12 +25,12 @@ export default {
   SPONSOR_TITLE: 'Nos partenaires',
   SPONSORS: 'Partenaires',
   LOGIN_GITHUB: 'Login avec GitHub',
-  SUBMIT_TALK: 'Soumettre un sujet',
+  SUBMIT_TALK: 'Proposer un sujet',
   TALK_EXPLAIN: `
     <p>Nous proposons 2 formats différents :</p>
     <ul>
-      <li><strong>Le court (5mins)</strong>, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.</li>
-      <li><strong>Le long (20mins + 5 mins questions)</strong>, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.</li>
+      <li><strong>Le court (5 minutes)</strong>, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.</li>
+      <li><strong>Le long (20 minutess + 5 minutes de questions)</strong>, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.</li>
     </ul>
   `,
   NEED_LOGIN_BEFORE: 'Vous devez vous connecter avant de proposer votre sujet',
