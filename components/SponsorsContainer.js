@@ -11,13 +11,46 @@ import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 
-const SponsorsContainer = () => {
-  const sponsors = [
-    { name: 'Keymetrics', img: '/sponsors/keymetrics.jpg' },
-    { name: 'Algolia', img: '/sponsors/algolia-logo-light.png' },
-    { name: 'Parisjs', img: '/sponsors/parisjs.png' }
-  ]
+const sponsors = [
+  {
+    name: 'Keymetrics',
+    img: '/sponsors/keymetrics.jpg',
+    website: 'https://keymetrics.io/',
+    link: { name: 'Jobs', url: 'https://jobs.keymetrics.io/' }
+  },
+  {
+    name: 'Algolia',
+    img: '/sponsors/algolia-logo-light.png',
+    website: 'https://www.algolia.com/',
+    link: { name: 'Careers', url: 'https://www.algolia.com/careers' }
+  }
+]
 
+const SponsorCard = props => {
+  return (
+    <div className="card sponsor">
+      <div className="sponsor__thumbnail">
+        {props.website ? (
+          <a href={props.website}>
+            <img src={props.img} alt={props.name} />
+          </a>
+        ) : (
+          <img src={props.img} alt={props.name} />
+        )}
+      </div>
+      <div className="sponsor__info">
+        <span className="sponsor__name">{props.name}</span>
+
+        <div class="sponsor__links">
+          {props.website && <a href={props.website}>Website</a>}{' '}
+          {props.link && <a href={props.link.url}>{props.link.name}</a>}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const SponsorsContainer = () => {
   return (
     <Layout>
       <Head>
@@ -34,12 +67,9 @@ const SponsorsContainer = () => {
         </p>
 
         <ul className="sponsors__list">
-          {sponsors.map(({ img, name }) => (
-            <li key={name} className="sponsors__item">
-              <figure className="card">
-                <img src={img} alt={name} />
-                <figcaption>{name}</figcaption>
-              </figure>
+          {sponsors.map(sponsor => (
+            <li key={sponsor.name} className="sponsors__item">
+              <SponsorCard {...sponsor} />
             </li>
           ))}
         </ul>
