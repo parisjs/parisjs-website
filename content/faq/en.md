@@ -1,12 +1,13 @@
 ---
 title: "Frequently asked questions"
 ---
+
 ## Paris.js
 
 ### What is Paris.js?
 
-Paris.js is a **community** of **Javascript developers** - beginners or experts, professionals or hobbyists.
-Paris.js organizes a meetup **every last Wednesday of the month** with speakers from the community. Each event ends with snacks and time for members to exchange ideas, chat, and network.
+Paris.js is a **community** of **JavaScript developers** - beginners or experts, professionals or hobbyists.
+Paris.js organizes a meetup **every last Wednesday of the month** with speakers from the community. Each event ends with food, drinks and time for members to exchange ideas, chat, and network.
 
 ### Who is Paris.js?
 
@@ -14,17 +15,18 @@ Paris.js organizes a meetup **every last Wednesday of the month** with speakers 
 
 ### Is Paris.js brand new?
 
-No, it is not. Our first event was held way **back in October 2010**.
+No, it is not. The first event was held way **back in October 2010**.
 
 ### How can I contribute to the community?
 
-There are multiple way to get involved in the Paris.js organization:
-  + [present a talk](#how-can-i-submit-a-talk)
-  + [have your company host a meetup](#i-want-to-host-a-meetup)
-  + join in on organizational discussions
-  + help maintain and develop our website
+There are multiple ways to get involved in the Paris.js organization:
 
-The easiest way to get started is by sending a note to our mailing list, slack channel or simply by asking at the next meetup.
+* [present a talk](#how-can-i-submit-a-talk)
+* [have your company host a meetup](#i-want-to-host-a-meetup)
+* join in on organizational discussions
+* help maintain and develop the website
+
+The easiest way to get started is by sending a message to the mailing list, slack channel or meet volunteers at the next event.
 
 ### Paris.js / France.js / Apéro.js / Whatever.js
 
@@ -32,27 +34,29 @@ While there are no “official” ties between Paris.js and other Paris-based Ja
 
 ### How can I be informed about what’s happening with Paris.js?
 
-You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and our [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [slack channel](https://slack-francejs.now.sh/) (via France.js).
+You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and the [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [slack channel](https://slack-francejs.now.sh/) (via France.js).
 
 ## The “Meetups”
 
-### What is discussed at Paris.js?
+### What do meetups talk about?
 
 We focus most heavily on **Javascript-related** topics, but we may also explore a wider array of **front-end** tech topics from time to time. Additionally, we have had speakers **dive into their experience as entrepreneurs**. Essentially, we consider anything that could pique the interest of modern developers under our potential umbrella.
 
 ### When is the next meetup?
 
-Our meetups are hosted **every last Wednesday of the month**, with generally about 10 meetups a year. We usually skip one in the summer months and we may or may not host one in December.
+Meetups usually happen **every last Wednesday of the month**.  
+We usually don't have meetups during the lowest month of summer and in December.
 
 ### How can I attend? Is it free?
 
-All our events are **free**! We open registration on meetup.com about a week before each event. To attend, you simply need to register - but be quick, tickets are generally gone within a day.
+All events are **free**! We open registration on meetup.com about a week before each event. To attend, you simply need to register - but be quick, tickets are generally gone within a day.
 
 ### How can I submit a talk?
 
 First off, thanks a bunch - speakers are crucial to what we do! We generally propose two types of talks:
-  + **lightning talks (5 minutes)**: generate enthusiasm; demo something neat
-  + **full length talks (20 minutes)**: dig deeper in a topic; do a live-coding session
+
+* **lightning talks (5 minutes)**: generate enthusiasm; demo something neat
+* **full length talks (20 minutes)**: dig deeper in a topic; do a live-coding session
 
 The easiest way to submit a talk is through [our dedicated form](/en/submission/talk).
 Please do not submit any commercial talks.
@@ -64,26 +68,28 @@ Talks are selected 2 weeks before the event (second week of the month). Popular 
 ### I want to host a meetup!
 
 We are always looking for new companies to host our meetups. The only (small!) conditions are:
-the room should be large enough to seat 50+ attendees.
-it should be located within the borders of Paris city/
-At the beginning of the event, we will allocate you some time to introduce your company and recruitment opportunities. [See sponsors page](/en/sponsors)
+
+* the venue should be large enough for 50+ attendees.
+* it should be located within the borders of Paris city.
+
+At the beginning of the event, you will get some time to introduce your company and recruitment opportunities. [See sponsors page](/en/sponsors)
 
 ## Sponsoring, Publicity
 
 ### I want to sponsor a meetup!
 
-The only to actually way to “sponsor” is by hosting a meetup. See “I want to host a meetup”.
+The only way to “sponsor” is by hosting a meetup. See “I want to host a meetup”.
 
 ### Can you advertise my event to your members?
 
-The rule of thumb is that we do not do advertisements for paying events. If the event is free and is on a topic related to Paris.js, we’d be happy to talk about it. Just send a message through meetup.com or on our mailing list.
+The rule of thumb is that we do not do advertisements for paid events. If the event is free and is on a topic related to Paris.js, we’d be happy to talk about it. Just send a message through meetup.com or on our mailing list.
 
 ### I’m looking for JS devs, can you help?
 
 If you’re looking for JS developers, we’ve got you covered:
 
-  + publish a job offer on our [LinkedIn group](https://www.linkedin.com/groups/3852602)
-  + sponsor the meetup and let us that you are looking for new teammates
-  + or just come by at a meetup and meet the attendees :)
+* publish a job offer on our [LinkedIn group](https://www.linkedin.com/groups/3852602)
+* sponsor the meetup and let us that you are looking for new teammates
+* or just come by at a meetup and meet the attendees :)
 
 Please do not post any job offers on the mailing list ❤️
