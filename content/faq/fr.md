@@ -9,9 +9,9 @@ title: "Foire aux questions"
 Paris.js est une **communauté** qui réunit **tous les javascripteurs** à Paris, qu’ils soient débutants ou experts, professionnels ou juste curieux.
 Un meetup est organisé **chaque dernier mercredi du mois**, avec des orateurs de la communauté et qui se termine autour d’un buffet permettant l'échange entre les membres.
 
-### Qui sommes nous  ?
+### Qui sommes nous ?
 
-**Vous**. Paris.js n’est pas affilié à une entreprise, nous n’avons pas d'existence juridique. La communauté existe par elle-même et est animée par tous ceux qui le souhaitent. Nous souhaitons rester **libres et indépendants**.
+**Vous**. Paris.js n’est affilié à aucune entreprise, nous n’avons pas d'existence juridique. La communauté existe par elle-même et est animée par tous ceux qui le souhaitent. Nous souhaitons rester **libres et indépendants**.
 
 ### C’est nouveau ?
 
@@ -20,10 +20,11 @@ Non ce n’est pas nouveau, bien au contraire: le premier événement a été or
 ### Comment contribuer ?
 
 Il existe de multiples façons de contribuer à Paris.js:
-  + [proposer un talk](#je-veux-proposer-un-sujet)
-  + [héberger le meetup](#je-veux-vous-accueillir-)
-  + participer à l’organisation
-  + proposer des améliorations sur le site web
+
+* [proposer un talk](#je-veux-proposer-un-sujet)
+* [héberger le meetup](#je-veux-vous-accueillir-)
+* participer à l’organisation
+* proposer des améliorations sur le site web
 
 Le plus simple est de venir faire un petit coucou sur la [mailing-list](groups.google.com/forum/#!forum/parisjs), le [slack](https://slack-francejs.now.sh/) ou tout simplement venir nous parler pendant un événement !
 
@@ -47,13 +48,14 @@ Nous proposons **une soirée chaque dernier mercredi du mois**. Environ 10 par a
 
 ### Comment venir, combien ça coûte?
 
-C’est **gratuit** ! Environ une bonne semaine avant, nous annonçons l’événement sur notre page [meetup.com](https://www.meetup.com/fr-FR/Paris-js/). Il suffit alors de s’inscrire sur meetup.com. Attention, les places partent assez vite..
+C’est **gratuit** ! Environ une bonne semaine avant, nous annonçons l’événement sur notre page [meetup.com](https://www.meetup.com/fr-FR/Paris-js/). Il suffit alors de s’inscrire sur meetup.com. Attention, les places partent vite !
 
 ### Je veux proposer un sujet
 
 Merci ! Nous proposons 2 formats différents :
-  + **Le court (5mins)**, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.
-  + **Le long (20mins + 5 mins questions)**, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.
+
+* **Le court (5mins)**, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.
+* **Le long (20mins + 5 mins questions)**, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.
 
 Le plus simple est de remplir le [formulaire sur cette page](/propositions/sujet)
 Nous sommes friands des retours d'expériences personnelles et des démonstrations techniques, un peu moins des sujets trop commerciaux.
@@ -73,7 +75,7 @@ Nos critères sont simples et flexibles: au moins 50 places assises et Paris int
 
 ### Je veux vous sponsoriser
 
-L’unique forme de sponsoring  possible est l’accueil d’un meetup. [Voir question “Je veux vous accueillir”](#je-veux-vous-accueillir-).
+L’unique forme de sponsoring possible est l’accueil d’un meetup. [Voir question “Je veux vous accueillir”](#je-veux-vous-accueillir-).
 
 ### Pouvez-vous faire de la pub pour X auprès de vos membres ?
 
@@ -82,6 +84,7 @@ En règle général, nous ne relayons aucune communication pour des événements
 ### Où est-ce que je peux recruter des développeurs JavaScript ?
 
 Si vous cherchez des développeurs JavaScript, vous pouvez:
-  + publier une offre d’emploi sur le groupe LinkedIn de Paris.JS: https://www.linkedin.com/groups/3852602 . Les offres d’emploi ne sont pas admises sur la liste de diffusion Google Groups.
-  + Sponsoriser un meetup pour vous faire connaître auprès de la communauté.
-  + Ou simplement venir à un meetup pour rencontrer les participants.
+
+* publier une offre d’emploi sur le groupe LinkedIn de Paris.JS: https://www.linkedin.com/groups/3852602 . Les offres d’emploi ne sont pas admises sur la liste de diffusion Google Groups.
+* Sponsoriser un meetup pour vous faire connaître auprès de la communauté.
+* Ou simplement venir à un meetup pour rencontrer les participants.
