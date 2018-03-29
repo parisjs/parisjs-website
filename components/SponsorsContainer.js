@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'react-helmet'
+import Helmet from 'react-helmet'
 import {
   createContainer,
   query,
@@ -41,7 +42,7 @@ const SponsorCard = props => {
       <div className="sponsor__info">
         <span className="sponsor__name">{props.name}</span>
 
-        <div class="sponsor__links">
+        <div className="sponsor__links">
           {props.website && <a href={props.website}>Website</a>}{' '}
           {props.link && <a href={props.link.url}>{props.link.name}</a>}
         </div>
@@ -53,10 +54,13 @@ const SponsorCard = props => {
 const SponsorsContainer = () => {
   return (
     <Layout>
-      <Head>
-        <title>Hello world</title>
-        <meta name="description" content="Everything is awaysome!" />
-      </Head>
+      <FormattedMessage id="SPONSOR_TITLE">
+        {message => (
+          <Helmet>
+            <title>{message}</title>
+          </Helmet>
+        )}
+      </FormattedMessage>
 
       <div className="container">
         <h1>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'react-helmet'
+import Helmet from 'react-helmet'
 import {
   createContainer,
   query,
@@ -256,10 +257,13 @@ class TalkSubmissionContainer extends React.Component {
   render() {
     return (
       <Layout>
-        <Head>
-          <title>Hello world</title>
-          <meta name="description" content="Everything is awaysome!" />
-        </Head>
+        <FormattedMessage id="SUBMIT_TALK">
+          {message => (
+            <Helmet>
+              <title>{message}</title>
+            </Helmet>
+          )}
+        </FormattedMessage>
 
         <div className="container talkSubmission">
           <h1>
