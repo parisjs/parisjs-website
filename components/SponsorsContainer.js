@@ -54,7 +54,9 @@ const SponsorsContainer = () => {
   return (
     <Layout>
       <Head>
-        <title>Hello world</title>
+        <title>
+          <FormattedMessage id="SPONSOR_TITLE" />
+        </title>
         <meta name="description" content="Everything is awaysome!" />
       </Head>
 
