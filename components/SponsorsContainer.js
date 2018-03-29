@@ -13,6 +13,12 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Kpler',
+    img: '/sponsors/kpler.png',
+    website: 'http://www.kpler.com/',
+    link: { name: 'Careers', url: 'https://careers.kpler.com/' }
+  },
+  {
     name: 'Keymetrics',
     img: '/sponsors/keymetrics.jpg',
     website: 'https://keymetrics.io/',
