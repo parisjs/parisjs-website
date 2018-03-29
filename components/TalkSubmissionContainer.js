@@ -257,7 +257,9 @@ class TalkSubmissionContainer extends React.Component {
     return (
       <Layout>
         <Head>
-          <title><FormattedMessage id="SUBMIT_TALK" /></title>
+          <title>
+            <FormattedMessage id="SUBMIT_TALK" />
+          </title>
           <meta name="description" content="Everything is awaysome!" />
         </Head>
 
