@@ -14,6 +14,12 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'LaPiscine',
+    img: '/sponsors/lapiscine.jpeg',
+    website: 'http://www.lapiscine.io/',
+    link: { name: 'Careers', url: 'https://www.margo-group.com/nous-rejoindre/' }
+  },
+  {
     name: 'Kpler',
     img: '/sponsors/kpler.png',
     website: 'http://www.kpler.com/',
