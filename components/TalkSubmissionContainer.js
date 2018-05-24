@@ -47,9 +47,9 @@ function formatTalkSubmission({
   title,
   kind,
   description,
-  slideLink,
-  projectLink,
-  twitter
+  slideLink = '',
+  projectLink = '',
+  twitter = ''
 }) {
   const formattedDescription = description.replace(/(.+)/g, '> $1')
   return `
