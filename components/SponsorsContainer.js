@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'react-helmet'
 import Helmet from 'react-helmet'
 import {
-  createContainer,
+  withPhenomicApi,
   query,
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client'
@@ -17,7 +17,10 @@ const sponsors = [
     name: 'LaPiscine',
     img: '/sponsors/lapiscine.jpeg',
     website: 'http://www.lapiscine.io/',
-    link: { name: 'Careers', url: 'https://www.margo-group.com/nous-rejoindre/' }
+    link: {
+      name: 'Careers',
+      url: 'https://www.margo-group.com/nous-rejoindre/'
+    }
   },
   {
     name: 'Kpler',

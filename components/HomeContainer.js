@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'react-helmet'
 import {
-  createContainer,
+  withPhenomicApi,
   query,
   BodyRenderer
 } from '@phenomic/preset-react-app/lib/client'
@@ -82,8 +82,12 @@ const SearchInput = injectIntl(({ intl, router }) => {
   )
 })
 
-const HomeContainer = createContainer(withRouter(Home), props => ({
-  meetups: query({ path: 'meetups', limit: 12, after: props.params.after })
+const HomeContainer = withPhenomicApi(withRouter(Home), props => ({
+  meetups: query({
+    path: 'content/meetups',
+    limit: 12,
+    after: props.params.after
+  })
 }))
 
 export default HomeContainer
