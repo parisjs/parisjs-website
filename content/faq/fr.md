@@ -26,7 +26,7 @@ Il existe de multiples façons de contribuer à Paris.js:
 * participer à l’organisation
 * proposer des améliorations sur le site web
 
-Le plus simple est de venir faire un petit coucou sur la [mailing-list](groups.google.com/forum/#!forum/parisjs), le [slack](https://slack-francejs.now.sh/) ou tout simplement venir nous parler pendant un événement !
+Le plus simple est de venir faire un petit coucou sur la [mailing-list](https://groups.google.com/forum/#!forum/parisjs), le [slack](https://slack-francejs.now.sh/) ou tout simplement venir nous parler pendant un événement !
 
 ### Paris.js / France.js / Apéro.js / Whatever.js
 
