@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Scaleway',
+    img: '/sponsors/scaleway.jpeg',
+    website: 'https://www.scaleway.com/',
+    link: {
+      name: 'Careers',
+      url: 'https://careers.scaleway.com/'
+    }
+  },
+  {
     name: 'LaPiscine',
     img: '/sponsors/lapiscine.jpeg',
     website: 'http://www.lapiscine.io/',
