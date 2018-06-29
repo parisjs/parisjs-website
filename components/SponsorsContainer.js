@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Oodrive',
+    img: '/sponsors/oodrive.jpg',
+    website: 'https://www.oodrive.com',
+    link: {
+      name: 'Careers',
+      url: 'https://careers.oodrive.com/'
+    }
+  },
+  {
     name: 'Scaleway',
     img: '/sponsors/scaleway.jpeg',
     website: 'https://www.scaleway.com/',
