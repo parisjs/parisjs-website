@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Datadog',
+    img: '/sponsors/datadog.png',
+    website: 'https://www.datadoghq.com/',
+    link: {
+      name: 'Careers',
+      url: 'https://www.datadoghq.com/careers/'
+    }
+  },
+  {
     name: 'Oodrive',
     img: '/sponsors/oodrive.jpg',
     website: 'https://www.oodrive.com',
