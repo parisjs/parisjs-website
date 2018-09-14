@@ -61,7 +61,7 @@ class NextMeetup extends React.Component {
 
   componentDidMount() {
     fetchJsonp(
-      'https://api.meetup.com/Paris-js/events?desc=true&photo-host=public&page=1&sig_id=77326482&status=upcoming&sig=37450db01a2fb58b77a6664d78aa6ebb601ae65f'
+      'https://api.meetup.com/paris-js/events?photo-host=public&page=1&sig_id=110174302&status=upcoming&sig=69301835357765ad1100c818bcd26e5a872f7608'
     )
       .then(resp => resp.json())
       .then(resp => {
