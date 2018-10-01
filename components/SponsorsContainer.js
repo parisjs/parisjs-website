@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Doctolib',
+    img: '/sponsors/doctolib.png',
+    website: 'https://www.doctolib.fr/',
+    link: {
+      name: 'Careers',
+      url: 'https://careers.doctolib.fr/'
+    }
+  },
+  {
     name: 'Datadog',
     img: '/sponsors/datadog.png',
     website: 'https://www.datadoghq.com/',
@@ -78,8 +87,8 @@ const SponsorCard = props => {
             <img src={props.img} alt={props.name} />
           </a>
         ) : (
-          <img src={props.img} alt={props.name} />
-        )}
+            <img src={props.img} alt={props.name} />
+          )}
       </div>
       <div className="sponsor__info">
         <span className="sponsor__name">{props.name}</span>
