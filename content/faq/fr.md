@@ -23,6 +23,7 @@ Il existe de multiples façons de contribuer à Paris.js:
 
 * [proposer un talk](#je-veux-proposer-un-sujet)
 * [héberger le meetup](#je-veux-vous-accueillir-)
+* [faire un don](#financement)
 * participer à l’organisation
 * proposer des améliorations sur le site web
 
@@ -71,7 +72,7 @@ Merci ! Nous recherchons tout le temps de nouveaux locaux pour nous accueillir.
 Nos critères sont simples et flexibles: au moins 50 places assises et Paris intra-muros.
 [Voir la page sponsor](/partenaires).
 
-## Sponsors, publicité
+## Sponsors, publicité, fiancement
 
 ### Je veux vous sponsoriser
 
@@ -80,6 +81,12 @@ L’unique forme de sponsoring possible est l’accueil d’un meetup. [Voir que
 ### Pouvez-vous faire de la pub pour X auprès de vos membres ?
 
 En règle général, nous ne relayons aucune communication pour des événements payants. Si votre événement est gratuit et a un sujet commun avec Paris.js, envoyez-nous un message sur meetup.com.
+
+### Financement
+
+Toujours dans l'esprit d'ouverture et de partage, nous avons ouvert une page sur [opencollective](https://opencollective.com/parisjs).
+Vous pouvez contribuer financièrementà Paris.js en faisant un don. Il n'offre aucune contrepartie.
+Notre budget annuel est faible, l'argent supplémentaire servira à la créations de goodies, cadeaux aux speakers, payer un buffet de dernière minutes.
 
 ### Où est-ce que je peux recruter des développeurs JavaScript ?
 
