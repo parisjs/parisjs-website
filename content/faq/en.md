@@ -90,6 +90,7 @@ The rule of thumb is that we do not do advertisements for paid events. If the ev
 In the same spirit of openness and sharing, we have opened a page on [opencollective](https://opencollective.com/parisjs).
 You can contribute financially to Paris.js by making a donation. It offers no compensation.
 Our annual budget is low, the extra money will be used to create goodies, gifts for speakers, pay a last minute buffet.
+To avoid creating a structure, we rely on an external [host](https://opencollective.com/faq/collectives#what-is-a-host-do-i-need-one-), opencollective.fr (https://www.societe.com/societe/opencollective-paris-oc-842144263.html). It is this association that manages the money and makes the transfers to reimburse the expenses.
 
 ### I’m looking for JS devs, can you help?
 
