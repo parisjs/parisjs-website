@@ -84,9 +84,9 @@ En règle général, nous ne relayons aucune communication pour des événements
 
 ### Financement
 
-Toujours dans l'esprit d'ouverture et de partage, nous avons ouvert une page sur [opencollective](https://opencollective.com/parisjs).
-Vous pouvez contribuer financièrement à Paris.js en faisant un don. Il n'offre aucune contrepartie.
-Notre budget annuel est faible, l'argent supplémentaire servira à la créations de goodies, cadeaux aux speakers, payer un buffet de dernière minutes.
+Toujours dans l'esprit d'ouverture et de partage, nous avons ouvert une page sur [opencollective](https://opencollective.com/parisjs).<br />
+Vous pouvez contribuer financièrement à Paris.js en faisant un don. Il n'offre aucune contrepartie.<br />
+Notre budget annuel est faible, l'argent supplémentaire servira à la créations de goodies, cadeaux aux speakers, payer un buffet de dernière minutes.<br />
 Pour éviter de créer une structure, nous nous reposons sur un [hôte](https://opencollective.com/faq/collectives#what-is-a-host-do-i-need-one-) externe, opencollective.fr (https://www.societe.com/societe/opencollective-paris-oc-842144263.html). C'est cette association qui gère l'argent et effectue les virements pour rembourser les dépenses.
 
 ### Où est-ce que je peux recruter des développeurs JavaScript ?
