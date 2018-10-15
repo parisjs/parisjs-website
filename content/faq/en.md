@@ -23,6 +23,7 @@ There are multiple ways to get involved in the Paris.js organization:
 
 * [present a talk](#how-can-i-submit-a-talk)
 * [have your company host a meetup](#i-want-to-host-a-meetup)
+* [Make a donation](#funding)
 * join in on organizational discussions
 * help maintain and develop the website
 
@@ -44,7 +45,7 @@ We focus most heavily on **Javascript-related** topics, but we may also explore 
 
 ### When is the next meetup?
 
-Meetups usually happen **every last Wednesday of the month**.  
+Meetups usually happen **every last Wednesday of the month**.<br />
 We usually don't have meetups during the lowest month of summer and in December.
 
 ### How can I attend? Is it free?
@@ -83,6 +84,13 @@ The only way to “sponsor” is by hosting a meetup. See “I want to host a me
 ### Can you advertise my event to your members?
 
 The rule of thumb is that we do not do advertisements for paid events. If the event is free and is on a topic related to Paris.js, we’d be happy to talk about it. Just send a message through meetup.com or on our mailing list.
+
+### Funding
+
+In the same spirit of openness and sharing, we have opened a page on [opencollective](https://opencollective.com/parisjs).<br/>
+You can contribute financially to Paris.js by making a donation. It offers no compensation.<br/>
+Our annual budget is low, the extra money will be used to create goodies, gifts for speakers, pay a last minute buffet.<br />
+To avoid creating a structure, we rely on an external [host](https://opencollective.com/faq/collectives#what-is-a-host-do-i-need-one-), opencollective.fr (https://www.societe.com/societe/opencollective-paris-oc-842144263.html). It is this association that manages the money and makes the transfers to reimburse the expenses.
 
 ### I’m looking for JS devs, can you help?
 
