@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Everoad',
+    img: '/sponsors/everoad.png',
+    website: 'https://www.everoad.com/',
+    link: {
+      name: 'Jobs',
+      url: 'https://www.welcometothejungle.co/companies/everoad/jobs'
+    }
+  },
+  {
     name: 'Doctolib',
     img: '/sponsors/doctolib.png',
     website: 'https://www.doctolib.fr/',
@@ -87,8 +96,8 @@ const SponsorCard = props => {
             <img src={props.img} alt={props.name} />
           </a>
         ) : (
-            <img src={props.img} alt={props.name} />
-          )}
+          <img src={props.img} alt={props.name} />
+        )}
       </div>
       <div className="sponsor__info">
         <span className="sponsor__name">{props.name}</span>
