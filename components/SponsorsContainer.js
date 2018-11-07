@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Chauffeur Privé',
+    img: '/sponsors/chauffeurprive.svg',
+    website: 'https://www.chauffeur-prive.com/',
+    link: {
+      name: 'Jobs',
+      url: 'https://chauffeur-prive.workable.com'
+    }
+  },
+  {
     name: 'Everoad',
     img: '/sponsors/everoad.png',
     website: 'https://www.everoad.com/',
