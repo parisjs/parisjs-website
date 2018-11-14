@@ -19,7 +19,7 @@ const sponsors = [
     website: 'https://www.chauffeur-prive.com/',
     link: {
       name: 'Jobs',
-      url: 'https://chauffeur-prive.workable.com'
+      url: 'https://engineering.chauffeur-prive.com/jobs#jobs'
     }
   },
   {
