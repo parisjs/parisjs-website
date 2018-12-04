@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'MeilleursAgents',
+    img: '/sponsors/meilleursagents.jpeg',
+    website: 'https://www.meilleursagents.com/',
+    link: {
+      name: 'Carrière',
+      url: 'https://carriere.meilleursagents.com/departments/tech'
+    }
+  },
+  {
     name: 'Chauffeur Privé',
     img: '/sponsors/chauffeurprive.svg',
     website: 'https://www.chauffeur-prive.com/',
