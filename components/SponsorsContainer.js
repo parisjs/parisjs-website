@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Abbeal',
+    img: '/sponsors/abbeal.png',
+    website: 'http://www.abbeal.com/',
+    link: {
+      name: 'jobs',
+      url: 'https://www.welcometothejungle.co/companies/abbeal/jobs'
+    }
+  },
+  {
     name: 'MeilleursAgents',
     img: '/sponsors/meilleursagents.jpeg',
     website: 'https://www.meilleursagents.com/',
