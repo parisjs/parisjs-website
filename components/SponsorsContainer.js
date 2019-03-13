@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'BAM',
+    img: '/sponsors/bam.jpg',
+    website: 'https://www.bam.tech/',
+    link: {
+      name: 'Jobs',
+      url: 'https://www.bam.tech/equipe-bam#jobs'
+    }
+  },
+  {
     name: 'Abbeal',
     img: '/sponsors/abbeal.png',
     website: 'http://www.abbeal.com/',
