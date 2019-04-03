@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Toucan Toco',
+    img: '/sponsors/toucantoco.png',
+    website: 'https://toucantoco.com/fr/',
+    link: {
+      name: 'Jobs',
+      url: 'https://toucantoco.com/fr/team.html#jobs'
+    }
+  },
+  {
     name: 'BAM',
     img: '/sponsors/bam.jpg',
     website: 'https://www.bam.tech/',
