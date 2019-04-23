@@ -4,6 +4,7 @@ import { Link } from 'react-router'
 import { IntlProvider, FormattedMessage } from 'react-intl'
 
 import { getLocale, getIntl, IntlLink } from '../intl'
+import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const locale = getLocale(
@@ -46,7 +47,7 @@ const Layout = ({ children }) => {
           </div>
         </header>
         {children}
-        <footer className="footer container">🚀 Paris.JS</footer>
+        <Footer />
       </div>
     </IntlProvider>
   )
