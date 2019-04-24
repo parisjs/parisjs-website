@@ -56,6 +56,10 @@
   justify-content: space-between;
 }
 
+div.ais-InstantSearch__root {
+  font-family: var(--body-font);
+}
+
 .ais-PoweredBy__root {
   position: absolute;
   bottom: 1em;

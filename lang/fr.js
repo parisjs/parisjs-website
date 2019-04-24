@@ -32,6 +32,7 @@ export default {
       <li><strong>Le court (5 minutes)</strong>, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.</li>
       <li><strong>Le long (20 minutess + 5 minutes de questions)</strong>, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.</li>
     </ul>
+    <p>Retrouvez tous les talks et votez pour votre préféré sur <a href="{link}">Github</a></p>
   `,
   NEED_LOGIN_BEFORE: 'Vous devez vous connecter avant de proposer votre sujet',
   TALK_SUBMITTED:

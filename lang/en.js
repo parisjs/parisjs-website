@@ -32,6 +32,7 @@ export default {
       <li><strong>lightning talks (5 minutes)</strong>: generate enthusiasm; demo something neat</li>
       <li><strong>full-length talks (20 minutes + 5 minutes for Q&A)</strong>: dive deeper into a topic; do a live-coding session</li>
     </ul>
+    <p>Check out all submitted talks and vote for your favorite on <a href="{link}">Github</a></p>
   `,
   NEED_LOGIN_BEFORE: 'You must log in to submit your talk',
   TALK_SUBMITTED:

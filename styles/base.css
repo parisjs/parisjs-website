@@ -2,6 +2,24 @@
   box-sizing: border-box;
 }
 
+:root {
+  --pink: #e14680;
+  --purple: #551a8b;
+  --purple-dark: #271f46;
+  --blue: #00b6ff;
+  --green: #b2e246;
+  --yellow: #f0db4f;
+  --black: #000000;
+  --white: #ffffff;
+  --grey-01: #45494d;
+  --grey-02: #8e9599;
+  --grey-03: #c4c9cc;
+  --grey-04: #edf0f2;
+
+  --brand-font: Poppins, sans-serif;
+  --body-font: Hack, monospace;
+}
+
 body {
   background: #eceff2;
   font-family: Hack, monospace;
@@ -30,7 +48,7 @@ ul {
 
 h1 {
   font-family: Poppins, sans-serif;
-  font-size: 72px;
+  font-size: 48px;
   font-weight: bold;
   color: #551a8b;
 }

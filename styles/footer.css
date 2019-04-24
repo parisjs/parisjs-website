@@ -2,5 +2,13 @@
   font-size: 14px;
   margin: 48px auto;
   text-align: center;
-  color: #8e9599;
+  color: var(--grey-02);
+}
+
+.footer a {
+  color: currentColor;
+}
+
+.footer a:hover {
+  color: var(--pink);
 }
