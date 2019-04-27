@@ -14,6 +14,15 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Daveo',
+    img: '/sponsors/daveo.png',
+    website: 'https://daveo.fr/',
+    link: {
+      name: 'Jobs',
+      url: 'https://daveo.fr/espace-candidat/'
+    }
+  },
+  {
     name: 'Toucan Toco',
     img: '/sponsors/toucantoco.png',
     website: 'https://toucantoco.com/fr/',
