@@ -14,9 +14,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@phenomic/cli": "^1.0.0-beta.3",
-    "@phenomic/core": "^1.0.0-beta.3",
-    "@phenomic/preset-react-app": "^1.0.0-beta.3",
+    "@phenomic/cli": "^1.0.0-beta.11",
+    "@phenomic/core": "^1.0.0-beta.11",
+    "@phenomic/preset-react-app": "^1.0.0-beta.11",
     "fetch-jsonp": "^1.1.3",
     "github-api": "^3.0.0",
     "husky": "^0.14.3",
