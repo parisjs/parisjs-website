@@ -14,12 +14,21 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
-    name: 'Daveo',
-    img: '/sponsors/daveo.png',
-    website: 'https://daveo.fr/',
+    name: 'Dailymotion',
+    img: '/sponsors/dailymotion.png',
+    website: 'https://www.dailymotion.com/',
     link: {
       name: 'Jobs',
-      url: 'https://daveo.fr/espace-candidat/'
+      url: 'https://jobs.dailymotion.com/'
+    }
+  },
+  {
+    name: 'Payfit',
+    img: '/sponsors/payfit.png',
+    website: 'https://payfit.com/',
+    link: {
+      name: 'Carrieres',
+      url: 'https://payfit.com/fr/carrieres'
     }
   },
   {
