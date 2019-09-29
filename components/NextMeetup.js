@@ -11,6 +11,8 @@ import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaGoogle from 'react-icons/lib/fa/google'
 import FaMeetup from './FaMeetup'
 
+const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
+
 function renderEvent(event) {
   return (
     <div>
@@ -103,6 +105,19 @@ class NextMeetup extends React.Component {
               />
               <FormattedMessage
                 id="NEXTMEETUP_RVSP"
+                className="NextMeetup__RegisterButtonText"
+              />
+            </a>
+          )}
+          {!this.state.nextEvent && (
+            <a className="btn NextMeetup__RegisterButton" href={MEETUP_URL}>
+              <FaMeetup
+                size={30}
+                color="#FFF"
+                className="NextMeetup__RegisterButtonIcon"
+              />
+              <FormattedMessage
+                id="GOTO_MEETUP"
                 className="NextMeetup__RegisterButtonText"
               />
             </a>

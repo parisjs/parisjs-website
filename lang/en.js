@@ -13,6 +13,7 @@ export default {
     other {# registered people}
   }`,
   NEXTMEETUP_RVSP: 'Register on Meetup.com',
+  GOTO_MEETUP: 'Follow on Meetup.com',
   PAGE_FAQ: '/en/faq',
   PAGE_HOME: '/en',
   PAGE_SPONSORS: '/en/sponsors',
