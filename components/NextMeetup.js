@@ -11,6 +11,8 @@ import FaTwitter from 'react-icons/lib/fa/twitter'
 import FaGoogle from 'react-icons/lib/fa/google'
 import FaMeetup from './FaMeetup'
 
+const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
+
 function renderEvent(event) {
   return (
     <div>
@@ -60,20 +62,21 @@ class NextMeetup extends React.Component {
   }
 
   componentDidMount() {
-    fetchJsonp(
-      'https://api.meetup.com/paris-js/events?photo-host=public&page=1&sig_id=110174302&status=upcoming&sig=69301835357765ad1100c818bcd26e5a872f7608'
-    )
-      .then(resp => resp.json())
-      .then(resp => {
-        if (resp.data && resp.data[0]) {
+    const feedUrl = 'https://www.meetup.com/fr-FR/Paris-js/events/json/'
+    const url = `https://cors-anywhere.herokuapp.com/${feedUrl}`
+    window
+      .fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length) {
           this.setState({
             nextEvent: {
-              title: resp.data[0].name,
-              date: new Date(resp.data[0].time),
-              link: resp.data[0].link,
-              rsvp: resp.data[0].yes_rsvp_count,
-              host: resp.data[0].venue.name,
-              address: resp.data[0].venue.address_1
+              title: data[0].title,
+              date: new Date(data[0].servertime),
+              link: data[0].event_url,
+              rsvp: data[0].confirmCount,
+              host: data[0].venue_name,
+              address: `${data[0].venue_address1} ${data[0].venue_city}`
             }
           })
         }
@@ -103,6 +106,19 @@ class NextMeetup extends React.Component {
               />
               <FormattedMessage
                 id="NEXTMEETUP_RVSP"
+                className="NextMeetup__RegisterButtonText"
+              />
+            </a>
+          )}
+          {!this.state.nextEvent && (
+            <a className="btn NextMeetup__RegisterButton" href={MEETUP_URL}>
+              <FaMeetup
+                size={30}
+                color="#FFF"
+                className="NextMeetup__RegisterButtonIcon"
+              />
+              <FormattedMessage
+                id="GOTO_MEETUP"
                 className="NextMeetup__RegisterButtonText"
               />
             </a>
