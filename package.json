@@ -44,5 +44,8 @@
     "front-matter": "^2.3.0",
     "react-icons": "^2.2.7",
     "react-instantsearch": "^4.5.2"
+  },
+  "resolutions": {
+    "oniguruma": "^7.2.0"
   }
 }
