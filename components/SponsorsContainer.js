@@ -14,6 +14,24 @@ import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
   {
+    name: 'Datadog',
+    img: '/sponsors/datadog.png',
+    website: 'https://www.datadoghq.com/',
+    link: {
+      name: 'Careers',
+      url: 'https://www.datadoghq.com/careers/'
+    }
+  },
+  {
+    name: 'Doctrine',
+    img: '/sponsors/doctrine.png',
+    website: 'https://www.doctrine.fr/',
+    link: {
+      name: 'Recrutement',
+      url: 'https://www.doctrine.fr/recrutement'
+    }
+  },
+  {
     name: 'Dailymotion',
     img: '/sponsors/dailymotion.png',
     website: 'https://www.dailymotion.com/',
@@ -92,15 +110,6 @@ const sponsors = [
     link: {
       name: 'Careers',
       url: 'https://careers.doctolib.fr/'
-    }
-  },
-  {
-    name: 'Datadog',
-    img: '/sponsors/datadog.png',
-    website: 'https://www.datadoghq.com/',
-    link: {
-      name: 'Careers',
-      url: 'https://www.datadoghq.com/careers/'
     }
   },
   {
