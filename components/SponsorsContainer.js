@@ -1,18 +1,37 @@
 import React from 'react'
-import Head from 'react-helmet'
 import Helmet from 'react-helmet'
-import {
-  withPhenomicApi,
-  query,
-  BodyRenderer
-} from '@phenomic/preset-react-app/lib/client'
-import { Link } from 'react-router'
 import { FormattedMessage, FormattedHTMLMessage } from 'react-intl'
 
 import Layout from './Layout'
-import MeetupPreview from './MeetupPreview'
 
 const sponsors = [
+  {
+    name: 'MeilleursAgents',
+    img: '/sponsors/meilleursagents.jpeg',
+    website: 'https://www.meilleursagents.com/',
+    link: {
+      name: 'Carrière',
+      url: 'https://carriere.meilleursagents.com/departments/tech'
+    }
+  },
+  {
+    name: 'Voodoo',
+    img: '/sponsors/voodoo.jpg',
+    website: 'https://www.voodoo.io/',
+    link: {
+      name: 'Careers',
+      url: 'https://www.voodoo.io/careers'
+    }
+  },
+  {
+    name: 'Alan',
+    img: '/sponsors/alan.png',
+    website: 'https://alan.com/',
+    link: {
+      name: 'Job',
+      url: 'https://angel.co/company/alan-25/jobs'
+    }
+  },
   {
     name: 'Datadog',
     img: '/sponsors/datadog.png',
@@ -74,15 +93,6 @@ const sponsors = [
     link: {
       name: 'jobs',
       url: 'https://www.welcometothejungle.co/companies/abbeal/jobs'
-    }
-  },
-  {
-    name: 'MeilleursAgents',
-    img: '/sponsors/meilleursagents.jpeg',
-    website: 'https://www.meilleursagents.com/',
-    link: {
-      name: 'Carrière',
-      url: 'https://carriere.meilleursagents.com/departments/tech'
     }
   },
   {
