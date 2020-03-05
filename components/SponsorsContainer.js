@@ -6,6 +6,15 @@ import Layout from './Layout'
 
 const sponsors = [
   {
+    name: 'Aircall',
+    img: '/sponsors/aircall.png',
+    website: 'https://aircall.io/',
+    link: {
+      name: 'Emplois',
+      url: 'https://aircall.io/careers/'
+    }
+  },
+  {
     name: 'MeilleursAgents',
     img: '/sponsors/meilleursagents.jpeg',
     website: 'https://www.meilleursagents.com/',
