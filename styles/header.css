@@ -56,6 +56,7 @@
   }
   .header__nav {
     display: block;
+    padding-bottom: 10px;
   }
   .header__nav a {
     display: block;
