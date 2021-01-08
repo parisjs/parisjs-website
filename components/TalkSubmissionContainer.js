@@ -24,7 +24,7 @@ try {
       github: 'Iv1.558c5d3bf74f6921'
     },
     {
-      redirect_uri: 'https://parisjs.org/propositions/sujet'
+      redirect_uri: 'https://parisjs.org/propositions/sujet/'
     }
   )
 } catch (e) {}
