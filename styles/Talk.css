@@ -20,6 +20,7 @@
 }
 
 .Talk__description {
+  white-space: pre-line;
   line-height: 24px;
   margin: 6px 0;
 }
