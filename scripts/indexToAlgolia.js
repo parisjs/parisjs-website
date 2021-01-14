@@ -11,7 +11,10 @@ const readFile = utils.promisify(fs.readFile)
 
 const baseDir = '../content/meetups'
 
-indexMeetups().catch(console.error)
+indexMeetups().catch(function(e) {
+  console.error(e)
+  process.exit(1)
+})
 
 function md5(m) {
   return crypto
@@ -26,7 +29,7 @@ async function indexMeetups() {
 
   const credentials = getCredentials()
 
-  uploadDataWithClear(credentials, 'paris.js-meetups', records)
+  await uploadDataWithClear(credentials, 'paris.js-meetups', records)
 }
 
 async function readMeetups() {
@@ -68,14 +71,12 @@ function getCredentials() {
   return { appID, apiKey }
 }
 
-function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
+async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
   const client = algolia(appID, apiKey)
   const index = client.initIndex(indexName)
   console.log('clearing index')
-  index.clearIndex().then(function(content) {
-    index.waitTask(content.taskID, function(err) {
-      console.log('Sending to Algolia - ' + toUpload.length + ' records')
-      index.addObjects(toUpload)
-    })
-  })
+  const content = await index.clearIndex()
+  await index.waitTask(content.taskID)
+  console.log('Sending to Algolia - ' + toUpload.length + ' records')
+  index.addObjects(toUpload)
 }
