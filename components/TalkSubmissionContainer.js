@@ -269,12 +269,10 @@ class TalkSubmissionContainer extends React.Component {
           <h1>
             <FormattedMessage id="SUBMIT_TALK" />
           </h1>
-          <p>
-            <FormattedHTMLMessage
-              id="TALK_EXPLAIN"
-              values={{ link: 'https://github.com/parisjs/talks/issues' }}
-            />
-          </p>
+          <FormattedHTMLMessage
+            id="TALK_EXPLAIN"
+            values={{ link: 'https://github.com/parisjs/talks/issues' }}
+          />
           {this.state.githubToken ? (
             !this.state.talkSubmissionLink ? (
               <TalkSubmissionForm onSubmit={this.handleSubmit} />
