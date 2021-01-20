@@ -1,23 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router'
-import { FormattedDate, FormattedMessage } from 'react-intl'
-import { LocalLink } from '../intl'
-import { Highlight } from 'react-instantsearch/dom'
+import { FormattedDate } from 'react-intl'
+import { LocalLink } from '../lib/intl'
+// import { Highlight } from 'react-instantsearch-dom'
 
 import TalkPreview from './TalkPreview'
 
-const Host = function({ host, meetup }) {
+const Host = function ({ host, meetup }) {
   if (!host) return <span />
-  const h = meetup._highlightResult ? (
-    <Highlight hit={meetup} attributeName="host" />
-  ) : (
-    host
-  )
+  const h =
+    meetup._highlightResult && meetup._highlightResult.length > 0 ? (
+      <Highlight hit={meetup} attributeName="host" />
+    ) : (
+      host
+    )
   return <span>@ {h}</span>
 }
 
-const PagePreview = meetup => {
-  const { id, edition, title, date, talks, host } = meetup
+const PagePreview = (meetup) => {
+  const { id, edition, date, talks, host } = meetup
   const pageDate = date ? new Date(date) : null
 
   return (

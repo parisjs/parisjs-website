@@ -1,71 +1,12 @@
 import React from 'react'
-import Head from 'react-helmet'
-import Helmet from 'react-helmet'
-import {
-  withPhenomicApi,
-  query,
-  BodyRenderer
-} from '@phenomic/preset-react-app/lib/client'
-import { Link } from 'react-router'
-import GitHub from 'github-api'
+import Head from 'next/head'
 import Form from 'react-jsonschema-form'
-import { injectIntl, FormattedMessage, FormattedHTMLMessage } from 'react-intl'
-
-import Layout from './Layout'
-import MeetupPreview from './MeetupPreview'
-
-try {
-  /**
-   * Use OAuth proxy https://auth-server.herokuapp.com
-   * See with PierrickP
-   */
-  hello.init(
-    {
-      github: 'Iv1.558c5d3bf74f6921'
-    },
-    {
-      redirect_uri: 'https://parisjs.org/propositions/sujet/'
-    }
-  )
-} catch (e) {}
-
-function getHelloGithubCred() {
-  const helloCreds = localStorage.getItem('hello')
-
-  if (helloCreds) {
-    const parsedData = JSON.parse(helloCreds)
-
-    return parsedData.github && parsedData.github.access_token
-      ? parsedData.github.access_token
-      : null
-  } else {
-    return null
-  }
-}
-
-function formatTalkSubmission({
-  title,
-  kind,
-  description,
-  slideLink = '',
-  projectLink = '',
-  twitter = ''
-}) {
-  const formattedDescription = description.replace(/(.+)/g, '> $1')
-  return `
-## ${title}
-
-*Talk format :* ${kind}
-
-*Description :*
-
-${formattedDescription}
-
-*Slides :* ${slideLink}
-*Projet :* ${projectLink}
-*Twitter :* ${twitter}
-`
-}
+import { injectIntl, FormattedMessage } from 'react-intl'
+import {
+  signinToGitHub,
+  createGitHubIssue,
+  initGithubAuthentication,
+} from '../lib/github'
 
 const TalkSubmissionForm = injectIntl(
   class extends React.Component {
@@ -84,11 +25,11 @@ const TalkSubmissionForm = injectIntl(
         properties: {
           title: {
             type: 'string',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_TITLE' })
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_TITLE' }),
           },
           description: {
             type: 'string',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_DESCRIPTION' })
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_DESCRIPTION' }),
           },
           kind: {
             type: 'string',
@@ -96,25 +37,25 @@ const TalkSubmissionForm = injectIntl(
             enum: ['Long', 'Short'],
             enumNames: [
               intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_LONG' }),
-              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_SHORT' })
+              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_SHORT' }),
             ],
-            default: 'Long'
+            default: 'Long',
           },
           slideLink: {
             type: 'string',
             format: 'uri',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_SLIDES' })
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_SLIDES' }),
           },
           projectLink: {
             type: 'string',
             format: 'uri',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_PROJECT' })
+            title: intl.formatMessage({ id: 'TALK_SCHEMA_PROJECT' }),
           },
           twitter: {
             type: 'string',
-            title: 'Twitter'
-          }
-        }
+            title: 'Twitter',
+          },
+        },
       }
     }
     schema = {}
@@ -122,21 +63,21 @@ const TalkSubmissionForm = injectIntl(
       description: {
         'ui:widget': 'textarea',
         'ui:options': {
-          rows: 5
-        }
+          rows: 5,
+        },
       },
       kind: {
-        'ui:widget': 'radio'
+        'ui:widget': 'radio',
       },
       slideLink: {
-        'ui:placeholder': 'http://'
+        'ui:placeholder': 'http://',
       },
       projectLink: {
-        'ui:placeholder': 'http://'
+        'ui:placeholder': 'http://',
       },
       twitter: {
-        'ui:placeholder': '@parisjs'
-      }
+        'ui:placeholder': '@parisjs',
+      },
     }
 
     render() {
@@ -163,14 +104,17 @@ const TalkSubmissionForm = injectIntl(
 const TalkSubmissionSummary = injectIntl(
   class extends React.Component {
     render() {
+      const { intl } = this.props
       return (
         <div className="card talkSubmission__form">
-          <p>
-            <FormattedHTMLMessage
-              id="TALK_SUBMITTED"
-              values={{ link: this.props.talkSubmissionLink }}
-            />
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage({
+                id: 'TALK_SUBMITTED',
+                values: { link: this.props.talkSubmissionLink },
+              }),
+            }}
+          />
           <input
             type="button"
             value={this.props.intl.formatMessage({ id: 'SUBMIT_TALK' })}
@@ -207,39 +151,24 @@ class TalkSubmissionContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      githubToken: null
+      githubToken: null,
     }
   }
 
   componentDidMount() {
     this.setState({
-      githubToken: getHelloGithubCred()
-    })
-    hello.on('auth.login', () => {
-      const auth = hello('github').getAuthResponse()
-
-      this.setState({
-        githubToken: auth.access_token
-      })
+      githubToken: initGithubAuthentication(),
     })
   }
 
   handleSubmit = ({ formData }) => {
     const { githubToken } = this.state
-    const gh = new GitHub({ token: githubToken })
-
-    const remoteIssues = gh.getIssues('parisjs', 'talks')
-
-    remoteIssues
-      .createIssue({
-        title: formData.title,
-        body: formatTalkSubmission(formData)
-      })
-      .then(({ status, data }) => {
-        if (status === 201) {
-          this.setState({ talkSubmissionLink: data.html_url })
-        }
-        // should handle the errors
+    createGitHubIssue({
+      githubToken,
+      formData,
+    })
+      .then(({ data }) => {
+        this.setState({ talkSubmissionLink: data.html_url })
       })
       .catch(() => {
         // should handle the errors
@@ -247,7 +176,11 @@ class TalkSubmissionContainer extends React.Component {
   }
 
   handleLogin = () => {
-    hello('github').login()
+    signinToGitHub().then((event) => {
+      this.setState({
+        githubToken: event.authResponse.access_token,
+      })
+    })
   }
 
   resetForm = () => {
@@ -255,13 +188,14 @@ class TalkSubmissionContainer extends React.Component {
   }
 
   render() {
+    const { intl } = this.props
     return (
-      <Layout>
+      <>
         <FormattedMessage id="SUBMIT_TALK">
-          {message => (
-            <Helmet>
+          {([message]) => (
+            <Head>
               <title>{message}</title>
-            </Helmet>
+            </Head>
           )}
         </FormattedMessage>
 
@@ -269,9 +203,13 @@ class TalkSubmissionContainer extends React.Component {
           <h1>
             <FormattedMessage id="SUBMIT_TALK" />
           </h1>
-          <FormattedHTMLMessage
-            id="TALK_EXPLAIN"
-            values={{ link: 'https://github.com/parisjs/talks/issues' }}
+          <div
+            dangerouslySetInnerHTML={{
+              __html: intl.formatMessage({
+                id: 'TALK_EXPLAIN',
+                values: { link: 'https://github.com/parisjs/talks/issues' },
+              }),
+            }}
           />
           {this.state.githubToken ? (
             !this.state.talkSubmissionLink ? (
@@ -286,9 +224,9 @@ class TalkSubmissionContainer extends React.Component {
             <TalkSubmissionLoginButton onSubmit={this.handleLogin} />
           )}
         </div>
-      </Layout>
+      </>
     )
   }
 }
 
-export default TalkSubmissionContainer
+export default injectIntl(TalkSubmissionContainer)

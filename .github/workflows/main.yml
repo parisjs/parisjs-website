@@ -24,15 +24,6 @@ jobs:
           yarn install
           yarn run build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.7.1
-        with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist
-          SINGLE_COMMIT: true
-          CLEAN: true
-
       - name: Update algolia
         continue-on-error: true
         run: |

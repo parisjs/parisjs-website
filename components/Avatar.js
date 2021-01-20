@@ -1,5 +1,4 @@
-import React from 'react'
-import MdPerson from 'react-icons/lib/md/person'
+import { MdPerson } from 'react-icons/md'
 
 const Avatar = ({ imageUrl, size }) => (
   <div className={`Avatar ${size === 'small' && 'Avatar--small'}`}>

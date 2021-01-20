@@ -1,19 +1,12 @@
 import React from 'react'
 import { FormattedDate, FormattedMessage } from 'react-intl'
-import fetchJsonp from 'fetch-jsonp'
 
-import MdDateRange from 'react-icons/lib/md/date-range'
-import MdPlace from 'react-icons/lib/md/place'
-import MdGroup from 'react-icons/lib/md/group'
-
-import FaSlack from 'react-icons/lib/fa/slack'
-import FaTwitter from 'react-icons/lib/fa/twitter'
-import FaGoogle from 'react-icons/lib/fa/google'
-import FaMeetup from './FaMeetup'
+import { MdDateRange, MdPlace, MdGroup } from 'react-icons/md'
+import { FaSlack, FaTwitter, FaGoogle, FaMeetup } from 'react-icons/fa'
 
 const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
 
-function renderEvent(event) {
+function Event({ event }) {
   return (
     <div>
       <h3 className="NextMeetup__Title">
@@ -66,8 +59,8 @@ class NextMeetup extends React.Component {
     const url = `https://cors-anywhere.herokuapp.com/${feedUrl}`
     window
       .fetch(url)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         if (data && data.length) {
           this.setState({
             nextEvent: {
@@ -76,8 +69,8 @@ class NextMeetup extends React.Component {
               link: data[0].event_url,
               rsvp: data[0].confirmCount,
               host: data[0].venue_name,
-              address: `${data[0].venue_address1} ${data[0].venue_city}`
-            }
+              address: `${data[0].venue_address1} ${data[0].venue_city}`,
+            },
           })
         }
       })
@@ -87,7 +80,7 @@ class NextMeetup extends React.Component {
     return (
       <div className="NextMeetup">
         {this.state.nextEvent ? (
-          renderEvent(this.state.nextEvent)
+          <Event event={this.state.nextEvent} />
         ) : (
           <h3 className="NextMeetup__Title NextMeetup__TitleNoMeetup">
             <FormattedMessage id="NEXTMEETUP_NO_EVENT" />

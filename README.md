@@ -5,9 +5,9 @@ This repository contains the code for the [parisjs.org](https://parisjs.org/) we
 ## Getting started
 
 * Clone this repository
-* `npm install`
-* `npm start`
-* Open `http://localhost:3333` in your browser
+* `yarn install`
+* `yarn dev`
+* Open `http://localhost:3000` in your browser
 
 ## Coding standards
 

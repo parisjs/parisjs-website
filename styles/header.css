@@ -49,6 +49,10 @@
   padding: 3px 8px;
 }
 
+.languageSwitcher a:hover {
+  border-bottom: 5px solid;
+}
+
 @media (max-width: 600px) {
   .header .container {
     display: block;

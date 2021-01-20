@@ -1,29 +1,31 @@
-import React from 'react'
-import Head from 'react-helmet'
-import { Link } from 'react-router'
-import { IntlProvider, FormattedMessage } from 'react-intl'
-
-import { getLocale, getIntl, IntlLink } from '../intl'
+import Head from 'next/head'
+import Link from 'next/link'
+import { IntlProvider } from 'react-intl'
+import { useRouter } from 'next/router'
+import { getIntl, IntlLink } from '../lib/intl'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
-  const locale = getLocale(
-    typeof location !== 'undefined' ? location.pathname : '/'
-  )
+  const { locale } = useRouter()
   const intl = getIntl(locale)
 
   return (
     <IntlProvider {...intl}>
       <div>
         <Head>
-          <html lang={locale} /> {/* this is valid react-helmet usage! */}
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="description"
+            content="Le meetup mensuel autour du JavaScript"
+          />
         </Head>
         <header className="header">
           <div className="container">
             <div className="header__logo">
-              <Link to="/">Paris.JS</Link>
+              <Link href="/">
+                <a>Paris.JS</a>
+              </Link>
             </div>
             <nav className="header__nav">
               <IntlLink to="PAGE_HOME" title="HOME" activeClassName="active" />
@@ -41,8 +43,12 @@ const Layout = ({ children }) => {
             </nav>
 
             <div className="languageSwitcher">
-              <Link to={`/`}>FR</Link>
-              <Link to={`/en`}>EN</Link>
+              <Link href="/" locale="fr">
+                <a href="/">FR</a>
+              </Link>
+              <Link href="/en" locale="en">
+                <a>EN</a>
+              </Link>
             </div>
           </div>
         </header>
