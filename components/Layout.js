@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { initI18next, IntlLink } from '../lib/intl'
+import { initI18next, MenuLink } from '../lib/intl'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
@@ -26,14 +26,14 @@ const Layout = ({ children }) => {
               </Link>
             </div>
             <nav className="header__nav">
-              <IntlLink to="PAGE_HOME" title="HOME" activeClassName="active" />
-              <IntlLink to="PAGE_FAQ" title="FAQ" activeClassName="active" />
-              <IntlLink
+              <MenuLink to="PAGE_HOME" title="HOME" activeClassName="active" />
+              <MenuLink to="PAGE_FAQ" title="FAQ" activeClassName="active" />
+              <MenuLink
                 to="PAGE_SUBMIT_TALK"
                 title="SUBMIT_TALK"
                 activeClassName="active"
               />
-              <IntlLink
+              <MenuLink
                 to="PAGE_SPONSORS"
                 title="SPONSORS"
                 activeClassName="active"

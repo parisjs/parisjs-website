@@ -1,28 +1,12 @@
 import { Highlight } from 'react-instantsearch-dom'
 import Avatar from './Avatar'
 
-const HighlightedAuthors = ({ authors }) => {
-  return authors.map((author) => (
-    <Highlight hit={{ _highlightResult: author }} attributeName="name" />
+const TalkPreview = ({ talk }) => {
+  const title = <Highlight hit={talk} attribute="title" />
+
+  const authors = talk.authors.map((_author, index) => (
+    <Highlight hit={talk} attribute={`authors.${index}.name`} />
   ))
-}
-
-const TalkPreview = ({ talk, highlights }) => {
-  const title =
-    highlights.length > 0 ? (
-      <Highlight hit={highlights} attributeName="title" />
-    ) : (
-      talk.title
-    )
-
-  const authors =
-    highlights.length > 0 ? (
-      <HighlightedAuthors authors={highlights._highlightResult.authors} />
-    ) : (
-      <span>
-        {talk.authors && talk.authors.map((author) => author.name).join(', ')}
-      </span>
-    )
 
   return (
     <div className="TalkPreview">

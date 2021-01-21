@@ -53,7 +53,7 @@ function MeetupSearch(props) {
         </div>
         <InfiniteHits
           hitComponent={({ hit: meetup }) => (
-            <MeetupPreview key={meetup.objectID} {...meetup} />
+            <MeetupPreview key={meetup.objectID} meetup={meetup} />
           )}
           translations={{
             loadMore: i18next.t('SEARCH_LOADMORE'),

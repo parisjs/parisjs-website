@@ -129,3 +129,14 @@ div.ais-InfiniteHits {
 .ais-InfiniteHits-list .ais-InfiniteHits-item + .ais-InfiniteHits-item {
   margin-top: 48px;
 }
+
+h3 .ais-Highlight-nonHighlighted,
+h3 .ais-Highlight-highlighted {
+  font-size: 24px;
+}
+
+.ais-Highlight-highlighted,
+.ais-Snippet-highlighted {
+  background: #bccef7;
+  font-style: normal;
+}
