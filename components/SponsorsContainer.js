@@ -1,8 +1,8 @@
+import i18next from 'i18next'
 import Head from 'next/head'
-import { FormattedMessage, useIntl } from 'react-intl'
 import { sponsors } from '../lib/sponsors'
 
-const SponsorCard = (props) => {
+function SponsorCard(props) {
   return (
     <div className="card sponsor">
       <div className="sponsor__thumbnail">
@@ -26,25 +26,18 @@ const SponsorCard = (props) => {
   )
 }
 
-const SponsorsContainer = () => {
-  const intl = useIntl()
+function SponsorsContainer() {
   return (
     <>
-      <FormattedMessage id="SPONSOR_TITLE">
-        {([message]) => (
-          <Head>
-            <title>{message}</title>
-          </Head>
-        )}
-      </FormattedMessage>
+      <Head>
+        <title>{i18next.t('SPONSOR_TITLE')}</title>
+      </Head>
 
       <div className="container">
-        <h1>
-          <FormattedMessage id="SPONSOR_TITLE" />
-        </h1>
+        <h1>{i18next.t('SPONSOR_TITLE')}</h1>
         <p
           dangerouslySetInnerHTML={{
-            __html: intl.formatMessage({ id: 'SPONSOR_INTRO' }),
+            __html: i18next.t('SPONSOR_INTRO'),
           }}
         />
         <ul className="sponsors__list">

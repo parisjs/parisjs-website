@@ -1,151 +1,133 @@
 import React from 'react'
+import i18next from 'i18next'
 import Head from 'next/head'
 import Form from 'react-jsonschema-form'
-import { injectIntl, FormattedMessage } from 'react-intl'
 import {
   signinToGitHub,
   createGitHubIssue,
   initGithubAuthentication,
 } from '../lib/github'
 
-const TalkSubmissionForm = injectIntl(
-  class extends React.Component {
-    componentWillMount() {
-      this.setupSchema(this.props.intl)
-    }
+class TalkSubmissionForm extends React.Component {
+  componentWillMount() {
+    this.setupSchema()
+  }
 
-    componentWillReceiveProps({ intl }) {
-      this.setupSchema(intl)
-    }
-
-    setupSchema(intl) {
-      this.schema = {
-        type: 'object',
-        required: ['title', 'description'],
-        properties: {
-          title: {
-            type: 'string',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_TITLE' }),
-          },
-          description: {
-            type: 'string',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_DESCRIPTION' }),
-          },
-          kind: {
-            type: 'string',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT' }),
-            enum: ['Long', 'Short'],
-            enumNames: [
-              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_LONG' }),
-              intl.formatMessage({ id: 'TALK_SCHEMA_FORMAT_SHORT' }),
-            ],
-            default: 'Long',
-          },
-          slideLink: {
-            type: 'string',
-            format: 'uri',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_SLIDES' }),
-          },
-          projectLink: {
-            type: 'string',
-            format: 'uri',
-            title: intl.formatMessage({ id: 'TALK_SCHEMA_PROJECT' }),
-          },
-          twitter: {
-            type: 'string',
-            title: 'Twitter',
-          },
+  setupSchema() {
+    this.schema = {
+      type: 'object',
+      required: ['title', 'description'],
+      properties: {
+        title: {
+          type: 'string',
+          title: i18next.t('TALK_SCHEMA_TITLE'),
         },
-      }
-    }
-    schema = {}
-    uiSchema = {
-      description: {
-        'ui:widget': 'textarea',
-        'ui:options': {
-          rows: 5,
+        description: {
+          type: 'string',
+          title: i18next.t('TALK_SCHEMA_DESCRIPTION'),
+        },
+        kind: {
+          type: 'string',
+          title: i18next.t('TALK_SCHEMA_FORMAT'),
+          enum: ['Long', 'Short'],
+          enumNames: [
+            i18next.t('TALK_SCHEMA_FORMAT_LONG'),
+            i18next.t('TALK_SCHEMA_FORMAT_SHORT'),
+          ],
+          default: 'Long',
+        },
+        slideLink: {
+          type: 'string',
+          format: 'uri',
+          title: i18next.t('TALK_SCHEMA_SLIDES'),
+        },
+        projectLink: {
+          type: 'string',
+          format: 'uri',
+          title: i18next.t('TALK_SCHEMA_PROJECT'),
+        },
+        twitter: {
+          type: 'string',
+          title: 'Twitter',
         },
       },
-      kind: {
-        'ui:widget': 'radio',
-      },
-      slideLink: {
-        'ui:placeholder': 'http://',
-      },
-      projectLink: {
-        'ui:placeholder': 'http://',
-      },
-      twitter: {
-        'ui:placeholder': '@parisjs',
-      },
-    }
-
-    render() {
-      return (
-        <Form
-          className="card talkSubmission__form"
-          schema={this.schema}
-          uiSchema={this.uiSchema}
-          onSubmit={this.props.onSubmit}
-        >
-          <div className="formGroup">
-            <input
-              type="submit"
-              value={this.props.intl.formatMessage({ id: 'SUBMIT_TALK' })}
-              className="btn"
-            />
-          </div>
-        </Form>
-      )
     }
   }
-)
+  schema = {}
+  uiSchema = {
+    description: {
+      'ui:widget': 'textarea',
+      'ui:options': {
+        rows: 5,
+      },
+    },
+    kind: {
+      'ui:widget': 'radio',
+    },
+    slideLink: {
+      'ui:placeholder': 'http://',
+    },
+    projectLink: {
+      'ui:placeholder': 'http://',
+    },
+    twitter: {
+      'ui:placeholder': '@parisjs',
+    },
+  }
 
-const TalkSubmissionSummary = injectIntl(
-  class extends React.Component {
-    render() {
-      const { intl } = this.props
-      return (
-        <div className="card talkSubmission__form">
-          <p
-            dangerouslySetInnerHTML={{
-              __html: intl.formatMessage({
-                id: 'TALK_SUBMITTED',
-                values: { link: this.props.talkSubmissionLink },
-              }),
-            }}
-          />
+  render() {
+    return (
+      <Form
+        className="card talkSubmission__form"
+        schema={this.schema}
+        uiSchema={this.uiSchema}
+        onSubmit={this.props.onSubmit}
+      >
+        <div className="formGroup">
           <input
-            type="button"
-            value={this.props.intl.formatMessage({ id: 'SUBMIT_TALK' })}
+            type="submit"
+            value={i18next.t('SUBMIT_TALK')}
             className="btn"
-            onClick={this.props.onSubmit}
           />
         </div>
-      )
-    }
+      </Form>
+    )
   }
-)
+}
 
-const TalkSubmissionLoginButton = injectIntl(
-  class extends React.Component {
-    render() {
-      return (
-        <div className="card talkSubmission__form">
-          <p>
-            <FormattedMessage id="NEED_LOGIN_BEFORE" />
-          </p>
-          <input
-            type="button"
-            value={this.props.intl.formatMessage({ id: 'LOGIN_GITHUB' })}
-            className="btn"
-            onClick={this.props.onSubmit}
-          />
-        </div>
-      )
-    }
-  }
-)
+function TalkSubmissionSummary({ onSubmit, talkSubmissionLink }) {
+  return (
+    <div className="card talkSubmission__form">
+      <p
+        dangerouslySetInnerHTML={{
+          __html: i18next.t('TALK_SUBMITTED', {
+            link: talkSubmissionLink,
+          }),
+        }}
+      />
+      <input
+        type="button"
+        value={i18next.t('SUBMIT_TALK')}
+        className="btn"
+        onClick={onSubmit}
+      />
+    </div>
+  )
+}
+
+function TalkSubmissionLoginButton({ onSubmit }) {
+  return (
+    <div className="card talkSubmission__form">
+      <p>{i18next.t('NEED_LOGIN_BEFORE')}</p>
+      <input
+        type="button"
+        value={i18next.t('LOGIN_GITHUB')}
+        className="btn"
+        onClick={onSubmit}
+      />
+    </div>
+  )
+}
 
 class TalkSubmissionContainer extends React.Component {
   constructor(props) {
@@ -188,26 +170,18 @@ class TalkSubmissionContainer extends React.Component {
   }
 
   render() {
-    const { intl } = this.props
     return (
       <>
-        <FormattedMessage id="SUBMIT_TALK">
-          {([message]) => (
-            <Head>
-              <title>{message}</title>
-            </Head>
-          )}
-        </FormattedMessage>
+        <Head>
+          <title>{i18next.t('SUBMIT_TALK')}</title>
+        </Head>
 
         <div className="container talkSubmission">
-          <h1>
-            <FormattedMessage id="SUBMIT_TALK" />
-          </h1>
+          <h1>{i18next.t('SUBMIT_TALK')}</h1>
           <div
             dangerouslySetInnerHTML={{
-              __html: intl.formatMessage({
-                id: 'TALK_EXPLAIN',
-                values: { link: 'https://github.com/parisjs/talks/issues' },
+              __html: i18next.t('TALK_EXPLAIN', {
+                link: 'https://github.com/parisjs/talks/issues',
               }),
             }}
           />
@@ -229,4 +203,4 @@ class TalkSubmissionContainer extends React.Component {
   }
 }
 
-export default injectIntl(TalkSubmissionContainer)
+export default TalkSubmissionContainer

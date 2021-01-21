@@ -1,12 +1,10 @@
 import algoliasearch from 'algoliasearch/lite'
 import { findResultsState } from 'react-instantsearch-dom/server'
-
-import HomeContainer from '../components/HomeContainer'
 import { useState } from 'react'
-import { IntlProvider } from 'react-intl'
 import { RouterContext } from 'next/dist/next-server/lib/router-context'
 
-import { getIntl } from '../lib/intl'
+import HomeContainer from '../components/HomeContainer'
+import { initI18next } from '../lib/intl'
 
 const searchClient = algoliasearch(
   'KQPF9BC268' /* appId */,
@@ -19,14 +17,13 @@ const DEFAULT_PROPS = {
 }
 
 export async function getStaticProps({ router, locale }) {
+  initI18next(locale)
   const searchState = {}
 
   function ServerSideSearch(props) {
     return (
       <RouterContext.Provider value={router}>
-        <IntlProvider {...getIntl(locale)}>
-          <HomeContainer {...props} />
-        </IntlProvider>
+        <HomeContainer {...props} />
       </RouterContext.Provider>
     )
   }

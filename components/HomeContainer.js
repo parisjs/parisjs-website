@@ -1,6 +1,5 @@
+import i18next from 'i18next'
 import Head from 'next/head'
-import { FormattedMessage, useIntl } from 'react-intl'
-
 import {
   InstantSearch,
   SearchBox,
@@ -26,9 +25,7 @@ const HomeContainer = (props) => {
       </Head>
       <div className="hero">
         <div className="container">
-          <h2>
-            <FormattedMessage id="HOME_HERO_TITLE" />
-          </h2>
+          <h2>{i18next.t('HOME_HERO_TITLE')}</h2>
           <NextMeetup />
         </div>
       </div>
@@ -38,19 +35,18 @@ const HomeContainer = (props) => {
 }
 
 function MeetupSearch(props) {
-  const intl = useIntl()
   return (
     <div className="container meetups">
       <InstantSearch {...props}>
         <div className="meetups__header">
           <h2 className="meetups__title --withChevron">
-            <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
+            {i18next.t('HOME_PREVIOUS_MEETUP')}
           </h2>
           <Configure hitsPerPage={5} />
           <SearchBox
             showLoadingIndicator
             translations={{
-              placeholder: intl.formatMessage({ id: 'SEARCH_PLACEHOLDER' }),
+              placeholder: i18next.t('SEARCH_PLACEHOLDER'),
             }}
           />
           <PoweredBy />
@@ -60,7 +56,7 @@ function MeetupSearch(props) {
             <MeetupPreview key={meetup.objectID} {...meetup} />
           )}
           translations={{
-            loadMore: intl.formatMessage({ id: 'SEARCH_LOADMORE' }),
+            loadMore: i18next.t('SEARCH_LOADMORE'),
           }}
         />
       </InstantSearch>

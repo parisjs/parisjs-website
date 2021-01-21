@@ -1,8 +1,7 @@
-import { FormattedDate } from 'react-intl'
 import { LocalLink } from '../lib/intl'
-// import { Highlight } from 'react-instantsearch-dom'
-
+import { Highlight } from 'react-instantsearch-dom'
 import TalkPreview from './TalkPreview'
+import i18next from 'i18next'
 
 const Host = function ({ host, meetup }) {
   if (!host) return <span />
@@ -26,14 +25,13 @@ const PagePreview = (meetup) => {
           Paris.js #{edition} <Host host={host} meetup={meetup} />
         </h3>
         <div>
-          <time key={pageDate.toISOString()}>
-            <FormattedDate
-              value={pageDate}
-              weekday="short"
-              day="2-digit"
-              month="long"
-              year="numeric"
-            />
+          <time dateTime={pageDate.toISOString()}>
+            {pageDate.toLocaleDateString(i18next.language, {
+              weekday: 'short',
+              day: '2-digit',
+              month: 'long',
+              year: 'numeric',
+            })}
           </time>
         </div>
       </div>

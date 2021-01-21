@@ -1,5 +1,5 @@
+import i18next from 'i18next'
 import Head from 'next/head'
-import { FormattedMessage } from 'react-intl'
 import Talk from './Talk'
 
 export const Meetup = ({ meetup }) => {
@@ -13,17 +13,10 @@ export const Meetup = ({ meetup }) => {
         <div className="meetupContainer__title">
           <h1>Paris.js #{meetup.edition}</h1>
           {meetup.host && (
-            <h2>
-              <FormattedMessage
-                id="MEETUP_HOSTEB_BY"
-                values={{ name: meetup.host }}
-              />
-            </h2>
+            <h2>{i18next.t('MEETUP_HOSTEB_BY', { name: meetup.host })}</h2>
           )}
           {meetup.meetupLink && (
-            <a href={meetup.meetupLink}>
-              <FormattedMessage id="MEETUP_LINK" />
-            </a>
+            <a href={meetup.meetupLink}>{i18next.t('MEETUP_LINK')}</a>
           )}
         </div>
         <div>

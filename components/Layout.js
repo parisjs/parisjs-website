@@ -1,16 +1,14 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import { IntlProvider } from 'react-intl'
 import { useRouter } from 'next/router'
-import { getIntl, IntlLink } from '../lib/intl'
+import { initI18next, IntlLink } from '../lib/intl'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
   const { locale } = useRouter()
-  const intl = getIntl(locale)
+  initI18next(locale)
 
   return (
-    <IntlProvider {...intl}>
       <div>
         <Head>
           <meta charSet="utf-8" />
@@ -55,7 +53,6 @@ const Layout = ({ children }) => {
         {children}
         <Footer />
       </div>
-    </IntlProvider>
   )
 }
 

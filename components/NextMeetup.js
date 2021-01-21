@@ -1,8 +1,7 @@
 import React from 'react'
-import { FormattedDate, FormattedMessage } from 'react-intl'
-
 import { MdDateRange, MdPlace, MdGroup } from 'react-icons/md'
 import { FaSlack, FaTwitter, FaGoogle, FaMeetup } from 'react-icons/fa'
+import i18next from 'i18next'
 
 const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
 
@@ -10,7 +9,7 @@ function Event({ event }) {
   return (
     <div>
       <h3 className="NextMeetup__Title">
-        <FormattedMessage id="NEXTMEETUP_NEXT" /> <span>{event.title}</span>
+        {i18next.t('NEXTMEETUP_NEXT')} <span>{event.title}</span>
       </h3>
 
       <div className="NextMeetup__Info">
@@ -19,15 +18,14 @@ function Event({ event }) {
           size={18}
           className="NextMeetup__InfoIcon"
         />
-        <FormattedDate
-          value={event.date}
-          weekday="short"
-          day="2-digit"
-          month="long"
-          year="numeric"
-          hour="numeric"
-          minute="numeric"
-        />
+        {event.date.toLocaleDateString(i18next.language, {
+          weekday: 'short',
+          day: '2-digit',
+          month: 'long',
+          year: 'numeric',
+          hour: 'numeric',
+          minute: 'numeric',
+        })}
       </div>
 
       <div className="NextMeetup__Info">
@@ -39,10 +37,7 @@ function Event({ event }) {
 
       <div className="NextMeetup__Info">
         <MdGroup color="#45494D" size={18} className="NextMeetup__InfoIcon" />
-        <FormattedMessage
-          id="NEXTMEETUP_PERSONS"
-          values={{ persons: event.rsvp }}
-        />
+        {i18next.t('NEXTMEETUP_PERSONS', { persons: event.rsvp })}
       </div>
     </div>
   )
@@ -83,7 +78,7 @@ class NextMeetup extends React.Component {
           <Event event={this.state.nextEvent} />
         ) : (
           <h3 className="NextMeetup__Title NextMeetup__TitleNoMeetup">
-            <FormattedMessage id="NEXTMEETUP_NO_EVENT" />
+            {i18next.t('NEXTMEETUP_NO_EVENT')}
           </h3>
         )}
         <div className="hero__actions">
@@ -97,10 +92,9 @@ class NextMeetup extends React.Component {
                 color="#FFF"
                 className="NextMeetup__RegisterButtonIcon"
               />
-              <FormattedMessage
-                id="NEXTMEETUP_RVSP"
-                className="NextMeetup__RegisterButtonText"
-              />
+              <span className="NextMeetup__RegisterButtonText">
+                {i18next.t('NEXTMEETUP_RVSP')}
+              </span>
             </a>
           )}
           {!this.state.nextEvent && (
@@ -110,14 +104,13 @@ class NextMeetup extends React.Component {
                 color="#FFF"
                 className="NextMeetup__RegisterButtonIcon"
               />
-              <FormattedMessage
-                id="GOTO_MEETUP"
-                className="NextMeetup__RegisterButtonText"
-              />
+              <span className="NextMeetup__RegisterButtonText">
+                {i18next.t('GOTO_MEETUP')}
+              </span>
             </a>
           )}
           <p>
-            <FormattedMessage id="NEXTMEETUP_MEET_THE_COMMUNITY_ON" />{' '}
+            {i18next.t('NEXTMEETUP_MEET_THE_COMMUNITY_ON')}{' '}
             <a href="https://slack-francejs.now.sh/">
               <FaSlack size={24} color="#C5C9CC" /> Slack
             </a>{' '}
