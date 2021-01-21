@@ -33,6 +33,7 @@
 
 .header__nav a {
   padding: 16px;
+  margin: 0 2px;
 }
 
 .header__nav a:hover,

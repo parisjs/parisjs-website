@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { FormattedMessage } from 'react-intl'
 import Talk from './Talk'
 
 export const Meetup = ({ meetup }) => {
@@ -11,8 +12,19 @@ export const Meetup = ({ meetup }) => {
       <div className="container meetupContainer">
         <div className="meetupContainer__title">
           <h1>Paris.js #{meetup.edition}</h1>
-          {meetup.host && <h2>chez {meetup.host}</h2>}
-          {meetup.meetupLink && <a href={meetup.meetupLink}>Lien meetup</a>}
+          {meetup.host && (
+            <h2>
+              <FormattedMessage
+                id="MEETUP_HOSTEB_BY"
+                values={{ name: meetup.host }}
+              />
+            </h2>
+          )}
+          {meetup.meetupLink && (
+            <a href={meetup.meetupLink}>
+              <FormattedMessage id="MEETUP_LINK" />
+            </a>
+          )}
         </div>
         <div>
           <ul className="meetupContainer__list">
