@@ -4,6 +4,15 @@ module.exports = {
     defaultLocale: 'fr',
     localeDetection: false,
   },
+  images: {
+    domains: [
+      'pbs.twimg.com',
+      'avatars0.githubusercontent.com',
+      'www.firebase.com',
+      'secure.gravatar.com',
+      'www.gravatar.com',
+    ],
+  },
   env: {
     // Algolia
     NEXT_PUBLIC_ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
