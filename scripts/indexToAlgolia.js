@@ -1,16 +1,28 @@
 const algolia = require('algoliasearch')
+
+const loadEnv = require('../lib/loadEnv')
 const { getAllMeetups } = require('../lib/meetups')
 
-indexMeetups().catch(function (e) {
-  console.error(e)
-  process.exit(1)
-})
+indexMeetups()
+  .then(() => {
+    console.log('DONE.')
+    process.exit(0)
+  })
+  .catch(function (e) {
+    console.error(e)
+    process.exit(1)
+  })
 
 async function indexMeetups() {
+  loadEnv()
   const credentials = getCredentials()
   const records = await getAllMeetups()
 
-  await uploadDataWithClear(credentials, 'paris.js-meetups', records)
+  await uploadDataWithClear(
+    credentials,
+    process.env.ALGOLIA_INDEX_NAME,
+    records
+  )
 }
 
 function getCredentials() {
@@ -29,8 +41,15 @@ function getCredentials() {
 async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
   const client = algolia(appID, apiKey)
   const index = client.initIndex(indexName)
-  console.log('clearing index')
+
+  console.info('🔧 set the ordering on the index')
+  await index.setSettings({
+    customRanking: ['desc(dateUnix)'],
+  })
+
+  console.log('🧹 clearing index')
   await index.clearObjects()
-  console.log('Sending to Algolia - ' + toUpload.length + ' records')
+
+  console.log('✈️  Sending to Algolia - ' + toUpload.length + ' records')
   await index.saveObjects(toUpload)
 }

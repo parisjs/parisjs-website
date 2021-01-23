@@ -7,13 +7,13 @@ import HomeContainer from '../components/HomeContainer'
 import { initI18next } from '../lib/intl'
 
 const searchClient = algoliasearch(
-  'KQPF9BC268' /* appId */,
-  '5eabe9bbceee31443c075723136fa826' /* apiKey */
+  process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
 )
 
 const DEFAULT_PROPS = {
   searchClient,
-  indexName: 'paris.js-meetups',
+  indexName: process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME,
 }
 
 export async function getStaticProps({ router, locale }) {

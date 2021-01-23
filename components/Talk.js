@@ -17,8 +17,8 @@ const Talk = ({ title, extract, authors, slides, links, videos }) => {
       <h3>{title}</h3>
       <div className="Talk_authors">
         {authors &&
-          authors.map(author => (
-            <TalkAuthor key={author.name} author={author} />
+          authors.map((author) => (
+            <TalkAuthor key={author.name} name={author.name} author={author} />
           ))}
       </div>
 

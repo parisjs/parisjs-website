@@ -4,6 +4,17 @@ module.exports = {
     defaultLocale: 'fr',
     localeDetection: false,
   },
+  env: {
+    // Algolia
+    NEXT_PUBLIC_ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
+    NEXT_PUBLIC_ALGOLIA_APPLICATION_ID: process.env.ALGOLIA_APPLICATION_ID,
+    NEXT_PUBLIC_ALGOLIA_API_KEY: process.env.PUBLIC_ALGOLIA_API_KEY,
+    // GitHub
+    NEXT_PUBLIC_GITHUB_APP_ID: process.env.GITHUB_APP_ID,
+    NEXT_PUBLIC_GITHUB_TALK_REPO_OWNER: process.env.GITHUB_TALK_REPO_OWNER,
+    NEXT_PUBLIC_GITHUB_TALK_REPO_NAME: process.env.GITHUB_TALK_REPO_NAME,
+    NEXT_PUBLIC_GITHUB_OAUTH_PROXY: process.env.GITHUB_OAUTH_PROXY,
+  },
   async rewrites() {
     return [
       {
