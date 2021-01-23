@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/*
+  @import url('https://cdn.jsdelivr.net/npm/hack-font/build/web/hack-subset.css');
+  The definition of this font doesn't support font-display. So it blocks rendering while fetching the font.
+*/
+@font-face {
+  font-family: 'Hack';
+  src: url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-regular-subset.woff2?sha=3114f1256')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-regular-subset.woff?sha=3114f1256')
+      format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-bold-subset.woff2?sha=3114f1256')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-bold-subset.woff?sha=3114f1256')
+      format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-italic-subset.woff2?sha=3114f1256')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-italic-webfont.woff?sha=3114f1256')
+      format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Hack';
+  src: url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-bolditalic-subset.woff2?sha=3114f1256')
+      format('woff2'),
+    url('https://cdn.jsdelivr.net/npm/hack-font/build/web/fonts/hack-bolditalic-subset.woff?sha=3114f1256')
+      format('woff');
+  font-weight: 700;
+  font-display: swap;
+  font-style: italic;
+}

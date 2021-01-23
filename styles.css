@@ -1,5 +1,4 @@
-@import url('https://cdn.jsdelivr.net/npm/hack-font/build/web/hack-subset.css');
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import 'styles/fonts.css';
 @import 'styles/normalize.css';
 @import 'styles/base.css';
 @import 'styles/header.css';
