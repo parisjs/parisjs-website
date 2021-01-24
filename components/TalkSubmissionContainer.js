@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import i18next from 'i18next'
 import Head from 'next/head'
-import Form from 'react-jsonschema-form'
+import dynamic from 'next/dynamic'
 import {
   signinToGitHub,
   createGitHubIssue,
   initGithubAuthentication,
 } from '../lib/github'
+
+const Form = dynamic(() => import('react-jsonschema-form'))
 
 class TalkSubmissionForm extends React.Component {
   componentWillMount() {
@@ -77,20 +79,22 @@ class TalkSubmissionForm extends React.Component {
 
   render() {
     return (
-      <Form
-        className="card talkSubmission__form"
-        schema={this.schema}
-        uiSchema={this.uiSchema}
-        onSubmit={this.props.onSubmit}
-      >
-        <div className="formGroup">
-          <input
-            type="submit"
-            value={i18next.t('SUBMIT_TALK')}
-            className="btn"
-          />
-        </div>
-      </Form>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Form
+          className="card talkSubmission__form"
+          schema={this.schema}
+          uiSchema={this.uiSchema}
+          onSubmit={this.props.onSubmit}
+        >
+          <div className="formGroup">
+            <input
+              type="submit"
+              value={i18next.t('SUBMIT_TALK')}
+              className="btn"
+            />
+          </div>
+        </Form>
+      </Suspense>
     )
   }
 }
