@@ -6,11 +6,13 @@ module.exports = {
   },
   images: {
     domains: [
+      'abs.twimg.com',
       'pbs.twimg.com',
       'avatars0.githubusercontent.com',
       'www.firebase.com',
       'secure.gravatar.com',
       'www.gravatar.com',
+      'm.c.lnkd.licdn.com',
     ],
   },
   env: {

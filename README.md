@@ -22,6 +22,10 @@ Thanks to Vercel sponsoring this project by allowing it to be deployed for free 
 
 ## Help section
 
+### Some avatars seem to be missing
+
+You can try running `yarn avatars:sync` to get the missing avatars if they are available and then create a pull request.
+
 ### How to post talks when running the app locally ?
 
 1. Create a GitHub OAuth app via https://github.com/settings/developers
