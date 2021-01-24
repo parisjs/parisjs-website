@@ -19,10 +19,9 @@ jobs:
             ./node_modules
           key: ${{ runner.os }}-${{ hashFiles('./yarn.lock') }}
 
-      - name: Install and Build
+      - name: Install dependencies
         run: |
           yarn install
-          yarn run build
 
       - name: Update algolia
         continue-on-error: true
@@ -31,3 +30,9 @@ jobs:
         env:
           ALGOLIA_APPLICATION_ID: ${{ secrets.ALGOLIA_APPLICATION_ID }}
           ALGOLIA_ADMIN_KEY: ${{ secrets.ALGOLIA_ADMIN_KEY }}
+
+      - name: Deploy production to Vercel
+        run: |
+          curl $VERCEL_DEPLOYMENT_WEBHOOK
+        env:
+          VERCEL_DEPLOYMENT_WEBHOOK: ${{ secrets.VERCEL_DEPLOYMENT_WEBHOOK }}
