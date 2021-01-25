@@ -1,14 +1,65 @@
 .TalkPreview {
   flex: 1 1 360px;
   display: flex;
-  align-items: center;
   padding-right: 24px;
-
-  line-height: 20px;
+  padding-bottom: 24px;
 }
 
+.TalkPreview_avatars {
+  display: flex;
+  flex: 0 0 auto;
+  margin-top: -16px;
+  width: 100px;
+  height: 70px;
+}
 
-.TalkPreview .ais-Highlight-nonHighlighted,
-.TalkPreview .ais-Highlight-highlighted {
+.TalkPreview_avatars > * {
+  /* stack avatars of multiple authors */
+  width: 20px;
+}
+
+.TalkPreview__description {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+
+.TalkPreview__title {
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.TalkPreview__title .ais-Snippet-nonHighlighted,
+.TalkPreview__title .ais-Snippet-highlighted {
   font-size: 14px;
+}
+
+/* Authors */
+
+.TalkPreview__authors {
+  line-height: 20px;
+  font-style: italic;
+}
+
+.TalkPreview__authors .ais-Highlight+.ais-Highlight::before {
+  content: ', ';
+}
+
+.TalkPreview__authors .ais-Highlight-nonHighlighted,
+.TalkPreview__authors .ais-Highlight-highlighted {
+  font-size: 12px;
+}
+
+/* Extracts */
+
+.TalkPreview__extract {
+  line-height: 16px;
+  text-align: justify;
+  display: inline-block;
+}
+
+.TalkPreview__extract .ais-Snippet-nonHighlighted,
+.TalkPreview__extract .ais-Snippet-highlighted {
+  font-size: 13px;
 }

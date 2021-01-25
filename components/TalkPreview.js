@@ -1,9 +1,18 @@
-import { Highlight } from 'react-instantsearch-dom'
+import { Highlight, Snippet } from 'react-instantsearch-dom'
 import Avatar from './Avatar'
 
 const TalkPreview = ({ talk }) => {
-  const title = <Highlight hit={talk} attribute="title" />
-
+  const avatars =
+    talk.authors &&
+    talk.authors.map((author, index) => (
+      <div>
+        <Avatar
+          key={`${author.name}-${index}`}
+          name={author.name}
+          imageUrl={author.avatar}
+        />
+      </div>
+    ))
   const authors = talk.authors.map((_author, index) => (
     <Highlight
       key={String(index)}
@@ -14,18 +23,17 @@ const TalkPreview = ({ talk }) => {
 
   return (
     <div className="TalkPreview">
-      {talk.authors &&
-        talk.authors.map((author, index) => (
-          <Avatar
-            key={`${author.name}-${index}`}
-            name={author.name}
-            imageUrl={author.avatar}
-          />
-        ))}
-      <div>
-        <strong>{title}</strong>
-        {'\xa0-\xa0'}
-        {authors}
+      <div className="TalkPreview_avatars">{avatars}</div>
+      <div className="TalkPreview__description">
+        <div>
+          <div className="TalkPreview__title">
+            {<Snippet hit={talk} attribute="title" />}
+          </div>
+          <div className="TalkPreview__authors">{authors}</div>
+        </div>
+        <div className="TalkPreview__extract">
+          <Snippet hit={talk} attribute="extract" />
+        </div>
       </div>
     </div>
   )

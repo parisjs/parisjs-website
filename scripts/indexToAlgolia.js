@@ -51,6 +51,8 @@ async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
       'unordered(talks.extract)',
       'unordered(talks.authors.name)',
     ],
+    attributesToSnippet: ['talks.title:10', 'talks.extract:15'],
+    snippetEllipsisText: '…',
   })
 
   console.log('🧹 clearing index')

@@ -40,10 +40,13 @@ const PagePreview = ({ meetup }) => {
               const highlights = meetup._highlightResult?.talks
                 ? { _highlightResult: meetup._highlightResult.talks[i] }
                 : undefined
+              const snippets = meetup._snippetResult?.talks
+                ? { _snippetResult: meetup._snippetResult.talks[i] }
+                : undefined
               return (
                 <TalkPreview
                   key={talk.title}
-                  talk={{ ...talk, ...highlights }}
+                  talk={{ ...talk, ...highlights, ...snippets }}
                 />
               )
             })}
