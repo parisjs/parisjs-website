@@ -45,6 +45,12 @@ async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
   console.info('🔧 set the ordering on the index')
   await index.setSettings({
     customRanking: ['desc(dateUnix)'],
+    searchableAttributes: [
+      'unordered(host)',
+      'unordered(talks.title)',
+      'unordered(talks.extract)',
+      'unordered(talks.authors.name)',
+    ],
   })
 
   console.log('🧹 clearing index')

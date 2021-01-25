@@ -37,7 +37,7 @@ const PagePreview = ({ meetup }) => {
         <div className="MeetupPreview__talks">
           {talks &&
             talks.map((talk, i) => {
-              const highlights = meetup._highlightResult
+              const highlights = meetup._highlightResult?.talks
                 ? { _highlightResult: meetup._highlightResult.talks[i] }
                 : undefined
               return (
