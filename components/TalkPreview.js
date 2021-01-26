@@ -5,12 +5,8 @@ const TalkPreview = ({ talk }) => {
   const avatars =
     talk.authors &&
     talk.authors.map((author, index) => (
-      <div>
-        <Avatar
-          key={`${author.name}-${index}`}
-          name={author.name}
-          imageUrl={author.avatar}
-        />
+      <div key={`${author.name}-${index}`}>
+        <Avatar name={author.name} imageUrl={author.avatar} />
       </div>
     ))
   const authors = talk.authors.map((_author, index) => (

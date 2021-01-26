@@ -11,7 +11,7 @@ import {
 import MeetupPreview from './MeetupPreview'
 import NextMeetup from './NextMeetup'
 
-const HomeContainer = (props) => {
+const HomeContainer = ({nextMeetup, ...props}) => {
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ const HomeContainer = (props) => {
       <div className="hero">
         <div className="container">
           <h2>{i18next.t('HOME_HERO_TITLE')}</h2>
-          <NextMeetup />
+          <NextMeetup nextMeetup={nextMeetup} />
         </div>
       </div>
       <MeetupSearch {...props} />

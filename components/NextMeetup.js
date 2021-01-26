@@ -18,7 +18,7 @@ function Event({ event }) {
           size={18}
           className="NextMeetup__InfoIcon"
         />
-        {event.date.toLocaleDateString(i18next.language, {
+        {new Date(event.date).toLocaleDateString(i18next.language, {
           weekday: 'short',
           day: '2-digit',
           month: 'long',
@@ -43,88 +43,56 @@ function Event({ event }) {
   )
 }
 
-class NextMeetup extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { nextEvent: props.nextEvent }
-  }
-
-  componentDidMount() {
-    const feedUrl = 'https://www.meetup.com/fr-FR/Paris-js/events/json/'
-    const url = `https://cors-anywhere.herokuapp.com/${feedUrl}`
-    window
-      .fetch(url)
-      .then((response) => response.json())
-      .then((data) => {
-        if (data && data.length) {
-          this.setState({
-            nextEvent: {
-              title: data[0].title,
-              date: new Date(data[0].servertime),
-              link: data[0].event_url,
-              rsvp: data[0].confirmCount,
-              host: data[0].venue_name,
-              address: `${data[0].venue_address1} ${data[0].venue_city}`,
-            },
-          })
-        }
-      })
-  }
-
-  render() {
-    return (
-      <div className="NextMeetup">
-        {this.state.nextEvent ? (
-          <Event event={this.state.nextEvent} />
-        ) : (
-          <h3 className="NextMeetup__Title NextMeetup__TitleNoMeetup">
-            {i18next.t('NEXTMEETUP_NO_EVENT')}
-          </h3>
+function NextMeetup({ nextMeetup }) {
+  return (
+    <div className="NextMeetup">
+      {nextMeetup ? (
+        <Event event={nextMeetup} />
+      ) : (
+        <h3 className="NextMeetup__Title NextMeetup__TitleNoMeetup">
+          {i18next.t('NEXTMEETUP_NO_EVENT')}
+        </h3>
+      )}
+      <div className="hero__actions">
+        {nextMeetup && (
+          <a className="btn NextMeetup__RegisterButton" href={nextMeetup.link}>
+            <FaMeetup
+              size={30}
+              color="#FFF"
+              className="NextMeetup__RegisterButtonIcon"
+            />
+            <span className="NextMeetup__RegisterButtonText">
+              {i18next.t('NEXTMEETUP_RVSP')}
+            </span>
+          </a>
         )}
-        <div className="hero__actions">
-          {this.state.nextEvent && (
-            <a
-              className="btn NextMeetup__RegisterButton"
-              href={this.state.nextEvent.link}
-            >
-              <FaMeetup
-                size={30}
-                color="#FFF"
-                className="NextMeetup__RegisterButtonIcon"
-              />
-              <span className="NextMeetup__RegisterButtonText">
-                {i18next.t('NEXTMEETUP_RVSP')}
-              </span>
-            </a>
-          )}
-          {!this.state.nextEvent && (
-            <a className="btn NextMeetup__RegisterButton" href={MEETUP_URL}>
-              <FaMeetup
-                size={30}
-                color="#FFF"
-                className="NextMeetup__RegisterButtonIcon"
-              />
-              <span className="NextMeetup__RegisterButtonText">
-                {i18next.t('GOTO_MEETUP')}
-              </span>
-            </a>
-          )}
-          <p>
-            {i18next.t('NEXTMEETUP_MEET_THE_COMMUNITY_ON')}{' '}
-            <a href="https://slack-francejs.now.sh/">
-              <FaSlack size={24} color="#C5C9CC" /> Slack
-            </a>{' '}
-            <a href="https://twitter.com/parisjs">
-              <FaTwitter size={24} color="#C5C9CC" /> Twitter
-            </a>{' '}
-            <a href="http://groups.google.com/group/parisjs">
-              <FaGoogle size={24} color="#C5C9CC" /> Google Groups
-            </a>
-          </p>
-        </div>
+        {!nextMeetup && (
+          <a className="btn NextMeetup__RegisterButton" href={MEETUP_URL}>
+            <FaMeetup
+              size={30}
+              color="#FFF"
+              className="NextMeetup__RegisterButtonIcon"
+            />
+            <span className="NextMeetup__RegisterButtonText">
+              {i18next.t('GOTO_MEETUP')}
+            </span>
+          </a>
+        )}
+        <p>
+          {i18next.t('NEXTMEETUP_MEET_THE_COMMUNITY_ON')}{' '}
+          <a href="https://slack-francejs.now.sh/">
+            <FaSlack size={24} color="#C5C9CC" /> Slack
+          </a>{' '}
+          <a href="https://twitter.com/parisjs">
+            <FaTwitter size={24} color="#C5C9CC" /> Twitter
+          </a>{' '}
+          <a href="http://groups.google.com/group/parisjs">
+            <FaGoogle size={24} color="#C5C9CC" /> Google Groups
+          </a>
+        </p>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default NextMeetup

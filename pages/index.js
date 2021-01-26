@@ -5,6 +5,7 @@ import { RouterContext } from 'next/dist/next-server/lib/router-context'
 
 import HomeContainer from '../components/HomeContainer'
 import { initI18next } from '../lib/intl'
+import { getNextMeetup } from '../lib/meetups'
 
 const searchClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
@@ -32,6 +33,8 @@ export async function getStaticProps({ router, locale }) {
     searchState,
   })
 
+  // load the next scheduled meetup
+  const nextMeetup = await getNextMeetup()
   return {
     props: {
       resultsState: {
@@ -40,7 +43,10 @@ export async function getStaticProps({ router, locale }) {
         state: JSON.parse(JSON.stringify(resultsState.state)),
       },
       searchState,
+      nextMeetup,
     },
+    // Incremental Static Regeneration each minute
+    revalidate: 60,
   }
 }
 
@@ -48,13 +54,12 @@ export default function Index(props) {
   const [searchState, setSearchState] = useState(props.searchState)
   return (
     <HomeContainer
-      {...{
-        ...DEFAULT_PROPS,
-        searchState,
-        onSearchStateChange: setSearchState,
-        createURL: () => {},
-        resultsState: props.resultsState,
-      }}
+      {...DEFAULT_PROPS}
+      searchState={searchState}
+      onSearchStateChange={setSearchState}
+      createURL={() => {}}
+      resultsState={props.resultsState}
+      nextMeetup={props.nextMeetup}
     />
   )
 }
