@@ -45,11 +45,13 @@ async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
   console.info('🔧 set the ordering on the index')
   await index.setSettings({
     customRanking: ['desc(dateUnix)'],
+    attributesForFaceting: ['talks.authors.name', 'host'],
     searchableAttributes: [
-      'unordered(host)',
+      'unordered(talks.authors.name)',
       'unordered(talks.title)',
       'unordered(talks.extract)',
-      'unordered(talks.authors.name)',
+      'host',
+      'edition',
     ],
     attributesToSnippet: ['talks.title:10', 'talks.extract:15'],
     snippetEllipsisText: '…',
