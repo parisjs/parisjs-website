@@ -7,5 +7,9 @@
 node_modules
 *.log
 
-# phenomic build
+# build
 dist
+.next
+
+# private env
+.env.local

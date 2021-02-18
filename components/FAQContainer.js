@@ -1,46 +1,18 @@
-import React from 'react'
-import Head from 'react-helmet'
-import {
-  withPhenomicApi,
-  query,
-  BodyRenderer,
-  textRenderer
-} from '@phenomic/preset-react-app/lib/client'
-import { Link } from 'react-router'
+import Head from 'next/head'
 
-import { getLocale } from '../intl'
-
-import Layout from './Layout'
-import MeetupPreview from './MeetupPreview'
-
-const FAQ = ({ hasError, isLoading, faq }) => (
-  <Layout>
-    {faq.node && (
-      <article>
-        <Head>
-          <title>{faq.node.title}</title>
-          <meta
-            name="description"
-            content={textRenderer(faq.node.body).slice(0, 150) + '…'}
-          />
-        </Head>
-        <div className="container FAQContainer">
-          <h1>{faq.node.title}</h1>
-          <div className="card">
-            <BodyRenderer>{faq.node.body}</BodyRenderer>
-          </div>
+const FAQContainer = ({ title, body }) => (
+    <article>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={body.slice(0, 150) + '…'} />
+      </Head>
+      <div className="container FAQContainer">
+        <h1>{title}</h1>
+        <div className="card">
+          <div dangerouslySetInnerHTML={{ __html: body }} />
         </div>
-      </article>
-    )}
-  </Layout>
+      </div>
+    </article>
 )
-
-const FAQContainer = withPhenomicApi(FAQ, (props, context) => {
-  const locale = getLocale(props.location ? props.location.pathname : '/faq')
-
-  return {
-    faq: query({ path: 'content/faq', id: locale })
-  }
-})
 
 export default FAQContainer

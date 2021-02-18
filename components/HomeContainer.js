@@ -1,93 +1,67 @@
-import React from 'react'
-import Head from 'react-helmet'
+import i18next from 'i18next'
+import Head from 'next/head'
 import {
-  withPhenomicApi,
-  query,
-  BodyRenderer
-} from '@phenomic/preset-react-app/lib/client'
-import { Link, withRouter } from 'react-router'
-import { LocalLink } from '../intl'
-import { FormattedMessage, injectIntl } from 'react-intl'
+  InstantSearch,
+  SearchBox,
+  PoweredBy,
+  Configure,
+  InfiniteHits,
+} from 'react-instantsearch-dom'
 
-import { InstantSearch, SearchBox, PoweredBy } from 'react-instantsearch/dom'
-
-import Layout from './Layout'
 import MeetupPreview from './MeetupPreview'
 import NextMeetup from './NextMeetup'
 
-const Home = ({ meetups, router }) => (
-  <Layout>
-    <Head>
-      <title>Paris.JS - Event-driven community about JavaScript</title>
-      <meta name="description" content="" />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/react-instantsearch-theme-algolia@4.4.2"
-      />
-    </Head>
-    <div className="hero">
-      <div className="container">
-        <h2>
-          <FormattedMessage id="HOME_HERO_TITLE" />
-        </h2>
-        <NextMeetup />
+const HomeContainer = ({nextMeetup, ...props}) => {
+  return (
+    <>
+      <Head>
+        <title>Paris.JS - Event-driven community about JavaScript</title>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossOrigin="anonymous"
+        />
+      </Head>
+      <div className="hero">
+        <div className="container">
+          <h2>{i18next.t('HOME_HERO_TITLE')}</h2>
+          <NextMeetup nextMeetup={nextMeetup} />
+        </div>
       </div>
-    </div>
+      <MeetupSearch {...props} />
+    </>
+  )
+}
+
+function MeetupSearch(props) {
+  return (
     <div className="container meetups">
-      <InstantSearch
-        appId="KQPF9BC268"
-        apiKey="5eabe9bbceee31443c075723136fa826"
-        indexName="paris.js-meetups"
-      >
+      <InstantSearch {...props}>
         <div className="meetups__header">
           <h2 className="meetups__title --withChevron">
-            <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
+            {i18next.t('HOME_PREVIOUS_MEETUP')}
           </h2>
-          <SearchInput router={router} />
+          <Configure hitsPerPage={5} />
+          <SearchBox
+            showLoadingIndicator
+            translations={{
+              placeholder: i18next.t('SEARCH_PLACEHOLDER'),
+            }}
+          />
           <PoweredBy />
         </div>
-        <ul className="meetups__list">
-          {meetups &&
-            meetups.node &&
-            meetups.node.list &&
-            meetups.node.list.map(meetup => (
-              <li key={meetup.id}>
-                <MeetupPreview {...meetup} />
-              </li>
-            ))}
-        </ul>
-        <p>
-          {meetups &&
-            meetups.node &&
-            meetups.node.hasNextPage && (
-              <LocalLink to={`/after/${meetups.node.next}`}>
-                <FormattedMessage id="HOME_PREVIOUS_MEETUP" />
-              </LocalLink>
-            )}
-        </p>
+        <InfiniteHits
+          hitComponent={({ hit: meetup }) => (
+            <MeetupPreview key={meetup.objectID} meetup={meetup} />
+          )}
+          translations={{
+            loadMore: i18next.t('SEARCH_LOADMORE'),
+          }}
+        />
       </InstantSearch>
     </div>
-  </Layout>
-)
-
-const SearchInput = injectIntl(({ intl, router }) => {
-  const localeSubPath = intl.locale === 'fr' ? '' : `${intl.locale}/`
-  return (
-    <SearchBox
-      onFocus={() => router.push(`/${localeSubPath}search`)}
-      translations={{
-        placeholder: intl.formatMessage({ id: 'SEARCH_PLACEHOLDER' })
-      }}
-    />
   )
-})
-
-const HomeContainer = withPhenomicApi(withRouter(Home), props => ({
-  meetups: query({
-    path: 'content/meetups',
-    limit: 12,
-    after: props.params.after
-  })
-}))
+}
 
 export default HomeContainer

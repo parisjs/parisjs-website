@@ -1,40 +1,35 @@
-import React from 'react'
-
-import { Highlight } from 'react-instantsearch/dom'
-
+import { Highlight, Snippet } from 'react-instantsearch-dom'
 import Avatar from './Avatar'
 
-const HighlightedAuthors = ({ authors }) => {
-  return authors.map(author => (
-    <Highlight hit={{ _highlightResult: author }} attributeName="name" />
+const TalkPreview = ({ talk }) => {
+  const avatars =
+    talk.authors &&
+    talk.authors.map((author, index) => (
+      <div key={`${author.name}-${index}`}>
+        <Avatar name={author.name} imageUrl={author.avatar} />
+      </div>
+    ))
+  const authors = talk.authors.map((_author, index) => (
+    <Highlight
+      key={String(index)}
+      hit={talk}
+      attribute={`authors.${index}.name`}
+    />
   ))
-}
-
-const TalkPreview = ({ talk, highlights }) => {
-  const title = highlights ? (
-    <Highlight hit={highlights} attributeName="title" />
-  ) : (
-    talk.title
-  )
-
-  const authors = highlights ? (
-    <HighlightedAuthors authors={highlights._highlightResult.authors} />
-  ) : (
-    <span>
-      {talk.authors && talk.authors.map(author => author.name).join(', ')}
-    </span>
-  )
 
   return (
     <div className="TalkPreview">
-      {talk.authors &&
-        talk.authors.map(author => (
-          <Avatar key={author.name} imageUrl={author.avatar} />
-        ))}
-      <div>
-        <strong>{title}</strong>
-        {'\xa0-\xa0'}
-        {authors}
+      <div className="TalkPreview_avatars">{avatars}</div>
+      <div className="TalkPreview__description">
+        <div>
+          <div className="TalkPreview__title">
+            {<Snippet hit={talk} attribute="title" />}
+          </div>
+          <div className="TalkPreview__authors">{authors}</div>
+        </div>
+        <div className="TalkPreview__extract">
+          <Snippet hit={talk} attribute="extract" />
+        </div>
       </div>
     </div>
   )

@@ -14,6 +14,8 @@ export default {
   }`,
   NEXTMEETUP_RVSP: 'Register on Meetup.com',
   GOTO_MEETUP: 'Follow on Meetup.com',
+  MEETUP_HOSTEB_BY: 'Hosted by {name}',
+  MEETUP_LINK: 'Link to the meetup',
   PAGE_FAQ: '/en/faq',
   PAGE_HOME: '/en',
   PAGE_SPONSORS: '/en/sponsors',

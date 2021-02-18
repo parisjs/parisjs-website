@@ -11,14 +11,20 @@
 .hero__actions p {
   color: #45494d;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .hero__actions p a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   padding: 6px;
   border-radius: 3px;
   color: #45494d;
   text-decoration: none;
+}
+.hero__actions p a svg {
+  margin-right: 6px;
 }
 
 .hero__actions p a:hover {
@@ -54,13 +60,14 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-div.ais-InstantSearch__root {
+div.ais-InfiniteHits {
   font-family: var(--body-font);
 }
 
-.ais-PoweredBy__root {
+.ais-PoweredBy {
   position: absolute;
   bottom: 1em;
   right: 0px;
@@ -71,16 +78,34 @@ div.ais-InstantSearch__root {
   vertical-align: bottom;
 }
 
-.ais-SearchBox__root {
+.ais-SearchBox-form {
   align-self: center;
-  border: 1px solid #551a8b;
   border-radius: 3px;
+  width: 400px;
+  height: 46px;
 }
 
-.meetups__list .ais-InfiniteHits__loadMore {
-  font-size: 120%;
+@media (max-width: 600px) {
+  .ais-SearchBox-form {
+    width: 200px;
+  }
+}
+
+.ais-SearchBox-input {
+  height: 100%;
+  border: 1px solid #551a8b;
+  padding-left: 46px;
+}
+.ais-SearchBox-submit {
+  height: 100%;
+  width: 46px;
+}
+
+.ais-InfiniteHits .ais-InfiniteHits-loadMore {
+  font-size: 1em;
   border: 1px solid #551a8b;
   background: white;
+  color: black;
   padding: 6px 12px;
   border-radius: 3px;
 }
@@ -89,13 +114,29 @@ div.ais-InstantSearch__root {
   margin: 48px 0;
 }
 
-.meetups__list {
+.ais-InfiniteHits-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.meetups__list li {
+.ais-InfiniteHits-list .ais-InfiniteHits-item {
   margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+.ais-InfiniteHits-list .ais-InfiniteHits-item + .ais-InfiniteHits-item {
+  margin-top: 48px;
+}
+
+h3 .ais-Highlight-nonHighlighted,
+h3 .ais-Highlight-highlighted {
+  font-size: 24px;
+}
+
+.ais-Highlight-highlighted,
+.ais-Snippet-highlighted {
+  background: #bccef7;
+  font-style: normal;
 }

@@ -1,5 +1,7 @@
 .Avatar {
   display: block;
+
+  box-sizing: content-box;
   width: 66px;
   height: 66px;
   border-radius: 33px;
@@ -8,8 +10,9 @@
   margin-top: 16px;
   margin-bottom: 16px;
   overflow: hidden;
-
+  position: relative;
   background-color: #edf0f2;
+  border: 2px solid #edf0f2;
 }
 
 .Avatar--small {

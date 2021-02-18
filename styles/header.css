@@ -33,6 +33,7 @@
 
 .header__nav a {
   padding: 16px;
+  margin: 0 2px;
 }
 
 .header__nav a:hover,
@@ -47,6 +48,10 @@
 .languageSwitcher a {
   height: 24px;
   padding: 3px 8px;
+}
+
+.languageSwitcher a:hover {
+  border-bottom: 5px solid;
 }
 
 @media (max-width: 600px) {

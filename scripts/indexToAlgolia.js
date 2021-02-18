@@ -1,61 +1,28 @@
-const fs = require('fs')
-const path = require('path')
-const utils = require('util')
-const crypto = require('crypto')
-
-const fm = require('front-matter')
 const algolia = require('algoliasearch')
 
-const readdir = utils.promisify(fs.readdir)
-const readFile = utils.promisify(fs.readFile)
+const loadEnv = require('../lib/loadEnv')
+const { getAllMeetups } = require('../lib/meetups')
 
-const baseDir = '../content/meetups'
-
-indexMeetups().catch(function(e) {
-  console.error(e)
-  process.exit(1)
-})
-
-function md5(m) {
-  return crypto
-    .createHash('md5')
-    .update(m)
-    .digest('hex')
-}
+indexMeetups()
+  .then(() => {
+    console.log('DONE.')
+    process.exit(0)
+  })
+  .catch(function (e) {
+    console.error(e)
+    process.exit(1)
+  })
 
 async function indexMeetups() {
-  const meetups = await readMeetups()
-  const records = meetupsToRecords(meetups)
-
+  loadEnv()
   const credentials = getCredentials()
+  const records = await getAllMeetups()
 
-  await uploadDataWithClear(credentials, 'paris.js-meetups', records)
-}
-
-async function readMeetups() {
-  const files = await readdir(path.join(__dirname, baseDir))
-  return Promise.all(
-    files.map(async file => {
-      const content = await readFile(
-        path.join(__dirname, baseDir, file),
-        'utf8'
-      )
-      const id = file.split('.')[0]
-      return {
-        ...fm(content).attributes,
-        id
-      }
-    })
+  await uploadDataWithClear(
+    credentials,
+    process.env.ALGOLIA_INDEX_NAME,
+    records
   )
-}
-
-function meetupsToRecords(meetups) {
-  return meetups.map(m => ({
-    ...m,
-    dateUnix: new Date(m.date).getTime(),
-    objectID: m.edition,
-    hash: md5(JSON.stringify(m))
-  }))
 }
 
 function getCredentials() {
@@ -66,7 +33,7 @@ function getCredentials() {
 
   const {
     ALGOLIA_APPLICATION_ID: appID,
-    ALGOLIA_ADMIN_KEY: apiKey
+    ALGOLIA_ADMIN_KEY: apiKey,
   } = process.env
   return { appID, apiKey }
 }
@@ -74,9 +41,25 @@ function getCredentials() {
 async function uploadDataWithClear({ appID, apiKey }, indexName, toUpload) {
   const client = algolia(appID, apiKey)
   const index = client.initIndex(indexName)
-  console.log('clearing index')
-  const content = await index.clearIndex()
-  await index.waitTask(content.taskID)
-  console.log('Sending to Algolia - ' + toUpload.length + ' records')
-  index.addObjects(toUpload)
+
+  console.info('🔧 set the ordering on the index')
+  await index.setSettings({
+    customRanking: ['desc(dateUnix)'],
+    attributesForFaceting: ['talks.authors.name', 'host'],
+    searchableAttributes: [
+      'unordered(talks.authors.name)',
+      'unordered(talks.title)',
+      'unordered(talks.extract)',
+      'host',
+      'edition',
+    ],
+    attributesToSnippet: ['talks.title:10', 'talks.extract:15'],
+    snippetEllipsisText: '…',
+  })
+
+  console.log('🧹 clearing index')
+  await index.clearObjects()
+
+  console.log('✈️  Sending to Algolia - ' + toUpload.length + ' records')
+  await index.saveObjects(toUpload)
 }
