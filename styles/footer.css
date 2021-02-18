@@ -12,3 +12,7 @@
 .footer a:hover {
   color: var(--pink);
 }
+
+.footer__vercel {
+  margin-top: 15px;
+}

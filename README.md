@@ -2,6 +2,12 @@
 
 This repository contains the code for the [parisjs.org](https://parisjs.org/) website.
 
+## Acknowledgements
+
+[![Powered by Vercel](./public/assets/powered-by-vercel.svg)](https://vercel.com/?utm_source=meetup-parisjs&utm_campaign=oss)
+
+Thanks to Vercel sponsoring this project by allowing it to be deployed for free for the entire ParisJS Team.
+
 ## Getting started
 
 * Clone this repository
