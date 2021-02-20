@@ -11,7 +11,7 @@
     "start": "next start",
     "dev": "next dev",
     "build": "next build",
-    "test": "npm run build",
+    "test": "mocha",
     "algolia:index": "node ./scripts/indexToAlgolia.js",
     "avatars:sync": "node ./scripts/syncAvatars.js"
   },
@@ -33,6 +33,7 @@
     "gray-matter": "^4.0.2",
     "husky": "^4.3.8",
     "lint-staged": "^10.5.3",
+    "mocha": "^8.3.0",
     "prettier": "^2.2.1",
     "puppeteer": "^5.5.0",
     "remark": "^13.0.0",
