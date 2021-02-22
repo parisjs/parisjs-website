@@ -27,12 +27,8 @@
   padding-top: 56.25%;
 }
 .sponsor__thumbnail img {
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 100%;
-  object-fit: contain;
+  /* nextjs injects some inline styles */
+  padding: 10px !important;
 }
 
 .sponsor__info {

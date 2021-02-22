@@ -1,30 +1,21 @@
 import Image from 'next/image'
-import { useRef, useState, useEffect, useLayoutEffect } from 'react'
+import { useState } from 'react'
 import { MdPerson } from 'react-icons/md'
 
-const canUseDOM = typeof window !== 'undefined'
-
-const useIsomorphicLayoutEffect = canUseDOM ? useLayoutEffect : useEffect
-
 function Avatar({ imageUrl, name, size }) {
-  const [showDefaultAvatar, setShowDefaultAvatar] = useState(!imageUrl)
-  const imageRef = useRef(null)
-  useIsomorphicLayoutEffect(() => {
-    if (imageRef.current) {
-      // Necessary so we can fallback to the default avatar in case of an error
-      imageRef.current.src = imageUrl
-    }
-  }, [])
+  const pixelSize = size === 'small' ? 34 : 66
+  const [shouldFallback, setShouldFallback] = useState(!imageUrl)
   return (
     <div className={`Avatar ${size === 'small' && 'Avatar--small'}`}>
-      {showDefaultAvatar ? (
+      {shouldFallback ? (
         <MdPerson color="#8E9599" size={18} className="Avatar__icon" />
       ) : (
-        <img
-          ref={imageRef}
+        <Image
           alt={name}
           src={imageUrl}
-          onError={() => setShowDefaultAvatar(true)}
+          width={pixelSize}
+          height={pixelSize}
+          onError={() => setShouldFallback(true)}
           className="Avatar__image"
         />
       )}

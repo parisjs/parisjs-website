@@ -1,4 +1,4 @@
-import { getAllMeetupIds, getMeetupData } from '../../lib/meetups'
+import { getAllMeetupIds, getMeetupData, getTwitterAvatars } from '../../lib/meetups'
 import { Meetup } from '../../components/MeetupContainer'
 
 export default Meetup
@@ -15,7 +15,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const meetup = await getMeetupData(params.id)
+  const twitterAvatars = await getTwitterAvatars()
+  const meetup = await getMeetupData(params.id, twitterAvatars)
   return {
     props: {
       meetup,

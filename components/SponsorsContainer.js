@@ -1,5 +1,6 @@
 import i18next from 'i18next'
 import Head from 'next/head'
+import Image from 'next/image'
 import { sponsors } from '../lib/sponsors'
 
 function SponsorCard(props) {
@@ -8,10 +9,10 @@ function SponsorCard(props) {
       <div className="sponsor__thumbnail">
         {props.website ? (
           <a href={props.website}>
-            <img src={props.img} alt={props.name} />
+            <Image src={props.img} layout="fill" objectFit="contain" alt={props.name} />
           </a>
         ) : (
-          <img src={props.img} alt={props.name} />
+          <Image src={props.img} layout="fill" objectFit="contain" alt={props.name} />
         )}
       </div>
       <div className="sponsor__info">

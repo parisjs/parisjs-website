@@ -4,6 +4,23 @@ module.exports = {
     defaultLocale: 'fr',
     localeDetection: false,
   },
+  images: {
+    domains: [
+      // twitter
+      'abs.twimg.com',
+      'pbs.twimg.com',
+      // github
+      'avatars0.githubusercontent.com',
+      // firebase
+      'www.firebase.com',
+      // gravatar
+      'secure.gravatar.com',
+      'www.gravatar.com',
+      // Linkedin
+      'm.c.lnkd.licdn.com',
+      // Add other source of images when needed
+    ],
+  },
   env: {
     // Algolia
     NEXT_PUBLIC_ALGOLIA_INDEX_NAME: process.env.ALGOLIA_INDEX_NAME,
