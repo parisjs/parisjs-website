@@ -10,8 +10,7 @@ syncAvatars()
   .then(() => {
     console.log('END.')
     process.exit(0)
-  })
-  .catch(function (e) {
+  }, (e) => {
     console.error(e)
     process.exit(1)
   })
@@ -24,9 +23,7 @@ async function syncAvatars() {
       meetups
         .flatMap((m) => m.talks)
         .flatMap((t) => t.authors)
-        .map((author) => {
-          return author.twitter_username
-        })
+        .flatMap((author) => author.twitter_username)
         .filter((username) => !!username)
     ),
   ]
