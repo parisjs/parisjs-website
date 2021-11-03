@@ -27,6 +27,7 @@ const Layout = ({ children }) => {
           </div>
           <nav className="header__nav">
             <MenuLink to="PAGE_HOME" title="HOME" activeClassName="active" />
+            <MenuLink to="PAGE_CODE_OF_CONDUCT" title="CODE_OF_CONDUCT" activeClassName="active" />
             <MenuLink to="PAGE_FAQ" title="FAQ" activeClassName="active" />
             <MenuLink
               to="PAGE_SUBMIT_TALK"

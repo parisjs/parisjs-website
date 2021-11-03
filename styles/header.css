@@ -54,7 +54,22 @@
   border-bottom: 5px solid;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+  .header .container {
+    flex-direction: column;
+  }
+  .header__nav {
+    flex-grow: 0;
+  }
+  .header .container {
+    display: flex;
+    align-items: center;
+    height: 120px;
+  }
+}
+
+
+@media (max-width: 800px) {
   .header .container {
     display: block;
     height: auto;
