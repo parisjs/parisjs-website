@@ -1,4 +1,5 @@
 export default {
+  CODE_OF_CONDUCT: "Code of conduct (FR)",
   HOME_DESCRIPTION: 'DESCRIPTION EN ANGLAIS',
   FAQ: 'FAQ',
   HOME_HERO_TITLE: 'The monthly meetup about JavaScript',
@@ -17,6 +18,7 @@ export default {
   MEETUP_HOSTEB_BY: 'Hosted by {name}',
   MEETUP_LINK: 'Link to the meetup',
   PAGE_FAQ: '/en/faq',
+  PAGE_CODE_OF_CONDUCT: '/code-of-conduct',
   PAGE_HOME: '/en',
   PAGE_SPONSORS: '/en/sponsors',
   PAGE_SUBMIT_TALK: '/en/submission/talk',
