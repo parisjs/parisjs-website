@@ -27,7 +27,7 @@ There are multiple ways to get involved in the Paris.js organization:
 * join in on organizational discussions
 * help maintain and develop the website
 
-The easiest way to get started is by sending a message to the mailing list, slack channel or meet volunteers at the next event.
+The easiest way to get started is by sending a message to the mailing list, discord server or meet volunteers at the next event.
 
 ### Paris.js / France.js / Apéro.js / Whatever.js
 
@@ -35,7 +35,7 @@ While there are no “official” ties between Paris.js and other Paris-based Ja
 
 ### How can I be informed about what’s happening with Paris.js?
 
-You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and the [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [slack channel](https://slack-francejs.now.sh/) (via France.js).
+You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and the [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [discord](https://discord.gg/t6t8jhAaVz/) (via France.js).
 
 ## The “Meetups”
 
