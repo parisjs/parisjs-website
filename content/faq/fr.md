@@ -6,12 +6,21 @@ title: "Foire aux questions"
 
 ### Qu’est ce que c’est ?
 
-Paris.js est une **communauté** qui réunit **tous les javascripteurs** à Paris, qu’ils soient débutants ou experts, professionnels ou juste curieux.
-Un meetup est organisé **chaque dernier mercredi du mois**, avec des orateurs de la communauté et qui se termine autour d’un buffet permettant l'échange entre les membres.
+Paris.JS est une **communauté** se réunissant à Paris les derniers Mercredi de chaque mois pour échanger sur **JavaScript**, **le web**, mais aussi **le travail dans le software**.
+
+Les évènements et espaces de discussion de Paris.JS s'addresse à toutes et tous, débutant·e·s ou expert·e·s, professionnel·le·s ou curieux·se.
+
+Les meetups sont composés de talks donnés par des membres de la communauté, et se terminent autour d'un buffet permettant d'échanger et de #networker.
+
+Les évènements Paris.JS sont gratuits, et avec un nombre de places limitées selon le lieu accueillant le meetup.
 
 ### Qui sommes nous ?
 
-**Vous**. Paris.js n’est affilié à aucune entreprise, nous n’avons pas d'existence juridique. La communauté existe par elle-même et est animée par tous ceux qui le souhaitent. Nous souhaitons rester **libres et indépendants**.
+**Vous**. Paris.JS n’est affilié à aucune entreprise et n'a pas d'existence juridique. La communauté est animée par celles et ceux qui le souhaitent.
+
+La communauté est libre est indépendante.
+
+Chacun·e se doit de respecter le [/code-of-conduct](code de conduite).
 
 ### C’est nouveau ?
 
@@ -55,11 +64,10 @@ C’est **gratuit** ! Environ une bonne semaine avant, nous annonçons l’évé
 
 Merci ! Nous proposons 2 formats différents :
 
-* **Le court (5mins)**, par exemple pour susciter la curiosité en faisant découvrir une librairie, ou pour parler d’un sujet précis lié à la programmation.
-* **Le long (20mins + 5 mins questions)**, parfait pour rentrer un peu plus dans le sujet, développer l’argumentation, faire un “live-coding”.
+* **Le court (5mins)**, pour susciter la curiosité en faisant découvrir une bibliothèque, une introduction rapide ou pour parler d’un sujet concis.
+* **Le long (20mins + 5 mins questions optionnelles)**, parfait pour rentrer un peu plus dans le sujet, développer un propos, ou encore proposer un “live-coding”.
 
 Le plus simple est de remplir le [formulaire sur cette page](/propositions/sujet)
-Nous sommes friands des retours d'expériences personnelles et des démonstrations techniques, un peu moins des sujets trop commerciaux.
 
 ### Comment sélectionnons-nous les sujets ?
 
@@ -80,7 +88,7 @@ L’unique forme de sponsoring possible est l’accueil d’un meetup. [Voir que
 
 ### Pouvez-vous faire de la pub pour X auprès de vos membres ?
 
-En règle général, nous ne relayons aucune communication pour des événements payants. Si votre événement est gratuit et a un sujet commun avec Paris.js, envoyez-nous un message sur meetup.com.
+En règle générale, nous ne relayons aucune communication pour des événements payants. Si votre événement est gratuit et a un sujet commun avec Paris.JS, envoyez-nous un message sur meetup.com.
 
 ### Financement
 
@@ -93,6 +101,6 @@ Pour éviter de créer une structure, nous nous reposons sur un [hôte](https://
 
 Si vous cherchez des développeurs JavaScript, vous pouvez:
 
-* publier une offre d’emploi sur le groupe LinkedIn de Paris.JS: https://www.linkedin.com/groups/3852602 . Les offres d’emploi ne sont pas admises sur la liste de diffusion Google Groups.
+* publier une offre d’emploi sur le groupe LinkedIn de Paris.JS: https://www.linkedin.com/groups/3852602. Les offres d’emploi ne sont pas admises sur la liste de diffusion Google Groups.
 * Sponsoriser un meetup pour vous faire connaître auprès de la communauté.
 * Ou simplement venir à un meetup pour rencontrer les participants.
