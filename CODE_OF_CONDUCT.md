@@ -2,7 +2,7 @@
 title: Code de conduite
 ---
 
-**Ce code de conduite s'applique à tou·te·s les invervenant·e·s et participant·e·s des évènements et discussions en ligne de Paris.JS**. 
+**Ce code de conduite s'applique à tou·te·s les invervenant·e·s et participant·e·s des évènements et discussions en ligne de Paris.JS, incluant l'équipe organisatrice et les sponsors**.
 
 ## Introduction
 
