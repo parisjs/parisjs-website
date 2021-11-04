@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer container">
       <div>
-        🚀 Paris.JS - <a href="https://slack-francejs.now.sh/">Slack</a> -{' '}
+        🚀 Paris.JS - <a href="https://discord.gg/t6t8jhAaVz">Discord</a> -{' '}
         <a href="https://twitter.com/parisjs">Twitter</a> -{' '}
         <a href="http://groups.google.com/group/parisjs">Google Groups</a> -{' '}
         <a href="https://github.com/parisjs">Github</a>

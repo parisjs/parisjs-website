@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdDateRange, MdPlace, MdGroup } from 'react-icons/md'
-import { FaSlack, FaTwitter, FaGoogle, FaMeetup } from 'react-icons/fa'
+import { FaDiscord, FaTwitter, FaGoogle, FaMeetup } from 'react-icons/fa'
 import i18next from 'i18next'
 
 const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
@@ -80,8 +80,8 @@ function NextMeetup({ nextMeetup }) {
         )}
         <p>
           {i18next.t('NEXTMEETUP_MEET_THE_COMMUNITY_ON')}{' '}
-          <a href="https://slack-francejs.now.sh/">
-            <FaSlack size={24} color="#C5C9CC" /> Slack
+          <a href="https://discord.gg/t6t8jhAaVz/">
+            <FaDiscord size={24} color="#C5C9CC" /> Discord
           </a>{' '}
           <a href="https://twitter.com/parisjs">
             <FaTwitter size={24} color="#C5C9CC" /> Twitter
