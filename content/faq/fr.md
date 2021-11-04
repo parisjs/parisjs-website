@@ -27,7 +27,7 @@ Il existe de multiples façons de contribuer à Paris.js:
 * participer à l’organisation
 * proposer des améliorations sur le site web
 
-Le plus simple est de venir faire un petit coucou sur le [discord](https://discord.gg/t6t8jhAaVz/) ou tout simplement venir nous parler pendant un événement !
+Le plus simple est de venir faire un petit coucou sur le [discord](https://discord.gg/t6t8jhAaVz) ou tout simplement venir nous parler pendant un événement !
 
 ### Paris.js / France.js / Apéro.js / Whatever.js
 
@@ -35,7 +35,7 @@ Paris.js n’est pas directement rattaché à d’autres groupes mais la plupart
 
 ### Suivre l’actualité de Paris.js
 
-Vous pouvez nous retrouver sur [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), [Discord](https://discord.gg/t6t8jhAaVz/)
+Vous pouvez nous retrouver sur [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), [Discord](https://discord.gg/t6t8jhAaVz)
 
 ## Les “meetups”
 

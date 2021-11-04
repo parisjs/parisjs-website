@@ -80,7 +80,7 @@ function NextMeetup({ nextMeetup }) {
         )}
         <p>
           {i18next.t('NEXTMEETUP_MEET_THE_COMMUNITY_ON')}{' '}
-          <a href="https://discord.gg/t6t8jhAaVz/">
+          <a href="https://discord.gg/t6t8jhAaVz">
             <FaDiscord size={24} color="#C5C9CC" /> Discord
           </a>{' '}
           <a href="https://twitter.com/parisjs">

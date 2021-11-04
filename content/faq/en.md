@@ -35,7 +35,7 @@ While there are no “official” ties between Paris.js and other Paris-based Ja
 
 ### How can I be informed about what’s happening with Paris.js?
 
-You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and the [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [discord](https://discord.gg/t6t8jhAaVz/) (via France.js).
+You can find more on [Meetup.com](https://www.meetup.com/fr-FR/Paris-js/), [Twitter](https://twitter.com/parisjs), and the [mailing-list](https://groups.google.com/forum/#!forum/parisjs) or [discord](https://discord.gg/t6t8jhAaVz) (via France.js).
 
 ## The “Meetups”
 
