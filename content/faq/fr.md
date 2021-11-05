@@ -20,7 +20,7 @@ Les évènements Paris.JS sont gratuits, et avec un nombre de places limitées s
 
 La communauté est libre est indépendante.
 
-Chacun·e se doit de respecter le [/code-of-conduct](code de conduite).
+Chacun·e se doit de respecter le [code de conduite](/code-of-conduct).
 
 ### C’est nouveau ?
 
