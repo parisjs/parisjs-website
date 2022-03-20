@@ -1,7 +1,7 @@
 import algoliasearch from 'algoliasearch/lite'
 import { findResultsState } from 'react-instantsearch-dom/server'
 import { useState } from 'react'
-import { RouterContext } from 'next/dist/next-server/lib/router-context'
+import { RouterContext } from 'next/dist/shared/lib/router-context'
 
 import HomeContainer from '../components/HomeContainer'
 import { initI18next } from '../lib/intl'
