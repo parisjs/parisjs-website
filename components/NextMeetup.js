@@ -1,6 +1,6 @@
 import React from 'react'
 import { MdDateRange, MdPlace, MdGroup } from 'react-icons/md'
-import { FaDiscord, FaTwitter, FaGoogle, FaMeetup } from 'react-icons/fa'
+import { FaDiscord, FaTwitter, FaGoogle, FaMeetup, FaYoutube } from 'react-icons/fa'
 import i18next from 'i18next'
 
 const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
@@ -86,8 +86,8 @@ function NextMeetup({ nextMeetup }) {
           <a href="https://twitter.com/parisjs">
             <FaTwitter size={24} color="#C5C9CC" /> Twitter
           </a>{' '}
-          <a href="http://groups.google.com/group/parisjs">
-            <FaGoogle size={24} color="#C5C9CC" /> Google Groups
+          <a href="https://www.youtube.com/parisjs">
+            <FaYoutube size={24} color="#C5C9CC" /> Youtube
           </a>
         </p>
       </div>

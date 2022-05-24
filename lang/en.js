@@ -7,14 +7,14 @@ export default {
   HOME: 'Home',
   NEXTMEETUP_MEET_THE_COMMUNITY_ON: 'Also join the community on',
   NEXTMEETUP_NEXT: 'Next meetup:',
-  NEXTMEETUP_NO_EVENT: 'No event planned yet',
+  NEXTMEETUP_NO_EVENT: 'Every last Wednesday of the month. More info on Meetup.com.',
   NEXTMEETUP_PERSONS: `{ persons, plural,
     =0 {Nobody registered}
     one {# person}
     other {# registered people}
   }`,
   NEXTMEETUP_RVSP: 'Register on Meetup.com',
-  GOTO_MEETUP: 'Follow on Meetup.com',
+  GOTO_MEETUP: 'See on Meetup.com',
   MEETUP_HOSTEB_BY: 'Hosted by {name}',
   MEETUP_LINK: 'Link to the meetup',
   PAGE_FAQ: '/en/faq',
