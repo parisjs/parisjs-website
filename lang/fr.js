@@ -1,5 +1,5 @@
 export default {
-  CODE_OF_CONDUCT: "Code de conduite",
+  CODE_OF_CONDUCT: 'Code de conduite',
   HOME_DESCRIPTION: 'DESCRIPTION EN FRANCAIS',
   FAQ: 'FAQ',
   HOME_HERO_TITLE: 'Le meetup mensuel autour du JavaScript',
@@ -7,7 +7,8 @@ export default {
   HOME: 'Accueil',
   NEXTMEETUP_MEET_THE_COMMUNITY_ON: 'Rejoignez aussi la communauté sur',
   NEXTMEETUP_NEXT: 'Prochain meetup:',
-  NEXTMEETUP_NO_EVENT: "Tous les derniers mercredis du mois. Plus d'infos sur Meetup.com.",
+  NEXTMEETUP_NO_EVENT:
+    "Tous les derniers mercredis du mois. Plus d'infos sur Meetup.com.",
   NEXTMEETUP_PERSONS: `{ persons, plural,
     =0 {Aucun inscrit}
     one {# personne}
@@ -30,6 +31,7 @@ export default {
   SPONSOR_TITLE: 'Nos partenaires',
   SPONSORS: 'Partenaires',
   LOGIN_GITHUB: 'Login avec GitHub',
+  SUBMIT_TALK_ON_GITHUB: 'Proposer votre sujet (sur GitHub)',
   SUBMIT_TALK: 'Proposer un sujet',
   TALK_EXPLAIN: `
     <p>Nous proposons 2 formats différents :</p>
@@ -50,5 +52,5 @@ export default {
   TALK_SCHEMA_SLIDES: 'Lien vers les slides',
   TALK_SCHEMA_PROJECT: 'Lien vers le project',
   SEARCH_PLACEHOLDER: 'Rechercher par sujet, auteur ou partenaire',
-  SEARCH_LOADMORE: 'Voir plus de résultats'
+  SEARCH_LOADMORE: 'Voir plus de résultats',
 }

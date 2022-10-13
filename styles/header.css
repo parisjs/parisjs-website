@@ -34,11 +34,22 @@
 .header__nav a {
   padding: 16px;
   margin: 0 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .header__nav a:hover,
 .header__nav a.active {
   background: #c72a63;
+}
+
+.header__nav a svg {
+  margin-left: 10px;
+}
+
+.header__nav a.main_action {
+  background-color: #551a8b;
 }
 
 .languageSwitcher {
@@ -67,7 +78,6 @@
     height: 120px;
   }
 }
-
 
 @media (max-width: 800px) {
   .header .container {

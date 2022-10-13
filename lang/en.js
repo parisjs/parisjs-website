@@ -1,5 +1,5 @@
 export default {
-  CODE_OF_CONDUCT: "Code of conduct (FR)",
+  CODE_OF_CONDUCT: 'Code of conduct (FR)',
   HOME_DESCRIPTION: 'DESCRIPTION EN ANGLAIS',
   FAQ: 'FAQ',
   HOME_HERO_TITLE: 'The monthly meetup about JavaScript',
@@ -7,7 +7,8 @@ export default {
   HOME: 'Home',
   NEXTMEETUP_MEET_THE_COMMUNITY_ON: 'Also join the community on',
   NEXTMEETUP_NEXT: 'Next meetup:',
-  NEXTMEETUP_NO_EVENT: 'Every last Wednesday of the month. More info on Meetup.com.',
+  NEXTMEETUP_NO_EVENT:
+    'Every last Wednesday of the month. More info on Meetup.com.',
   NEXTMEETUP_PERSONS: `{ persons, plural,
     =0 {Nobody registered}
     one {# person}
@@ -30,6 +31,7 @@ export default {
   SPONSOR_TITLE: 'Our sponsors',
   SPONSORS: 'Sponsors',
   LOGIN_GITHUB: 'Log in with GitHub',
+  SUBMIT_TALK_ON_GITHUB: 'Submit your talk (on GitHub)',
   SUBMIT_TALK: 'Submit a talk',
   TALK_EXPLAIN: `
     <p>We usually have two types of talks:</p>
@@ -50,5 +52,5 @@ export default {
   TALK_SCHEMA_SLIDES: 'Link to your slides',
   TALK_SCHEMA_PROJECT: 'Link to your project',
   SEARCH_PLACEHOLDER: 'Search for talks, authors or partners',
-  SEARCH_LOADMORE: 'Show more results'
+  SEARCH_LOADMORE: 'Show more results',
 }
