@@ -1,4 +1,4 @@
-import { Highlight, Snippet } from 'react-instantsearch-dom'
+import { Highlight, Snippet } from 'react-instantsearch-hooks-web'
 import Avatar from './Avatar'
 
 const TalkPreview = ({ talk }) => {
@@ -14,6 +14,7 @@ const TalkPreview = ({ talk }) => {
       key={String(index)}
       hit={talk}
       attribute={`authors.${index}.name`}
+      highlightedTagName="em"
     />
   ))
 
@@ -23,12 +24,12 @@ const TalkPreview = ({ talk }) => {
       <div className="TalkPreview__description">
         <div>
           <div className="TalkPreview__title">
-            {<Snippet hit={talk} attribute="title" />}
+            {<Snippet hit={talk} attribute="title" highlightedTagName="em" />}
           </div>
           <div className="TalkPreview__authors">{authors}</div>
         </div>
         <div className="TalkPreview__extract">
-          <Snippet hit={talk} attribute="extract" />
+          <Snippet hit={talk} attribute="extract" highlightedTagName="em" />
         </div>
       </div>
     </div>
