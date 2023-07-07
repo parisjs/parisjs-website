@@ -1,6 +1,6 @@
 import algoliasearch from 'algoliasearch/lite'
-import { findResultsState } from 'react-instantsearch-dom/server'
-import { useState } from 'react'
+import { getServerState } from 'react-instantsearch-hooks-server'
+import { renderToString } from 'react-dom/server'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 
 import HomeContainer from '../components/HomeContainer'
@@ -19,7 +19,6 @@ const DEFAULT_PROPS = {
 
 export async function getStaticProps({ router, locale }) {
   initI18next(locale)
-  const searchState = {}
 
   function ServerSideSearch(props) {
     return (
@@ -28,21 +27,16 @@ export async function getStaticProps({ router, locale }) {
       </RouterContext.Provider>
     )
   }
-  const resultsState = await findResultsState(ServerSideSearch, {
-    ...DEFAULT_PROPS,
-    searchState,
-  })
+  const serverState = await getServerState(
+    <ServerSideSearch {...DEFAULT_PROPS} />,
+    { renderToString }
+  )
 
   // load the next scheduled meetup
   const nextMeetup = await getNextMeetup()
   return {
     props: {
-      resultsState: {
-        ...resultsState,
-        metadata: [],
-        state: JSON.parse(JSON.stringify(resultsState.state)),
-      },
-      searchState,
+      serverState,
       nextMeetup,
     },
     // Incremental Static Regeneration each minute
@@ -51,15 +45,5 @@ export async function getStaticProps({ router, locale }) {
 }
 
 export default function Index(props) {
-  const [searchState, setSearchState] = useState(props.searchState)
-  return (
-    <HomeContainer
-      {...DEFAULT_PROPS}
-      searchState={searchState}
-      onSearchStateChange={setSearchState}
-      createURL={() => {}}
-      resultsState={props.resultsState}
-      nextMeetup={props.nextMeetup}
-    />
-  )
+  return <HomeContainer {...DEFAULT_PROPS} {...props} />
 }

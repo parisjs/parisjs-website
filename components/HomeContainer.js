@@ -6,12 +6,13 @@ import {
   PoweredBy,
   Configure,
   InfiniteHits,
-} from 'react-instantsearch-dom'
+  InstantSearchSSRProvider,
+} from 'react-instantsearch-hooks-web'
 
 import MeetupPreview from './MeetupPreview'
 import NextMeetup from './NextMeetup'
 
-const HomeContainer = ({nextMeetup, ...props}) => {
+const HomeContainer = ({ nextMeetup, ...props }) => {
   return (
     <>
       <Head>
@@ -34,32 +35,31 @@ const HomeContainer = ({nextMeetup, ...props}) => {
   )
 }
 
-function MeetupSearch(props) {
+function MeetupSearch({ serverState, ...props }) {
   return (
     <div className="container meetups">
-      <InstantSearch {...props}>
-        <div className="meetups__header">
-          <h2 className="meetups__title --withChevron">
-            {i18next.t('HOME_PREVIOUS_MEETUP')}
-          </h2>
-          <Configure hitsPerPage={5} />
-          <SearchBox
-            showLoadingIndicator
+      <InstantSearchSSRProvider {...serverState}>
+        <InstantSearch {...props}>
+          <div className="meetups__header">
+            <h2 className="meetups__title --withChevron">
+              {i18next.t('HOME_PREVIOUS_MEETUP')}
+            </h2>
+            <Configure hitsPerPage={5} />
+            <SearchBox
+              placeholder={i18next.t('SEARCH_PLACEHOLDER')}
+            />
+            <PoweredBy />
+          </div>
+          <InfiniteHits
+            hitComponent={({ hit: meetup }) => (
+              <MeetupPreview key={meetup.objectID} meetup={meetup} />
+            )}
             translations={{
-              placeholder: i18next.t('SEARCH_PLACEHOLDER'),
+              showMoreButtonText: i18next.t('SEARCH_LOADMORE'),
             }}
           />
-          <PoweredBy />
-        </div>
-        <InfiniteHits
-          hitComponent={({ hit: meetup }) => (
-            <MeetupPreview key={meetup.objectID} meetup={meetup} />
-          )}
-          translations={{
-            loadMore: i18next.t('SEARCH_LOADMORE'),
-          }}
-        />
-      </InstantSearch>
+        </InstantSearch>
+      </InstantSearchSSRProvider>
     </div>
   )
 }

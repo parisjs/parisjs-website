@@ -1,4 +1,4 @@
-import { Highlight } from 'react-instantsearch-dom'
+import { Highlight } from 'react-instantsearch-hooks-web'
 import i18next from 'i18next'
 import Link from 'next/link'
 import TalkPreview from './TalkPreview'
@@ -6,7 +6,7 @@ import TalkPreview from './TalkPreview'
 function Host({ meetup }) {
   return (
     <span>
-      @ <Highlight hit={meetup} attribute="host" />
+      @ <Highlight hit={meetup} attribute="host" highlightedTagName="em" />
     </span>
   )
 }
