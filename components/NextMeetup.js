@@ -3,7 +3,7 @@ import { MdDateRange, MdPlace, MdGroup } from 'react-icons/md'
 import { FaDiscord, FaTwitter, FaGoogle, FaMeetup, FaYoutube } from 'react-icons/fa'
 import i18next from 'i18next'
 
-const MEETUP_URL = 'https://www.meetup.com/fr-FR/Paris-js/'
+const MEETUP_URL = 'https://www.meetup.com/paris-js/'
 
 function Event({ event }) {
   return (
